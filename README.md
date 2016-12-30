@@ -30,7 +30,7 @@ Completely free with no ads
 Suggestions
 -----------
 
-To suggest new conversions, please head over to [this link](mailto:calintat@gmail.com).
+To suggest new conversions, please head over to [this link](https://docs.google.com/forms/d/e/1FAIpQLSfxDoObDqKGmhf9wmIOv9TdZKZE3idKrkDmIGrQHdehV8Vl3A/viewform?entry.77629743).
 
 Please feel free to email me with suggestions on how to make the app better.
 
