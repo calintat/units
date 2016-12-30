@@ -1,0 +1,165 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <group
+        android:id="@+id/basic" >
+
+        <item
+            android:id="@+id/navigation_length"
+            android:icon="@drawable/ic_navigation_length"
+            android:title="@string/navigation_length" />
+
+        <item
+            android:id="@+id/navigation_area"
+            android:icon="@drawable/ic_navigation_area"
+            android:title="@string/navigation_area" />
+
+        <item
+            android:id="@+id/navigation_volume"
+            android:icon="@drawable/ic_navigation_volume"
+            android:title="@string/navigation_volume" />
+
+        <item
+            android:id="@+id/navigation_mass"
+            android:icon="@drawable/ic_navigation_mass"
+            android:title="@string/navigation_mass" />
+
+        <item
+            android:id="@+id/navigation_time"
+            android:icon="@drawable/ic_navigation_time"
+            android:title="@string/navigation_time" />
+
+        <item
+            android:id="@+id/navigation_speed"
+            android:icon="@drawable/ic_navigation_speed"
+            android:title="@string/navigation_speed" />
+
+        <item
+            android:id="@+id/navigation_temperature"
+            android:icon="@drawable/ic_navigation_temperature"
+            android:title="@string/navigation_temperature" />
+
+        <item
+            android:visible="false"
+            android:id="@+id/navigation_currency"
+            android:icon="@drawable/ic_navigation_currency"
+            android:title="@string/navigation_currency" />
+
+        <item
+            android:id="@+id/navigation_fuel"
+            android:icon="@drawable/ic_navigation_fuel"
+            android:title="@string/navigation_fuel" />
+
+        <item
+            android:id="@+id/navigation_storage"
+            android:icon="@drawable/ic_navigation_storage"
+            android:title="@string/navigation_storage" />
+
+    </group>
+
+    <group
+        android:id="@+id/advanced" >
+
+        <item
+            android:id="@+id/navigation_angle"
+            android:icon="@drawable/ic_navigation_angle"
+            android:title="@string/navigation_angle" />
+
+        <item
+            android:id="@+id/navigation_density"
+            android:icon="@drawable/ic_navigation_density"
+            android:title="@string/navigation_density" />
+
+        <item
+            android:id="@+id/navigation_frequency"
+            android:icon="@drawable/ic_navigation_frequency"
+            android:title="@string/navigation_frequency" />
+
+        <item
+            android:id="@+id/navigation_flow"
+            android:icon="@drawable/ic_navigation_flow"
+            android:title="@string/navigation_flow" />
+
+        <item
+            android:id="@+id/navigation_acceleration"
+            android:icon="@drawable/ic_navigation_acceleration"
+            android:title="@string/navigation_acceleration" />
+
+        <item
+            android:id="@+id/navigation_force"
+            android:icon="@drawable/ic_navigation_force"
+            android:title="@string/navigation_force" />
+
+        <item
+            android:id="@+id/navigation_pressure"
+            android:icon="@drawable/ic_navigation_pressure"
+            android:title="@string/navigation_pressure" />
+
+        <item
+            android:id="@+id/navigation_torque"
+            android:icon="@drawable/ic_navigation_torque"
+            android:title="@string/navigation_torque" />
+
+        <item
+            android:id="@+id/navigation_energy"
+            android:icon="@drawable/ic_navigation_energy"
+            android:title="@string/navigation_energy" />
+
+        <item
+            android:id="@+id/navigation_power"
+            android:icon="@drawable/ic_navigation_power"
+            android:title="@string/navigation_power" />
+
+        <item
+            android:id="@+id/navigation_current"
+            android:icon="@drawable/ic_navigation_current"
+            android:title="@string/navigation_current" />
+
+        <item
+            android:id="@+id/navigation_charge"
+            android:icon="@drawable/ic_navigation_charge"
+            android:title="@string/navigation_charge" />
+
+        <item
+            android:id="@+id/navigation_voltage"
+            android:icon="@drawable/ic_navigation_voltage"
+            android:title="@string/navigation_voltage" />
+
+        <item
+            android:id="@+id/navigation_luminance"
+            android:icon="@drawable/ic_navigation_luminance"
+            android:title="@string/navigation_luminance" />
+
+        <item
+            android:id="@+id/navigation_illuminance"
+            android:icon="@drawable/ic_navigation_illuminance"
+            android:title="@string/navigation_illuminance" />
+
+        <item
+            android:id="@+id/navigation_radiation"
+            android:icon="@drawable/ic_navigation_radiation"
+            android:title="@string/navigation_radiation" />
+
+        <item
+            android:id="@+id/navigation_radioactivity"
+            android:icon="@drawable/ic_navigation_radioactivity"
+            android:title="@string/navigation_radioactivity" />
+
+    </group>
+
+    <group
+        android:id="@+id/others" >
+
+        <item
+            android:id="@+id/navigation_settings"
+            android:icon="@drawable/ic_navigation_settings"
+            android:title="@string/navigation_settings" />
+
+        <item
+            android:id="@+id/navigation_feedback"
+            android:icon="@drawable/ic_navigation_feedback"
+            android:title="@string/navigation_feedback" />
+
+    </group>
+
+</menu>

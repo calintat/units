@@ -1,0 +1,40 @@
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="AllowBackup,GoogleAppIndexingWarning"
+    package="com.calintat.units" >
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/app_theme"
+        android:allowBackup="true"
+        android:supportsRtl="true" >
+
+        <activity
+            android:name=".activities.MainActivity"
+            android:windowSoftInputMode="stateHidden" >
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:parentActivityName=".activities.MainActivity" />
+
+    </application>
+
+</manifest>

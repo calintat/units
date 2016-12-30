@@ -1,0 +1,525 @@
+<resources>
+
+    <string name="clipboard">Copiat în clipboard</string>
+
+    <string name="enter_input">Introduceţi o valoare</string>
+
+    <string name="pref_advanced">Avansat</string>
+
+    <string name="pref_dark_theme">Temă întunecată</string>
+
+    <string name="pref_about">Despre</string>
+
+    <string name="pref_developer">Dezvoltator</string>
+
+    <string name="action_clear">Ștergeți</string>
+
+    <string name="navigation_settings">Setări</string>
+
+    <string name="navigation_feedback">Trimiteți feedback</string>
+
+    <!--QUANTITIES-->
+
+    <string name="navigation_length">Lungime</string>
+
+    <string name="navigation_area">Arie</string>
+
+    <string name="navigation_volume">Volum</string>
+
+    <string name="navigation_mass">Masă</string>
+
+    <string name="navigation_time">Timp</string>
+
+    <string name="navigation_speed">Viteză</string>
+
+    <string name="navigation_temperature">Temperatură</string>
+
+    <string name="navigation_currency">Valută</string>
+
+    <string name="navigation_fuel">Combustibil</string>
+
+    <string name="navigation_storage">Memorie</string>
+
+    <string name="navigation_angle">Unghi</string>
+
+    <string name="navigation_density">Densitate</string>
+
+    <string name="navigation_frequency">Frecvență</string>
+
+    <string name="navigation_flow">Debit</string>
+
+    <string name="navigation_acceleration">Acceleraţie</string>
+
+    <string name="navigation_force">Forță</string>
+
+    <string name="navigation_pressure">Presiune</string>
+
+    <string name="navigation_torque">Cuplu</string>
+
+    <string name="navigation_energy">Energie</string>
+
+    <string name="navigation_power">Putere</string>
+
+    <string name="navigation_current">Curent</string>
+
+    <string name="navigation_charge">Sarcină</string>
+
+    <string name="navigation_voltage">Voltaj</string>
+
+    <string name="navigation_luminance">Luminanță</string>
+
+    <string name="navigation_illuminance">Iluminare</string>
+
+    <string name="navigation_radiation">Radiație</string>
+
+    <string name="navigation_radioactivity">Radioactivitate</string>
+
+    <!--LENGTH-->
+
+    <string name="metre">metru</string>
+
+    <string name="kilometre">kilometru</string>
+
+    <string name="mile">milă</string>
+
+    <string name="yard">yard</string>
+
+    <string name="foot">picior</string>
+
+    <string name="inch">țol</string>
+
+    <string name="centimetre">centimetru</string>
+
+    <string name="millimetre">milimetru</string>
+
+    <string name="micrometre">micrometru</string>
+
+    <string name="angstrom">angstrom</string>
+
+    <string name="astronomical_unit">unitate astronomică</string>
+
+    <string name="light_year">an-lumină</string>
+
+    <string name="parsec">parsec</string>
+
+    <string name="nanometre">nanometru</string>
+
+    <string name="picometre">picometru</string>
+
+    <string name="fermi">fermi</string>
+
+    <string name="fathom">fathom</string>
+
+    <string name="furlong">furlong</string>
+
+    <string name="nautical_mile">milă marină</string>
+
+    <!--AREA-->
+
+    <string name="square_metre">metru pătrat</string>
+
+    <string name="square_kilometre">kilometru pătrat</string>
+
+    <string name="are">ar</string>
+
+    <string name="hectare">hectar</string>
+
+    <string name="acre">acru</string>
+
+    <string name="cuerda">cuerda</string>
+
+    <string name="square_yard">yard pătrat</string>
+
+    <string name="square_foot">picior pătrat</string>
+
+    <string name="square_inch">țol pătrat</string>
+
+    <!--VOLUME-->
+
+    <string name="cubic_metre">metru cub</string>
+
+    <string name="litre">litru</string>
+
+    <string name="millilitre">mililitru</string>
+
+    <string name="cubic_foot">picior cub</string>
+
+    <string name="cubic_inch">țol cub</string>
+
+    <string name="imperial_gallon">galon imperial</string>
+
+    <string name="us_gallon">galon american</string>
+
+    <string name="imperial_quart">cvartă imperială</string>
+
+    <string name="us_quart">cvartă americană</string>
+
+    <string name="imperial_pint">pintă imperială</string>
+
+    <string name="us_pint">pintă americană</string>
+
+    <string name="imperial_fluid_ounce">uncie lichidă imperială</string>
+
+    <string name="us_fluid_ounce">uncie lichidă americană</string>
+
+    <string name="imperial_tablespoon">lingură imperială</string>
+
+    <string name="us_tablespoon">lingură americană</string>
+
+    <string name="imperial_teaspoon">linguriță imperială</string>
+
+    <string name="us_teaspoon">linguriță americană</string>
+
+    <!--MASS-->
+
+    <string name="kilogram">kilogram</string>
+
+    <string name="stone">stone</string>
+
+    <string name="pound">livră</string>
+
+    <string name="ounce">uncie</string>
+
+    <string name="imperial_ton">tonă imperială</string>
+
+    <string name="us_ton">tonă americană</string>
+
+    <string name="tonne">tonă</string>
+
+    <string name="gram">gram</string>
+
+    <string name="milligram">miligram</string>
+
+    <string name="microgram">microgram</string>
+
+    <string name="carat">carat</string>
+
+    <string name="dram">dram</string>
+
+    <string name="grain">grain</string>
+
+    <string name="atomic_mass_unit">unitatea atomică de masă</string>
+
+    <string name="electron_rest_mass">masa de repaus a electronului</string>
+
+    <!--TIME-->
+
+    <string name="second">secundă</string>
+
+    <string name="minute">minut</string>
+
+    <string name="hour">oră</string>
+
+    <string name="day">zi</string>
+
+    <string name="week">săptămână</string>
+
+    <string name="month">month</string>
+
+    <string name="year">lună</string>
+
+    <string name="decade">deceniu</string>
+
+    <string name="century">secol</string>
+
+    <!--SPEED-->
+
+    <string name="metre_per_second">metru pe secundă</string>
+
+    <string name="mile_per_hour">milă pe oră</string>
+
+    <string name="kilometre_per_hour">kilometru pe oră</string>
+
+    <string name="foot_per_second">picior pe secundă</string>
+
+    <string name="knot">nod</string>
+
+    <string name="speed_of_light">viteza luminii</string>
+
+    <string name="speed_of_sound">viteza sunetului</string>
+
+    <!--TEMPERATURE-->
+
+    <string name="kelvin">Kelvin</string>
+
+    <string name="celsius">Celsius</string>
+
+    <string name="fahrenheit">Fahrenheit</string>
+
+    <!--CURRENCY-->
+
+    <string name="british_pound">liră sterlină</string>
+
+    <string name="us_dollar">dolar american</string>
+
+    <string name="euro">euro</string>
+
+    <string name="australian_dollar">dolar australian</string>
+
+    <string name="canadian_dollar">dolar canadian</string>
+
+    <string name="japanese_yen">yen japonez</string>
+
+    <!--FUEL-->
+
+    <string name="kilometre_per_litre">kilometru pe litru</string>
+
+    <string name="mile_per_imperial_gallon">milă pe galon imperial</string>
+
+    <string name="mile_per_us_gallon">milă pe galon american</string>
+
+    <!--STORAGE-->
+
+    <string name="_bit">bit</string>
+
+    <string name="_byte">byte</string>
+
+    <string name="kilobit">kilobit</string>
+
+    <string name="kibibit">kibibit</string>
+
+    <string name="kilobyte">kilobyte</string>
+
+    <string name="kibibyte">kibibyte</string>
+
+    <string name="megabit">megabit</string>
+
+    <string name="mebibit">mebibit</string>
+
+    <string name="megabyte">megabyte</string>
+
+    <string name="mebibyte">mebibyte</string>
+
+    <string name="gigabit">gigabit</string>
+
+    <string name="gibibit">gibibit</string>
+
+    <string name="gigabyte">gigabyte</string>
+
+    <string name="gibibyte">gibibyte</string>
+
+    <string name="terabit">terabit</string>
+
+    <string name="tebibit">tebibit</string>
+
+    <string name="terabyte">terabyte</string>
+
+    <string name="tebibyte">tebibyte</string>
+
+    <string name="petabit">petabit</string>
+
+    <string name="pebibit">pebibit</string>
+
+    <string name="petabyte">petabyte</string>
+
+    <string name="pebibyte">pebibyte</string>
+
+    <!--ANGLE-->
+
+    <string name="radian">radian</string>
+
+    <string name="degree">grad</string>
+
+    <string name="arcminute">arcminut</string>
+
+    <string name="arcsecond">arcsecundă</string>
+
+    <!--DENSITY-->
+
+    <string name="kilogram_per_cubic_metre">kilogram pe metru cub</string>
+
+    <string name="kilogram_per_litre">kilogram pe litru</string>
+
+    <string name="ounce_per_cubic_foot">uncie pe picior cub</string>
+
+    <string name="ounce_per_cubic_inch">uncie pe țol cub</string>
+
+    <string name="pound_per_cubic_foot">livră pe picior cub</string>
+
+    <string name="pound_per_cubic_inch">livră pe țol cub</string>
+
+    <string name="ounce_per_imperial_gallon">uncie pe galon imperial</string>
+
+    <string name="ounce_per_us_gallon">uncie pe galon american</string>
+
+    <string name="pound_per_imperial_gallon">livră pe galon imperial</string>
+
+    <string name="pound_per_us_gallon">livră pe galon american</string>
+
+    <!--FREQUENCY-->
+
+    <string name="hertz">hertz</string>
+
+    <string name="kilohertz">kilohertz</string>
+
+    <string name="megahertz">megahertz</string>
+
+    <string name="gigahertz">gigahertz</string>
+
+    <string name="revolution_per_minute">rotație pe minut</string>
+
+    <!--FLOW-->
+
+    <string name="cubic_metre_per_second">metru cub pe secundă</string>
+
+    <string name="litre_per_minute">litru pe minut</string>
+
+    <string name="imperial_gallon_per_minute">galon imperial pe minut</string>
+
+    <string name="us_gallon_per_minute">galon american pe minut</string>
+
+    <!--ACCELERATION-->
+
+    <string name="metre_per_second_squared">metru pe secundă la pătrat</string>
+
+    <string name="galileo">galileo</string>
+
+    <string name="standard_gravity">gravitate standard</string>
+
+    <string name="mile_per_hour_per_second">milă pe oră pe secundă</string>
+
+    <string name="knot_per_second">nod pe secundă</string>
+
+    <!--FORCE-->
+
+    <string name="newton">newton</string>
+
+    <string name="dyne">dină</string>
+
+    <string name="kilopond">kilopond</string>
+
+    <string name="poundal">poundal</string>
+
+    <string name="pound_force">livră-forță</string>
+
+    <string name="ounce_force">uncie-forță</string>
+
+    <!--PRESSURE-->
+
+    <string name="pascal">pascal</string>
+
+    <string name="pound_per_square_inch">livră pe țol pătrat</string>
+
+    <string name="atmosphere">atmosferă</string>
+
+    <string name="bar">bar</string>
+
+    <string name="millimetre_of_mercury">milimetru de mercur</string>
+
+    <string name="kilopascal">kilopascal</string>
+
+    <string name="megapascal">megapascal</string>
+
+    <!--TORQUE-->
+
+    <string name="foot_pound">picior-livră</string>
+
+    <string name="inch_pound">țol-livră</string>
+
+    <string name="newton_metre">newton metru</string>
+
+    <string name="kilopond_metre">kilopond metru</string>
+
+    <!--ENERGY-->
+
+    <string name="joule">joule</string>
+
+    <string name="erg">erg</string>
+
+    <string name="kilowatt_hour">kilowatt-oră</string>
+
+    <string name="megawatt_hour">megawatt-oră</string>
+
+    <string name="calorie">calorie</string>
+
+    <string name="kilocalorie">kilocalorie</string>
+
+    <string name="barrel_of_oil_equivalent">baril echivalent petrol</string>
+
+    <string name="british_thermal_unit">unitate termică britanică</string>
+
+    <string name="electronvolt">electronvolt</string>
+
+    <string name="imperial_gallon_atmosphere">galon imperial-atmosferă</string>
+
+    <string name="us_gallon_atmosphere">galon american-atmosferă</string>
+
+    <!--POWER-->
+
+    <string name="watt">watt</string>
+
+    <string name="kilowatt">kilowatt</string>
+
+    <string name="megawatt">megawatt</string>
+
+    <string name="horsepower">cal putere</string>
+
+    <string name="erg_per_second">erg pe secundă</string>
+
+    <string name="calorie_per_second">calorie pe secundă</string>
+
+    <!--CURRENT-->
+
+    <string name="ampere">ampere</string>
+
+    <string name="abampere">abamper</string>
+
+    <string name="statampere">statamper</string>
+
+    <!--CHARGE-->
+
+    <string name="coulomb">coulomb</string>
+
+    <string name="abcoulomb">abcoulomb</string>
+
+    <string name="statcoulomb">statcoulomb</string>
+
+    <string name="faraday">faraday</string>
+
+    <string name="milliampere_hour">miliamper oră</string>
+
+    <!--VOLTAGE-->
+
+    <string name="volt">volt</string>
+
+    <string name="abvolt">abvolt</string>
+
+    <string name="statvolt">statvolt</string>
+
+    <!--LUMINANCE-->
+
+    <string name="candela_per_square_metre">candelă pe metru pătrat</string>
+
+    <string name="stilb">stilb</string>
+
+    <string name="lambert">lambert</string>
+
+    <string name="footlambert">footlambert</string>
+
+    <!--ILLUMINANCE-->
+
+    <string name="lux">lux</string>
+
+    <string name="phot">phot</string>
+
+    <string name="footcandle">footcandle</string>
+
+    <!--RADIATION-->
+
+    <string name="gray">gray</string>
+
+    <string name="rad">rad</string>
+
+    <string name="sievert">sievert</string>
+
+    <string name="rem">rem</string>
+
+    <!--RADIOACTIVITY-->
+
+    <string name="becquerel">becquerel</string>
+
+    <string name="curie">curie</string>
+
+    <string name="rutherford">rutherford</string>
+
+</resources>

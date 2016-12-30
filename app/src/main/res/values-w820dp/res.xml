@@ -1,0 +1,13 @@
+<resources>
+
+    <dimen name="app_bar_height">256dp</dimen>
+
+    <dimen name="card_view_margin_top">64dp</dimen>
+
+    <dimen name="card_view_margin_start">128dp</dimen>
+
+    <dimen name="card_view_margin_end">128dp</dimen>
+
+    <dimen name="card_view_margin_bottom">64dp</dimen>
+
+</resources>

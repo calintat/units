@@ -1,0 +1,925 @@
+<resources>
+    
+    <string translatable="false" name="app_name">Units</string>
+
+    <string translatable="false" name="app_version">4.0</string>
+
+    <string translatable="false" name="app_developer">Calin Tataru</string>
+
+    <string name="clipboard">Copied to clipboard</string>
+
+    <string name="enter_input">Enter input</string>
+
+    <string name="pref_advanced">Advanced</string>
+
+    <string name="pref_dark_theme">Dark theme</string>
+
+    <string name="pref_about">About</string>
+
+    <string name="pref_developer">Developer</string>
+
+    <string name="action_clear">Clear</string>
+
+    <string name="navigation_settings">Settings</string>
+
+    <string name="navigation_feedback">Send feedback</string>
+
+    <!--QUANTITIES-->
+
+    <string name="navigation_length">Length</string>
+
+    <string name="navigation_area">Area</string>
+
+    <string name="navigation_volume">Volume</string>
+
+    <string name="navigation_mass">Mass</string>
+
+    <string name="navigation_time">Time</string>
+
+    <string name="navigation_speed">Speed</string>
+
+    <string name="navigation_temperature">Temperature</string>
+
+    <string name="navigation_currency">Currency</string>
+
+    <string name="navigation_fuel">Fuel</string>
+
+    <string name="navigation_storage">Storage</string>
+
+    <string name="navigation_angle">Angle</string>
+
+    <string name="navigation_density">Density</string>
+
+    <string name="navigation_frequency">Frequency</string>
+
+    <string name="navigation_flow">Flow</string>
+
+    <string name="navigation_acceleration">Acceleration</string>
+
+    <string name="navigation_force">Force</string>
+
+    <string name="navigation_pressure">Pressure</string>
+
+    <string name="navigation_torque">Torque</string>
+
+    <string name="navigation_energy">Energy</string>
+
+    <string name="navigation_power">Power</string>
+
+    <string name="navigation_current">Current</string>
+
+    <string name="navigation_charge">Charge</string>
+
+    <string name="navigation_voltage">Voltage</string>
+
+    <string name="navigation_luminance">Luminance</string>
+
+    <string name="navigation_illuminance">Illuminance</string>
+
+    <string name="navigation_radiation">Radiation</string>
+
+    <string name="navigation_radioactivity">Radioactivity</string>
+
+    <!--LENGTH-->
+
+    <string name="metre">metre</string>
+
+    <string name="kilometre">kilometre</string>
+
+    <string name="mile">mile</string>
+
+    <string name="yard">yard</string>
+
+    <string name="foot">foot</string>
+
+    <string name="inch">inch</string>
+
+    <string name="centimetre">centimetre</string>
+
+    <string name="millimetre">millimetre</string>
+
+    <string name="micrometre">micrometre</string>
+
+    <string name="angstrom">angstrom</string>
+
+    <string name="astronomical_unit">astronomical unit</string>
+
+    <string name="light_year">light-year</string>
+
+    <string name="parsec">parsec</string>
+
+    <string name="nanometre">nanometre</string>
+
+    <string name="picometre">picometre</string>
+
+    <string name="fermi">fermi</string>
+
+    <string name="fathom">fathom</string>
+
+    <string name="furlong">furlong</string>
+
+    <string name="nautical_mile">nautical mile</string>
+
+    <string translatable="false" name="symbol_metre">m</string>
+
+    <string translatable="false" name="symbol_kilometre">km</string>
+
+    <string translatable="false" name="symbol_mile">mi</string>
+
+    <string translatable="false" name="symbol_yard">yd</string>
+
+    <string translatable="false" name="symbol_foot">ft</string>
+
+    <string translatable="false" name="symbol_inch">in</string>
+
+    <string translatable="false" name="symbol_centimetre">cm</string>
+
+    <string translatable="false" name="symbol_millimetre">mm</string>
+
+    <string translatable="false" name="symbol_micrometre">µm</string>
+
+    <string translatable="false" name="symbol_angstrom">Å</string>
+
+    <string translatable="false" name="symbol_astronomical_unit">au</string>
+
+    <string translatable="false" name="symbol_light_year">ly</string>
+
+    <string translatable="false" name="symbol_parsec">pc</string>
+
+    <string translatable="false" name="symbol_nanometre">nm</string>
+
+    <string translatable="false" name="symbol_picometre">pm</string>
+
+    <string translatable="false" name="symbol_fermi">fm</string>
+
+    <string translatable="false" name="symbol_fathom">ftm</string>
+
+    <string translatable="false" name="symbol_furlong">fur</string>
+
+    <string translatable="false" name="symbol_nautical_mile">nmi</string>
+
+    <!--AREA-->
+
+    <string name="square_metre">square metre</string>
+
+    <string name="square_kilometre">square kilometre</string>
+
+    <string name="are">are</string>
+
+    <string name="hectare">hectare</string>
+
+    <string name="acre">acre</string>
+
+    <string name="cuerda">cuerda</string>
+
+    <string name="square_yard">square yard</string>
+
+    <string name="square_foot">square foot</string>
+
+    <string name="square_inch">square inch</string>
+
+    <string translatable="false" name="symbol_square_metre">m²</string>
+
+    <string translatable="false" name="symbol_square_kilometre">km²</string>
+
+    <string translatable="false" name="symbol_are">a</string>
+
+    <string translatable="false" name="symbol_hectare">ha</string>
+
+    <string translatable="false" name="symbol_acre">ac</string>
+
+    <string translatable="false" name="symbol_cuerda">cda</string>
+
+    <string translatable="false" name="symbol_square_yard">sq yd</string>
+
+    <string translatable="false" name="symbol_square_foot">sq ft</string>
+
+    <string translatable="false" name="symbol_square_inch">sq in</string>
+
+    <!--VOLUME-->
+
+    <string name="cubic_metre">cubic metre</string>
+
+    <string name="litre">litre</string>
+
+    <string name="millilitre">millilitre</string>
+
+    <string name="cubic_foot">cubic foot</string>
+
+    <string name="cubic_inch">cubic inch</string>
+
+    <string name="imperial_gallon">imperial gallon</string>
+
+    <string name="us_gallon">US gallon</string>
+
+    <string name="imperial_quart">imperial quart</string>
+
+    <string name="us_quart">US quart</string>
+
+    <string name="imperial_pint">imperial pint</string>
+
+    <string name="us_pint">US pint</string>
+
+    <string name="imperial_fluid_ounce">imperial fluid ounce</string>
+
+    <string name="us_fluid_ounce">US fluid ounce</string>
+
+    <string name="imperial_tablespoon">imperial tablespoon</string>
+
+    <string name="us_tablespoon">US tablespoon</string>
+
+    <string name="imperial_teaspoon">imperial teaspoon</string>
+    
+    <string name="us_teaspoon">US teaspoon</string>
+
+    <string translatable="false" name="symbol_cubic_metre">m³</string>
+
+    <string translatable="false" name="symbol_litre">L</string>
+
+    <string translatable="false" name="symbol_millilitre">mL</string>
+
+    <string translatable="false" name="symbol_cubic_foot">cu ft</string>
+
+    <string translatable="false" name="symbol_cubic_inch">cu in</string>
+
+    <string translatable="false" name="symbol_imperial_gallon">gal</string>
+
+    <string translatable="false" name="symbol_us_gallon">gal</string>
+
+    <string translatable="false" name="symbol_imperial_quart">qt</string>
+
+    <string translatable="false" name="symbol_us_quart">qt</string>
+
+    <string translatable="false" name="symbol_imperial_pint">pt</string>
+
+    <string translatable="false" name="symbol_us_pint">pt</string>
+
+    <string translatable="false" name="symbol_imperial_fluid_ounce">fl oz</string>
+
+    <string translatable="false" name="symbol_us_fluid_ounce">fl oz</string>
+
+    <string translatable="false" name="symbol_imperial_tablespoon">tbsp</string>
+
+    <string translatable="false" name="symbol_us_tablespoon">tbsp</string>
+
+    <string translatable="false" name="symbol_imperial_teaspoon">tsp</string>
+    
+    <string translatable="false" name="symbol_us_teaspoon">tsp</string>
+
+    <!--MASS-->
+
+    <string name="kilogram">kilogram</string>
+
+    <string name="stone">stone</string>
+
+    <string name="pound">pound</string>
+
+    <string name="ounce">ounce</string>
+
+    <string name="imperial_ton">imperial ton</string>
+
+    <string name="us_ton">US ton</string>
+
+    <string name="tonne">tonne</string>
+
+    <string name="gram">gram</string>
+
+    <string name="milligram">milligram</string>
+
+    <string name="microgram">microgram</string>
+
+    <string name="carat">carat</string>
+
+    <string name="dram">dram</string>
+
+    <string name="grain">grain</string>
+
+    <string name="atomic_mass_unit">atomic mass unit</string>
+
+    <string name="electron_rest_mass">electron rest mass</string>
+
+    <string translatable="false" name="symbol_kilogram">kg</string>
+
+    <string translatable="false" name="symbol_stone">st</string>
+
+    <string translatable="false" name="symbol_pound">lb</string>
+
+    <string translatable="false" name="symbol_ounce">oz</string>
+
+    <string translatable="false" name="symbol_imperial_ton">tn</string>
+
+    <string translatable="false" name="symbol_us_ton">tn</string>
+
+    <string translatable="false" name="symbol_tonne">t</string>
+
+    <string translatable="false" name="symbol_gram">g</string>
+
+    <string translatable="false" name="symbol_milligram">mg</string>
+
+    <string translatable="false" name="symbol_microgram">µg</string>
+
+    <string translatable="false" name="symbol_carat">ct</string>
+
+    <string translatable="false" name="symbol_dram">dr</string>
+
+    <string translatable="false" name="symbol_grain">gt</string>
+
+    <string translatable="false" name="symbol_atomic_mass_unit">u</string>
+
+    <string translatable="false" name="symbol_electron_rest_mass">mₑ</string>
+
+    <!--TIME-->
+
+    <string name="second">second</string>
+
+    <string name="minute">minute</string>
+
+    <string name="hour">hour</string>
+
+    <string name="day">day</string>
+
+    <string name="week">week</string>
+
+    <string name="month">month</string>
+
+    <string name="year">year</string>
+
+    <string name="decade">decade</string>
+
+    <string name="century">century</string>
+
+    <string translatable="false" name="symbol_second">s</string>
+
+    <string translatable="false" name="symbol_minute">min</string>
+
+    <string translatable="false" name="symbol_hour">h</string>
+
+    <string translatable="false" name="symbol_day">d</string>
+
+    <string translatable="false" name="symbol_week">wk</string>
+
+    <string translatable="false" name="symbol_month">mo</string>
+
+    <string translatable="false" name="symbol_year">yr</string>
+
+    <string translatable="false" name="symbol_decade">dec</string>
+
+    <string translatable="false" name="symbol_century">c</string>
+
+    <!--SPEED-->
+
+    <string name="metre_per_second">metre per second</string>
+
+    <string name="mile_per_hour">mile per hour</string>
+
+    <string name="kilometre_per_hour">kilometre per hour</string>
+
+    <string name="foot_per_second">foot per second</string>
+
+    <string name="knot">knot</string>
+
+    <string name="speed_of_light">speed of light</string>
+
+    <string name="speed_of_sound">speed of sound</string>
+
+    <string translatable="false" name="symbol_metre_per_second">m/s</string>
+
+    <string translatable="false" name="symbol_mile_per_hour">mph</string>
+
+    <string translatable="false" name="symbol_kilometre_per_hour">km/h</string>
+
+    <string translatable="false" name="symbol_foot_per_second">fps</string>
+
+    <string translatable="false" name="symbol_knot">kn</string>
+
+    <string translatable="false" name="symbol_speed_of_light">c</string>
+
+    <string translatable="false" name="symbol_speed_of_sound">s</string>
+
+    <!--TEMPERATURE-->
+
+    <string name="kelvin">Kelvin</string>
+
+    <string name="celsius">Celsius</string>
+
+    <string name="fahrenheit">Fahrenheit</string>
+
+    <string translatable="false" name="symbol_kelvin">K</string>
+
+    <string translatable="false" name="symbol_celsius">°C</string>
+
+    <string translatable="false" name="symbol_fahrenheit">°F</string>
+
+    <!--CURRENCY-->
+
+    <string name="british_pound">British pound</string>
+
+    <string name="us_dollar">US dollar</string>
+
+    <string name="euro">euro</string>
+
+    <string name="australian_dollar">Australian dollar</string>
+
+    <string name="canadian_dollar">Canadian dollar</string>
+
+    <string name="japanese_yen">Japanese yen</string>
+
+    <string translatable="false" name="symbol_british_pound">GBP</string>
+
+    <string translatable="false" name="symbol_us_dollar">USD</string>
+
+    <string translatable="false" name="symbol_euro">EUR</string>
+
+    <string translatable="false" name="symbol_australian_dollar">AUD</string>
+
+    <string translatable="false" name="symbol_canadian_dollar">CAD</string>
+
+    <string translatable="false" name="symbol_japanese_yen">JPY</string>
+    
+    <!--FUEL-->
+    
+    <string name="kilometre_per_litre">kilometre per litre</string>
+
+    <string name="mile_per_imperial_gallon">mile per imperial gallon</string>
+
+    <string name="mile_per_us_gallon">mile per US gallon</string>
+
+    <string translatable="false" name="symbol_kilometre_per_litre">km/L</string>
+
+    <string translatable="false" name="symbol_mile_per_imperial_gallon">mi/gal</string>
+
+    <string translatable="false" name="symbol_mile_per_us_gallon">mi/gal</string>
+
+    <!--STORAGE-->
+
+    <string name="_bit">bit</string>
+
+    <string name="_byte">byte</string>
+
+    <string name="kilobit">kilobit</string>
+
+    <string name="kibibit">kibibit</string>
+
+    <string name="kilobyte">kilobyte</string>
+
+    <string name="kibibyte">kibibyte</string>
+
+    <string name="megabit">megabit</string>
+
+    <string name="mebibit">mebibit</string>
+
+    <string name="megabyte">megabyte</string>
+
+    <string name="mebibyte">mebibyte</string>
+
+    <string name="gigabit">gigabit</string>
+
+    <string name="gibibit">gibibit</string>
+
+    <string name="gigabyte">gigabyte</string>
+
+    <string name="gibibyte">gibibyte</string>
+
+    <string name="terabit">terabit</string>
+
+    <string name="tebibit">tebibit</string>
+
+    <string name="terabyte">terabyte</string>
+
+    <string name="tebibyte">tebibyte</string>
+
+    <string name="petabit">petabit</string>
+
+    <string name="pebibit">pebibit</string>
+
+    <string name="petabyte">petabyte</string>
+
+    <string name="pebibyte">pebibyte</string>
+
+    <string translatable="false" name="symbol_bit">bit</string>
+
+    <string translatable="false" name="symbol_byte">B</string>
+
+    <string translatable="false" name="symbol_kilobit">kbit</string>
+
+    <string translatable="false" name="symbol_kibibit">Kibit</string>
+
+    <string translatable="false" name="symbol_kilobyte">kB</string>
+
+    <string translatable="false" name="symbol_kibibyte">KiB</string>
+
+    <string translatable="false" name="symbol_megabit">Mbit</string>
+
+    <string translatable="false" name="symbol_mebibit">Mibit</string>
+
+    <string translatable="false" name="symbol_megabyte">MB</string>
+
+    <string translatable="false" name="symbol_mebibyte">MiB</string>
+
+    <string translatable="false" name="symbol_gigabit">Gbit</string>
+
+    <string translatable="false" name="symbol_gibibit">Gibit</string>
+
+    <string translatable="false" name="symbol_gigabyte">GB</string>
+
+    <string translatable="false" name="symbol_gibibyte">GiB</string>
+
+    <string translatable="false" name="symbol_terabit">Tbit</string>
+
+    <string translatable="false" name="symbol_tebibit">Tibit</string>
+
+    <string translatable="false" name="symbol_terabyte">TB</string>
+
+    <string translatable="false" name="symbol_tebibyte">TiB</string>
+
+    <string translatable="false" name="symbol_petabit">Pbit</string>
+
+    <string translatable="false" name="symbol_pebibit">Pibit</string>
+
+    <string translatable="false" name="symbol_petabyte">PB</string>
+
+    <string translatable="false" name="symbol_pebibyte">PiB</string>
+
+    <!--ANGLE-->
+
+    <string name="radian">radian</string>
+
+    <string name="degree">degree</string>
+
+    <string name="arcminute">arcminute</string>
+
+    <string name="arcsecond">arcsecond</string>
+
+    <string translatable="false" name="symbol_radian">rad</string>
+
+    <string translatable="false" name="symbol_degree">deg</string>
+
+    <string translatable="false" name="symbol_arcminute">amin</string>
+
+    <string translatable="false" name="symbol_arcsecond">asec</string>
+
+    <!--DENSITY-->
+
+    <string name="kilogram_per_cubic_metre">kilogram per cubic metre</string>
+
+    <string name="kilogram_per_litre">kilogram per litre</string>
+
+    <string name="ounce_per_cubic_foot">ounce per cubic foot</string>
+
+    <string name="ounce_per_cubic_inch">ounce per cubic inch</string>
+
+    <string name="pound_per_cubic_foot">pound per cubic foot</string>
+
+    <string name="pound_per_cubic_inch">pound per cubic inch</string>
+
+    <string name="ounce_per_imperial_gallon">ounce per imperial gallon</string>
+
+    <string name="ounce_per_us_gallon">ounce per US gallon</string>
+
+    <string name="pound_per_imperial_gallon">pound per imperial gallon</string>
+
+    <string name="pound_per_us_gallon">pound per US gallon</string>
+
+    <string translatable="false" name="symbol_kilogram_per_cubic_metre">kg/m³</string>
+
+    <string translatable="false" name="symbol_kilogram_per_litre">kg/L</string>
+
+    <string translatable="false" name="symbol_ounce_per_cubic_foot">oz/ft³</string>
+
+    <string translatable="false" name="symbol_ounce_per_cubic_inch">oz/in³</string>
+
+    <string translatable="false" name="symbol_pound_per_cubic_foot">lb/ft³</string>
+
+    <string translatable="false" name="symbol_pound_per_cubic_inch">lb/in³</string>
+
+    <string translatable="false" name="symbol_ounce_per_imperial_gallon">oz/gal</string>
+
+    <string translatable="false" name="symbol_ounce_per_us_gallon">oz/gal</string>
+
+    <string translatable="false" name="symbol_pound_per_imperial_gallon">lb/gal</string>
+
+    <string translatable="false" name="symbol_pound_per_us_gallon">lb/gal</string>
+
+    <!--FREQUENCY-->
+
+    <string name="hertz">hertz</string>
+
+    <string name="kilohertz">kilohertz</string>
+
+    <string name="megahertz">megahertz</string>
+
+    <string name="gigahertz">gigahertz</string>
+
+    <string name="revolution_per_minute">revolution per minute</string>
+
+    <string translatable="false" name="symbol_hertz">Hz</string>
+
+    <string translatable="false" name="symbol_kilohertz">kHz</string>
+
+    <string translatable="false" name="symbol_megahertz">MHz</string>
+
+    <string translatable="false" name="symbol_gigahertz">GHz</string>
+
+    <string translatable="false" name="symbol_revolutions_per_minute">rpm</string>
+
+    <!--FLOW-->
+
+    <string name="cubic_metre_per_second">cubic metre per second</string>
+
+    <string name="litre_per_minute">litre per minute</string>
+
+    <string name="imperial_gallon_per_minute">imperial gallon per minute</string>
+
+    <string name="us_gallon_per_minute">US gallon per minute</string>
+
+    <string translatable="false" name="symbol_cubic_metre_per_second">m³/s</string>
+
+    <string translatable="false" name="symbol_litre_per_minute">L/min</string>
+
+    <string translatable="false" name="symbol_imperial_gallon_per_minute">gal/min</string>
+
+    <string translatable="false" name="symbol_us_gallon_per_minute">gal/min</string>
+
+    <!--ACCELERATION-->
+
+    <string name="metre_per_second_squared">metre per second squared</string>
+
+    <string name="galileo">galileo</string>
+
+    <string name="standard_gravity">standard gravity</string>
+
+    <string name="mile_per_hour_per_second">mile per hour per second</string>
+
+    <string name="knot_per_second">knot per second</string>
+
+    <string translatable="false" name="symbol_metre_per_second_squared">m/s²</string>
+
+    <string translatable="false" name="symbol_galileo">Gal</string>
+
+    <string translatable="false" name="symbol_standard_gravity">g</string>
+
+    <string translatable="false" name="symbol_mile_per_hour_per_second">mph/s</string>
+
+    <string translatable="false" name="symbol_knot_per_second">kn/s</string>
+
+    <!--FORCE-->
+
+    <string name="newton">newton</string>
+
+    <string name="dyne">dyne</string>
+
+    <string name="kilopond">kilopond</string>
+
+    <string name="poundal">poundal</string>
+
+    <string name="pound_force">pound-force</string>
+
+    <string name="ounce_force">ounce-force</string>
+
+    <string translatable="false" name="symbol_newton">N</string>
+
+    <string translatable="false" name="symbol_dyne">dyn</string>
+
+    <string translatable="false" name="symbol_kilopond">kp</string>
+
+    <string translatable="false" name="symbol_poundal">pdl</string>
+
+    <string translatable="false" name="symbol_pound_force">lbf</string>
+
+    <string translatable="false" name="symbol_ounce_force">ozf</string>
+
+    <!--PRESSURE-->
+
+    <string name="pascal">pascal</string>
+
+    <string name="pound_per_square_inch">pound per square inch</string>
+
+    <string name="atmosphere">atmosphere</string>
+
+    <string name="bar">bar</string>
+
+    <string name="millimetre_of_mercury">millimetre of mercury</string>
+
+    <string name="kilopascal">kilopascal</string>
+
+    <string name="megapascal">megapascal</string>
+
+    <string translatable="false" name="symbol_pascal">Pa</string>
+
+    <string translatable="false" name="symbol_pound_per_square_inch">psi</string>
+
+    <string translatable="false" name="symbol_atmosphere">atm</string>
+
+    <string translatable="false" name="symbol_bar">bar</string>
+
+    <string translatable="false" name="symbol_millimetre_of_mercury">mmHg</string>
+
+    <string translatable="false" name="symbol_kilopascal">kPa</string>
+
+    <string translatable="false" name="symbol_megapascal">MPa</string>
+
+    <!--TORQUE-->
+
+    <string name="foot_pound">foot-pound</string>
+
+    <string name="inch_pound">inch-pound</string>
+
+    <string name="newton_metre">newton metre</string>
+
+    <string name="kilopond_metre">kilopond metre</string>
+
+    <string translatable="false" name="symbol_foot_pound">ft lbf</string>
+
+    <string translatable="false" name="symbol_inch_pound">in lbf</string>
+
+    <string translatable="false" name="symbol_newton_metre">N m</string>
+
+    <string translatable="false" name="symbol_kilopond_metre">kp m</string>
+
+    <!--ENERGY-->
+
+    <string name="joule">joule</string>
+
+    <string name="erg">erg</string>
+
+    <string name="kilowatt_hour">kilowatt-hour</string>
+
+    <string name="megawatt_hour">megawatt-hour</string>
+
+    <string name="calorie">calorie</string>
+
+    <string name="kilocalorie">kilocalorie</string>
+
+    <string name="barrel_of_oil_equivalent">barrel of oil equivalent</string>
+
+    <string name="british_thermal_unit">British thermal unit</string>
+
+    <string name="electronvolt">electronvolt</string>
+
+    <string name="imperial_gallon_atmosphere">imperial gallon-atmosphere</string>
+
+    <string name="us_gallon_atmosphere">US gallon-atmosphere</string>
+
+    <string translatable="false" name="symbol_joule">J</string>
+
+    <string translatable="false" name="symbol_erg">erg</string>
+
+    <string translatable="false" name="symbol_kilowatt_hour">kW h</string>
+
+    <string translatable="false" name="symbol_megawatt_hour">MW h</string>
+
+    <string translatable="false" name="symbol_calorie">cal</string>
+
+    <string translatable="false" name="symbol_kilocalorie">kcal</string>
+
+    <string translatable="false" name="symbol_barrel_of_oil_equivalent">boe</string>
+
+    <string translatable="false" name="symbol_british_thermal_unit">Btu</string>
+
+    <string translatable="false" name="symbol_electronvolt">eV</string>
+
+    <string translatable="false" name="symbol_imperial_gallon_atmosphere">gal atm</string>
+
+    <string translatable="false" name="symbol_us_gallon_atmosphere">gal atm</string>
+
+    <!--POWER-->
+
+    <string name="watt">watt</string>
+
+    <string name="kilowatt">kilowatt</string>
+
+    <string name="megawatt">megawatt</string>
+
+    <string name="horsepower">horsepower</string>
+
+    <string name="erg_per_second">erg per second</string>
+
+    <string name="calorie_per_second">calorie per second</string>
+
+    <string translatable="false" name="symbol_watt">W</string>
+
+    <string translatable="false" name="symbol_kilowatt">kW</string>
+
+    <string translatable="false" name="symbol_megawatt">MW</string>
+
+    <string translatable="false" name="symbol_horsepower">hp</string>
+
+    <string translatable="false" name="symbol_erg_per_second">erg/s</string>
+
+    <string translatable="false" name="symbol_calorie_per_second">cal/s</string>
+
+    <!--CURRENT-->
+
+    <string name="ampere">ampere</string>
+
+    <string name="abampere">abampere</string>
+
+    <string name="statampere">statampere</string>
+
+    <string translatable="false" name="symbol_ampere">A</string>
+
+    <string translatable="false" name="symbol_abampere">abA</string>
+
+    <string translatable="false" name="symbol_statampere">statA</string>
+
+    <!--CHARGE-->
+
+    <string name="coulomb">coulomb</string>
+
+    <string name="abcoulomb">abcoulomb</string>
+
+    <string name="statcoulomb">statcoulomb</string>
+
+    <string name="faraday">faraday</string>
+
+    <string name="milliampere_hour">milliampere hour</string>
+
+    <string translatable="false" name="symbol_coulomb">C</string>
+
+    <string translatable="false" name="symbol_abcoulomb">abC</string>
+
+    <string translatable="false" name="symbol_statcoulomb">statC</string>
+
+    <string translatable="false" name="symbol_faraday">F</string>
+
+    <string translatable="false" name="symbol_milliampere_hour">mA h</string>
+
+    <!--VOLTAGE-->
+
+    <string name="volt">volt</string>
+
+    <string name="abvolt">abvolt</string>
+
+    <string name="statvolt">statvolt</string>
+
+    <string translatable="false" name="symbol_volt">V</string>
+
+    <string translatable="false" name="symbol_abvolt">abV</string>
+
+    <string translatable="false" name="symbol_statvolt">statV</string>
+
+    <!--LUMINANCE-->
+
+    <string name="candela_per_square_metre">candela per square metre</string>
+
+    <string name="stilb">stilb</string>
+
+    <string name="lambert">lambert</string>
+
+    <string name="footlambert">footlambert</string>
+
+    <string translatable="false" name="symbol_candela_per_square_metre">cd/m²</string>
+
+    <string translatable="false" name="symbol_stilb">sb</string>
+
+    <string translatable="false" name="symbol_lambert">L</string>
+
+    <string translatable="false" name="symbol_footlambert">fL</string>
+
+    <!--ILLUMINANCE-->
+
+    <string name="lux">lux</string>
+
+    <string name="phot">phot</string>
+
+    <string name="footcandle">footcandle</string>
+
+    <string translatable="false" name="symbol_lux">lx</string>
+
+    <string translatable="false" name="symbol_phot">ph</string>
+
+    <string translatable="false" name="symbol_footcandle">fc</string>
+
+    <!--RADIATION-->
+
+    <string name="gray">gray</string>
+
+    <string name="rad">rad</string>
+
+    <string name="sievert">sievert</string>
+
+    <string name="rem">rem</string>
+
+    <string translatable="false" name="symbol_gray">Gy</string>
+
+    <string translatable="false" name="symbol_rad">rad</string>
+
+    <string translatable="false" name="symbol_sievert">Sv</string>
+
+    <string translatable="false" name="symbol_rem">rem</string>
+
+    <!--RADIOACTIVITY-->
+
+    <string name="becquerel">becquerel</string>
+
+    <string name="curie">curie</string>
+
+    <string name="rutherford">rutherford</string>
+
+    <string translatable="false" name="symbol_becquerel">Bq</string>
+
+    <string translatable="false" name="symbol_curie">Ci</string>
+
+    <string translatable="false" name="symbol_rutherford">rd</string>
+
+</resources>

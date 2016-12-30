@@ -1,0 +1,525 @@
+<resources>
+
+    <string name="clipboard">Bol skopírovaný do schránky</string>
+
+    <string name="enter_input">Vstúpiť vstup</string>
+
+    <string name="pref_advanced">Pokročilý</string>
+
+    <string name="pref_dark_theme">Dark tému</string>
+
+    <string name="pref_about">O aplikácii</string>
+
+    <string name="pref_developer">Vývojka</string>
+
+    <string name="action_clear">Jasný</string>
+
+    <string name="navigation_settings">Nastavenie</string>
+
+    <string name="navigation_feedback">Poslať spätnú väzbu</string>
+
+    <!--QUANTITIES-->
+
+    <string name="navigation_length">Dĺžka</string>
+
+    <string name="navigation_area">Plocha</string>
+
+    <string name="navigation_volume">Objem</string>
+
+    <string name="navigation_mass">Hmotnosť</string>
+
+    <string name="navigation_time">Čas</string>
+
+    <string name="navigation_speed">Rýchlosť</string>
+
+    <string name="navigation_temperature">Teplotas</string>
+
+    <string name="navigation_currency">Mena</string>
+
+    <string name="navigation_fuel">Palivo</string>
+
+    <string name="navigation_storage">Skladovanie</string>
+
+    <string name="navigation_angle">Uhol</string>
+
+    <string name="navigation_density">Hustota</string>
+
+    <string name="navigation_frequency">Frekvencia</string>
+
+    <string name="navigation_flow">Prietok</string>
+
+    <string name="navigation_acceleration">Zrýchlenie</string>
+
+    <string name="navigation_force">Sila</string>
+
+    <string name="navigation_pressure">Tlak</string>
+
+    <string name="navigation_torque">Krútiaci moment</string>
+
+    <string name="navigation_energy">Energia</string>
+
+    <string name="navigation_power">Výkon</string>
+
+    <string name="navigation_current">Prúd</string>
+
+    <string name="navigation_charge">Náboj</string>
+
+    <string name="navigation_voltage">Napätie</string>
+
+    <string name="navigation_luminance">Jas</string>
+
+    <string name="navigation_illuminance">Osvětlenost</string>
+
+    <string name="navigation_radiation">Radiácie</string>
+
+    <string name="navigation_radioactivity">Rádioaktivita</string>
+
+    <!--LENGTH-->
+
+    <string name="metre">meter</string>
+
+    <string name="kilometre">kilometer</string>
+
+    <string name="mile">míľa</string>
+
+    <string name="yard">yard</string>
+
+    <string name="foot">stopa</string>
+
+    <string name="inch">palec</string>
+
+    <string name="centimetre">centimeter</string>
+
+    <string name="millimetre">milimeter</string>
+
+    <string name="micrometre">mikrometer</string>
+
+    <string name="angstrom">angstrom</string>
+
+    <string name="astronomical_unit">astronomická jednotka</string>
+
+    <string name="light_year">svetelný rok</string>
+
+    <string name="parsec">parsek</string>
+
+    <string name="nanometre">nanometer</string>
+
+    <string name="picometre">pikometer</string>
+
+    <string name="fermi">fermi</string>
+
+    <string name="fathom">fathom</string>
+
+    <string name="furlong">furlong</string>
+
+    <string name="nautical_mile">námorná míľa</string>
+
+    <!--AREA-->
+
+    <string name="square_metre">štvorcový meter</string>
+
+    <string name="square_kilometre">štvorcový kilometer</string>
+
+    <string name="are">ár</string>
+
+    <string name="hectare">hektár</string>
+
+    <string name="acre">aker</string>
+
+    <string name="cuerda">cuerda</string>
+
+    <string name="square_yard">štvorcový yard</string>
+
+    <string name="square_foot">štvorcový stopa</string>
+
+    <string name="square_inch">štvorcový palec</string>
+
+    <!--VOLUME-->
+
+    <string name="cubic_metre">kubický meter</string>
+
+    <string name="litre">liter</string>
+
+    <string name="millilitre">mililiter</string>
+
+    <string name="cubic_foot">kubický stopa</string>
+
+    <string name="cubic_inch">kubický palec</string>
+
+    <string name="imperial_gallon">imperiálny galón</string>
+
+    <string name="us_gallon">US galón</string>
+
+    <string name="imperial_quart">imperiálny kvart</string>
+
+    <string name="us_quart">US kvart</string>
+
+    <string name="imperial_pint">imperiálny pinta</string>
+
+    <string name="us_pint">US pinta</string>
+
+    <string name="imperial_fluid_ounce">imperiálny dutá unca</string>
+
+    <string name="us_fluid_ounce">US dutá unca</string>
+
+    <string name="imperial_tablespoon">imperiálny lyžice</string>
+
+    <string name="us_tablespoon">US lyžice</string>
+
+    <string name="imperial_teaspoon">imperiálny čajová lyžička</string>
+
+    <string name="us_teaspoon">US čajová lyžička</string>
+
+    <!--MASS-->
+
+    <string name="kilogram">kilogram</string>
+
+    <string name="stone">stone</string>
+
+    <string name="pound">libra</string>
+
+    <string name="ounce">unca</string>
+
+    <string name="imperial_ton">imperiálny tona</string>
+
+    <string name="us_ton">US tona</string>
+
+    <string name="tonne">tona</string>
+
+    <string name="gram">gram</string>
+
+    <string name="milligram">miligram</string>
+
+    <string name="microgram">mikrogram</string>
+
+    <string name="carat">karát</string>
+
+    <string name="dram">dram</string>
+
+    <string name="grain">grain</string>
+
+    <string name="atomic_mass_unit">atómová hmotnostná jednotka</string>
+
+    <string name="electron_rest_mass">elektrón kľudové hmotnosti</string>
+
+    <!--TIME-->
+
+    <string name="second">sekunda</string>
+
+    <string name="minute">minúta</string>
+
+    <string name="hour">hodina</string>
+
+    <string name="day">deň</string>
+
+    <string name="week">týždeň</string>
+
+    <string name="month">mesiac</string>
+
+    <string name="year">rok</string>
+
+    <string name="decade">desaťročia</string>
+
+    <string name="century">storočia</string>
+
+    <!--SPEED-->
+
+    <string name="metre_per_second">meter za sekundu</string>
+
+    <string name="mile_per_hour">míľa za hodina</string>
+
+    <string name="kilometre_per_hour">kilometer za hodina</string>
+
+    <string name="foot_per_second">stopa za sekundu</string>
+
+    <string name="knot">uzol</string>
+
+    <string name="speed_of_light">rýchlosť svetla</string>
+
+    <string name="speed_of_sound">rýchlosť zvuku</string>
+
+    <!--TEMPERATURE-->
+
+    <string name="kelvin">Kelvin</string>
+
+    <string name="celsius">Celzia</string>
+
+    <string name="fahrenheit">Fahrenheita</string>
+
+    <!--CURRENCY-->
+
+    <string name="british_pound">britská libra</string>
+
+    <string name="us_dollar">US dolár</string>
+
+    <string name="euro">euro</string>
+
+    <string name="australian_dollar">austrálsky dolár</string>
+
+    <string name="canadian_dollar">kanadský dolár</string>
+
+    <string name="japanese_yen">japonský jen</string>
+
+    <!--FUEL-->
+
+    <string name="kilometre_per_litre">kilometer za liter</string>
+
+    <string name="mile_per_imperial_gallon">míľa za imperiálny galón</string>
+
+    <string name="mile_per_us_gallon">míľa za US galón</string>
+
+    <!--STORAGE-->
+
+    <string name="_bit">bit</string>
+
+    <string name="_byte">byte</string>
+
+    <string name="kilobit">kilobit</string>
+
+    <string name="kibibit">kibibit</string>
+
+    <string name="kilobyte">kilobyte</string>
+
+    <string name="kibibyte">kibibyte</string>
+
+    <string name="megabit">megabit</string>
+
+    <string name="mebibit">mebibit</string>
+
+    <string name="megabyte">megabyte</string>
+
+    <string name="mebibyte">mebibyte</string>
+
+    <string name="gigabit">gigabit</string>
+
+    <string name="gibibit">gibibit</string>
+
+    <string name="gigabyte">gigabyte</string>
+
+    <string name="gibibyte">gibibyte</string>
+
+    <string name="terabit">terabit</string>
+
+    <string name="tebibit">tebibit</string>
+
+    <string name="terabyte">terabyte</string>
+
+    <string name="tebibyte">tebibyte</string>
+
+    <string name="petabit">petabit</string>
+
+    <string name="pebibit">pebibit</string>
+
+    <string name="petabyte">petabyte</string>
+
+    <string name="pebibyte">pebibyte</string>
+
+    <!--ANGLE-->
+
+    <string name="radian">radian</string>
+
+    <string name="degree">degree</string>
+
+    <string name="arcminute">arcminúta</string>
+
+    <string name="arcsecond">arcsekunda</string>
+
+    <!--DENSITY-->
+
+    <string name="kilogram_per_cubic_metre">kilogram za kubický meter</string>
+
+    <string name="kilogram_per_litre">kilogram za liter</string>
+
+    <string name="ounce_per_cubic_foot">unca za kubický stopa</string>
+
+    <string name="ounce_per_cubic_inch">unca za kubický palec</string>
+
+    <string name="pound_per_cubic_foot">libra za kubický stopa</string>
+
+    <string name="pound_per_cubic_inch">libra za kubický palec</string>
+
+    <string name="ounce_per_imperial_gallon">unca za imperiálny galón</string>
+
+    <string name="ounce_per_us_gallon">unca za US galón</string>
+
+    <string name="pound_per_imperial_gallon">libra za imperiálny galón</string>
+
+    <string name="pound_per_us_gallon">libra za US galón</string>
+
+    <!--FREQUENCY-->
+
+    <string name="hertz">hertz</string>
+
+    <string name="kilohertz">kilohertz</string>
+
+    <string name="megahertz">megahertz</string>
+
+    <string name="gigahertz">gigahertz</string>
+
+    <string name="revolution_per_minute">otáčok za minútu</string>
+
+    <!--FLOW-->
+
+    <string name="cubic_metre_per_second">kubický meter za sekundu</string>
+
+    <string name="litre_per_minute">liter za minútu</string>
+
+    <string name="imperial_gallon_per_minute">imperiálny galón za minútu</string>
+
+    <string name="us_gallon_per_minute">US galón za minútu</string>
+
+    <!--ACCELERATION-->
+
+    <string name="metre_per_second_squared">meter za sekundu na druhú</string>
+
+    <string name="galileo">galileo</string>
+
+    <string name="standard_gravity">štandardné gravitácie</string>
+
+    <string name="mile_per_hour_per_second">míľa za hodina za sekundu</string>
+
+    <string name="knot_per_second">uzol za sekundu</string>
+
+    <!--FORCE-->
+
+    <string name="newton">newton</string>
+
+    <string name="dyne">dína</string>
+
+    <string name="kilopond">kilopond</string>
+
+    <string name="poundal">poundal</string>
+
+    <string name="pound_force">libra-sila</string>
+
+    <string name="ounce_force">unca-sila</string>
+
+    <!--PRESSURE-->
+
+    <string name="pascal">pascal</string>
+
+    <string name="pound_per_square_inch">libra za štvorcový palec</string>
+
+    <string name="atmosphere">atmosféra</string>
+
+    <string name="bar">bar</string>
+
+    <string name="millimetre_of_mercury">milimeter ortuťového</string>
+
+    <string name="kilopascal">kilopascal</string>
+
+    <string name="megapascal">megapascal</string>
+
+    <!--TORQUE-->
+
+    <string name="foot_pound">stopa-libra</string>
+
+    <string name="inch_pound">palec-libra</string>
+
+    <string name="newton_metre">newton meter</string>
+
+    <string name="kilopond_metre">kilopond meter</string>
+
+    <!--ENERGY-->
+
+    <string name="joule">joule</string>
+
+    <string name="erg">erg</string>
+
+    <string name="kilowatt_hour">kilowatthodina</string>
+
+    <string name="megawatt_hour">megawatthodina</string>
+
+    <string name="calorie">kaloríja</string>
+
+    <string name="kilocalorie">kilokaloríja</string>
+
+    <string name="barrel_of_oil_equivalent">barel ropného ekvivalentu</string>
+
+    <string name="british_thermal_unit">britská tepelná jednotka</string>
+
+    <string name="electronvolt">elektrónvolt</string>
+
+    <string name="imperial_gallon_atmosphere">imperiálny galón-atmosféra</string>
+
+    <string name="us_gallon_atmosphere">US galón-atmosféra</string>
+
+    <!--POWER-->
+
+    <string name="watt">watt</string>
+
+    <string name="kilowatt">kilowatt</string>
+
+    <string name="megawatt">megawatt</string>
+
+    <string name="horsepower">konský výkon</string>
+
+    <string name="erg_per_second">erg za sekundu</string>
+
+    <string name="calorie_per_second">kaloríja za sekundu</string>
+
+    <!--CURRENT-->
+
+    <string name="ampere">ampér</string>
+
+    <string name="abampere">abampér</string>
+
+    <string name="statampere">statampér</string>
+
+    <!--CHARGE-->
+
+    <string name="coulomb">coulomb</string>
+
+    <string name="abcoulomb">abcoulomb</string>
+
+    <string name="statcoulomb">statcoulomb</string>
+
+    <string name="faraday">faraday</string>
+
+    <string name="milliampere_hour">miliampérhodina</string>
+
+    <!--VOLTAGE-->
+
+    <string name="volt">volt</string>
+
+    <string name="abvolt">abvolt</string>
+
+    <string name="statvolt">statvolt</string>
+
+    <!--LUMINANCE-->
+
+    <string name="candela_per_square_metre">kandela za meter štvorcový</string>
+
+    <string name="stilb">stilb</string>
+
+    <string name="lambert">lambert</string>
+
+    <string name="footlambert">footlambert</string>
+
+    <!--ILLUMINANCE-->
+
+    <string name="lux">lux</string>
+
+    <string name="phot">phot</string>
+
+    <string name="footcandle">footcandle</string>
+
+    <!--RADIATION-->
+
+    <string name="gray">gray</string>
+
+    <string name="rad">rad</string>
+
+    <string name="sievert">sievert</string>
+
+    <string name="rem">rem</string>
+
+    <!--RADIOACTIVITY-->
+
+    <string name="becquerel">becquerel</string>
+
+    <string name="curie">curie</string>
+
+    <string name="rutherford">rutherford</string>
+
+</resources>
