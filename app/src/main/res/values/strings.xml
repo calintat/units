@@ -2,7 +2,7 @@
     
     <string translatable="false" name="app_name">Units</string>
 
-    <string translatable="false" name="app_version">4.0</string>
+    <string translatable="false" name="app_version">4.0.1</string>
 
     <string translatable="false" name="app_developer">Calin Tataru</string>
 
@@ -15,6 +15,8 @@
     <string name="pref_dark_theme">Dark theme</string>
 
     <string name="pref_about">About</string>
+
+    <string name="pref_version">Version</string>
 
     <string name="pref_developer">Developer</string>
 
@@ -45,6 +47,8 @@
     <string name="navigation_fuel">Fuel</string>
 
     <string name="navigation_storage">Storage</string>
+
+    <string name="navigation_bitrate">Bitrate</string>
 
     <string name="navigation_angle">Angle</string>
 
@@ -539,6 +543,72 @@
     <string translatable="false" name="symbol_petabyte">PB</string>
 
     <string translatable="false" name="symbol_pebibyte">PiB</string>
+
+    <!--BITRATE-->
+
+    <string name="kilobit_per_second">kilobit per second</string>
+
+    <string name="kibibit_per_second">kibibit per second</string>
+
+    <string name="kilobyte_per_second">kilobyte per second</string>
+
+    <string name="kibibyte_per_second">kibibyte per second</string>
+
+    <string name="megabit_per_second">megabit per second</string>
+
+    <string name="mebibit_per_second">mebibit per second</string>
+
+    <string name="megabyte_per_second">megabyte per second</string>
+
+    <string name="mebibyte_per_second">mebibyte per second</string>
+
+    <string name="gigabit_per_second">gigabit per second</string>
+
+    <string name="gibibit_per_second">gibibit per second</string>
+
+    <string name="gigabyte_per_second">gigabyte per second</string>
+
+    <string name="gibibyte_per_second">gibibyte per second</string>
+
+    <string name="terabit_per_second">terabit per second</string>
+
+    <string name="tebibit_per_second">tebibit per second</string>
+
+    <string name="terabyte_per_second">terabyte per second</string>
+
+    <string name="tebibyte_per_second">tebibyte per second</string>
+
+    <string translatable="false" name="symbol_kilobit_per_second">kbit/s</string>
+
+    <string translatable="false" name="symbol_kibibit_per_second">Kibit/s</string>
+
+    <string translatable="false" name="symbol_kilobyte_per_second">kB/s</string>
+
+    <string translatable="false" name="symbol_kibibyte_per_second">KiB/s</string>
+
+    <string translatable="false" name="symbol_megabit_per_second">Mbit/s</string>
+
+    <string translatable="false" name="symbol_mebibit_per_second">Mibit/s</string>
+
+    <string translatable="false" name="symbol_megabyte_per_second">MB/s</string>
+
+    <string translatable="false" name="symbol_mebibyte_per_second">MiB/s</string>
+
+    <string translatable="false" name="symbol_gigabit_per_second">Gbit/s</string>
+
+    <string translatable="false" name="symbol_gibibit_per_second">Gibit/s</string>
+
+    <string translatable="false" name="symbol_gigabyte_per_second">GB/s</string>
+
+    <string translatable="false" name="symbol_gibibyte_per_second">GiB/s</string>
+
+    <string translatable="false" name="symbol_terabit_per_second">Tbit/s</string>
+
+    <string translatable="false" name="symbol_tebibit_per_second">Tibit/s</string>
+
+    <string translatable="false" name="symbol_terabyte_per_second">TB/s</string>
+
+    <string translatable="false" name="symbol_tebibyte_per_second">TiB/s</string>
 
     <!--ANGLE-->
 

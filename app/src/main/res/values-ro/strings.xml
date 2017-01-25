@@ -10,6 +10,8 @@
 
     <string name="pref_about">Despre</string>
 
+    <string name="pref_version">Versiune</string>
+
     <string name="pref_developer">Dezvoltator</string>
 
     <string name="action_clear">Ștergeți</string>
@@ -39,6 +41,8 @@
     <string name="navigation_fuel">Combustibil</string>
 
     <string name="navigation_storage">Memorie</string>
+
+    <string name="navigation_bitrate">Rată de biți</string>
 
     <string name="navigation_angle">Unghi</string>
 
@@ -314,6 +318,40 @@
 
     <string name="pebibyte">pebibyte</string>
 
+    <!--BITRATE-->
+
+    <string name="kilobit_per_second">kilobit pe secundă</string>
+
+    <string name="kibibit_per_second">kibibit pe secundă</string>
+
+    <string name="kilobyte_per_second">kilobyte pe secundă</string>
+
+    <string name="kibibyte_per_second">kibibyte pe secundă</string>
+
+    <string name="megabit_per_second">megabit pe secundă</string>
+
+    <string name="mebibit_per_second">mebibit pe secundă</string>
+
+    <string name="megabyte_per_second">megabyte pe secundă</string>
+
+    <string name="mebibyte_per_second">mebibyte pe secundă</string>
+
+    <string name="gigabit_per_second">gigabit pe secundă</string>
+
+    <string name="gibibit_per_second">gibibit pe secundă</string>
+
+    <string name="gigabyte_per_second">gigabyte pe secundă</string>
+
+    <string name="gibibyte_per_second">gibibyte pe secundă</string>
+
+    <string name="terabit_per_second">terabit pe secundă</string>
+
+    <string name="tebibit_per_second">tebibit pe secundă</string>
+
+    <string name="terabyte_per_second">terabyte pe secundă</string>
+
+    <string name="tebibyte_per_second">tebibyte pe secundă</string>
+    
     <!--ANGLE-->
 
     <string name="radian">radian</string>

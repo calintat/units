@@ -10,6 +10,8 @@
 
     <string name="pref_about">Acerca de</string>
 
+    <string name="pref_version">Versión</string>
+
     <string name="pref_developer">Desarrollador</string>
 
     <string name="action_clear">Despejar</string>
@@ -32,13 +34,15 @@
 
     <string name="navigation_speed">Rapidez</string>
 
-    <string name="navigation_temperature">Temporatura</string>
+    <string name="navigation_temperature">Temperatura</string>
 
     <string name="navigation_currency">Divisa</string>
 
     <string name="navigation_fuel">Combustible</string>
 
     <string name="navigation_storage">Almacenamiento</string>
+
+    <string name="navigation_bitrate">Tasa de bits</string>
 
     <string name="navigation_angle">Ángulo</string>
 
@@ -314,6 +318,40 @@
 
     <string name="pebibyte">pebibyte</string>
 
+    <!--BITRATE-->
+
+    <string name="kilobit_per_second">kilobit por segundo</string>
+
+    <string name="kibibit_per_second">kibibit por segundo</string>
+
+    <string name="kilobyte_per_second">kilobyte por segundo</string>
+
+    <string name="kibibyte_per_second">kibibyte por segundo</string>
+
+    <string name="megabit_per_second">megabit por segundo</string>
+
+    <string name="mebibit_per_second">mebibit por segundo</string>
+
+    <string name="megabyte_per_second">megabyte por segundo</string>
+
+    <string name="mebibyte_per_second">mebibyte por segundo</string>
+
+    <string name="gigabit_per_second">gigabit por segundo</string>
+
+    <string name="gibibit_per_second">gibibit por segundo</string>
+
+    <string name="gigabyte_per_second">gigabyte por segundo</string>
+
+    <string name="gibibyte_per_second">gibibyte por segundo</string>
+
+    <string name="terabit_per_second">terabit por segundo</string>
+
+    <string name="tebibit_per_second">tebibit por segundo</string>
+
+    <string name="terabyte_per_second">terabyte por segundo</string>
+
+    <string name="tebibyte_per_second">tebibyte por segundo</string>
+    
     <!--ANGLE-->
 
     <string name="radian">radián</string>

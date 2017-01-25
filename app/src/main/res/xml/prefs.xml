@@ -20,7 +20,7 @@
 
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://play.google.com/store/apps/details?id=com.calintat.units" />
+                android:data="market://details?id=com.calintat.units" />
 
         </Preference>
 

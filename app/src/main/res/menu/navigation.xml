@@ -55,6 +55,11 @@
             android:icon="@drawable/ic_navigation_storage"
             android:title="@string/navigation_storage" />
 
+        <item
+            android:id="@+id/navigation_bitrate"
+            android:icon="@drawable/ic_navigation_bitrate"
+            android:title="@string/navigation_bitrate" />
+
     </group>
 
     <group

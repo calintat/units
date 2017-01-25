@@ -10,6 +10,8 @@
 
     <string name="pref_about">O aplikaci</string>
 
+    <string name="pref_version">Verze</string>
+
     <string name="pref_developer">Vývojář</string>
 
     <string name="action_clear">Jasný</string>
@@ -39,6 +41,8 @@
     <string name="navigation_fuel">Palivo</string>
 
     <string name="navigation_storage">Úložiště</string>
+
+    <string name="navigation_bitrate">Přenosová rychlost</string>
 
     <string name="navigation_angle">Úhel</string>
 
@@ -312,6 +316,40 @@
 
     <string name="pebibyte">pebibajt</string>
 
+    <!--BITRATE-->
+
+    <string name="kilobit_per_second">kilobit za sekundu</string>
+
+    <string name="kibibit_per_second">kibibit za sekundu</string>
+
+    <string name="kilobyte_per_second">kilobajt za sekundu</string>
+
+    <string name="kibibyte_per_second">kibibajt za sekundu</string>
+
+    <string name="megabit_per_second">megabit za sekundu</string>
+
+    <string name="mebibit_per_second">mebibit za sekundu</string>
+
+    <string name="megabyte_per_second">megabajt za sekundu</string>
+
+    <string name="mebibyte_per_second">mebibajt za sekundu</string>
+
+    <string name="gigabit_per_second">gigabit za sekundu</string>
+
+    <string name="gibibit_per_second">gibibit za sekundu</string>
+
+    <string name="gigabyte_per_second">gigabajt za sekundu</string>
+
+    <string name="gibibyte_per_second">gibibajt za sekundu</string>
+
+    <string name="terabit_per_second">terabit za sekundu</string>
+
+    <string name="tebibit_per_second">tebibit za sekundu</string>
+
+    <string name="terabyte_per_second">terabajt za sekundu</string>
+
+    <string name="tebibyte_per_second">tebibajt za sekundu</string>
+    
     <!--ANGLE-->
 
     <string name="radian">radián</string>

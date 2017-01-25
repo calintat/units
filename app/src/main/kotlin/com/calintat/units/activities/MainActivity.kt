@@ -174,7 +174,8 @@ class MainActivity : AppCompatActivity() {
             val quantity = Converter.getShortcut(intent.action, defId)
 
             updateSelection(quantity)
-        } else { // orientation change, etc
+        }
+        else { // orientation change, etc
 
             val quantity = Converter.get(savedInstanceState.getInt(KEY_QUANTITY))
 

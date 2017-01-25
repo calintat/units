@@ -14,13 +14,13 @@ android {
 
         applicationId "com.calintat.units"
 
-        versionName "@string/app_version"
-
-        versionCode 23
-
         minSdkVersion 21
 
         targetSdkVersion 25
+
+        versionCode 24
+
+        versionName "@string/app_version"
     }
 
     sourceSets {

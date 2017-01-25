@@ -20,7 +20,7 @@ object Converter {
 
     class Quantity(val id: Int, val color: Int, val colorDark: Int, val units: Array<Unit>)
 
-    // LENGTH---------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------
 
     private val METRE = Unit(metre, symbol_metre)
 
@@ -60,7 +60,7 @@ object Converter {
 
     private val NAUTICAL_MILE = Unit(nautical_mile, symbol_nautical_mile, 1852.0)
 
-    // AREA-----------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------
 
     private val SQUARE_METRE = Unit(square_metre, symbol_square_metre)
 
@@ -245,6 +245,40 @@ object Converter {
     private val PETABYTE = Unit(petabyte, symbol_petabyte, 8e15)
 
     private val PEBIBYTE = Unit(pebibyte, symbol_pebibyte, 9.007199254740992e15)
+
+    //----------------------------------------------------------------------------------------------
+
+    private val KILOBIT_PER_SECOND = Unit(kilobit_per_second, symbol_kilobit_per_second, 1000.0)
+
+    private val KIBIBIT_PER_SECOND = Unit(kibibit_per_second, symbol_kibibit_per_second, 1024.0)
+
+    private val KILOBYTE_PER_SECOND = Unit(kilobyte_per_second, symbol_kilobyte_per_second, 8000.0)
+
+    private val KIBIBYTE_PER_SECOND = Unit(kibibyte_per_second, symbol_kibibyte_per_second, 8192.0)
+
+    private val MEGABIT_PER_SECOND = Unit(megabit_per_second, symbol_megabit_per_second, 1e6)
+
+    private val MEBIBIT_PER_SECOND = Unit(mebibit_per_second, symbol_mebibit_per_second, 1.048576e6)
+
+    private val MEGABYTE_PER_SECOND = Unit(megabyte_per_second, symbol_megabyte_per_second, 8e6)
+
+    private val MEBIBYTE_PER_SECOND = Unit(mebibyte_per_second, symbol_mebibyte_per_second, 8.38860836)
+
+    private val GIGABIT_PER_SECOND = Unit(gigabit_per_second, symbol_gigabit_per_second, 1e9)
+
+    private val GIBIBIT_PER_SECOND = Unit(gibibit_per_second, symbol_gibibit_per_second, 1.073741824e9)
+
+    private val GIGABYTE_PER_SECOND = Unit(gigabyte_per_second, symbol_gigabyte_per_second, 8e9)
+
+    private val GIBIBYTE_PER_SECOND = Unit(gibibyte_per_second, symbol_gibibyte_per_second, 8.589934592e9)
+
+    private val TERABIT_PER_SECOND = Unit(terabit_per_second, symbol_terabit_per_second, 1e12)
+
+    private val TEBIBIT_PER_SECOND = Unit(tebibit_per_second, symbol_tebibit_per_second, 1.099511627776e12)
+
+    private val TERABYTE_PER_SECOND = Unit(terabyte_per_second, symbol_terabyte_per_second, 8e12)
+
+    private val TEBIBYTE_PER_SECOND = Unit(tebibyte_per_second, symbol_tebibyte, 8.796093022208e12)
 
     //----------------------------------------------------------------------------------------------
 
@@ -643,6 +677,7 @@ object Converter {
 
             MILE_PER_US_GALLON
     )
+
     private val UNITS_STORAGE = arrayOf(
 
             BIT,
@@ -688,6 +723,41 @@ object Converter {
             PETABYTE,
 
             PEBIBYTE
+    )
+
+    private val UNITS_BITRATE = arrayOf(
+
+            KILOBIT_PER_SECOND,
+
+            KIBIBIT_PER_SECOND,
+
+            KILOBYTE_PER_SECOND,
+
+            KIBIBYTE_PER_SECOND,
+
+            MEGABIT_PER_SECOND,
+
+            MEBIBIT_PER_SECOND,
+
+            MEGABYTE_PER_SECOND,
+
+            MEBIBYTE_PER_SECOND,
+
+            GIGABIT_PER_SECOND,
+
+            GIBIBIT_PER_SECOND,
+
+            GIGABYTE_PER_SECOND,
+
+            GIBIBYTE_PER_SECOND,
+
+            TERABIT_PER_SECOND,
+
+            TEBIBIT_PER_SECOND,
+
+            TERABYTE_PER_SECOND,
+
+            TEBIBYTE_PER_SECOND
     )
 
     private val UNITS_ANGLE = arrayOf(
@@ -1015,6 +1085,17 @@ object Converter {
             units = UNITS_STORAGE
     )
 
+    private val BITRATE = Quantity(
+
+            id = R.id.navigation_bitrate,
+
+            color = R.color.amber,
+
+            colorDark = R.color.amber_dark,
+
+            units = UNITS_BITRATE
+    )
+
     private val ANGLE = Quantity(
 
             id = R.id.navigation_angle,
@@ -1204,7 +1285,6 @@ object Converter {
 
     //----------------------------------------------------------------------------------------------
 
-
     private val idMap = hashMapOf(
 
             R.id.navigation_length to LENGTH,
@@ -1224,6 +1304,8 @@ object Converter {
             R.id.navigation_fuel to FUEL,
 
             R.id.navigation_storage to STORAGE,
+
+            R.id.navigation_bitrate to BITRATE,
 
             R.id.navigation_angle to ANGLE,
 

@@ -10,6 +10,8 @@
 
     <string name="pref_about">Sur</string>
 
+    <string name="pref_version">Version</string>
+
     <string name="pref_developer">Développeur</string>
 
     <string name="action_clear">Clair</string>
@@ -39,6 +41,8 @@
     <string name="navigation_fuel">Carburant</string>
 
     <string name="navigation_storage">Stockage</string>
+
+    <string name="navigation_bitrate">Débit binaire</string>
 
     <string name="navigation_angle">Angle</string>
 
@@ -314,6 +318,40 @@
 
     <string name="pebibyte">pebibyte</string>
 
+    <!--BITRATE-->
+
+    <string name="kilobit_per_second">kilobit par seconde</string>
+
+    <string name="kibibit_per_second">kibibit par seconde</string>
+
+    <string name="kilobyte_per_second">kilobyte par seconde</string>
+
+    <string name="kibibyte_per_second">kibibyte par seconde</string>
+
+    <string name="megabit_per_second">megabit par seconde</string>
+
+    <string name="mebibit_per_second">mebibit par seconde</string>
+
+    <string name="megabyte_per_second">megabyte par seconde</string>
+
+    <string name="mebibyte_per_second">mebibyte par seconde</string>
+
+    <string name="gigabit_per_second">gigabit par seconde</string>
+
+    <string name="gibibit_per_second">gibibit par seconde</string>
+
+    <string name="gigabyte_per_second">gigabyte par seconde</string>
+
+    <string name="gibibyte_per_second">gibibyte par seconde</string>
+
+    <string name="terabit_per_second">terabit par seconde</string>
+
+    <string name="tebibit_per_second">tebibit par seconde</string>
+
+    <string name="terabyte_per_second">terabyte par seconde</string>
+
+    <string name="tebibyte_per_second">tebibyte par seconde</string>
+    
     <!--ANGLE-->
 
     <string name="radian">radian</string>
