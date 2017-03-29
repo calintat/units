@@ -1,0 +1,5 @@
+<full-backup-content>
+
+    <exclude domain="file" path="instant-run" />
+
+</full-backup-content>
