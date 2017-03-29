@@ -1,9 +1,9 @@
 package com.calintat.units.activities
 
 import android.os.Bundle
-import android.preference.PreferenceFragment
 import android.support.v7.app.AppCompatActivity
 import com.calintat.units.R
+import com.github.calintat.Alps.populateWithPreferences
 import kotlinx.android.synthetic.main.activity_settings.*
 
 class SettingsActivity : AppCompatActivity() {
@@ -20,16 +20,6 @@ class SettingsActivity : AppCompatActivity() {
 
         toolbar.setNavigationOnClickListener { finish() }
 
-        fragmentManager.beginTransaction().replace(R.id.fragment, SettingsFragment()).commit()
-    }
-
-    class SettingsFragment : PreferenceFragment() {
-
-        override fun onCreate(savedInstanceState: Bundle?) {
-
-            super.onCreate(savedInstanceState)
-
-            addPreferencesFromResource(R.xml.prefs)
-        }
+        populateWithPreferences(R.id.fragment, R.xml.preferences)
     }
 }
