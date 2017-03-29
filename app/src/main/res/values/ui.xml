@@ -1,0 +1,25 @@
+<resources>
+
+    <style name="app_theme" parent="Theme.AppCompat.DayNight.DarkActionBar" >
+
+        <item name="windowActionBar">false</item>
+
+        <item name="windowNoTitle">true</item>
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+
+    </style>
+
+    <dimen name="app_bar_height">168dp</dimen>
+
+    <dimen name="card_view_margin_top">72dp</dimen>
+
+    <dimen name="card_view_margin_start">16dp</dimen>
+
+    <dimen name="card_view_margin_end">16dp</dimen>
+
+    <dimen name="card_view_margin_bottom">16dp</dimen>
+
+</resources>
