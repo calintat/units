@@ -15,10 +15,6 @@
             android:name=".activities.MainActivity"
             android:windowSoftInputMode="stateHidden" >
 
-            <meta-data
-                android:name="android.app.shortcuts"
-                android:resource="@xml/shortcuts" />
-
             <intent-filter>
 
                 <action
