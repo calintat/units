@@ -3,14 +3,14 @@ package com.calintat.units.recycler
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.widget.TextView
-
 import com.calintat.units.R
+import org.jetbrains.anko.find
 
 class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-    val num = itemView.findViewById(R.id.list_item_num) as TextView
+    internal val num = itemView.find<TextView>(R.id.list_item_num)
 
-    val str = itemView.findViewById(R.id.list_item_str) as TextView
+    internal val str = itemView.find<TextView>(R.id.list_item_str)
 
-    val sym = itemView.findViewById(R.id.list_item_sym) as TextView
+    internal val sym = itemView.find<TextView>(R.id.list_item_sym)
 }
