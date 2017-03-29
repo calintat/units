@@ -1,26 +1,28 @@
 <resources>
 
-    <string name="clipboard">Copiat în clipboard</string>
+    <!--ACTIONS-->
 
-    <string name="enter_input">Introduceţi o valoare</string>
+    <string name="action_clear_input">Ștergeți input</string>
 
-    <string name="pref_advanced">Avansat</string>
+    <string name="action_add_to_favourites">Adăugati la favorite</string>
 
-    <string name="pref_dark_theme">Temă întunecată</string>
+    <string name="action_remove_from_favourites">Eliminați din favorite</string>
 
-    <string name="pref_about">Despre</string>
+    <!--ERRORS-->
 
-    <string name="pref_version">Versiune</string>
+    <string name="err_add_to_favourites">Maxim 4 favorite</string>
 
-    <string name="pref_developer">Dezvoltator</string>
+    <!--MESSAGES-->
 
-    <string name="action_clear">Ștergeți</string>
+    <string name="msg_clipboard">Copiat în clipboard</string>
 
-    <string name="navigation_settings">Setări</string>
+    <string name="msg_input">Introduceţi o intrare</string>
 
-    <string name="navigation_feedback">Trimiteți feedback</string>
+    <string name="msg_add_to_favourites">Adăugat la favorite</string>
 
-    <!--QUANTITIES-->
+    <string name="msg_remove_from_favourites">Eliminat din favorite</string>
+
+    <!--CONVERTER-->
 
     <string name="navigation_length">Lungime</string>
 
@@ -77,6 +79,22 @@
     <string name="navigation_radiation">Radiație</string>
 
     <string name="navigation_radioactivity">Radioactivitate</string>
+
+    <string name="navigation_settings">Setări</string>
+
+    <string name="navigation_feedback">Trimiteți feedback</string>
+
+    <!--PREFERENCES-->
+
+    <string name="pref_advanced">Avansat</string>
+
+    <string name="pref_dark_theme">Temă întunecată</string>
+
+    <string name="pref_about">Despre</string>
+
+    <string name="pref_version">Versiune</string>
+
+    <string name="pref_developer">Dezvoltator</string>
 
     <!--LENGTH-->
 
@@ -351,7 +369,7 @@
     <string name="terabyte_per_second">terabyte pe secundă</string>
 
     <string name="tebibyte_per_second">tebibyte pe secundă</string>
-    
+
     <!--ANGLE-->
 
     <string name="radian">radian</string>

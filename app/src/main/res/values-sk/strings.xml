@@ -1,26 +1,28 @@
 <resources>
 
-    <string name="clipboard">Bol skopírovaný do schránky</string>
+    <!--ACTIONS-->
 
-    <string name="enter_input">Vstúpiť vstup</string>
+    <string name="action_clear_input">Vymazať vstup</string>
 
-    <string name="pref_advanced">Pokročilý</string>
+    <string name="action_add_to_favourites">Pridať do obľúbených</string>
 
-    <string name="pref_dark_theme">Dark tému</string>
+    <string name="action_remove_from_favourites">Odstrániť z obľúbených</string>
 
-    <string name="pref_about">O aplikácii</string>
+    <!--ERRORS-->
 
-    <string name="pref_version">Verzia</string>
+    <string name="err_add_to_favourites">Maximálne 4 obľúbené</string>
 
-    <string name="pref_developer">Vývojka</string>
+    <!--MESSAGES-->
 
-    <string name="action_clear">Jasný</string>
+    <string name="msg_clipboard">Bol skopírovaný do schránky</string>
 
-    <string name="navigation_settings">Nastavenie</string>
+    <string name="msg_input">Vstúpiť vstup</string>
 
-    <string name="navigation_feedback">Poslať spätnú väzbu</string>
+    <string name="msg_add_to_favourites">Pridané do obľúbených</string>
 
-    <!--QUANTITIES-->
+    <string name="msg_remove_from_favourites">Odstránenie z obľúbených</string>
+
+    <!--NAVIGATION-->
 
     <string name="navigation_length">Dĺžka</string>
 
@@ -77,6 +79,22 @@
     <string name="navigation_radiation">Radiácie</string>
 
     <string name="navigation_radioactivity">Rádioaktivita</string>
+
+    <string name="navigation_settings">Nastavenie</string>
+
+    <string name="navigation_feedback">Poslať spätnú väzbu</string>
+
+    <!--PREFERENCES-->
+
+    <string name="pref_advanced">Pokročilý</string>
+
+    <string name="pref_dark_theme">Dark tému</string>
+
+    <string name="pref_about">O aplikácii</string>
+
+    <string name="pref_version">Verzia</string>
+
+    <string name="pref_developer">Vývojka</string>
 
     <!--LENGTH-->
 
@@ -351,7 +369,7 @@
     <string name="terabyte_per_second">terabyte za sekundu</string>
 
     <string name="tebibyte_per_second">tebibyte za sekundu</string>
-    
+
     <!--ANGLE-->
 
     <string name="radian">radian</string>

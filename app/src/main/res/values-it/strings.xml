@@ -1,26 +1,28 @@
 <resources>
 
-    <string name="clipboard">Copiato negli appunti</string>
+    <!--ACTIONS-->
 
-    <string name="enter_input">Inserisci ingresso</string>
+    <string name="action_clear_input">Cancella l\'ingresso</string>
 
-    <string name="pref_advanced">Avanzate</string>
+    <string name="action_add_to_favourites">Aggiungi ai preferiti</string>
 
-    <string name="pref_dark_theme">Tema scuro</string>
+    <string name="action_remove_from_favourites">Rimuovere dai preferiti</string>
 
-    <string name="pref_about">Di</string>
+    <!--ERRORS-->
 
-    <string name="pref_version">Versione</string>
+    <string name="err_add_to_favourites">Massimo 4 preferiti</string>
 
-    <string name="pref_developer">Sviluppatore</string>
+    <!--MESSAGES-->
 
-    <string name="action_clear">Pulire</string>
+    <string name="msg_clipboard">Copiato negli appunti</string>
 
-    <string name="navigation_settings">Impostazioni</string>
+    <string name="msg_input">Inserisci ingresso</string>
 
-    <string name="navigation_feedback">Invia feedback</string>
+    <string name="msg_add_to_favourites">Aggiunto ai preferiti</string>
 
-    <!--QUANTITIES-->
+    <string name="msg_remove_from_favourites">Rimosso dai preferiti</string>
+
+    <!--NAVIGATION-->
 
     <string name="navigation_length">Lunghezza</string>
 
@@ -77,6 +79,22 @@
     <string name="navigation_radiation">Radiazione</string>
 
     <string name="navigation_radioactivity">Radioattività</string>
+
+    <string name="navigation_settings">Impostazioni</string>
+
+    <string name="navigation_feedback">Invia feedback</string>
+
+    <!--PREFERENCES-->
+
+    <string name="pref_advanced">Avanzate</string>
+
+    <string name="pref_dark_theme">Tema scuro</string>
+
+    <string name="pref_about">Info</string>
+
+    <string name="pref_version">Versione</string>
+
+    <string name="pref_developer">Sviluppatore</string>
 
     <!--LENGTH-->
 
@@ -218,7 +236,7 @@
 
     <string name="week">settimana</string>
 
-    <string name="month">messe</string>
+    <string name="month">mese</string>
 
     <string name="year">anno</string>
 
@@ -351,7 +369,7 @@
     <string name="terabyte_per_second">terabyte al secondo</string>
 
     <string name="tebibyte_per_second">tebibyte al secondo</string>
-    
+
     <!--ANGLE-->
 
     <string name="radian">radiante</string>

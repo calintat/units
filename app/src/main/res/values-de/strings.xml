@@ -1,26 +1,28 @@
 <resources>
 
-    <string name="clipboard">In die Zwischenablage kopiert</string>
+    <!--ACTIONS-->
 
-    <string name="enter_input">Eingabe eingeben</string>
+    <string name="action_clear_input">Klare Eingabe</string>
 
-    <string name="pref_advanced">Fortgeschritten</string>
+    <string name="action_add_to_favourites">Zu Favoriten hinzufügen</string>
 
-    <string name="pref_dark_theme">Dunkles Thema</string>
+    <string name="action_remove_from_favourites">Von den Favoriten entfernen</string>
 
-    <string name="pref_about">Etwa</string>
+    <!--ERRORS-->
 
-    <string name="pref_version">Version</string>
+    <string name="err_add_to_favourites">Maximal 4 Favoriten</string>
 
-    <string name="pref_developer">Entwickler</string>
+    <!--MESSAGES-->
 
-    <string name="action_clear">Löschen</string>
+    <string name="msg_clipboard">In die Zwischenablage kopiert</string>
 
-    <string name="navigation_settings">Einstellungen</string>
+    <string name="msg_input">Eingabe eingeben</string>
 
-    <string name="navigation_feedback">Feedback geben</string>
+    <string name="msg_add_to_favourites">Zu Favoriten hinzugefügt</string>
 
-    <!--QUANTITIES-->
+    <string name="msg_remove_from_favourites">Von Favoriten entfernt</string>
+
+    <!--NAVIGATION-->
 
     <string name="navigation_length">Länge</string>
 
@@ -77,6 +79,22 @@
     <string name="navigation_radiation">Strahlendosis</string>
 
     <string name="navigation_radioactivity">Radioaktivität</string>
+
+    <string name="navigation_settings">Einstellungen</string>
+
+    <string name="navigation_feedback">Feedback geben</string>
+
+    <!--PREFERENCES-->
+
+    <string name="pref_advanced">Fortgeschritten</string>
+
+    <string name="pref_dark_theme">Dunkles Thema</string>
+
+    <string name="pref_about">Etwa</string>
+
+    <string name="pref_version">Version</string>
+
+    <string name="pref_developer">Entwickler</string>
 
     <!--LENGTH-->
 
@@ -351,7 +369,7 @@
     <string name="terabyte_per_second">Terabyte pro Sekunde</string>
 
     <string name="tebibyte_per_second">Tebibyte pro Sekunde</string>
-    
+
     <!--ANGLE-->
 
     <string name="radian">Radiant</string>

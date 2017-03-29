@@ -1,26 +1,28 @@
 <resources>
 
-    <string name="clipboard">Byl zkopírován do schránky</string>
+    <!--ACTIONS-->
 
-    <string name="enter_input">Vstoupit vstup</string>
+    <string name="action_clear_input">Vymazat vstup</string>
 
-    <string name="pref_advanced">Moderní</string>
+    <string name="action_add_to_favourites">Přidat do oblíbených</string>
 
-    <string name="pref_dark_theme">Dark téma</string>
+    <string name="action_remove_from_favourites">Odstranit z oblíbených</string>
 
-    <string name="pref_about">O aplikaci</string>
+    <!--ERRORS-->
 
-    <string name="pref_version">Verze</string>
+    <string name="err_add_to_favourites">Maximálně 4 oblíbené</string>
 
-    <string name="pref_developer">Vývojář</string>
+    <!--MESSAGES-->
 
-    <string name="action_clear">Jasný</string>
+    <string name="msg_clipboard">Byl zkopírován do schránky</string>
 
-    <string name="navigation_settings">Nastavení</string>
+    <string name="msg_input">Vstoupit vstup</string>
 
-    <string name="navigation_feedback">Poslat zpětnou vazbu</string>
+    <string name="msg_add_to_favourites">Přidáno do oblíbených</string>
 
-    <!--QUANTITIES-->
+    <string name="msg_remove_from_favourites">Odstranění z oblíbených</string>
+
+    <!--NAVIGATION-->
 
     <string name="navigation_length">Délka</string>
 
@@ -77,6 +79,22 @@
     <string name="navigation_radiation">Záření</string>
 
     <string name="navigation_radioactivity">Radioaktivita</string>
+
+    <string name="navigation_settings">Nastavení</string>
+
+    <string name="navigation_feedback">Poslat zpětnou vazbu</string>
+
+    <!--PREFERENCES-->
+
+    <string name="pref_advanced">Moderní</string>
+
+    <string name="pref_dark_theme">Dark téma</string>
+
+    <string name="pref_about">O aplikaci</string>
+
+    <string name="pref_version">Verze</string>
+
+    <string name="pref_developer">Vývojář</string>
 
     <!--LENGTH-->
 
@@ -349,7 +367,7 @@
     <string name="terabyte_per_second">terabajt za sekundu</string>
 
     <string name="tebibyte_per_second">tebibajt za sekundu</string>
-    
+
     <!--ANGLE-->
 
     <string name="radian">radián</string>
@@ -557,6 +575,7 @@
     <string name="curie">curie</string>
 
     <string name="rutherford">rutherford</string>
+
     <string name="angstrom">angstrom</string>
 
 </resources>
