@@ -1,24 +1,26 @@
 package com.calintat.units.utils
 
+import android.support.annotation.ColorRes
+import android.support.annotation.DrawableRes
+import android.support.annotation.IdRes
+import android.support.annotation.StringRes
 import com.calintat.units.R
 import com.calintat.units.R.string.*
 
 object Converter {
 
-    fun get(id: Int) = idMap[id]!!
-
-    fun getShortcut(action: String, defId: Int) = shortcutMap[action] ?: get(defId)
+    fun get(@IdRes id: Int) = idMap[id] ?: throw NoSuchElementException("Identifier not found")
 
     //----------------------------------------------------------------------------------------------
 
-    class Unit(val name: Int, val symbol: Int, val a: Double = 1.0, val b: Double = 0.0) {
+    class Unit(@StringRes val name: Int, @StringRes val symbol: Int, val a: Double = 1.0, val b: Double = 0.0, val n: Double = 1.0) {
 
-        fun selfToBase(x: Double) = a * x + b
+        fun selfToBase(x: Double) = a * Math.pow(x, n) + b
 
-        fun baseToSelf(x: Double) = (x - b) / a
+        fun baseToSelf(y: Double) = Math.pow((y - b) / a, 1/n)
     }
 
-    class Quantity(val id: Int, val color: Int, val colorDark: Int, val units: Array<Unit>)
+    class Quantity(@IdRes val id: Int, @StringRes val name: Int, @ColorRes val color: Int, @ColorRes val colorDark: Int, @DrawableRes val shortcutIcon: Int, val units: Array<Unit>, val rank: Int)
 
     //----------------------------------------------------------------------------------------------
 
@@ -984,303 +986,466 @@ object Converter {
 
             RUTHERFORD
     )
+
     //----------------------------------------------------------------------------------------------
 
     private val LENGTH = Quantity(
 
             id = R.id.navigation_length,
 
-            color = R.color.blue,
+            name = R.string.navigation_length,
 
-            colorDark = R.color.blue_dark,
+            color = R.color.blue_500,
 
-            units = UNITS_LENGTH
+            colorDark = R.color.blue_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_length,
+
+            units = UNITS_LENGTH,
+            
+            rank = 100
     )
 
     private val AREA = Quantity(
 
             id = R.id.navigation_area,
 
-            color = R.color.green,
+            name = R.string.navigation_area,
 
-            colorDark = R.color.green_dark,
+            color = R.color.green_500,
 
-            units = UNITS_AREA
+            colorDark = R.color.green_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_area,
+
+            units = UNITS_AREA,
+            
+            rank = 101
     )
 
     private val VOLUME = Quantity(
 
             id = R.id.navigation_volume,
 
-            color = R.color.light_blue,
+            name = R.string.navigation_volume,
 
-            colorDark = R.color.light_blue_dark,
+            color = R.color.light_blue_500,
 
-            units = UNITS_VOLUME
+            colorDark = R.color.light_blue_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_volume,
+
+            units = UNITS_VOLUME,
+            
+            rank = 102
     )
 
     private val MASS = Quantity(
 
             id = R.id.navigation_mass,
 
-            color = R.color.red,
+            name = R.string.navigation_mass,
 
-            colorDark = R.color.red_dark,
+            color = R.color.red_500,
 
-            units = UNITS_MASS
+            colorDark = R.color.red_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_mass,
+
+            units = UNITS_MASS,
+            
+            rank = 103
     )
 
     private val TIME = Quantity(
 
             id = R.id.navigation_time,
 
-            color = R.color.amber,
+            name = R.string.navigation_time,
 
-            colorDark = R.color.amber_dark,
+            color = R.color.amber_500,
 
-            units = UNITS_TIME
+            colorDark = R.color.amber_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_time,
+
+            units = UNITS_TIME,
+            
+            rank = 104
     )
 
     private val SPEED = Quantity(
 
             id = R.id.navigation_speed,
 
-            color = R.color.deep_orange,
+            name = R.string.navigation_speed,
 
-            colorDark = R.color.deep_orange_dark,
+            color = R.color.deep_orange_500,
 
-            units = UNITS_SPEED
+            colorDark = R.color.deep_orange_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_speed,
+
+            units = UNITS_SPEED,
+            
+            rank = 105
     )
 
     private val TEMPERATURE = Quantity(
 
             id = R.id.navigation_temperature,
 
-            color = R.color.cyan,
+            name = R.string.navigation_temperature,
 
-            colorDark = R.color.cyan_dark,
+            color = R.color.cyan_500,
 
-            units = UNITS_TEMPERATURE
+            colorDark = R.color.cyan_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_temperature,
+
+            units = UNITS_TEMPERATURE,
+            
+            rank = 106
     )
 
     private val FUEL = Quantity(
 
             id = R.id.navigation_fuel,
 
-            color = R.color.lime,
+            name = R.string.navigation_fuel,
 
-            colorDark = R.color.lime_dark,
+            color = R.color.lime_500,
 
-            units = UNITS_FUEL
+            colorDark = R.color.lime_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_fuel,
+
+            units = UNITS_FUEL,
+            
+            rank = 107
     )
 
     private val STORAGE = Quantity(
 
             id = R.id.navigation_storage,
 
-            color = R.color.teal,
+            name = R.string.navigation_storage,
 
-            colorDark = R.color.teal_dark,
+            color = R.color.teal_500,
 
-            units = UNITS_STORAGE
+            colorDark = R.color.teal_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_storage,
+
+            units = UNITS_STORAGE,
+            
+            rank = 108
     )
 
     private val BITRATE = Quantity(
 
             id = R.id.navigation_bitrate,
 
-            color = R.color.amber,
+            name = R.string.navigation_bitrate,
 
-            colorDark = R.color.amber_dark,
+            color = R.color.amber_500,
 
-            units = UNITS_BITRATE
+            colorDark = R.color.amber_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_bitrate,
+
+            units = UNITS_BITRATE,
+            
+            rank = 109
     )
 
     private val ANGLE = Quantity(
 
             id = R.id.navigation_angle,
 
-            color = R.color.red,
+            name = R.string.navigation_angle,
 
-            colorDark = R.color.red_dark,
+            color = R.color.red_500,
 
-            units = UNITS_ANGLE
+            colorDark = R.color.red_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_angle,
+
+            units = UNITS_ANGLE,
+            
+            rank = 200
     )
 
     private val DENSITY = Quantity(
 
             id = R.id.navigation_density,
 
-            color = R.color.blue,
+            name = R.string.navigation_density,
 
-            colorDark = R.color.blue_dark,
+            color = R.color.blue_500,
 
-            units = UNITS_DENSITY
+            colorDark = R.color.blue_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_density,
+
+            units = UNITS_DENSITY,
+            
+            rank = 201
     )
 
     private val FREQUENCY = Quantity(
 
             id = R.id.navigation_frequency,
 
-            color = R.color.green,
+            name = R.string.navigation_frequency,
 
-            colorDark = R.color.green_dark,
+            color = R.color.green_500,
 
-            units = UNITS_FREQUENCY
+            colorDark = R.color.green_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_frequency,
+
+            units = UNITS_FREQUENCY,
+            
+            rank = 202
     )
 
     private val FLOW = Quantity(
 
             id = R.id.navigation_flow,
 
-            color = R.color.light_blue,
+            name = R.string.navigation_flow,
 
-            colorDark = R.color.light_blue_dark,
+            color = R.color.light_blue_500,
 
-            units = UNITS_FLOW
+            colorDark = R.color.light_blue_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_flow,
+
+            units = UNITS_FLOW,
+            
+            rank = 203
     )
 
     private val ACCELERATION = Quantity(
 
             id = R.id.navigation_acceleration,
 
-            color = R.color.orange,
+            name = R.string.navigation_acceleration,
 
-            colorDark = R.color.orange_dark,
+            color = R.color.orange_500,
 
-            units = UNITS_ACCELERATION
+            colorDark = R.color.orange_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_acceleration,
+
+            units = UNITS_ACCELERATION,
+            
+            rank = 204
     )
 
     private val FORCE = Quantity(
 
             id = R.id.navigation_force,
 
-            color = R.color.teal,
+            name = R.string.navigation_force,
 
-            colorDark = R.color.teal_dark,
+            color = R.color.teal_500,
 
-            units = UNITS_FORCE
+            colorDark = R.color.teal_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_force,
+
+            units = UNITS_FORCE,
+            
+            rank = 205
     )
 
     private val PRESSURE = Quantity(
 
             id = R.id.navigation_pressure,
 
-            color = R.color.cyan,
+            name = R.string.navigation_pressure,
 
-            colorDark = R.color.cyan_dark,
+            color = R.color.cyan_500,
 
-            units = UNITS_PRESSURE
+            colorDark = R.color.cyan_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_pressure,
+
+            units = UNITS_PRESSURE,
+            
+            rank = 206
     )
 
     private val TORQUE = Quantity(
 
             id = R.id.navigation_torque,
 
-            color = R.color.yellow,
+            name = R.string.navigation_torque,
 
-            colorDark = R.color.yellow_dark,
+            color = R.color.yellow_500,
 
-            units = UNITS_TORQUE
+            colorDark = R.color.yellow_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_torque,
+
+            units = UNITS_TORQUE,
+            
+            rank = 207
     )
 
     private val ENERGY = Quantity(
 
             id = R.id.navigation_energy,
 
-            color = R.color.green,
+            name = R.string.navigation_energy,
 
-            colorDark = R.color.green_dark,
+            color = R.color.green_500,
 
-            units = UNITS_ENERGY
+            colorDark = R.color.green_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_energy,
+
+            units = UNITS_ENERGY,
+            
+            rank = 208
     )
 
     private val POWER = Quantity(
 
             id = R.id.navigation_power,
 
-            color = R.color.red,
+            name = R.string.navigation_power,
 
-            colorDark = R.color.red_dark,
+            color = R.color.red_500,
 
-            units = UNITS_POWER
+            colorDark = R.color.red_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_power,
+
+            units = UNITS_POWER,
+            
+            rank = 209
     )
 
     private val CURRENT = Quantity(
 
             id = R.id.navigation_current,
 
-            color = R.color.yellow,
+            name = R.string.navigation_current,
 
-            colorDark = R.color.yellow_dark,
+            color = R.color.yellow_500,
 
-            units = UNITS_CURRENT
+            colorDark = R.color.yellow_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_current,
+
+            units = UNITS_CURRENT,
+            
+            rank = 210
     )
 
     private val CHARGE = Quantity(
 
             id = R.id.navigation_charge,
 
-            color = R.color.light_green,
+            name = R.string.navigation_charge,
 
-            colorDark = R.color.light_green_dark,
+            color = R.color.light_green_500,
 
-            units = UNITS_CHARGE
+            colorDark = R.color.light_green_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_charge,
+
+            units = UNITS_CHARGE,
+
+            rank = 211
     )
 
     private val VOLTAGE = Quantity(
 
             id = R.id.navigation_voltage,
 
-            color = R.color.orange,
+            name = R.string.navigation_voltage,
 
-            colorDark = R.color.orange_dark,
+            color = R.color.orange_500,
 
-            units = UNITS_VOLTAGE
+            colorDark = R.color.orange_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_voltage,
+
+            units = UNITS_VOLTAGE,
+
+            rank = 212
     )
 
     private val LUMINANCE = Quantity(
 
             id = R.id.navigation_luminance,
 
-            color = R.color.amber,
+            name = R.string.navigation_luminance,
 
-            colorDark = R.color.amber_dark,
+            color = R.color.amber_500,
 
-            units = UNITS_LUMINANCE
+            colorDark = R.color.amber_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_luminance,
+
+            units = UNITS_LUMINANCE,
+
+            rank = 213
     )
 
     private val ILLUMINANCE = Quantity(
 
             id = R.id.navigation_illuminance,
 
-            color = R.color.lime,
+            name = R.string.navigation_illuminance,
 
-            colorDark = R.color.lime_dark,
+            color = R.color.lime_500,
 
-            units = UNITS_ILLUMINANCE
+            colorDark = R.color.lime_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_illuminance,
+
+            units = UNITS_ILLUMINANCE,
+
+            rank = 214
     )
 
     private val RADIATION = Quantity(
 
             id = R.id.navigation_radiation,
 
-            color = R.color.deep_orange,
+            name = R.string.navigation_radiation,
 
-            colorDark = R.color.deep_orange_dark,
+            color = R.color.deep_orange_500,
 
-            units = UNITS_RADIATION
+            colorDark = R.color.deep_orange_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_radiation,
+
+            units = UNITS_RADIATION,
+
+            rank = 215
     )
 
     private val RADIOACTIVITY = Quantity(
 
             id = R.id.navigation_radioactivity,
 
-            color = R.color.yellow,
+            name = R.string.navigation_radioactivity,
 
-            colorDark = R.color.yellow_dark,
+            color = R.color.yellow_500,
 
-            units = UNITS_RADIOACTIVITY
+            colorDark = R.color.yellow_700,
+
+            shortcutIcon = R.drawable.ic_shortcut_radioactivity,
+
+            units = UNITS_RADIOACTIVITY,
+
+            rank = 216
     )
 
     //----------------------------------------------------------------------------------------------
@@ -1340,26 +1505,5 @@ object Converter {
             R.id.navigation_radiation to RADIATION,
 
             R.id.navigation_radioactivity to RADIOACTIVITY
-    )
-
-    private val shortcutMap = hashMapOf(
-
-            "com.calintat.units.SHORTCUT_LENGTH" to LENGTH,
-
-            "com.calintat.units.SHORTCUT_AREA" to AREA,
-
-            "com.calintat.units.SHORTCUT_VOLUME" to VOLUME,
-
-            "com.calintat.units.SHORTCUT_MASS" to MASS,
-
-            "com.calintat.units.SHORTCUT_TIME" to TIME,
-
-            "com.calintat.units.SHORTCUT_SPEED" to SPEED,
-
-            "com.calintat.units.SHORTCUT_TEMPERATURE" to TEMPERATURE,
-
-            "com.calintat.units.SHORTCUT_FUEL" to FUEL,
-
-            "com.calintat.units.SHORTCUT_STORAGE" to STORAGE
     )
 }
