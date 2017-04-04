@@ -40,6 +40,6 @@ class Adapter(private val context: Context) : RecyclerView.Adapter<ViewHolder>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = with(context) {
 
-        ViewHolder(layoutInflater.inflate(R.layout.converter_list_item, parent, false))
+        ViewHolder(layoutInflater.inflate(R.layout.recycler_list_item, parent, false))
     }
 }
