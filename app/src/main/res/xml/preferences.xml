@@ -1,5 +1,5 @@
 <PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <SwitchPreference
         android:defaultValue="true"
@@ -15,7 +15,7 @@
         android:title="@string/pref_about" >
 
         <Preference
-            android:title="Version"
+            android:title="@string/pref_version"
             android:summary="@string/app_version" >
 
             <intent
