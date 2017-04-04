@@ -16,14 +16,20 @@ import android.text.Editable
 import android.widget.EditText
 import com.calintat.units.R
 import com.calintat.units.recycler.Adapter
+import com.calintat.units.ui.MainUI
+import com.calintat.units.ui.MainUI.drawerLayout
+import com.calintat.units.ui.MainUI.editText
+import com.calintat.units.ui.MainUI.navigationView
+import com.calintat.units.ui.MainUI.recyclerView
+import com.calintat.units.ui.MainUI.textView1
+import com.calintat.units.ui.MainUI.textView2
+import com.calintat.units.ui.MainUI.toolbar
 import com.calintat.units.utils.Converter
 import com.calintat.units.utils.ShortcutUtils
-import com.github.calintat.Alps
-import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.anko.configuration
-import org.jetbrains.anko.startActivity
-import org.jetbrains.anko.textChangedListener
-import org.jetbrains.anko.toast
+import com.github.calintat.getBoolean
+import com.github.calintat.getInt
+import com.github.calintat.putInt
+import org.jetbrains.anko.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -43,9 +49,7 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_main)
-
-        Alps.init(this)
+        MainUI.setContentView(this)
 
         setTheme()
 
@@ -99,7 +103,7 @@ class MainActivity : AppCompatActivity() {
 
         configuration(fromSdk = 25) { favourites = ShortcutUtils.getShortcuts(this) }
 
-        val defaultId = Alps.getInt(KEY_ID, R.id.navigation_length)
+        val defaultId = getInt(KEY_ID, R.id.navigation_length)
 
         if (savedInstanceState == null) { /* opened from launcher or app shortcut */
 
@@ -115,7 +119,7 @@ class MainActivity : AppCompatActivity() {
 
         this.id = id
 
-        Alps.putInt(KEY_ID, id)
+        putInt(KEY_ID, id)
 
         refreshActionMenu()
 
@@ -143,7 +147,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setTheme() {
 
-        when (Alps.getBoolean("pref_dark_theme")) {
+        when (getBoolean("pref_dark_theme")) {
 
             true -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
 
@@ -173,7 +177,7 @@ class MainActivity : AppCompatActivity() {
 
         toolbar.setNavigationOnClickListener { drawerLayout.openDrawer(navigationView) }
 
-        toolbar.overflowIcon = ContextCompat.getDrawable(this, R.drawable.ic_overflow)
+        toolbar.overflowIcon = ContextCompat.getDrawable(this, R.drawable.ic_action_overflow)
     }
 
     private fun setMainContent() {
@@ -259,7 +263,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun refreshNavigationView() {
 
-        navigationView.menu.setGroupVisible(R.id.advanced, Alps.getBoolean("pref_advanced"))
+        navigationView.menu.setGroupVisible(R.id.advanced, getBoolean("pref_advanced"))
     }
 
     private fun gotoFeedback() {
@@ -275,7 +279,7 @@ class MainActivity : AppCompatActivity() {
 
         val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
 
-        clipboardManager.primaryClip = ClipData.newPlainText("conversion num", text)
+        clipboardManager.primaryClip = ClipData.newPlainText("conversion output", text)
 
         toast(R.string.msg_clipboard)
     }
