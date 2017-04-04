@@ -1,10 +1,12 @@
 package com.calintat.units.activities
 
 import android.os.Bundle
+import android.preference.PreferenceFragment
 import android.support.v7.app.AppCompatActivity
 import com.calintat.units.R
-import com.github.calintat.Alps.populateWithPreferences
-import kotlinx.android.synthetic.main.activity_settings.*
+import com.calintat.units.ui.SettingsUI
+import com.calintat.units.ui.SettingsUI.toolbar
+import org.jetbrains.anko.setContentView
 
 class SettingsActivity : AppCompatActivity() {
 
@@ -12,7 +14,7 @@ class SettingsActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_settings)
+        SettingsUI.setContentView(this)
 
         toolbar.setTitle(R.string.navigation_settings)
 
@@ -20,6 +22,16 @@ class SettingsActivity : AppCompatActivity() {
 
         toolbar.setNavigationOnClickListener { finish() }
 
-        populateWithPreferences(R.id.fragment, R.xml.preferences)
+        fragmentManager.beginTransaction().add(SettingsUI.FRAGMENT, SettingsFragment()).commit()
+    }
+
+    class SettingsFragment : PreferenceFragment() {
+
+        override fun onCreate(savedInstanceState: Bundle?) {
+
+            super.onCreate(savedInstanceState)
+
+            addPreferencesFromResource(R.xml.preferences)
+        }
     }
 }
