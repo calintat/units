@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import com.calintat.units.R
 import com.calintat.units.ui.SettingsUI
 import com.calintat.units.ui.SettingsUI.toolbar
+import com.github.calintat.populateWithPreferences
 import org.jetbrains.anko.setContentView
 
 class SettingsActivity : AppCompatActivity() {
@@ -22,16 +23,6 @@ class SettingsActivity : AppCompatActivity() {
 
         toolbar.setNavigationOnClickListener { finish() }
 
-        fragmentManager.beginTransaction().add(SettingsUI.FRAGMENT, SettingsFragment()).commit()
-    }
-
-    class SettingsFragment : PreferenceFragment() {
-
-        override fun onCreate(savedInstanceState: Bundle?) {
-
-            super.onCreate(savedInstanceState)
-
-            addPreferencesFromResource(R.xml.preferences)
-        }
+        populateWithPreferences(SettingsUI.FRAGMENT, R.xml.preferences)
     }
 }
