@@ -4,6 +4,7 @@ import android.graphics.Color
 import android.view.View
 import android.widget.Toolbar
 import com.calintat.units.activities.SettingsActivity
+import com.github.calintat.Colorful
 import org.jetbrains.anko.*
 import org.jetbrains.anko.design.appBarLayout
 import org.jetbrains.anko.design.coordinatorLayout
@@ -26,7 +27,7 @@ object SettingsUI : AnkoComponent<SettingsActivity> {
 
                     toolbar = toolbar {
 
-                        setTitleTextColor(Color.WHITE)
+                        setTitleTextColor(Colorful.white)
                     }
                 }
 
