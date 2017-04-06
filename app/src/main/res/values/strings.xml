@@ -708,7 +708,7 @@
 
     <string translatable="false" name="symbol_gigahertz">GHz</string>
 
-    <string translatable="false" name="symbol_revolutions_per_minute">rpm</string>
+    <string translatable="false" name="symbol_revolution_per_minute">rpm</string>
 
     <!--FLOW-->
 
