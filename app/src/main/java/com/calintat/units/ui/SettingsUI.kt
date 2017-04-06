@@ -1,8 +1,7 @@
 package com.calintat.units.ui
 
-import android.graphics.Color
-import android.view.View
 import android.widget.Toolbar
+import com.calintat.units.R
 import com.calintat.units.activities.SettingsActivity
 import com.github.calintat.Colorful
 import org.jetbrains.anko.*
@@ -10,8 +9,6 @@ import org.jetbrains.anko.design.appBarLayout
 import org.jetbrains.anko.design.coordinatorLayout
 
 object SettingsUI : AnkoComponent<SettingsActivity> {
-
-    internal val FRAGMENT by lazy { View.generateViewId() }
 
     internal lateinit var toolbar: Toolbar
 
@@ -33,7 +30,7 @@ object SettingsUI : AnkoComponent<SettingsActivity> {
 
                 frameLayout {
 
-                    id = FRAGMENT
+                    id = R.id.fragment
                 }
             }
         }
