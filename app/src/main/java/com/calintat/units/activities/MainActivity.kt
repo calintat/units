@@ -272,7 +272,7 @@ class MainActivity : AppCompatActivity() {
 
         id?.let { builder.setToolbarColor(ContextCompat.getColor(this, Converter.get(it).color)) }
 
-        builder.build().launchUrl(this, Uri.parse("https://github.com/calintat/Units/issues"))
+        builder.build().launchUrl(this, Uri.parse("https://github.com/calintat/units/issues"))
     }
 
     private fun copyToClipboard(text: String) {
