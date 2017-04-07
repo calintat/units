@@ -58,7 +58,7 @@ object ShortcutUtils {
 
         ShortcutInfo.Builder(context, it)
 
-                .setShortLabel(context.resources.getString(item.name))
+                .setShortLabel(context.resources.getString(item.shortLabel))
 
                 .setIcon(Icon.createWithResource(context, item.shortcutIcon))
 
