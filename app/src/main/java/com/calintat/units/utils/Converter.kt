@@ -5,1505 +5,832 @@ import android.support.annotation.DrawableRes
 import android.support.annotation.IdRes
 import android.support.annotation.StringRes
 import com.calintat.units.R
-import com.calintat.units.R.string.*
+import kotlin.properties.Delegates
 
 object Converter {
 
-    fun get(@IdRes id: Int) = idMap[id] ?: throw NoSuchElementException("Identifier not found")
+    /**
+     * Data structure to represent a measurement unit such as metres or kilometres.
+     *
+     * To convert from this unit to the corresponding base unit, apply f(x) = [a] x^[n] + [b].
+     *
+     * @param n The exponent in the conversion formula, note that it has to be either +1 or -1.
+     */
+    data class MeasurementUnit(@StringRes val name: Int, @StringRes val symbol: Int, val a: Double, val b: Double, val n: Int) {
 
-    //----------------------------------------------------------------------------------------------
+        /**
+         * Raise a number to either +1 or -1.
+         */
+        private infix fun Double.pow(n: Int) = if (n == 1) this else 1 / this
 
-    class Unit(@StringRes val name: Int, @StringRes val symbol: Int, val a: Double = 1.0, val b: Double = 0.0, val n: Double = 1.0) {
+        /**
+         * Convert [x] from this unit to the base unit.
+         */
+        fun selfToBase(x: Double) = a * (x pow n) + b
 
-        fun selfToBase(x: Double) = a * Math.pow(x, n) + b
-
-        fun baseToSelf(y: Double) = Math.pow((y - b) / a, 1/n)
+        /**
+         * Convert [y] from the base unit to this unit.
+         */
+        fun baseToSelf(y: Double) = ((y - b) / a) pow n
     }
 
-    class Quantity(@IdRes val id: Int, @StringRes val name: Int, @ColorRes val color: Int, @ColorRes val colorDark: Int, @DrawableRes val shortcutIcon: Int, val units: Array<Unit>, val rank: Int)
+    /**
+     * A converter item which represents a physical quantity such as length.
+     *
+     * @param id The identifier of the corresponding menu item.
+     */
+    data class Item(@IdRes val id: Int) {
 
-    //----------------------------------------------------------------------------------------------
+        companion object {
 
-    private val METRE = Unit(metre, symbol_metre)
+            private var counter = 0
+        }
 
-    private val KILOMETRE = Unit(kilometre, symbol_kilometre, 1000.0)
+        /**
+         * The rank of this item which will be used to sort the shortcuts.
+         */
+        internal val rank = counter++
 
-    private val MILE = Unit(mile, symbol_mile, 1609.344)
+        /**
+         * A list of measurement units available for this item.
+         */
+        internal val units = mutableListOf<MeasurementUnit>()
 
-    private val YARD = Unit(yard, symbol_yard, 0.9144)
+        /**
+         * The resource id of the string for the short shortLabel of the shortcut.
+         */
+        internal var shortLabel by Delegates.notNull<@StringRes Int>()
 
-    private val FOOT = Unit(foot, symbol_foot, 0.3048)
+        /**
+         * The resource id of the primary colour.
+         */
+        internal var color by Delegates.notNull<@ColorRes Int>()
 
-    private val INCH = Unit(inch, symbol_inch, 0.0254)
+        /**
+         * The resource id of the dark primary colour.
+         */
+        internal var colorDark by Delegates.notNull<@ColorRes Int>()
 
-    private val CENTIMETRE = Unit(centimetre, symbol_centimetre, 0.01)
+        /**
+         * The resource id of the icon for the app shortcut.
+         */
+        internal var shortcutIcon by Delegates.notNull<@DrawableRes Int>()
 
-    private val MILLIMETRE = Unit(millimetre, symbol_millimetre, 1e-3)
+        /**
+         * Builder function for measurement units which adds them in the list above.
+         */
+        internal fun unit(name: Int, symbol: Int, a: Double = 1.0, b: Double = 0.0, n: Int = 1) {
 
-    private val MICROMETRE = Unit(micrometre, symbol_micrometre, 1e-6)
+            units += MeasurementUnit(name, symbol, a, b, n)
+        }
+    }
 
-    private val ANGSTROM = Unit(angstrom, symbol_angstrom, 1e-10)
+    /**
+     * Get the converter item corresponding to the given identifier.
+     *
+     * @throws Exception if the identifier is not defined in init.
+     */
+    fun get(@IdRes id: Int) = items[id] ?: throw Exception("Unknown identifier")
 
-    private val AU = Unit(astronomical_unit, symbol_astronomical_unit, 149597870700.0)
+    /**
+     * A mapping between identifiers and physical quantities.
+     */
+    private val items = mutableMapOf<@IdRes Int, Item>()
 
-    private val LIGHT_YEAR = Unit(light_year, symbol_light_year, 9.4607304725808e15)
+    /**
+     * Builder function for converter items that puts them in the above map.
+     */
+    private fun item(@IdRes id: Int, init: Item.() -> Unit) {
 
-    private val PARSEC = Unit(parsec, symbol_parsec, 3.085677581e16)
+        Item(id).apply(init).let { items += it.id to it }
+    }
 
-    private val NANOMETRE = Unit(nanometre, symbol_nanometre, 1e-9)
+    init {
 
-    private val PICOMETRE = Unit(picometre, symbol_picometre, 1e-12)
+        item(id = R.id.navigation_length) {
 
-    private val FERMI = Unit(fermi, symbol_fermi, 1e-15)
+            shortLabel = R.string.navigation_length
 
-    private val FATHOM = Unit(fathom, symbol_fathom, 1.8288)
+            color = R.color.blue_500
 
-    private val FURLONG = Unit(furlong, symbol_furlong, 201.168)
+            colorDark = R.color.blue_700
 
-    private val NAUTICAL_MILE = Unit(nautical_mile, symbol_nautical_mile, 1852.0)
+            shortcutIcon = R.drawable.ic_shortcut_length
 
-    //----------------------------------------------------------------------------------------------
+            unit(R.string.metre, R.string.symbol_metre)
 
-    private val SQUARE_METRE = Unit(square_metre, symbol_square_metre)
+            unit(R.string.kilometre, R.string.symbol_kilometre, 1000.0)
 
-    private val SQUARE_KILOMETRE = Unit(square_kilometre, symbol_square_kilometre, 1e6)
+            unit(R.string.mile, R.string.symbol_mile, 1609.344)
 
-    private val ARE = Unit(are, symbol_are, 100.0)
+            unit(R.string.yard, R.string.symbol_yard, 0.9144)
 
-    private val HECTARE = Unit(hectare, symbol_hectare, 10000.0)
+            unit(R.string.foot, R.string.symbol_foot, 0.3048)
 
-    private val ACRE = Unit(acre, symbol_acre, 4046.8564224)
+            unit(R.string.inch, R.string.symbol_inch, 0.0254)
 
-    private val CUERDA = Unit(cuerda, symbol_cuerda, 3930.395625)
+            unit(R.string.centimetre, R.string.symbol_centimetre, 0.01)
 
-    private val SQUARE_YARD = Unit(square_yard, symbol_square_yard, 0.83612736)
+            unit(R.string.millimetre, R.string.symbol_millimetre, 1e-3)
 
-    private val SQUARE_FOOT = Unit(square_foot, symbol_square_foot, 9.290304e-2)
+            unit(R.string.micrometre, R.string.symbol_micrometre, 1e-6)
 
-    private val SQUARE_INCH = Unit(square_inch, symbol_square_inch, 6.4516e-4)
+            unit(R.string.angstrom, R.string.symbol_angstrom, 1e-10)
 
-    //----------------------------------------------------------------------------------------------
+            unit(R.string.astronomical_unit, R.string.symbol_astronomical_unit, 149597870700.0)
 
-    private val CUBIC_METRE = Unit(cubic_metre, symbol_cubic_metre)
+            unit(R.string.light_year, R.string.symbol_light_year, 9.4607304725808e15)
 
-    private val LITRE = Unit(litre, symbol_litre, 0.001)
+            unit(R.string.parsec, R.string.symbol_parsec, 3.085677581e16)
 
-    private val MILLILITRE = Unit(millilitre, symbol_millilitre, 1e-6)
+            unit(R.string.nanometre, R.string.symbol_nanometre, 1e-9)
 
-    private val CUBIC_FOOT = Unit(cubic_foot, symbol_cubic_foot, 0.028316846592)
+            unit(R.string.picometre, R.string.symbol_picometre, 1e-12)
 
-    private val CUBIC_INCH = Unit(cubic_inch, symbol_cubic_inch, 16.387064e-6)
+            unit(R.string.fermi, R.string.symbol_fermi, 1e-15)
 
-    private val IMPERIAL_GALLON = Unit(imperial_gallon, symbol_imperial_gallon, 4.54609e-3)
+            unit(R.string.fathom, R.string.symbol_fathom, 1.8288)
 
-    private val US_GALLON = Unit(us_gallon, symbol_us_gallon, 3.785411784e-3)
+            unit(R.string.furlong, R.string.symbol_furlong, 201.168)
 
-    private val IMPERIAL_QUART = Unit(imperial_quart, symbol_imperial_quart, 1.1365225e-3)
+            unit(R.string.nautical_mile, R.string.symbol_nautical_mile, 1852.0)
+        }
 
-    private val US_QUART = Unit(us_quart, symbol_us_quart, 946.352946e-6)
+        item(id = R.id.navigation_area) {
 
-    private val IMPERIAL_PINT = Unit(imperial_pint, symbol_imperial_pint, 568.26125e-6)
+            shortLabel = R.string.navigation_area
 
-    private val US_PINT = Unit(us_pint, symbol_us_pint, 473.176473e-6)
+            color = R.color.green_500
 
-    private val IMPERIAL_FLUID_OUNCE = Unit(imperial_fluid_ounce, symbol_imperial_fluid_ounce, 28.4130625e-6)
+            colorDark = R.color.green_700
 
-    private val US_FLUID_OUNCE = Unit(us_fluid_ounce, symbol_us_fluid_ounce, 29.5735295625e-6)
+            shortcutIcon = R.drawable.ic_shortcut_area
 
-    private val IMPERIAL_TABLESPOON = Unit(imperial_tablespoon, symbol_imperial_tablespoon, 17.7581640625e-6)
+            unit(R.string.square_metre, R.string.symbol_square_metre)
 
-    private val US_TABLESPOON = Unit(us_tablespoon, symbol_us_tablespoon, 14.78676478125e-6)
+            unit(R.string.square_kilometre, R.string.symbol_square_kilometre, 1e6)
 
-    private val IMPERIAL_TEASPOON = Unit(imperial_teaspoon, symbol_imperial_teaspoon, 5.9193880208333e-6)
+            unit(R.string.are, R.string.symbol_are, 100.0)
 
-    private val US_TEASPOON = Unit(us_teaspoon, symbol_us_teaspoon, 4.92892159375e-6)
+            unit(R.string.hectare, R.string.symbol_hectare, 10000.0)
 
-    //----------------------------------------------------------------------------------------------
+            unit(R.string.acre, R.string.symbol_acre, 4046.8564224)
 
-    private val KILOGRAM = Unit(kilogram, symbol_kilogram)
+            unit(R.string.cuerda, R.string.symbol_cuerda, 3930.395625)
 
-    private val STONE = Unit(stone, symbol_stone, 6.35029318)
+            unit(R.string.square_yard, R.string.symbol_square_yard, 0.83612736)
 
-    private val POUND = Unit(pound, symbol_pound, 0.45359237)
+            unit(R.string.square_foot, R.string.symbol_square_foot, 9.290304e-2)
 
-    private val OUNCE = Unit(ounce, symbol_ounce, 28.349523125e-3)
+            unit(R.string.square_inch, R.string.symbol_square_inch, 6.4516e-4)
+        }
 
-    private val IMPERIAL_TON = Unit(imperial_ton, symbol_imperial_ton, 1016.0469088)
+        item(id = R.id.navigation_volume) {
 
-    private val US_TON = Unit(us_ton, symbol_us_ton, 907.18474)
+            shortLabel = R.string.navigation_volume
 
-    private val TONNE = Unit(tonne, symbol_tonne, 1000.0)
+            color = R.color.light_blue_500
 
-    private val GRAM = Unit(gram, symbol_gram, 0.001)
+            colorDark = R.color.light_blue_700
 
-    private val MILLIGRAM = Unit(milligram, symbol_milligram, 1e-6)
+            shortcutIcon = R.drawable.ic_shortcut_volume
 
-    private val MICROGRAM = Unit(microgram, symbol_microgram, 1e-9)
+            unit(R.string.cubic_metre, R.string.symbol_cubic_metre)
 
-    private val CARAT = Unit(carat, symbol_carat, 0.0002)
+            unit(R.string.litre, R.string.symbol_litre, 0.001)
 
-    private val DRAM = Unit(dram, symbol_dram, 1.7718451953125e-3)
+            unit(R.string.millilitre, R.string.symbol_millilitre, 1e-6)
 
-    private val GRAIN = Unit(grain, symbol_grain, 64.79891e-6)
+            unit(R.string.cubic_foot, R.string.symbol_cubic_foot, 0.028316846592)
 
-    private val ATOMIC_MASS_UNIT = Unit(atomic_mass_unit, symbol_atomic_mass_unit, 1.66053892173e-27)
+            unit(R.string.cubic_inch, R.string.symbol_cubic_inch, 16.387064e-6)
 
-    private val ELECTRON_REST_MASS = Unit(electron_rest_mass, symbol_electron_rest_mass, 9.1093829140e-31)
+            unit(R.string.imperial_gallon, R.string.symbol_imperial_gallon, 4.54609e-3)
 
-    //----------------------------------------------------------------------------------------------
+            unit(R.string.us_gallon, R.string.symbol_us_gallon, 3.785411784e-3)
 
-    private val SECOND = Unit(second, symbol_second)
+            unit(R.string.imperial_quart, R.string.symbol_imperial_quart, 1.1365225e-3)
 
-    private val MINUTE = Unit(minute, symbol_minute, 60.0)
+            unit(R.string.us_quart, R.string.symbol_us_quart, 946.352946e-6)
 
-    private val HOUR = Unit(hour, symbol_hour, 3.6e3)
+            unit(R.string.imperial_pint, R.string.symbol_imperial_pint, 568.26125e-6)
 
-    private val DAY = Unit(day, symbol_day, 86.4e3)
+            unit(R.string.us_pint, R.string.symbol_us_pint, 473.176473e-6)
 
-    private val WEEK = Unit(week, symbol_week, 604.8e3)
+            unit(R.string.imperial_fluid_ounce, R.string.symbol_imperial_fluid_ounce, 28.4130625e-6)
 
-    private val MONTH = Unit(month, symbol_month, 2.592e6)
+            unit(R.string.us_fluid_ounce, R.string.symbol_us_fluid_ounce, 29.5735295625e-6)
 
-    private val YEAR = Unit(year, symbol_year, 31.556952e6)
+            unit(R.string.imperial_tablespoon, R.string.symbol_imperial_tablespoon, 17.7581640625e-6)
 
-    private val DECADE = Unit(decade, symbol_decade, 315.56952e6)
+            unit(R.string.us_tablespoon, R.string.symbol_us_tablespoon, 14.78676478125e-6)
 
-    private val CENTURY = Unit(century, symbol_century, 3.1556952e9)
+            unit(R.string.imperial_teaspoon, R.string.symbol_imperial_teaspoon, 5.9193880208333e-6)
 
-    //----------------------------------------------------------------------------------------------
+            unit(R.string.us_teaspoon, R.string.symbol_us_teaspoon, 4.92892159375e-6)
+        }
 
-    private val METRE_PER_SECOND = Unit(metre_per_second, symbol_metre_per_second)
+        item(id = R.id.navigation_mass) {
 
-    private val MILE_PER_HOUR = Unit(mile_per_hour, symbol_mile_per_hour, 0.44704)
+            shortLabel = R.string.navigation_mass
 
-    private val KILOMETRE_PER_HOUR = Unit(kilometre_per_hour, symbol_kilometre_per_hour, 0.277778)
+            color = R.color.red_500
 
-    private val FOOT_PER_SECOND = Unit(foot_per_second, symbol_foot_per_second, 0.30480024384)
+            colorDark = R.color.red_700
 
-    private val KNOT = Unit(knot, symbol_knot, 0.514444855556)
+            shortcutIcon = R.drawable.ic_shortcut_mass
 
-    private val SPEED_OF_LIGHT = Unit(speed_of_light, symbol_speed_of_light, 299792458.0)
+            unit(R.string.kilogram, R.string.symbol_kilogram)
 
-    private val SPEED_OF_SOUND = Unit(speed_of_sound, symbol_speed_of_sound, 343.2)
+            unit(R.string.stone, R.string.symbol_stone, 6.35029318)
 
-    //----------------------------------------------------------------------------------------------
+            unit(R.string.pound, R.string.symbol_pound, 0.45359237)
 
-    private val KELVIN = Unit(kelvin, symbol_kelvin)
+            unit(R.string.ounce, R.string.symbol_ounce, 28.349523125e-3)
 
-    private val CELSIUS = Unit(celsius, symbol_celsius, 1.0, 273.15)
+            unit(R.string.imperial_ton, R.string.symbol_imperial_ton, 1016.0469088)
 
-    private val FAHRENHEIT = Unit(fahrenheit, symbol_fahrenheit, 5.0 / 9, 459.67 * 5 / 9)
+            unit(R.string.us_ton, R.string.symbol_us_ton, 907.18474)
 
-    //----------------------------------------------------------------------------------------------
+            unit(R.string.tonne, R.string.symbol_tonne, 1000.0)
 
-    private val KILOMETRE_PER_LITRE = Unit(kilometre_per_litre, symbol_kilometre_per_litre)
+            unit(R.string.gram, R.string.symbol_gram, 0.001)
 
-    private val MILE_PER_IMPERIAL_GALLON = Unit(mile_per_imperial_gallon, symbol_mile_per_imperial_gallon, 0.354006)
+            unit(R.string.milligram, R.string.symbol_milligram, 1e-6)
 
-    private val MILE_PER_US_GALLON = Unit(mile_per_us_gallon, symbol_mile_per_us_gallon, 0.425144)
+            unit(R.string.microgram, R.string.symbol_microgram, 1e-9)
 
-    //----------------------------------------------------------------------------------------------
+            unit(R.string.carat, R.string.symbol_carat, 0.0002)
 
-    private val BIT = Unit(_bit, symbol_bit)
+            unit(R.string.dram, R.string.symbol_dram, 1.7718451953125e-3)
 
-    private val BYTE = Unit(_byte, symbol_byte, 8.0)
+            unit(R.string.grain, R.string.symbol_grain, 64.79891e-6)
 
-    private val KILOBIT = Unit(kilobit, symbol_kilobit, 1000.0)
+            unit(R.string.atomic_mass_unit, R.string.symbol_atomic_mass_unit, 1.66053892173e-27)
 
-    private val KIBIBIT = Unit(kibibit, symbol_kibibit, 1024.0)
+            unit(R.string.electron_rest_mass, R.string.symbol_electron_rest_mass, 9.1093829140e-31)
+        }
 
-    private val KILOBYTE = Unit(kilobyte, symbol_kilobyte, 8000.0)
+        item(id = R.id.navigation_time) {
 
-    private val KIBIBYTE = Unit(kibibyte, symbol_kibibyte, 8192.0)
+            shortLabel = R.string.navigation_time
 
-    private val MEGABIT = Unit(megabit, symbol_megabit, 1e6)
+            color = R.color.amber_500
 
-    private val MEBIBIT = Unit(mebibit, symbol_mebibit, 1.048576e6)
+            colorDark = R.color.amber_700
 
-    private val MEGABYTE = Unit(megabyte, symbol_megabyte, 8e6)
+            shortcutIcon = R.drawable.ic_shortcut_time
 
-    private val MEBIBYTE = Unit(mebibyte, symbol_mebibyte, 8.38860836)
+            unit(R.string.second, R.string.symbol_second)
 
-    private val GIGABIT = Unit(gigabit, symbol_gigabit, 1e9)
+            unit(R.string.minute, R.string.symbol_minute, 60.0)
 
-    private val GIBIBIT = Unit(gibibit, symbol_gibibit, 1.073741824e9)
+            unit(R.string.hour, R.string.symbol_hour, 3.6e3)
 
-    private val GIGABYTE = Unit(gigabyte, symbol_gigabyte, 8e9)
+            unit(R.string.day, R.string.symbol_day, 86.4e3)
 
-    private val GIBIBYTE = Unit(gibibyte, symbol_gibibyte, 8.589934592e9)
+            unit(R.string.week, R.string.symbol_week, 604.8e3)
 
-    private val TERABIT = Unit(terabit, symbol_terabit, 1e12)
+            unit(R.string.month, R.string.symbol_month, 2.592e6)
 
-    private val TEBIBIT = Unit(tebibit, symbol_tebibit, 1.099511627776e12)
+            unit(R.string.year, R.string.symbol_year, 31.556952e6)
 
-    private val TERABYTE = Unit(terabyte, symbol_terabyte, 8e12)
+            unit(R.string.decade, R.string.symbol_decade, 315.56952e6)
 
-    private val TEBIBYTE = Unit(tebibyte, symbol_tebibyte, 8.796093022208e12)
+            unit(R.string.century, R.string.symbol_century, 3.1556952e9)
+        }
 
-    private val PETABIT = Unit(petabit, symbol_petabit, 1e15)
+        item(id = R.id.navigation_speed) {
 
-    private val PEBIBIT = Unit(pebibit, symbol_pebibit, 1.125899906842624e15)
+            shortLabel = R.string.navigation_speed
 
-    private val PETABYTE = Unit(petabyte, symbol_petabyte, 8e15)
+            color = R.color.deep_orange_500
 
-    private val PEBIBYTE = Unit(pebibyte, symbol_pebibyte, 9.007199254740992e15)
+            colorDark = R.color.deep_orange_700
 
-    //----------------------------------------------------------------------------------------------
+            shortcutIcon = R.drawable.ic_shortcut_speed
 
-    private val KILOBIT_PER_SECOND = Unit(kilobit_per_second, symbol_kilobit_per_second, 1000.0)
+            unit(R.string.metre_per_second, R.string.symbol_metre_per_second)
 
-    private val KIBIBIT_PER_SECOND = Unit(kibibit_per_second, symbol_kibibit_per_second, 1024.0)
+            unit(R.string.mile_per_hour, R.string.symbol_mile_per_hour, 0.44704)
 
-    private val KILOBYTE_PER_SECOND = Unit(kilobyte_per_second, symbol_kilobyte_per_second, 8000.0)
+            unit(R.string.kilometre_per_hour, R.string.symbol_kilometre_per_hour, 0.277778)
 
-    private val KIBIBYTE_PER_SECOND = Unit(kibibyte_per_second, symbol_kibibyte_per_second, 8192.0)
+            unit(R.string.foot_per_second, R.string.symbol_foot_per_second, 0.30480024384)
 
-    private val MEGABIT_PER_SECOND = Unit(megabit_per_second, symbol_megabit_per_second, 1e6)
+            unit(R.string.knot, R.string.symbol_knot, 0.514444855556)
 
-    private val MEBIBIT_PER_SECOND = Unit(mebibit_per_second, symbol_mebibit_per_second, 1.048576e6)
+            unit(R.string.speed_of_light, R.string.symbol_speed_of_light, 299792458.0)
 
-    private val MEGABYTE_PER_SECOND = Unit(megabyte_per_second, symbol_megabyte_per_second, 8e6)
+            unit(R.string.speed_of_sound, R.string.symbol_speed_of_sound, 343.2)
+        }
 
-    private val MEBIBYTE_PER_SECOND = Unit(mebibyte_per_second, symbol_mebibyte_per_second, 8.38860836)
+        item(id = R.id.navigation_temperature) {
 
-    private val GIGABIT_PER_SECOND = Unit(gigabit_per_second, symbol_gigabit_per_second, 1e9)
+            shortLabel = R.string.navigation_temperature
 
-    private val GIBIBIT_PER_SECOND = Unit(gibibit_per_second, symbol_gibibit_per_second, 1.073741824e9)
+            color = R.color.cyan_500
 
-    private val GIGABYTE_PER_SECOND = Unit(gigabyte_per_second, symbol_gigabyte_per_second, 8e9)
+            colorDark = R.color.cyan_700
 
-    private val GIBIBYTE_PER_SECOND = Unit(gibibyte_per_second, symbol_gibibyte_per_second, 8.589934592e9)
+            shortcutIcon = R.drawable.ic_shortcut_temperature
 
-    private val TERABIT_PER_SECOND = Unit(terabit_per_second, symbol_terabit_per_second, 1e12)
+            unit(R.string.kelvin, R.string.symbol_kelvin)
 
-    private val TEBIBIT_PER_SECOND = Unit(tebibit_per_second, symbol_tebibit_per_second, 1.099511627776e12)
+            unit(R.string.celsius, R.string.symbol_celsius, 1.0, 273.15)
 
-    private val TERABYTE_PER_SECOND = Unit(terabyte_per_second, symbol_terabyte_per_second, 8e12)
+            unit(R.string.fahrenheit, R.string.symbol_fahrenheit, 5.0 / 9, 459.67 * 5 / 9)
+        }
 
-    private val TEBIBYTE_PER_SECOND = Unit(tebibyte_per_second, symbol_tebibyte, 8.796093022208e12)
+        item(id = R.id.navigation_currency) {
 
-    //----------------------------------------------------------------------------------------------
+            shortLabel = R.string.navigation_currency
 
-    private val RADIAN = Unit(radian, symbol_radian)
+            color = R.color.green_500
 
-    private val DEGREE = Unit(degree, symbol_degree, 17.453293e-3)
+            colorDark = R.color.green_700
 
-    private val ARCMINUTE = Unit(arcminute, symbol_arcminute, 0.290888e-3)
+            shortcutIcon = R.drawable.ic_shortcut_currency
 
-    private val ARCSECOND = Unit(arcsecond, symbol_arcsecond, 4.848137e-6)
+            unit(R.string.british_pound, R.string.symbol_british_pound)
 
-    //----------------------------------------------------------------------------------------------
+            /* TODO: implement currency conversions */
+        }
 
-    private val KILOGRAM_PER_CUBIC_METRE = Unit(kilogram_per_cubic_metre, symbol_kilogram_per_cubic_metre)
+        item(id = R.id.navigation_fuel) {
 
-    private val KILOGRAM_PER_LITRE = Unit(kilogram_per_litre, symbol_kilogram_per_litre, 1000.0)
+            shortLabel = R.string.navigation_fuel
 
-    private val OUNCE_PER_CUBIC_FOOT = Unit(ounce_per_cubic_foot, symbol_ounce_per_cubic_foot, 1.001153961)
+            color = R.color.lime_500
 
-    private val OUNCE_PER_CUBIC_INCH = Unit(ounce_per_cubic_inch, symbol_ounce_per_cubic_inch, 1.729994044e3)
+            colorDark = R.color.lime_700
 
-    private val POUND_PER_CUBIC_FOOT = Unit(pound_per_cubic_foot, symbol_pound_per_cubic_foot, 16.01846337)
+            shortcutIcon = R.drawable.ic_shortcut_fuel
 
-    private val POUND_PER_CUBIC_INCH = Unit(pound_per_cubic_inch, symbol_pound_per_cubic_inch, 2.76799047134)
+            unit(R.string.kilometre_per_litre, R.string.symbol_kilometre_per_litre)
 
-    private val OUNCE_PER_IMPERIAL_GALLON = Unit(ounce_per_imperial_gallon, symbol_ounce_per_imperial_gallon, 6.236023291)
+            unit(R.string.mile_per_imperial_gallon, R.string.symbol_mile_per_imperial_gallon, 0.354006)
 
-    private val OUNCE_PER_US_GALLON = Unit(ounce_per_us_gallon, symbol_ounce_per_us_gallon, 7.489151707)
+            unit(R.string.mile_per_us_gallon, R.string.symbol_mile_per_us_gallon, 0.425144)
+        }
 
-    private val POUND_PER_IMPERIAL_GALLON = Unit(pound_per_imperial_gallon, symbol_pound_per_imperial_gallon, 99.77637266)
+        item(id = R.id.navigation_storage) {
 
-    private val POUND_PER_US_GALLON = Unit(pound_per_us_gallon, symbol_pound_per_us_gallon, 119.8264273)
+            shortLabel = R.string.navigation_storage
 
-    //----------------------------------------------------------------------------------------------
+            color = R.color.teal_500
 
-    private val HERTZ = Unit(hertz, symbol_hertz)
+            colorDark = R.color.teal_700
 
-    private val KILOHERTZ = Unit(kilohertz, symbol_kilohertz, 1e3)
+            shortcutIcon = R.drawable.ic_shortcut_storage
 
-    private val MEGAHERTZ = Unit(megahertz, symbol_megahertz, 1e6)
+            unit(R.string._bit, R.string.symbol_bit)
 
-    private val GIGAHERTZ = Unit(gigahertz, symbol_gigahertz, 1e9)
+            unit(R.string._byte, R.string.symbol_byte, 8.0)
 
-    private val REVOLUTION_PER_MINUTE = Unit(revolution_per_minute, symbol_revolutions_per_minute, 0.104719755)
+            unit(R.string.kilobit, R.string.symbol_kilobit, 1000.0)
 
-    //----------------------------------------------------------------------------------------------
+            unit(R.string.kibibit, R.string.symbol_kibibit, 1024.0)
 
-    private val CUBIC_METRE_PER_SECOND = Unit(cubic_metre_per_second, symbol_cubic_metre_per_second)
+            unit(R.string.kilobyte, R.string.symbol_kilobyte, 8000.0)
 
-    private val LITRE_PER_MINUTE = Unit(litre_per_minute, symbol_litre_per_minute, 1.667e-5)
+            unit(R.string.kibibyte, R.string.symbol_kibibyte, 8192.0)
 
-    private val IMPERIAL_GALLON_PER_MINUTE = Unit(imperial_gallon_per_minute, symbol_imperial_gallon_per_minute, 7.577e-5)
+            unit(R.string.megabit, R.string.symbol_megabit, 1e6)
 
-    private val US_GALLON_PER_MINUTE = Unit(us_gallon_per_minute, symbol_us_gallon_per_minute, 6.309e-5)
+            unit(R.string.mebibit, R.string.symbol_mebibit, 1.048576e6)
 
-    //----------------------------------------------------------------------------------------------
+            unit(R.string.megabyte, R.string.symbol_megabyte, 8e6)
 
-    private val METRE_PER_SECOND_SQUARED = Unit(metre_per_second_squared, symbol_metre_per_second_squared)
+            unit(R.string.mebibyte, R.string.symbol_mebibyte, 8.38860836)
 
-    private val GALILEO = Unit(galileo, symbol_galileo, 1e-2)
+            unit(R.string.gigabit, R.string.symbol_gigabit, 1e9)
 
-    private val STANDARD_GRAVITY = Unit(standard_gravity, symbol_standard_gravity, 9.80665)
+            unit(R.string.gibibit, R.string.symbol_gibibit, 1.073741824e9)
 
-    private val MILE_PER_HOUR_PER_SECOND = Unit(mile_per_hour_per_second, symbol_mile_per_hour_per_second, 0.44704)
+            unit(R.string.gigabyte, R.string.symbol_gigabyte, 8e9)
 
-    private val KNOT_PER_SECOND = Unit(knot_per_second, symbol_knot_per_second, 0.514444)
+            unit(R.string.gibibyte, R.string.symbol_gibibyte, 8.589934592e9)
 
-    //----------------------------------------------------------------------------------------------
+            unit(R.string.terabit, R.string.symbol_terabit, 1e12)
 
-    private val NEWTON = Unit(newton, symbol_newton)
+            unit(R.string.tebibit, R.string.symbol_tebibit, 1.099511627776e12)
 
-    private val DYNE = Unit(dyne, symbol_dyne, 1e-5)
+            unit(R.string.terabyte, R.string.symbol_terabyte, 8e12)
 
-    private val KILOPOND = Unit(kilopond, symbol_kilopond, 9.80665)
+            unit(R.string.tebibyte, R.string.symbol_tebibyte, 8.796093022208e12)
 
-    private val POUNDAL = Unit(poundal, symbol_poundal, 0.138254954376)
+            unit(R.string.petabit, R.string.symbol_petabit, 1e15)
 
-    private val POUND_FORCE = Unit(pound_force, symbol_pound_force, 4.4482216152605)
+            unit(R.string.pebibit, R.string.symbol_pebibit, 1.125899906842624e15)
 
-    private val OUNCE_FORCE = Unit(ounce_force, symbol_ounce_force, 0.27801385095378125)
+            unit(R.string.petabyte, R.string.symbol_petabyte, 8e15)
 
-    //----------------------------------------------------------------------------------------------
+            unit(R.string.pebibyte, R.string.symbol_pebibyte, 9.007199254740992e15)
+        }
 
-    private val PASCAL = Unit(pascal, symbol_pascal)
+        item(id = R.id.navigation_bitrate) {
 
-    private val POUND_PER_SQUARE_INCH = Unit(pound_per_square_inch, symbol_pound_per_square_inch, 6.894757e3)
+            shortLabel = R.string.navigation_bitrate
 
-    private val ATMOSPHERE = Unit(atmosphere, symbol_atmosphere, 101325.0)
+            color = R.color.amber_500
 
-    private val BAR = Unit(bar, symbol_bar, 1e5)
+            colorDark = R.color.amber_700
 
-    private val MILLIMETRE_OF_MERCURY = Unit(millimetre_of_mercury, symbol_millimetre_of_mercury, 133.3224)
+            shortcutIcon = R.drawable.ic_shortcut_bitrate
 
-    private val KILOPASCAL = Unit(kilopascal, symbol_kilopascal, 1e3)
+            unit(R.string.kilobit_per_second, R.string.symbol_kilobit_per_second, 1000.0)
 
-    private val MEGAPASCAL = Unit(megapascal, symbol_megapascal, 1e6)
+            unit(R.string.kibibit_per_second, R.string.symbol_kibibit_per_second, 1024.0)
 
-    //----------------------------------------------------------------------------------------------
+            unit(R.string.kilobyte_per_second, R.string.symbol_kilobyte_per_second, 8000.0)
 
-    private val FOOT_POUND = Unit(foot_pound, symbol_foot_pound, 1.3558179483314004)
+            unit(R.string.kibibyte_per_second, R.string.symbol_kibibyte_per_second, 8192.0)
 
-    private val INCH_POUND = Unit(inch_pound, symbol_inch_pound, 0.1129848290276167)
+            unit(R.string.megabit_per_second, R.string.symbol_megabit_per_second, 1e6)
 
-    private val NEWTON_METRE = Unit(newton_metre, symbol_newton_metre)
+            unit(R.string.mebibit_per_second, R.string.symbol_mebibit_per_second, 1.048576e6)
 
-    private val KILOPOND_METRE = Unit(kilopond_metre, symbol_kilopond_metre, 9.80665)
+            unit(R.string.megabyte_per_second, R.string.symbol_megabyte_per_second, 8e6)
 
-    //----------------------------------------------------------------------------------------------
+            unit(R.string.mebibyte_per_second, R.string.symbol_mebibyte_per_second, 8.38860836)
 
-    private val JOULE = Unit(joule, symbol_joule)
+            unit(R.string.gigabit_per_second, R.string.symbol_gigabit_per_second, 1e9)
 
-    private val ERG = Unit(erg, symbol_erg, 1e-7)
+            unit(R.string.gibibit_per_second, R.string.symbol_gibibit_per_second, 1.073741824e9)
 
-    private val KILOWATT_HOUR = Unit(kilowatt_hour, symbol_kilowatt_hour, 3.6e6)
+            unit(R.string.gigabyte_per_second, R.string.symbol_gigabyte_per_second, 8e9)
 
-    private val MEGAWATT_HOUR = Unit(megawatt_hour, symbol_megawatt_hour, 3.6e9)
+            unit(R.string.gibibyte_per_second, R.string.symbol_gibibyte_per_second, 8.589934592e9)
 
-    private val CALORIE = Unit(calorie, symbol_calorie, 4.1868)
+            unit(R.string.terabit_per_second, R.string.symbol_terabit_per_second, 1e12)
 
-    private val KILOCALORIE = Unit(kilocalorie, symbol_kilocalorie, 4.1868e3)
+            unit(R.string.tebibit_per_second, R.string.symbol_tebibit_per_second, 1.099511627776e12)
 
-    private val BARREL_OF_OIL_EQUIVALENT = Unit(barrel_of_oil_equivalent, symbol_barrel_of_oil_equivalent, 6.12e9)
+            unit(R.string.terabyte_per_second, R.string.symbol_terabyte_per_second, 8e12)
 
-    private val BRITISH_THERMAL_UNIT = Unit(british_thermal_unit, symbol_british_thermal_unit, 1.05505585262e3)
+            unit(R.string.tebibyte_per_second, R.string.symbol_tebibyte_per_second, 8.796093022208e12)
+        }
 
-    private val ELECTRONVOLT = Unit(electronvolt, symbol_electronvolt, 1.60217656535e-19)
+        item(id = R.id.navigation_angle) {
 
-    private val IMPERIAL_GALLON_ATMOSPHERE = Unit(imperial_gallon_atmosphere, symbol_imperial_gallon_atmosphere, 460.63256925)
+            shortLabel = R.string.navigation_angle
 
-    private val US_GALLON_ATMOSPHERE = Unit(us_gallon_atmosphere, symbol_us_gallon_atmosphere, 383.5568490138)
+            color = R.color.red_500
 
-    //----------------------------------------------------------------------------------------------
+            colorDark = R.color.red_700
 
-    private val WATT = Unit(watt, symbol_watt)
+            shortcutIcon = R.drawable.ic_shortcut_angle
 
-    private val KILOWATT = Unit(kilowatt, symbol_kilowatt, 1e3)
+            unit(R.string.radian, R.string.symbol_radian)
 
-    private val MEGAWATT = Unit(megawatt, symbol_megawatt, 1e6)
+            unit(R.string.degree, R.string.symbol_degree, 17.453293e-3)
 
-    private val HORSEPOWER = Unit(horsepower, symbol_horsepower, 735.49875)
+            unit(R.string.arcminute, R.string.symbol_arcminute, 0.290888e-3)
 
-    private val ERG_PER_SECOND = Unit(erg_per_second, symbol_erg_per_second, 1e-7)
+            unit(R.string.arcsecond, R.string.symbol_arcsecond, 4.848137e-6)
+        }
 
-    private val CALORIE_PER_SECOND = Unit(calorie_per_second, symbol_calorie_per_second, 4.1868)
+        item(id = R.id.navigation_density) {
 
-    //----------------------------------------------------------------------------------------------
+            shortLabel = R.string.navigation_density
 
-    private val AMPERE = Unit(ampere, symbol_ampere)
+            color = R.color.blue_500
 
-    private val ABAMPERE = Unit(abampere, symbol_abampere, 10.0)
+            colorDark = R.color.blue_700
 
-    private val STATAMPERE = Unit(statampere, symbol_statampere, 3.335641e-10)
+            shortcutIcon = R.drawable.ic_shortcut_density
 
-    //----------------------------------------------------------------------------------------------
+            unit(R.string.kilogram_per_cubic_metre, R.string.symbol_kilogram_per_cubic_metre)
 
-    private val COULOMB = Unit(coulomb, symbol_coulomb)
+            unit(R.string.kilogram_per_litre, R.string.symbol_kilogram_per_litre, 1000.0)
 
-    private val ABCOULOMB = Unit(abcoulomb, symbol_abcoulomb, 10.0)
+            unit(R.string.ounce_per_cubic_foot, R.string.symbol_ounce_per_cubic_foot, 1.001153961)
 
-    private val STATCOULOMB = Unit(statcoulomb, symbol_statcoulomb, 3.335641e-10)
+            unit(R.string.ounce_per_cubic_inch, R.string.symbol_ounce_per_cubic_inch, 1.729994044e3)
 
-    private val FARADAY = Unit(faraday, symbol_faraday, 96485.3383)
+            unit(R.string.pound_per_cubic_foot, R.string.symbol_pound_per_cubic_foot, 16.01846337)
 
-    private val MILLIAMPERE_HOUR = Unit(milliampere_hour, symbol_milliampere_hour, 3.6)
+            unit(R.string.pound_per_cubic_inch, R.string.symbol_pound_per_cubic_inch, 2.76799047134)
 
-    //----------------------------------------------------------------------------------------------
+            unit(R.string.ounce_per_imperial_gallon, R.string.symbol_ounce_per_imperial_gallon, 6.236023291)
 
-    private val VOLT = Unit(volt, symbol_volt)
+            unit(R.string.ounce_per_us_gallon, R.string.symbol_ounce_per_us_gallon, 7.489151707)
 
-    private val ABVOLT = Unit(abvolt, symbol_abvolt, 1e-8)
+            unit(R.string.pound_per_imperial_gallon, R.string.symbol_pound_per_imperial_gallon, 99.77637266)
 
-    private val STATVOLT = Unit(statvolt, symbol_statvolt, 299.792458)
+            unit(R.string.pound_per_us_gallon, R.string.symbol_pound_per_us_gallon, 119.8264273)
+        }
 
-    //----------------------------------------------------------------------------------------------
+        item(id = R.id.navigation_frequency) {
 
-    private val CANDELA_PER_SQUARE_METRE = Unit(candela_per_square_metre, symbol_candela_per_square_metre)
+            shortLabel = R.string.navigation_frequency
 
-    private val STILB = Unit(stilb, symbol_stilb, 1e4)
+            color = R.color.green_500
 
-    private val LAMBERT = Unit(lambert, symbol_lambert, 3183.0988618)
+            colorDark = R.color.green_700
 
-    private val FOOTLAMBERT = Unit(footlambert, symbol_footlambert, 3.4262590996)
+            shortcutIcon = R.drawable.ic_shortcut_frequency
 
-    //----------------------------------------------------------------------------------------------
+            unit(R.string.hertz, R.string.symbol_hertz)
 
-    private val LUX = Unit(lux, symbol_lux)
+            unit(R.string.kilohertz, R.string.symbol_kilohertz, 1e3)
 
-    private val PHOT = Unit(phot, symbol_phot, 1e4)
+            unit(R.string.megahertz, R.string.symbol_megahertz, 1e6)
 
-    private val FOOTCANDLE = Unit(footcandle, symbol_footcandle, 10.763910417)
+            unit(R.string.gigahertz, R.string.symbol_gigahertz, 1e9)
 
-    //----------------------------------------------------------------------------------------------
+            unit(R.string.revolution_per_minute, R.string.symbol_revolution_per_minute, 0.104719755)
+        }
 
-    private val GRAY = Unit(gray, symbol_gray)
+        item(id = R.id.navigation_flow) {
 
-    private val RAD = Unit(rad, symbol_rad, 0.01)
+            shortLabel = R.string.navigation_flow
 
-    private val SIEVERT = Unit(sievert, symbol_sievert)
+            color = R.color.light_blue_500
 
-    private val REM = Unit(rem, symbol_rem, 0.01)
+            colorDark = R.color.light_blue_700
 
-    //----------------------------------------------------------------------------------------------
+            shortcutIcon = R.drawable.ic_shortcut_flow
 
-    private val BECQUEREL = Unit(becquerel, symbol_becquerel)
+            unit(R.string.cubic_metre_per_second, R.string.symbol_cubic_metre_per_second)
 
-    private val CURIE = Unit(curie, symbol_curie, 3.7e10)
+            unit(R.string.litre_per_minute, R.string.symbol_litre_per_minute, 1.667e-5)
 
-    private val RUTHERFORD = Unit(rutherford, symbol_rutherford, 1e6)
+            unit(R.string.imperial_gallon_per_minute, R.string.symbol_imperial_gallon_per_minute, 7.577e-5)
 
-    //----------------------------------------------------------------------------------------------
+            unit(R.string.us_gallon_per_minute, R.string.symbol_us_gallon_per_minute, 6.309e-5)
+        }
 
-    private val UNITS_LENGTH = arrayOf(
+        item(id = R.id.navigation_acceleration) {
 
-            METRE,
+            shortLabel = R.string.navigation_acceleration
 
-            KILOMETRE,
+            color = R.color.orange_500
 
-            MILE,
+            colorDark = R.color.orange_700
 
-            YARD,
+            shortcutIcon = R.drawable.ic_shortcut_acceleration
 
-            FOOT,
+            unit(R.string.metre_per_second_squared, R.string.symbol_metre_per_second_squared)
 
-            INCH,
+            unit(R.string.galileo, R.string.symbol_galileo, 1e-2)
 
-            CENTIMETRE,
+            unit(R.string.standard_gravity, R.string.symbol_standard_gravity, 9.80665)
 
-            MILLIMETRE,
+            unit(R.string.mile_per_hour_per_second, R.string.symbol_mile_per_hour_per_second, 0.44704)
 
-            MICROMETRE,
+            unit(R.string.knot_per_second, R.string.symbol_knot_per_second, 0.514444)
+        }
 
-            ANGSTROM,
+        item(id = R.id.navigation_force) {
 
-            AU,
+            shortLabel = R.string.navigation_force
 
-            LIGHT_YEAR,
+            color = R.color.teal_500
 
-            PARSEC,
+            colorDark = R.color.teal_700
 
-            NANOMETRE,
+            shortcutIcon = R.drawable.ic_shortcut_force
 
-            PICOMETRE,
+            unit(R.string.newton, R.string.symbol_newton)
 
-            FERMI,
+            unit(R.string.dyne, R.string.symbol_dyne, 1e-5)
 
-            FATHOM,
+            unit(R.string.kilopond, R.string.symbol_kilopond, 9.80665)
 
-            FURLONG,
+            unit(R.string.poundal, R.string.symbol_poundal, 0.138254954376)
 
-            NAUTICAL_MILE
-    )
+            unit(R.string.pound_force, R.string.symbol_pound_force, 4.4482216152605)
 
-    private val UNITS_AREA = arrayOf(
+            unit(R.string.ounce_force, R.string.symbol_ounce_force, 0.27801385095378125)
+        }
 
-            SQUARE_METRE,
+        item(id = R.id.navigation_pressure) {
 
-            SQUARE_KILOMETRE,
+            shortLabel = R.string.navigation_pressure
 
-            ARE,
+            color = R.color.cyan_500
 
-            HECTARE,
+            colorDark = R.color.cyan_700
 
-            ACRE,
+            shortcutIcon = R.drawable.ic_shortcut_pressure
 
-            CUERDA,
+            unit(R.string.pascal, R.string.symbol_pascal)
 
-            SQUARE_YARD,
+            unit(R.string.pound_per_square_inch, R.string.symbol_pound_per_square_inch, 6.894757e3)
 
-            SQUARE_FOOT,
+            unit(R.string.atmosphere, R.string.symbol_atmosphere, 101325.0)
 
-            SQUARE_INCH
-    )
+            unit(R.string.bar, R.string.symbol_bar, 1e5)
 
-    private val UNITS_VOLUME = arrayOf(
+            unit(R.string.millimetre_of_mercury, R.string.symbol_millimetre_of_mercury, 133.3224)
 
-            CUBIC_METRE,
+            unit(R.string.kilopascal, R.string.symbol_kilopascal, 1e3)
 
-            LITRE,
+            unit(R.string.megapascal, R.string.symbol_megapascal, 1e6)
+        }
 
-            MILLILITRE,
+        item(id = R.id.navigation_torque) {
 
-            CUBIC_FOOT,
+            shortLabel = R.string.navigation_torque
 
-            CUBIC_INCH,
+            color = R.color.yellow_500
 
-            IMPERIAL_GALLON,
+            colorDark = R.color.yellow_700
 
-            US_GALLON,
+            shortcutIcon = R.drawable.ic_shortcut_torque
 
-            IMPERIAL_QUART,
+            unit(R.string.foot_pound, R.string.symbol_foot_pound, 1.3558179483314004)
 
-            US_QUART,
+            unit(R.string.inch_pound, R.string.symbol_inch_pound, 0.1129848290276167)
 
-            IMPERIAL_PINT,
+            unit(R.string.newton_metre, R.string.symbol_newton_metre)
 
-            US_PINT,
+            unit(R.string.kilopond_metre, R.string.symbol_kilopond_metre, 9.80665)
+        }
 
-            IMPERIAL_FLUID_OUNCE,
+        item(id = R.id.navigation_energy) {
 
-            US_FLUID_OUNCE,
+            shortLabel = R.string.navigation_energy
 
-            IMPERIAL_TABLESPOON,
+            color = R.color.green_500
 
-            US_TABLESPOON,
+            colorDark = R.color.green_700
 
-            IMPERIAL_TEASPOON,
+            shortcutIcon = R.drawable.ic_shortcut_energy
 
-            US_TEASPOON
-    )
+            unit(R.string.joule, R.string.symbol_joule)
 
-    private val UNITS_MASS = arrayOf(
+            unit(R.string.erg, R.string.symbol_erg, 1e-7)
 
-            KILOGRAM,
+            unit(R.string.kilowatt_hour, R.string.symbol_kilowatt_hour, 3.6e6)
 
-            STONE,
+            unit(R.string.megawatt_hour, R.string.symbol_megawatt_hour, 3.6e9)
 
-            POUND,
+            unit(R.string.calorie, R.string.symbol_calorie, 4.1868)
 
-            OUNCE,
+            unit(R.string.kilocalorie, R.string.symbol_kilocalorie, 4.1868e3)
 
-            IMPERIAL_TON,
+            unit(R.string.barrel_of_oil_equivalent, R.string.symbol_barrel_of_oil_equivalent, 6.12e9)
 
-            US_TON,
+            unit(R.string.british_thermal_unit, R.string.symbol_british_thermal_unit, 1.05505585262e3)
 
-            TONNE,
+            unit(R.string.electronvolt, R.string.symbol_electronvolt, 1.60217656535e-19)
 
-            GRAM,
+            unit(R.string.imperial_gallon_atmosphere, R.string.symbol_imperial_gallon_atmosphere, 460.63256925)
 
-            MILLIGRAM,
+            unit(R.string.us_gallon_atmosphere, R.string.symbol_us_gallon_atmosphere, 383.5568490138)
+        }
 
-            MICROGRAM,
+        item(id = R.id.navigation_power) {
 
-            CARAT,
+            shortLabel = R.string.navigation_power
 
-            DRAM,
+            color = R.color.red_500
 
-            GRAIN,
+            colorDark = R.color.red_700
 
-            ATOMIC_MASS_UNIT,
+            shortcutIcon = R.drawable.ic_shortcut_power
 
-            ELECTRON_REST_MASS
-    )
+            unit(R.string.watt, R.string.symbol_watt)
 
-    private val UNITS_TIME = arrayOf(
+            unit(R.string.kilowatt, R.string.symbol_kilowatt, 1e3)
 
-            SECOND,
+            unit(R.string.megawatt, R.string.symbol_megawatt, 1e6)
 
-            MINUTE,
+            unit(R.string.horsepower, R.string.symbol_horsepower, 735.49875)
 
-            HOUR,
+            unit(R.string.erg_per_second, R.string.symbol_erg_per_second, 1e-7)
 
-            DAY,
+            unit(R.string.calorie_per_second, R.string.symbol_calorie_per_second, 4.1868)
+        }
 
-            WEEK,
+        item(id = R.id.navigation_current) {
 
-            MONTH,
+            shortLabel = R.string.navigation_current
 
-            YEAR,
+            color = R.color.yellow_500
 
-            DECADE,
+            colorDark = R.color.yellow_700
 
-            CENTURY
-    )
+            shortcutIcon = R.drawable.ic_shortcut_current
 
-    private val UNITS_SPEED = arrayOf(
+            unit(R.string.ampere, R.string.symbol_ampere)
 
-            METRE_PER_SECOND,
+            unit(R.string.abampere, R.string.symbol_abampere, 10.0)
 
-            MILE_PER_HOUR,
+            unit(R.string.statampere, R.string.symbol_statampere, 3.335641e-10)
+        }
 
-            KILOMETRE_PER_HOUR,
+        item(id = R.id.navigation_charge) {
 
-            FOOT_PER_SECOND,
+            shortLabel = R.string.navigation_charge
 
-            KNOT,
+            color = R.color.light_green_500
 
-            SPEED_OF_LIGHT,
+            colorDark = R.color.light_green_700
 
-            SPEED_OF_SOUND
-    )
+            shortcutIcon = R.drawable.ic_shortcut_charge
 
-    private val UNITS_TEMPERATURE = arrayOf(
+            unit(R.string.coulomb, R.string.symbol_coulomb)
 
-            KELVIN,
+            unit(R.string.abcoulomb, R.string.symbol_abcoulomb, 10.0)
 
-            CELSIUS,
+            unit(R.string.statcoulomb, R.string.symbol_statcoulomb, 3.335641e-10)
 
-            FAHRENHEIT
-    )
+            unit(R.string.faraday, R.string.symbol_faraday, 96485.3383)
 
-    private val UNITS_FUEL = arrayOf(
+            unit(R.string.milliampere_hour, R.string.symbol_milliampere_hour, 3.6)
+        }
 
-            KILOMETRE_PER_LITRE,
+        item(id = R.id.navigation_voltage) {
 
-            MILE_PER_IMPERIAL_GALLON,
+            shortLabel = R.string.navigation_voltage
 
-            MILE_PER_US_GALLON
-    )
+            color = R.color.orange_500
 
-    private val UNITS_STORAGE = arrayOf(
+            colorDark = R.color.orange_700
 
-            BIT,
+            shortcutIcon = R.drawable.ic_shortcut_voltage
 
-            BYTE,
+            unit(R.string.volt, R.string.symbol_volt)
 
-            KILOBIT,
+            unit(R.string.abvolt, R.string.symbol_abvolt, 1e-8)
 
-            KIBIBIT,
+            unit(R.string.statvolt, R.string.symbol_statvolt, 299.792458)
+        }
 
-            KILOBYTE,
+        item(id = R.id.navigation_luminance) {
 
-            KIBIBYTE,
+            shortLabel = R.string.navigation_luminance
 
-            MEGABIT,
+            color = R.color.amber_500
 
-            MEBIBIT,
+            colorDark = R.color.amber_700
 
-            MEGABYTE,
+            shortcutIcon = R.drawable.ic_shortcut_luminance
 
-            MEBIBYTE,
+            unit(R.string.candela_per_square_metre, R.string.symbol_candela_per_square_metre)
 
-            GIGABIT,
+            unit(R.string.stilb, R.string.symbol_stilb, 1e4)
 
-            GIBIBIT,
+            unit(R.string.lambert, R.string.symbol_lambert, 3183.0988618)
 
-            GIGABYTE,
+            unit(R.string.footlambert, R.string.symbol_footlambert, 3.4262590996)
+        }
 
-            GIBIBYTE,
+        item(id = R.id.navigation_illuminance) {
 
-            TERABIT,
+            shortLabel = R.string.navigation_illuminance
 
-            TEBIBIT,
+            color = R.color.lime_500
 
-            TERABYTE,
+            colorDark = R.color.lime_700
 
-            TEBIBYTE,
+            shortcutIcon = R.drawable.ic_shortcut_illuminance
 
-            PETABIT,
+            unit(R.string.lux, R.string.symbol_lux)
 
-            PEBIBIT,
+            unit(R.string.phot, R.string.symbol_phot, 1e4)
 
-            PETABYTE,
+            unit(R.string.footcandle, R.string.symbol_footcandle, 10.763910417)
+        }
 
-            PEBIBYTE
-    )
+        item(id = R.id.navigation_radiation) {
 
-    private val UNITS_BITRATE = arrayOf(
+            shortLabel = R.string.navigation_radiation
 
-            KILOBIT_PER_SECOND,
+            color = R.color.deep_orange_500
 
-            KIBIBIT_PER_SECOND,
+            colorDark = R.color.deep_orange_700
 
-            KILOBYTE_PER_SECOND,
+            shortcutIcon = R.drawable.ic_shortcut_radiation
 
-            KIBIBYTE_PER_SECOND,
+            unit(R.string.gray, R.string.symbol_gray)
 
-            MEGABIT_PER_SECOND,
+            unit(R.string.rad, R.string.symbol_rad, 0.01)
 
-            MEBIBIT_PER_SECOND,
+            unit(R.string.sievert, R.string.symbol_sievert)
 
-            MEGABYTE_PER_SECOND,
+            unit(R.string.rem, R.string.symbol_rem, 0.01)
+        }
 
-            MEBIBYTE_PER_SECOND,
+        item(id = R.id.navigation_radioactivity) {
 
-            GIGABIT_PER_SECOND,
+            shortLabel = R.string.navigation_radioactivity
 
-            GIBIBIT_PER_SECOND,
+            color = R.color.yellow_500
 
-            GIGABYTE_PER_SECOND,
+            colorDark = R.color.yellow_700
 
-            GIBIBYTE_PER_SECOND,
+            shortcutIcon = R.drawable.ic_shortcut_radioactivity
 
-            TERABIT_PER_SECOND,
+            unit(R.string.becquerel, R.string.symbol_becquerel)
 
-            TEBIBIT_PER_SECOND,
+            unit(R.string.curie, R.string.symbol_curie, 3.7e10)
 
-            TERABYTE_PER_SECOND,
-
-            TEBIBYTE_PER_SECOND
-    )
-
-    private val UNITS_ANGLE = arrayOf(
-
-            RADIAN,
-
-            DEGREE,
-
-            ARCMINUTE,
-
-            ARCSECOND
-    )
-
-    private val UNITS_DENSITY = arrayOf(
-
-            KILOGRAM_PER_CUBIC_METRE,
-
-            KILOGRAM_PER_LITRE,
-
-            OUNCE_PER_CUBIC_FOOT,
-
-            OUNCE_PER_CUBIC_INCH,
-
-            POUND_PER_CUBIC_FOOT,
-
-            POUND_PER_CUBIC_INCH,
-
-            OUNCE_PER_IMPERIAL_GALLON,
-
-            OUNCE_PER_US_GALLON,
-
-            POUND_PER_IMPERIAL_GALLON,
-
-            POUND_PER_US_GALLON
-    )
-
-    private val UNITS_FREQUENCY = arrayOf(
-
-            HERTZ,
-
-            KILOHERTZ,
-
-            MEGAHERTZ,
-
-            GIGAHERTZ,
-
-            REVOLUTION_PER_MINUTE
-    )
-
-    private val UNITS_FLOW = arrayOf(
-
-            CUBIC_METRE_PER_SECOND,
-
-            LITRE_PER_MINUTE,
-
-            IMPERIAL_GALLON_PER_MINUTE,
-
-            US_GALLON_PER_MINUTE
-    )
-
-    private val UNITS_ACCELERATION = arrayOf(
-
-            METRE_PER_SECOND_SQUARED,
-
-            GALILEO,
-
-            STANDARD_GRAVITY,
-
-            MILE_PER_HOUR_PER_SECOND,
-
-            KNOT_PER_SECOND
-    )
-
-    private val UNITS_FORCE = arrayOf(
-
-            NEWTON,
-
-            DYNE,
-
-            KILOPOND,
-
-            POUNDAL,
-
-            POUND_FORCE,
-
-            OUNCE_FORCE
-    )
-
-    private val UNITS_PRESSURE = arrayOf(
-
-            PASCAL,
-
-            POUND_PER_SQUARE_INCH,
-
-            ATMOSPHERE,
-
-            BAR,
-
-            MILLIMETRE_OF_MERCURY,
-
-            KILOPASCAL,
-
-            MEGAPASCAL
-    )
-
-    private val UNITS_TORQUE = arrayOf(
-
-            FOOT_POUND,
-
-            INCH_POUND,
-
-            NEWTON_METRE,
-
-            KILOPOND_METRE
-    )
-
-    private val UNITS_ENERGY = arrayOf(
-
-            JOULE,
-
-            ERG,
-
-            KILOWATT_HOUR,
-
-            MEGAWATT_HOUR,
-
-            CALORIE,
-
-            KILOCALORIE,
-
-            BARREL_OF_OIL_EQUIVALENT,
-
-            BRITISH_THERMAL_UNIT,
-
-            ELECTRONVOLT,
-
-            IMPERIAL_GALLON_ATMOSPHERE,
-
-            US_GALLON_ATMOSPHERE
-    )
-
-    private val UNITS_POWER = arrayOf(
-
-            WATT,
-
-            KILOWATT,
-
-            MEGAWATT,
-
-            HORSEPOWER,
-
-            ERG_PER_SECOND,
-
-            CALORIE_PER_SECOND
-    )
-
-    private val UNITS_CURRENT = arrayOf(
-
-            AMPERE,
-
-            ABAMPERE,
-
-            STATAMPERE
-    )
-
-    private val UNITS_CHARGE = arrayOf(
-
-            COULOMB,
-
-            ABCOULOMB,
-
-            STATCOULOMB,
-
-            FARADAY,
-
-            MILLIAMPERE_HOUR
-    )
-
-    private val UNITS_VOLTAGE = arrayOf(
-
-            VOLT,
-
-            ABVOLT,
-
-            STATVOLT
-    )
-
-    private val UNITS_LUMINANCE = arrayOf(
-
-            CANDELA_PER_SQUARE_METRE,
-
-            STILB,
-
-            LAMBERT,
-
-            FOOTLAMBERT
-    )
-
-    private val UNITS_ILLUMINANCE = arrayOf(
-
-            LUX,
-
-            PHOT,
-
-            FOOTCANDLE
-    )
-
-    private val UNITS_RADIATION = arrayOf(
-
-            GRAY,
-
-            RAD,
-
-            SIEVERT,
-
-            REM
-    )
-
-    private val UNITS_RADIOACTIVITY = arrayOf(
-
-            BECQUEREL,
-
-            CURIE,
-
-            RUTHERFORD
-    )
-
-    //----------------------------------------------------------------------------------------------
-
-    private val LENGTH = Quantity(
-
-            id = R.id.navigation_length,
-
-            name = R.string.navigation_length,
-
-            color = R.color.blue_500,
-
-            colorDark = R.color.blue_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_length,
-
-            units = UNITS_LENGTH,
-            
-            rank = 100
-    )
-
-    private val AREA = Quantity(
-
-            id = R.id.navigation_area,
-
-            name = R.string.navigation_area,
-
-            color = R.color.green_500,
-
-            colorDark = R.color.green_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_area,
-
-            units = UNITS_AREA,
-            
-            rank = 101
-    )
-
-    private val VOLUME = Quantity(
-
-            id = R.id.navigation_volume,
-
-            name = R.string.navigation_volume,
-
-            color = R.color.light_blue_500,
-
-            colorDark = R.color.light_blue_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_volume,
-
-            units = UNITS_VOLUME,
-            
-            rank = 102
-    )
-
-    private val MASS = Quantity(
-
-            id = R.id.navigation_mass,
-
-            name = R.string.navigation_mass,
-
-            color = R.color.red_500,
-
-            colorDark = R.color.red_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_mass,
-
-            units = UNITS_MASS,
-            
-            rank = 103
-    )
-
-    private val TIME = Quantity(
-
-            id = R.id.navigation_time,
-
-            name = R.string.navigation_time,
-
-            color = R.color.amber_500,
-
-            colorDark = R.color.amber_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_time,
-
-            units = UNITS_TIME,
-            
-            rank = 104
-    )
-
-    private val SPEED = Quantity(
-
-            id = R.id.navigation_speed,
-
-            name = R.string.navigation_speed,
-
-            color = R.color.deep_orange_500,
-
-            colorDark = R.color.deep_orange_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_speed,
-
-            units = UNITS_SPEED,
-            
-            rank = 105
-    )
-
-    private val TEMPERATURE = Quantity(
-
-            id = R.id.navigation_temperature,
-
-            name = R.string.navigation_temperature,
-
-            color = R.color.cyan_500,
-
-            colorDark = R.color.cyan_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_temperature,
-
-            units = UNITS_TEMPERATURE,
-            
-            rank = 106
-    )
-
-    private val FUEL = Quantity(
-
-            id = R.id.navigation_fuel,
-
-            name = R.string.navigation_fuel,
-
-            color = R.color.lime_500,
-
-            colorDark = R.color.lime_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_fuel,
-
-            units = UNITS_FUEL,
-            
-            rank = 107
-    )
-
-    private val STORAGE = Quantity(
-
-            id = R.id.navigation_storage,
-
-            name = R.string.navigation_storage,
-
-            color = R.color.teal_500,
-
-            colorDark = R.color.teal_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_storage,
-
-            units = UNITS_STORAGE,
-            
-            rank = 108
-    )
-
-    private val BITRATE = Quantity(
-
-            id = R.id.navigation_bitrate,
-
-            name = R.string.navigation_bitrate,
-
-            color = R.color.amber_500,
-
-            colorDark = R.color.amber_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_bitrate,
-
-            units = UNITS_BITRATE,
-            
-            rank = 109
-    )
-
-    private val ANGLE = Quantity(
-
-            id = R.id.navigation_angle,
-
-            name = R.string.navigation_angle,
-
-            color = R.color.red_500,
-
-            colorDark = R.color.red_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_angle,
-
-            units = UNITS_ANGLE,
-            
-            rank = 200
-    )
-
-    private val DENSITY = Quantity(
-
-            id = R.id.navigation_density,
-
-            name = R.string.navigation_density,
-
-            color = R.color.blue_500,
-
-            colorDark = R.color.blue_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_density,
-
-            units = UNITS_DENSITY,
-            
-            rank = 201
-    )
-
-    private val FREQUENCY = Quantity(
-
-            id = R.id.navigation_frequency,
-
-            name = R.string.navigation_frequency,
-
-            color = R.color.green_500,
-
-            colorDark = R.color.green_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_frequency,
-
-            units = UNITS_FREQUENCY,
-            
-            rank = 202
-    )
-
-    private val FLOW = Quantity(
-
-            id = R.id.navigation_flow,
-
-            name = R.string.navigation_flow,
-
-            color = R.color.light_blue_500,
-
-            colorDark = R.color.light_blue_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_flow,
-
-            units = UNITS_FLOW,
-            
-            rank = 203
-    )
-
-    private val ACCELERATION = Quantity(
-
-            id = R.id.navigation_acceleration,
-
-            name = R.string.navigation_acceleration,
-
-            color = R.color.orange_500,
-
-            colorDark = R.color.orange_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_acceleration,
-
-            units = UNITS_ACCELERATION,
-            
-            rank = 204
-    )
-
-    private val FORCE = Quantity(
-
-            id = R.id.navigation_force,
-
-            name = R.string.navigation_force,
-
-            color = R.color.teal_500,
-
-            colorDark = R.color.teal_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_force,
-
-            units = UNITS_FORCE,
-            
-            rank = 205
-    )
-
-    private val PRESSURE = Quantity(
-
-            id = R.id.navigation_pressure,
-
-            name = R.string.navigation_pressure,
-
-            color = R.color.cyan_500,
-
-            colorDark = R.color.cyan_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_pressure,
-
-            units = UNITS_PRESSURE,
-            
-            rank = 206
-    )
-
-    private val TORQUE = Quantity(
-
-            id = R.id.navigation_torque,
-
-            name = R.string.navigation_torque,
-
-            color = R.color.yellow_500,
-
-            colorDark = R.color.yellow_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_torque,
-
-            units = UNITS_TORQUE,
-            
-            rank = 207
-    )
-
-    private val ENERGY = Quantity(
-
-            id = R.id.navigation_energy,
-
-            name = R.string.navigation_energy,
-
-            color = R.color.green_500,
-
-            colorDark = R.color.green_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_energy,
-
-            units = UNITS_ENERGY,
-            
-            rank = 208
-    )
-
-    private val POWER = Quantity(
-
-            id = R.id.navigation_power,
-
-            name = R.string.navigation_power,
-
-            color = R.color.red_500,
-
-            colorDark = R.color.red_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_power,
-
-            units = UNITS_POWER,
-            
-            rank = 209
-    )
-
-    private val CURRENT = Quantity(
-
-            id = R.id.navigation_current,
-
-            name = R.string.navigation_current,
-
-            color = R.color.yellow_500,
-
-            colorDark = R.color.yellow_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_current,
-
-            units = UNITS_CURRENT,
-            
-            rank = 210
-    )
-
-    private val CHARGE = Quantity(
-
-            id = R.id.navigation_charge,
-
-            name = R.string.navigation_charge,
-
-            color = R.color.light_green_500,
-
-            colorDark = R.color.light_green_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_charge,
-
-            units = UNITS_CHARGE,
-
-            rank = 211
-    )
-
-    private val VOLTAGE = Quantity(
-
-            id = R.id.navigation_voltage,
-
-            name = R.string.navigation_voltage,
-
-            color = R.color.orange_500,
-
-            colorDark = R.color.orange_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_voltage,
-
-            units = UNITS_VOLTAGE,
-
-            rank = 212
-    )
-
-    private val LUMINANCE = Quantity(
-
-            id = R.id.navigation_luminance,
-
-            name = R.string.navigation_luminance,
-
-            color = R.color.amber_500,
-
-            colorDark = R.color.amber_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_luminance,
-
-            units = UNITS_LUMINANCE,
-
-            rank = 213
-    )
-
-    private val ILLUMINANCE = Quantity(
-
-            id = R.id.navigation_illuminance,
-
-            name = R.string.navigation_illuminance,
-
-            color = R.color.lime_500,
-
-            colorDark = R.color.lime_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_illuminance,
-
-            units = UNITS_ILLUMINANCE,
-
-            rank = 214
-    )
-
-    private val RADIATION = Quantity(
-
-            id = R.id.navigation_radiation,
-
-            name = R.string.navigation_radiation,
-
-            color = R.color.deep_orange_500,
-
-            colorDark = R.color.deep_orange_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_radiation,
-
-            units = UNITS_RADIATION,
-
-            rank = 215
-    )
-
-    private val RADIOACTIVITY = Quantity(
-
-            id = R.id.navigation_radioactivity,
-
-            name = R.string.navigation_radioactivity,
-
-            color = R.color.yellow_500,
-
-            colorDark = R.color.yellow_700,
-
-            shortcutIcon = R.drawable.ic_shortcut_radioactivity,
-
-            units = UNITS_RADIOACTIVITY,
-
-            rank = 216
-    )
-
-    //----------------------------------------------------------------------------------------------
-
-    private val idMap = hashMapOf(
-
-            R.id.navigation_length to LENGTH,
-
-            R.id.navigation_area to AREA,
-
-            R.id.navigation_volume to VOLUME,
-
-            R.id.navigation_mass to MASS,
-
-            R.id.navigation_time to TIME,
-
-            R.id.navigation_speed to SPEED,
-
-            R.id.navigation_temperature to TEMPERATURE,
-
-            R.id.navigation_fuel to FUEL,
-
-            R.id.navigation_storage to STORAGE,
-
-            R.id.navigation_bitrate to BITRATE,
-
-            R.id.navigation_angle to ANGLE,
-
-            R.id.navigation_density to DENSITY,
-
-            R.id.navigation_frequency to FREQUENCY,
-
-            R.id.navigation_flow to FLOW,
-
-            R.id.navigation_acceleration to ACCELERATION,
-
-            R.id.navigation_force to FORCE,
-
-            R.id.navigation_pressure to PRESSURE,
-
-            R.id.navigation_torque to TORQUE,
-
-            R.id.navigation_energy to ENERGY,
-
-            R.id.navigation_power to POWER,
-
-            R.id.navigation_current to CURRENT,
-
-            R.id.navigation_charge to CHARGE,
-
-            R.id.navigation_voltage to VOLTAGE,
-
-            R.id.navigation_luminance to LUMINANCE,
-
-            R.id.navigation_illuminance to ILLUMINANCE,
-
-            R.id.navigation_radiation to RADIATION,
-
-            R.id.navigation_radioactivity to RADIOACTIVITY
-    )
+            unit(R.string.rutherford, R.string.symbol_rutherford, 1e6)
+        }
+    }
 }
