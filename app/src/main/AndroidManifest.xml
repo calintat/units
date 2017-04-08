@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:fullBackupContent="@xml/backup_descriptor" >
 
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+
         <activity
             android:name=".activities.MainActivity"
             android:windowSoftInputMode="stateHidden" >
