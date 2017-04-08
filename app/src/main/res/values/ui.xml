@@ -16,11 +16,9 @@
 
     <dimen name="card_view_margin_top">72dp</dimen>
 
-    <dimen name="card_view_margin_start">16dp</dimen>
-
-    <dimen name="card_view_margin_end">16dp</dimen>
-
     <dimen name="card_view_margin_bottom">16dp</dimen>
+
+    <dimen name="card_view_margin_horizontal">16dp</dimen>
 
     <item type="id" name="fragment" />
 
