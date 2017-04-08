@@ -263,7 +263,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun refreshNavigationView() {
 
-        navigationView.menu.setGroupVisible(R.id.advanced, getBoolean("pref_advanced"))
+        navigationView.menu.setGroupVisible(R.id.advanced, getBoolean("pref_advanced", true))
     }
 
     private fun gotoFeedback() {
