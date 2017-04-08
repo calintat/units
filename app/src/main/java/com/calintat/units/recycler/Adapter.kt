@@ -3,13 +3,13 @@ package com.calintat.units.recycler
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
-import com.calintat.units.R
+import com.calintat.units.ui.ListItem
 import com.calintat.units.utils.Converter
-import org.jetbrains.anko.layoutInflater
+import org.jetbrains.anko.AnkoContext
 
 class Adapter(private val context: Context) : RecyclerView.Adapter<ViewHolder>() {
 
-    internal var units = emptyArray<Converter.Unit>()
+    internal var units = emptyList<Converter.MeasurementUnit>()
 
     internal var input = Double.NaN // in base unit
 
@@ -38,8 +38,8 @@ class Adapter(private val context: Context) : RecyclerView.Adapter<ViewHolder>()
         holder.itemView.setOnLongClickListener { onLongClick(output.toString()); true }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = with(context) {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
-        ViewHolder(layoutInflater.inflate(R.layout.recycler_list_item, parent, false))
+        return ViewHolder(ListItem.createView(AnkoContext.create(context, parent)))
     }
 }
