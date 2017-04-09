@@ -226,6 +226,8 @@
 
     <!--TIME-->
 
+    <string name="millisecond">Millisekunde</string>
+
     <string name="second">Sekunde</string>
 
     <string name="minute">Minute</string>
@@ -289,6 +291,8 @@
     <string name="mile_per_imperial_gallon">Meile pro Imperiale Gallone</string>
 
     <string name="mile_per_us_gallon">Meile pro US Gallone</string>
+
+    <string name="litre_per_100_kilometres">Liter pro 100 Kilometers</string>
 
     <!--STORAGE-->
 
@@ -385,6 +389,8 @@
     <string name="kilogram_per_cubic_metre">Kilogramm pro Kubikmeter</string>
 
     <string name="kilogram_per_litre">Kilogramm pro Liter</string>
+
+    <string name="gram_per_cubic_centimetre">Gramm pro Kubikzentimeter</string>
 
     <string name="ounce_per_cubic_foot">Unze pro Kubikfuß</string>
 

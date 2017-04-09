@@ -224,6 +224,8 @@
 
     <!--TIME-->
 
+    <string name="millisecond">milisekunda</string>
+
     <string name="second">sekunda</string>
 
     <string name="minute">minuta</string>
@@ -287,6 +289,8 @@
     <string name="mile_per_imperial_gallon">míle za imperiální galon</string>
 
     <string name="mile_per_us_gallon">míle za US galon</string>
+
+    <string name="litre_per_100_kilometres">litr az 100 kilometrů</string>
 
     <!--STORAGE-->
 
@@ -383,6 +387,8 @@
     <string name="kilogram_per_cubic_metre">kilogram za metr krychlový</string>
 
     <string name="kilogram_per_litre">kilogram za litr</string>
+
+    <string name="gram_per_cubic_centimetre">gram za centimetr krychlový</string>
 
     <string name="ounce_per_cubic_foot">unce za stopa krychlový</string>
 
