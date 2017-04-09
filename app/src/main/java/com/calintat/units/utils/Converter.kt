@@ -281,6 +281,8 @@ object Converter {
 
             shortcutIcon = R.drawable.ic_shortcut_time
 
+            unit(R.string.millisecond, R.string.symbol_millisecond, 0.001)
+
             unit(R.string.second, R.string.symbol_second)
 
             unit(R.string.minute, R.string.symbol_minute, 60.0)
@@ -372,6 +374,8 @@ object Converter {
             unit(R.string.mile_per_imperial_gallon, R.string.symbol_mile_per_imperial_gallon, 0.354006)
 
             unit(R.string.mile_per_us_gallon, R.string.symbol_mile_per_us_gallon, 0.425144)
+
+            unit(R.string.litre_per_100_kilometres, R.string.symbol_litre_per_100_kilometres, 100.0, n = -1)
         }
 
         item(id = R.id.navigation_storage) {
@@ -504,6 +508,8 @@ object Converter {
             unit(R.string.kilogram_per_cubic_metre, R.string.symbol_kilogram_per_cubic_metre)
 
             unit(R.string.kilogram_per_litre, R.string.symbol_kilogram_per_litre, 1000.0)
+
+            unit(R.string.gram_per_cubic_centimetre, R.string.symbol_gram_per_cubic_centimetre, 1000.0)
 
             unit(R.string.ounce_per_cubic_foot, R.string.symbol_ounce_per_cubic_foot, 1.001153961)
 
