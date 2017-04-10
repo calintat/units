@@ -66,8 +66,6 @@ class MainActivity : AppCompatActivity() {
 
         super.onResume()
 
-        refreshActionMenu()
-
         refreshRecyclerView()
 
         refreshNavigationView()
