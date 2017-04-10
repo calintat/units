@@ -1,0 +1,58 @@
+<shortcuts
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:targetApi="25" >
+
+    <shortcut
+        android:shortcutId="shortcut_length"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_length"
+        android:shortcutShortLabel="@string/navigation_length" >
+
+        <intent
+            android:action="com.calintat.units.SHORTCUT_LENGTH"
+            android:targetPackage="com.calintat.units"
+            android:targetClass="com.calintat.units.activities.MainActivity" />
+
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="shortcut_area"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_area"
+        android:shortcutShortLabel="@string/navigation_area" >
+
+        <intent
+            android:action="com.calintat.units.SHORTCUT_AREA"
+            android:targetPackage="com.calintat.units"
+            android:targetClass="com.calintat.units.activities.MainActivity" />
+
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="shortcut_volume"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_volume"
+        android:shortcutShortLabel="@string/navigation_volume" >
+
+        <intent
+            android:action="com.calintat.units.SHORTCUT_VOLUME"
+            android:targetPackage="com.calintat.units"
+            android:targetClass="com.calintat.units.activities.MainActivity" />
+
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="shortcut_mass"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_mass"
+        android:shortcutShortLabel="@string/navigation_mass" >
+
+        <intent
+            android:action="com.calintat.units.SHORTCUT_MASS"
+            android:targetPackage="com.calintat.units"
+            android:targetClass="com.calintat.units.activities.MainActivity" />
+
+    </shortcut>
+
+</shortcuts>
