@@ -42,4 +42,4 @@ Translations
 Want to help translate Units to your language?
 Just email me the translated [strings.xml](app/src/main/res/values/strings.xml) file.
 
-Supported languages: English, German, French, Spanish, Italian, Romanian, Czech & Slovak.
+Supported languages: English, German, French, Spanish, Italian, Romanian, Czech, Slovak & Dutch.
