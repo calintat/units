@@ -30,7 +30,7 @@ Completely free with no ads
 Suggestions
 -----------
 
-To suggest new conversions, please head over to [this link](https://docs.google.com/forms/d/e/1FAIpQLSfxDoObDqKGmhf9wmIOv9TdZKZE3idKrkDmIGrQHdehV8Vl3A/viewform?entry.77629743).
+To suggest new conversions, please create a [new issue](https://github.com/calintat/units/issues/new).
 
 Please feel free to email me with suggestions on how to make the app better.
 
