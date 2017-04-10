@@ -4,6 +4,7 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.support.annotation.IdRes
 import android.support.customtabs.CustomTabsIntent
@@ -243,13 +244,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun refreshActionMenu() {
 
+        val api25 = Build.VERSION.SDK_INT >= 25
+
         val contained = favourites.contains(id)
 
         toolbar.menu.findItem(R.id.action_clear_input).isVisible = editText.text.isNotEmpty()
 
-        toolbar.menu.findItem(R.id.action_add_to_favourites).isVisible = !contained
+        toolbar.menu.findItem(R.id.action_add_to_favourites).isVisible = api25 && !contained
 
-        toolbar.menu.findItem(R.id.action_remove_from_favourites).isVisible = contained
+        toolbar.menu.findItem(R.id.action_remove_from_favourites).isVisible = api25 && contained
     }
 
     private fun refreshRecyclerView() {
