@@ -1,0 +1,587 @@
+<resources>
+    
+    <!--ACTIONS-->
+
+    <string name="action_clear_input">Clear ingang</string>
+
+    <string name="action_add_to_favourites">Toevoegen aan favorieten</string>
+
+    <string name="action_remove_from_favourites">Verwijderen uit favorieten</string>
+
+    <!--ERRORS-->
+
+    <string name="err_add_to_favourites">Maximaal 4 favorieten</string>
+
+    <!--MESSAGES-->
+
+    <string name="msg_clipboard">Gekopieerd naar het klembord</string>
+
+    <string name="msg_input">Voer ingang</string>
+
+    <string name="msg_add_to_favourites">Toegevoegd aan favorieten</string>
+
+    <string name="msg_remove_from_favourites">Verwijderd uit favorieten</string>
+
+    <!--NAVIGATION-->
+
+    <string name="navigation_length">Lengte</string>
+
+    <string name="navigation_area">Gebied</string>
+
+    <string name="navigation_volume">Volume</string>
+
+    <string name="navigation_mass">Massa</string>
+
+    <string name="navigation_time">Tijd</string>
+
+    <string name="navigation_speed">Snelheid</string>
+
+    <string name="navigation_temperature">Temperatuur</string>
+
+    <string name="navigation_currency">Valuta</string>
+
+    <string name="navigation_fuel">Brandstof</string>
+
+    <string name="navigation_storage">Opslagruimte</string>
+
+    <string name="navigation_bitrate">Bitrate</string>
+
+    <string name="navigation_angle">Hoek</string>
+
+    <string name="navigation_density">Dichtheid</string>
+
+    <string name="navigation_frequency">Frequentie</string>
+
+    <string name="navigation_flow">Stroom</string>
+
+    <string name="navigation_acceleration">Versnelling</string>
+
+    <string name="navigation_force">Dwingen</string>
+
+    <string name="navigation_pressure">Druk</string>
+
+    <string name="navigation_torque">Torque</string>
+
+    <string name="navigation_energy">Koppel</string>
+
+    <string name="navigation_power">Macht</string>
+
+    <string name="navigation_current">Actueel</string>
+
+    <string name="navigation_charge">Lading</string>
+
+    <string name="navigation_voltage">Spanning</string>
+
+    <string name="navigation_luminance">Luminantie</string>
+
+    <string name="navigation_illuminance">Verlichtingssterkte</string>
+
+    <string name="navigation_radiation">Bestraling</string>
+
+    <string name="navigation_radioactivity">Radioactiviteit</string>
+
+    <string name="navigation_settings">Instellingen</string>
+
+    <string name="navigation_feedback">Stuur feedback</string>
+
+    <!--PREFERENCES-->
+
+    <string name="pref_advanced">Gevorderd</string>
+
+    <string name="pref_dark_theme">Donker thema</string>
+
+    <string name="pref_about">Over</string>
+
+    <string name="pref_version">Versie</string>
+
+    <string name="pref_developer">Ontwikkelaar</string>
+
+    <!--LENGTH-->
+
+    <string name="metre">meter</string>
+
+    <string name="kilometre">kilometer</string>
+
+    <string name="mile">mijl</string>
+
+    <string name="yard">yard</string>
+
+    <string name="foot">voet</string>
+
+    <string name="inch">inch</string>
+
+    <string name="centimetre">centimeter</string>
+
+    <string name="millimetre">millimeter</string>
+
+    <string name="micrometre">micrometer</string>
+
+    <string name="angstrom">angstrom</string>
+
+    <string name="astronomical_unit">astronomische eenheid</string>
+
+    <string name="light_year">lichtjaar</string>
+
+    <string name="parsec">parsec</string>
+
+    <string name="nanometre">nanometer</string>
+
+    <string name="picometre">picometer</string>
+
+    <string name="fermi">fermi</string>
+
+    <string name="fathom">vadem</string>
+
+    <string name="furlong">furlong</string>
+
+    <string name="nautical_mile">zeemijl</string>
+
+    <!--AREA-->
+
+    <string name="square_metre">vierkante meter</string>
+
+    <string name="square_kilometre">vierkante kilometer</string>
+
+    <string name="are">are</string>
+
+    <string name="hectare">hectare</string>
+
+    <string name="acre">acre</string>
+
+    <string name="cuerda">cuerda</string>
+
+    <string name="square_yard">vierkante yard</string>
+
+    <string name="square_foot">vierkante voet</string>
+
+    <string name="square_inch">vierkante inch</string>
+
+    <!--VOLUME-->
+
+    <string name="cubic_metre">kubieke meter</string>
+
+    <string name="litre">liter</string>
+
+    <string name="millilitre">milliliter</string>
+
+    <string name="cubic_foot">kubieke voet</string>
+
+    <string name="cubic_inch">kubieke inch</string>
+
+    <string name="imperial_gallon">imperial gallon</string>
+
+    <string name="us_gallon">US gallon</string>
+
+    <string name="imperial_quart">imperial quart</string>
+
+    <string name="us_quart">US quart</string>
+
+    <string name="imperial_pint">imperial pint</string>
+
+    <string name="us_pint">US pint</string>
+
+    <string name="imperial_fluid_ounce">imperial fluid ounce</string>
+
+    <string name="us_fluid_ounce">US fluid ounce</string>
+
+    <string name="imperial_tablespoon">imperial eetlepel</string>
+
+    <string name="us_tablespoon">US eetlepel</string>
+
+    <string name="imperial_teaspoon">imperial theelepel</string>
+
+    <string name="us_teaspoon">US theelepel</string>
+
+    <!--MASS-->
+
+    <string name="kilogram">kilogram</string>
+
+    <string name="stone">stone</string>
+
+    <string name="pound">pond</string>
+
+    <string name="ounce">ons</string>
+
+    <string name="imperial_ton">imperial ton</string>
+
+    <string name="us_ton">US ton</string>
+
+    <string name="tonne">metrieke ton</string>
+
+    <string name="gram">gram</string>
+
+    <string name="milligram">milligram</string>
+
+    <string name="microgram">microgram</string>
+
+    <string name="carat">karaat</string>
+
+    <string name="dram">dram</string>
+
+    <string name="grain">grein</string>
+
+    <string name="atomic_mass_unit">atomaire massa-eenheid</string>
+
+    <string name="electron_rest_mass">electron rustmassa</string>
+
+    <!--TIME-->
+
+    <string name="millisecond">milliseconde</string>
+
+    <string name="second">seconde</string>
+
+    <string name="minute">minuut</string>
+
+    <string name="hour">uur</string>
+
+    <string name="day">dag</string>
+
+    <string name="week">week</string>
+
+    <string name="month">maand</string>
+
+    <string name="year">jaar</string>
+
+    <string name="decade">decennium</string>
+
+    <string name="century">eeuw</string>
+
+    <!--SPEED-->
+
+    <string name="metre_per_second">meter per seconde</string>
+
+    <string name="mile_per_hour">mijl per uur</string>
+
+    <string name="kilometre_per_hour">kilometer per uur</string>
+
+    <string name="foot_per_second">voet per seconde</string>
+
+    <string name="knot">knoop</string>
+
+    <string name="speed_of_light">lichtsnelheid</string>
+
+    <string name="speed_of_sound">geluidssnelheid</string>
+
+    <!--TEMPERATURE-->
+
+    <string name="kelvin">Kelvin</string>
+
+    <string name="celsius">Celsius</string>
+
+    <string name="fahrenheit">Fahrenheit</string>
+
+    <!--CURRENCY-->
+
+    <string name="british_pound">Britse pond</string>
+
+    <string name="us_dollar">US dollar</string>
+
+    <string name="euro">euro</string>
+
+    <string name="australian_dollar">Australische dollar</string>
+
+    <string name="canadian_dollar">Canadese dollar</string>
+
+    <string name="japanese_yen">Japanse yen</string>
+
+    <!--FUEL-->
+
+    <string name="kilometre_per_litre">kilometer per liter</string>
+
+    <string name="mile_per_imperial_gallon">mijl per imperial gallon</string>
+
+    <string name="mile_per_us_gallon">mijl per US gallon</string>
+
+    <string name="litre_per_100_kilometres">liter per 100 kilometers</string>
+
+    <!--STORAGE-->
+
+    <string name="_bit">bit</string>
+
+    <string name="_byte">byte</string>
+
+    <string name="kilobit">kilobit</string>
+
+    <string name="kibibit">kibibit</string>
+
+    <string name="kilobyte">kilobyte</string>
+
+    <string name="kibibyte">kibibyte</string>
+
+    <string name="megabit">megabit</string>
+
+    <string name="mebibit">mebibit</string>
+
+    <string name="megabyte">megabyte</string>
+
+    <string name="mebibyte">mebibyte</string>
+
+    <string name="gigabit">gigabit</string>
+
+    <string name="gibibit">gibibit</string>
+
+    <string name="gigabyte">gigabyte</string>
+
+    <string name="gibibyte">gibibyte</string>
+
+    <string name="terabit">terabit</string>
+
+    <string name="tebibit">tebibit</string>
+
+    <string name="terabyte">terabyte</string>
+
+    <string name="tebibyte">tebibyte</string>
+
+    <string name="petabit">petabit</string>
+
+    <string name="pebibit">pebibit</string>
+
+    <string name="petabyte">petabyte</string>
+
+    <string name="pebibyte">pebibyte</string>
+
+    <!--BITRATE-->
+
+    <string name="kilobit_per_second">kilobit per seconde</string>
+
+    <string name="kibibit_per_second">kibibit per seconde</string>
+
+    <string name="kilobyte_per_second">kilobyte per seconde</string>
+
+    <string name="kibibyte_per_second">kibibyte per seconde</string>
+
+    <string name="megabit_per_second">megabit per seconde</string>
+
+    <string name="mebibit_per_second">mebibit per seconde</string>
+
+    <string name="megabyte_per_second">megabyte per seconde</string>
+
+    <string name="mebibyte_per_second">mebibyte per seconde</string>
+
+    <string name="gigabit_per_second">gigabit per seconde</string>
+
+    <string name="gibibit_per_second">gibibit per seconde</string>
+
+    <string name="gigabyte_per_second">gigabyte per seconde</string>
+
+    <string name="gibibyte_per_second">gibibyte per seconde</string>
+
+    <string name="terabit_per_second">terabit per seconde</string>
+
+    <string name="tebibit_per_second">tebibit per seconde</string>
+
+    <string name="terabyte_per_second">terabyte per seconde</string>
+
+    <string name="tebibyte_per_second">tebibyte per seconde</string>
+
+    <!--ANGLE-->
+
+    <string name="radian">radiaal</string>
+
+    <string name="degree">graad</string>
+
+    <string name="arcminute">arcminuut</string>
+
+    <string name="arcsecond">arcseconde</string>
+
+    <!--DENSITY-->
+
+    <string name="kilogram_per_cubic_metre">kilogram per kubieke meter</string>
+
+    <string name="kilogram_per_litre">kilogram per liter</string>
+
+    <string name="gram_per_cubic_centimetre">gram per kubieke centimeter</string>
+
+    <string name="ounce_per_cubic_foot">ons per kubieke voet</string>
+
+    <string name="ounce_per_cubic_inch">ons per kubieke inch</string>
+
+    <string name="pound_per_cubic_foot">pond per kubieke voet</string>
+
+    <string name="pound_per_cubic_inch">pond per kubieke inch</string>
+
+    <string name="ounce_per_imperial_gallon">ons per imperial gallon</string>
+
+    <string name="ounce_per_us_gallon">ons per US gallon</string>
+
+    <string name="pound_per_imperial_gallon">pond per imperial gallon</string>
+
+    <string name="pound_per_us_gallon">pond per US gallon</string>
+
+    <!--FREQUENCY-->
+
+    <string name="hertz">hertz</string>
+
+    <string name="kilohertz">kilohertz</string>
+
+    <string name="megahertz">megahertz</string>
+
+    <string name="gigahertz">gigahertz</string>
+
+    <string name="revolution_per_minute">omwenteling per minuut</string>
+
+    <!--FLOW-->
+
+    <string name="cubic_metre_per_second">kubieke meter per seconde</string>
+
+    <string name="litre_per_minute">liter per minuut</string>
+
+    <string name="imperial_gallon_per_minute">imperial gallon per minuut</string>
+
+    <string name="us_gallon_per_minute">US gallon per minuut</string>
+
+    <!--ACCELERATION-->
+
+    <string name="metre_per_second_squared">meter per seconde kwadraat</string>
+
+    <string name="galileo">galileo</string>
+
+    <string name="standard_gravity">standaardzwaartekracht</string>
+
+    <string name="mile_per_hour_per_second">mijl per uur per seconde</string>
+
+    <string name="knot_per_second">knoop per seconde</string>
+
+    <!--FORCE-->
+
+    <string name="newton">newton</string>
+
+    <string name="dyne">dyne</string>
+
+    <string name="kilopond">kilopond</string>
+
+    <string name="poundal">poundal</string>
+
+    <string name="pound_force">pond-force</string>
+
+    <string name="ounce_force">ons-force</string>
+
+    <!--PRESSURE-->
+
+    <string name="pascal">pascal</string>
+
+    <string name="pound_per_square_inch">pond per vierkante inch</string>
+
+    <string name="atmosphere">atmosfeer</string>
+
+    <string name="bar">bar</string>
+
+    <string name="millimetre_of_mercury">millimeter kwik</string>
+
+    <string name="kilopascal">kilopascal</string>
+
+    <string name="megapascal">megapascal</string>
+
+    <!--TORQUE-->
+
+    <string name="foot_pound">voet-pond</string>
+
+    <string name="inch_pound">inch-pond</string>
+
+    <string name="newton_metre">newton meter</string>
+
+    <string name="kilopond_metre">kilopond meter</string>
+
+    <!--ENERGY-->
+
+    <string name="joule">joule</string>
+
+    <string name="erg">erg</string>
+
+    <string name="kilowatt_hour">kilowatt-uur</string>
+
+    <string name="megawatt_hour">megawatt-uur</string>
+
+    <string name="calorie">calorie</string>
+
+    <string name="kilocalorie">kilocalorie</string>
+
+    <string name="barrel_of_oil_equivalent">vat olie-equivalent</string>
+
+    <string name="british_thermal_unit">Britse warmte-eenheid</string>
+
+    <string name="electronvolt">electronvolt</string>
+
+    <string name="imperial_gallon_atmosphere">imperial gallon-atmosfeer</string>
+
+    <string name="us_gallon_atmosphere">US gallon-atmosfeer</string>
+
+    <!--POWER-->
+
+    <string name="watt">watt</string>
+
+    <string name="kilowatt">kilowatt</string>
+
+    <string name="megawatt">megawatt</string>
+
+    <string name="horsepower">paardekracht</string>
+
+    <string name="erg_per_second">erg per seconde</string>
+
+    <string name="calorie_per_second">calorie per seconde</string>
+
+    <!--CURRENT-->
+
+    <string name="ampere">ampère</string>
+
+    <string name="abampere">abampère</string>
+
+    <string name="statampere">statampère</string>
+
+    <!--CHARGE-->
+
+    <string name="coulomb">coulomb</string>
+
+    <string name="abcoulomb">abcoulomb</string>
+
+    <string name="statcoulomb">statcoulomb</string>
+
+    <string name="faraday">faraday</string>
+
+    <string name="milliampere_hour">milliampère uur</string>
+
+    <!--VOLTAGE-->
+
+    <string name="volt">volt</string>
+
+    <string name="abvolt">abvolt</string>
+
+    <string name="statvolt">statvolt</string>
+
+    <!--LUMINANCE-->
+
+    <string name="candela_per_square_metre">candela per vierkante meter</string>
+
+    <string name="stilb">stilb</string>
+
+    <string name="lambert">lambert</string>
+
+    <string name="footlambert">footlambert</string>
+
+    <!--ILLUMINANCE-->
+
+    <string name="lux">lux</string>
+
+    <string name="phot">phot</string>
+
+    <string name="footcandle">footcandle</string>
+
+    <!--RADIATION-->
+
+    <string name="gray">gray</string>
+
+    <string name="rad">rad</string>
+
+    <string name="sievert">sievert</string>
+
+    <string name="rem">rem</string>
+
+    <!--RADIOACTIVITY-->
+
+    <string name="becquerel">becquerel</string>
+
+    <string name="curie">curie</string>
+
+    <string name="rutherford">rutherford</string>
+
+</resources>
