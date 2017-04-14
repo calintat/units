@@ -630,6 +630,8 @@ object Converter {
 
             unit(R.string.bar, R.string.symbol_bar, 1e5)
 
+            unit(R.string.millibar, R.string.symbol_millibar, 100.0)
+
             unit(R.string.millimetre_of_mercury, R.string.symbol_millimetre_of_mercury, 133.3224)
 
             unit(R.string.kilopascal, R.string.symbol_kilopascal, 1e3)

@@ -466,6 +466,8 @@
 
     <string name="bar">Bar</string>
 
+    <string name="millibar">Millibar</string>
+
     <string name="millimetre_of_mercury">Millimeter Quecksilbersäule</string>
 
     <string name="kilopascal">Kilopascal</string>

@@ -466,6 +466,8 @@
 
     <string name="bar">bar</string>
 
+    <string name="millibar">milibar</string>
+
     <string name="millimetre_of_mercury">milímetro de mercurio</string>
 
     <string name="kilopascal">kilopascal</string>

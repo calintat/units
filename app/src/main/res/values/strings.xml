@@ -798,6 +798,8 @@
 
     <string name="bar">bar</string>
 
+    <string name="millibar">millibar</string>
+
     <string name="millimetre_of_mercury">millimetre of mercury</string>
 
     <string name="kilopascal">kilopascal</string>
@@ -811,6 +813,8 @@
     <string translatable="false" name="symbol_atmosphere">atm</string>
 
     <string translatable="false" name="symbol_bar">bar</string>
+
+    <string translatable="false" name="symbol_millibar">millibar</string>
 
     <string translatable="false" name="symbol_millimetre_of_mercury">mmHg</string>
 
