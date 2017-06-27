@@ -6,7 +6,7 @@ android {
 
     compileSdkVersion 25
 
-    buildToolsVersion "25.0.2"
+    buildToolsVersion "25.0.3"
 
     defaultConfig {
 
@@ -16,7 +16,7 @@ android {
 
         targetSdkVersion 25
 
-        versionCode 29
+        versionCode 30
 
         versionName "4.1.3"
     }
@@ -24,7 +24,7 @@ android {
 
 dependencies {
 
-    ext.support_version = '25.3.1'
+    ext.support_version = '25.4.0'
 
     ext.anko_version = '0.9.1'
 
@@ -36,7 +36,7 @@ dependencies {
 
     compile "com.android.support:support-v4:$support_version"
 
-    compile "com.github.calintat:alps:1.2"
+    compile "com.github.calintat:alps:1.2.1"
 
     compile "com.github.calintat:colorful:1.0.1"
 
