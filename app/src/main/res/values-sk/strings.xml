@@ -220,6 +220,12 @@
 
     <string name="grain">grain</string>
 
+    <string name="troy_pound">troja libra</string>
+
+    <string name="troy_ounce">troja unca</string>
+
+    <string name="pennyweight">pennyweight</string>
+
     <string name="atomic_mass_unit">atómová hmotnostná jednotka</string>
 
     <string name="electron_rest_mass">elektrón kľudové hmotnosti</string>

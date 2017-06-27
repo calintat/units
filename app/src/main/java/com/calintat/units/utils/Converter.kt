@@ -266,6 +266,12 @@ object Converter {
 
             unit(R.string.grain, R.string.symbol_grain, 64.79891e-6)
 
+            unit(R.string.troy_pound, R.string.symbol_troy_pound, 0.3732417216)
+
+            unit(R.string.troy_ounce, R.string.symbol_troy_ounce, 0.0311035)
+
+            unit(R.string.pennyweight, R.string.symbol_pennyweight, 1.55517384e-3)
+
             unit(R.string.atomic_mass_unit, R.string.symbol_atomic_mass_unit, 1.66053892173e-27)
 
             unit(R.string.electron_rest_mass, R.string.symbol_electron_rest_mass, 9.1093829140e-31)

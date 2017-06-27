@@ -316,6 +316,12 @@
 
     <string name="grain">grain</string>
 
+    <string name="troy_pound">troy pound</string>
+
+    <string name="troy_ounce">troy ounce</string>
+
+    <string name="pennyweight">pennyweight</string>
+
     <string name="atomic_mass_unit">atomic mass unit</string>
 
     <string name="electron_rest_mass">electron rest mass</string>
@@ -345,6 +351,12 @@
     <string translatable="false" name="symbol_dram">dr</string>
 
     <string translatable="false" name="symbol_grain">gt</string>
+
+    <string translatable="false" name="symbol_troy_pound">lb t</string>
+
+    <string translatable="false" name="symbol_troy_ounce">oz t</string>
+
+    <string translatable="false" name="symbol_pennyweight">dwt</string>
 
     <string translatable="false" name="symbol_atomic_mass_unit">u</string>
 

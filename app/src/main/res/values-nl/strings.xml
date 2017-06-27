@@ -220,6 +220,12 @@
 
     <string name="grain">grein</string>
 
+    <string name="troy_pound">troy pond</string>
+
+    <string name="troy_ounce">troy ons</string>
+
+    <string name="pennyweight">pennyweight</string>
+
     <string name="atomic_mass_unit">atomaire massa-eenheid</string>
 
     <string name="electron_rest_mass">electron rustmassa</string>

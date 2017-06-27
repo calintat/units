@@ -220,6 +220,12 @@
 
     <string name="grain">grain</string>
 
+    <string name="troy_pound">livre troy</string>
+
+    <string name="troy_ounce">once troy</string>
+
+    <string name="pennyweight">pennyweight</string>
+
     <string name="atomic_mass_unit">unité de masse atomique</string>
 
     <string name="electron_rest_mass">masse de repos électronique</string>

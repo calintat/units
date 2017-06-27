@@ -220,6 +220,12 @@
 
     <string name="grain">grain</string>
 
+    <string name="troy_pound">livră troy</string>
+
+    <string name="troy_ounce">uncie troy</string>
+
+    <string name="pennyweight">pennyweight</string>
+
     <string name="atomic_mass_unit">unitatea atomică de masă</string>
 
     <string name="electron_rest_mass">masa de repaus a electronului</string>
