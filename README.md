@@ -19,11 +19,11 @@ Accurate conversions
 
 Simple and colourful design
 
-App shortcuts for Android Nougat
+Dynamic app shortcuts
 
 Remembers the last selected item
 
-Supports eight languages
+Supports nine languages
 
 Completely free with no ads
 
