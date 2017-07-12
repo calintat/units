@@ -30,7 +30,7 @@ object SettingsUI : AnkoComponent<SettingsActivity> {
 
                 frameLayout {
 
-                    id = R.id.fragment
+                    id = R.id.container
                 }
             }
         }
