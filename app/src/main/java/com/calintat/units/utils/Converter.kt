@@ -57,7 +57,7 @@ object Converter {
         internal val units = mutableListOf<MeasurementUnit>()
 
         /**
-         * The resource id of the string for the short shortLabel of the shortcut.
+         * The resource id of the string for the short label of the shortcut.
          */
         internal var shortLabel by Delegates.notNull<@StringRes Int>()
 
@@ -71,6 +71,11 @@ object Converter {
          */
         internal var colorDark by Delegates.notNull<@ColorRes Int>()
 
+        /**
+         * The id of the shortcut.
+         */
+        internal var shortcutId by Delegates.notNull<String>()
+        
         /**
          * The resource id of the icon for the app shortcut.
          */
@@ -93,6 +98,11 @@ object Converter {
     fun get(@IdRes id: Int) = items[id] ?: throw Exception("Unknown identifier")
 
     /**
+     * An invertible mapping between navigation ids and shortcut ids.
+     */
+    val shortcuts = mutableSetOf<Pair<@IdRes Int, String>>()
+
+    /**
      * A mapping between identifiers and physical quantities.
      */
     private val items = mutableMapOf<@IdRes Int, Item>()
@@ -102,7 +112,7 @@ object Converter {
      */
     private fun item(@IdRes id: Int, init: Item.() -> Unit) {
 
-        Item(id).apply(init).let { items += it.id to it }
+        Item(id).apply(init).let { items += it.id to it; shortcuts += it.id to it.shortcutId }
     }
 
     init {
@@ -114,6 +124,8 @@ object Converter {
             color = R.color.blue_500
 
             colorDark = R.color.blue_700
+
+            shortcutId = "shortcut_length"
 
             shortcutIcon = R.drawable.ic_shortcut_length
 
@@ -164,6 +176,8 @@ object Converter {
 
             colorDark = R.color.green_700
 
+            shortcutId = "shortcut_area"
+
             shortcutIcon = R.drawable.ic_shortcut_area
 
             unit(R.string.square_metre, R.string.symbol_square_metre)
@@ -192,6 +206,8 @@ object Converter {
             color = R.color.light_blue_500
 
             colorDark = R.color.light_blue_700
+
+            shortcutId = "shortcut_volume"
 
             shortcutIcon = R.drawable.ic_shortcut_volume
 
@@ -237,6 +253,8 @@ object Converter {
             color = R.color.red_500
 
             colorDark = R.color.red_700
+
+            shortcutId = "shortcut_mass"
 
             shortcutIcon = R.drawable.ic_shortcut_mass
 
@@ -285,6 +303,8 @@ object Converter {
 
             colorDark = R.color.amber_700
 
+            shortcutId = "shortcut_time"
+
             shortcutIcon = R.drawable.ic_shortcut_time
 
             unit(R.string.millisecond, R.string.symbol_millisecond, 0.001)
@@ -316,6 +336,8 @@ object Converter {
 
             colorDark = R.color.deep_orange_700
 
+            shortcutId = "shortcut_speed"
+
             shortcutIcon = R.drawable.ic_shortcut_speed
 
             unit(R.string.metre_per_second, R.string.symbol_metre_per_second)
@@ -341,6 +363,8 @@ object Converter {
 
             colorDark = R.color.cyan_700
 
+            shortcutId = "shortcut_temperature"
+
             shortcutIcon = R.drawable.ic_shortcut_temperature
 
             unit(R.string.kelvin, R.string.symbol_kelvin)
@@ -358,6 +382,8 @@ object Converter {
 
             colorDark = R.color.green_700
 
+            shortcutId = "shortcut_currency"
+
             shortcutIcon = R.drawable.ic_shortcut_currency
 
             unit(R.string.british_pound, R.string.symbol_british_pound)
@@ -372,6 +398,8 @@ object Converter {
             color = R.color.lime_500
 
             colorDark = R.color.lime_700
+
+            shortcutId = "shortcut_fuel"
 
             shortcutIcon = R.drawable.ic_shortcut_fuel
 
@@ -391,6 +419,8 @@ object Converter {
             color = R.color.teal_500
 
             colorDark = R.color.teal_700
+
+            shortcutId = "shortcut_storage"
 
             shortcutIcon = R.drawable.ic_shortcut_storage
 
@@ -447,6 +477,8 @@ object Converter {
 
             colorDark = R.color.amber_700
 
+            shortcutId = "shortcut_bitrate"
+
             shortcutIcon = R.drawable.ic_shortcut_bitrate
 
             unit(R.string.kilobit_per_second, R.string.symbol_kilobit_per_second, 1000.0)
@@ -490,6 +522,8 @@ object Converter {
 
             colorDark = R.color.red_700
 
+            shortcutId = "shortcut_angle"
+
             shortcutIcon = R.drawable.ic_shortcut_angle
 
             unit(R.string.radian, R.string.symbol_radian)
@@ -508,6 +542,8 @@ object Converter {
             color = R.color.blue_500
 
             colorDark = R.color.blue_700
+
+            shortcutId = "shortcut_density"
 
             shortcutIcon = R.drawable.ic_shortcut_density
 
@@ -542,6 +578,8 @@ object Converter {
 
             colorDark = R.color.green_700
 
+            shortcutId = "shortcut_frequency"
+
             shortcutIcon = R.drawable.ic_shortcut_frequency
 
             unit(R.string.hertz, R.string.symbol_hertz)
@@ -563,6 +601,8 @@ object Converter {
 
             colorDark = R.color.light_blue_700
 
+            shortcutId = "shortcut_flow"
+
             shortcutIcon = R.drawable.ic_shortcut_flow
 
             unit(R.string.cubic_metre_per_second, R.string.symbol_cubic_metre_per_second)
@@ -581,6 +621,8 @@ object Converter {
             color = R.color.orange_500
 
             colorDark = R.color.orange_700
+
+            shortcutId = "shortcut_acceleration"
 
             shortcutIcon = R.drawable.ic_shortcut_acceleration
 
@@ -602,6 +644,8 @@ object Converter {
             color = R.color.teal_500
 
             colorDark = R.color.teal_700
+
+            shortcutId = "shortcut_force"
 
             shortcutIcon = R.drawable.ic_shortcut_force
 
@@ -625,6 +669,8 @@ object Converter {
             color = R.color.cyan_500
 
             colorDark = R.color.cyan_700
+
+            shortcutId = "shortcut_pressure"
 
             shortcutIcon = R.drawable.ic_shortcut_pressure
 
@@ -653,6 +699,8 @@ object Converter {
 
             colorDark = R.color.yellow_700
 
+            shortcutId = "shortcut_torque"
+
             shortcutIcon = R.drawable.ic_shortcut_torque
 
             unit(R.string.foot_pound, R.string.symbol_foot_pound, 1.3558179483314004)
@@ -671,6 +719,8 @@ object Converter {
             color = R.color.green_500
 
             colorDark = R.color.green_700
+
+            shortcutId = "shortcut_energy"
 
             shortcutIcon = R.drawable.ic_shortcut_energy
 
@@ -705,6 +755,8 @@ object Converter {
 
             colorDark = R.color.red_700
 
+            shortcutId = "shortcut_power"
+
             shortcutIcon = R.drawable.ic_shortcut_power
 
             unit(R.string.watt, R.string.symbol_watt)
@@ -728,6 +780,8 @@ object Converter {
 
             colorDark = R.color.yellow_700
 
+            shortcutId = "shortcut_current"
+
             shortcutIcon = R.drawable.ic_shortcut_current
 
             unit(R.string.ampere, R.string.symbol_ampere)
@@ -744,6 +798,8 @@ object Converter {
             color = R.color.light_green_500
 
             colorDark = R.color.light_green_700
+
+            shortcutId = "shortcut_charge"
 
             shortcutIcon = R.drawable.ic_shortcut_charge
 
@@ -766,6 +822,8 @@ object Converter {
 
             colorDark = R.color.orange_700
 
+            shortcutId = "shortcut_voltage"
+
             shortcutIcon = R.drawable.ic_shortcut_voltage
 
             unit(R.string.volt, R.string.symbol_volt)
@@ -782,6 +840,8 @@ object Converter {
             color = R.color.amber_500
 
             colorDark = R.color.amber_700
+
+            shortcutId = "shortcut_luminance"
 
             shortcutIcon = R.drawable.ic_shortcut_luminance
 
@@ -802,6 +862,8 @@ object Converter {
 
             colorDark = R.color.lime_700
 
+            shortcutId = "shortcut_illuminance"
+
             shortcutIcon = R.drawable.ic_shortcut_illuminance
 
             unit(R.string.lux, R.string.symbol_lux)
@@ -818,6 +880,8 @@ object Converter {
             color = R.color.deep_orange_500
 
             colorDark = R.color.deep_orange_700
+
+            shortcutId = "shortcut_radiation"
 
             shortcutIcon = R.drawable.ic_shortcut_radiation
 
@@ -837,6 +901,8 @@ object Converter {
             color = R.color.yellow_500
 
             colorDark = R.color.yellow_700
+
+            shortcutId = "shortcut_radioactivity"
 
             shortcutIcon = R.drawable.ic_shortcut_radioactivity
 
