@@ -6,8 +6,8 @@ import android.util.TypedValue
 import android.view.Gravity
 import android.view.ViewGroup
 import android.widget.LinearLayout
-import android.widget.TextView
 import com.calintat.units.R
+import com.calintat.units.utils.AnkoUtils.textAppearance
 import org.jetbrains.anko.*
 
 object ListItem : AnkoComponent<ViewGroup> {
@@ -75,15 +75,4 @@ object ListItem : AnkoComponent<ViewGroup> {
 
         return TypedValue().let { ctx.theme.resolveAttribute(value, it, true); it.resourceId }
     }
-
-    internal var TextView.textAppearance: Int
-
-        get() = throw PropertyWithoutGetterException("textAppearance")
-
-        set(value) {
-
-            val sdk = Build.VERSION.SDK_INT
-
-            if (sdk >= 23) setTextAppearance(value) else setTextAppearance(context, value)
-        }
 }
