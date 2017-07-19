@@ -15,6 +15,9 @@ import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.text.Editable
 import android.widget.EditText
+import com.calintat.alps.getBoolean
+import com.calintat.alps.getInt
+import com.calintat.alps.putInt
 import com.calintat.units.R
 import com.calintat.units.recycler.Adapter
 import com.calintat.units.ui.MainUI
@@ -27,10 +30,11 @@ import com.calintat.units.ui.MainUI.textView2
 import com.calintat.units.ui.MainUI.toolbar
 import com.calintat.units.utils.Converter
 import com.calintat.units.utils.ShortcutUtils
-import com.github.calintat.getBoolean
-import com.github.calintat.getInt
-import com.github.calintat.putInt
-import org.jetbrains.anko.*
+import org.jetbrains.anko.configuration
+import org.jetbrains.anko.sdk25.coroutines.textChangedListener
+import org.jetbrains.anko.setContentView
+import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.toast
 
 class MainActivity : AppCompatActivity() {
 
