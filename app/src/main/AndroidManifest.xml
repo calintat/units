@@ -14,13 +14,13 @@
             android:name="android.max_aspect"
             android:value="2.1" />
 
-        <meta-data
-            android:name="android.app.shortcuts"
-            android:resource="@xml/static_shortcuts" />
-
         <activity
             android:name=".activities.MainActivity"
             android:windowSoftInputMode="stateHidden" >
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
 
             <intent-filter>
 
