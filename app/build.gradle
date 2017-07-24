@@ -36,9 +36,9 @@ dependencies {
 
     compile "com.android.support:support-v4:$support_version"
 
-    compile "com.github.calintat.alps:alps-core:2.0"
+    compile "com.github.calintat.alps:alps-core:2.0.2"
 
-    compile "com.github.calintat.alps:alps-dsl:2.0"
+    compile "com.github.calintat.alps:alps-dsl:2.0.2"
 
     compile "com.github.calintat:colorful:1.0.1"
 
