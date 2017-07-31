@@ -1,13 +1,12 @@
 package com.calintat.units.recycler
 
-import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
 import com.calintat.units.ui.ListItem
 import com.calintat.units.utils.Converter
 import org.jetbrains.anko.AnkoContext
 
-class Adapter(private val context: Context) : RecyclerView.Adapter<ViewHolder>() {
+class Adapter : RecyclerView.Adapter<ViewHolder>() {
 
     internal var units = emptyList<Converter.MeasurementUnit>()
 
@@ -40,6 +39,6 @@ class Adapter(private val context: Context) : RecyclerView.Adapter<ViewHolder>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
-        return ViewHolder(ListItem.createView(AnkoContext.create(context, parent)))
+        return ViewHolder(ListItem.createView(AnkoContext.create(parent.context, parent)))
     }
 }
