@@ -4,7 +4,7 @@ apply plugin: 'kotlin-android'
 
 android {
 
-    compileSdkVersion 25
+    compileSdkVersion 26
 
     buildToolsVersion "26.0.0"
 
@@ -14,7 +14,7 @@ android {
 
         minSdkVersion 21
 
-        targetSdkVersion 25
+        targetSdkVersion 26
 
         versionCode 30
 
@@ -24,7 +24,7 @@ android {
 
 dependencies {
 
-    ext.support_version = '25.4.0'
+    ext.support_version = '26.0.0'
 
     ext.anko_version = '0.10.1'
 

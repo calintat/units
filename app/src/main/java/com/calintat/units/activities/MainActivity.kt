@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatDelegate
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.text.Editable
+import android.view.Gravity
 import android.widget.EditText
 import com.calintat.alps.getBoolean
 import com.calintat.alps.getInt
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity() {
 
     private val KEY_ID = "com.calintat.units.KEY_ID"
 
-    private val adapter by lazy { Adapter(this) }
+    private val adapter by lazy { Adapter() }
 
     private var id: Int? = null
 
@@ -85,9 +86,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
 
-        when (drawerLayout.isDrawerOpen(navigationView)) {
+        when {
 
-            true -> drawerLayout.closeDrawers()
+            drawerLayout.isDrawerOpen(Gravity.START) -> drawerLayout.closeDrawers()
 
             else -> super.onBackPressed()
         }
@@ -178,7 +179,7 @@ class MainActivity : AppCompatActivity() {
 
         toolbar.setNavigationIcon(R.drawable.ic_action_menu)
 
-        toolbar.setNavigationOnClickListener { drawerLayout.openDrawer(navigationView) }
+        toolbar.setNavigationOnClickListener { drawerLayout.openDrawer(Gravity.START) }
 
         toolbar.overflowIcon = ContextCompat.getDrawable(this, R.drawable.ic_action_overflow)
     }
