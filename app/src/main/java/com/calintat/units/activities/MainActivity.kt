@@ -31,8 +31,8 @@ import com.calintat.units.ui.MainUI.textView2
 import com.calintat.units.ui.MainUI.toolbar
 import com.calintat.units.utils.Converter
 import com.calintat.units.utils.ShortcutUtils
-import org.jetbrains.anko.configuration
-import org.jetbrains.anko.sdk25.coroutines.textChangedListener
+import org.jetbrains.anko.doFromSdk
+import org.jetbrains.anko.sdk21.listeners.textChangedListener
 import org.jetbrains.anko.setContentView
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
@@ -105,7 +105,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun init(savedInstanceState: Bundle?) {
 
-        configuration(fromSdk = 25) { favourites = ShortcutUtils.getShortcuts(this) }
+        doFromSdk(version = 25) { favourites = ShortcutUtils.getShortcuts(this) }
 
         val defaultId = getInt(KEY_ID, R.id.navigation_length)
 
@@ -290,7 +290,7 @@ class MainActivity : AppCompatActivity() {
         toast(R.string.msg_clipboard)
     }
 
-    private fun updateShortcuts() = configuration(fromSdk = 25) {
+    private fun updateShortcuts() = doFromSdk(version = 25) {
 
         ShortcutUtils.setShortcuts(this, favourites)
     }
