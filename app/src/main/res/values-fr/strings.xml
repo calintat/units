@@ -96,6 +96,11 @@
 
     <string name="pref_developer">Développeur</string>
 
+    <!--THEMES-->
+
+    <string-array name="themes">
+        <item>Auto</item><item>Journée</item><item>Nuit</item></string-array>
+
     <!--LENGTH-->
 
     <string name="metre">mètre</string>

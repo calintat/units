@@ -7,7 +7,7 @@
         android:title="@string/pref_advanced" />
 
     <ListPreference
-        android:defaultValue="2"
+        android:defaultValue="1"
         android:key="pref_theme"
         android:title="@string/pref_theme"
         android:summary="%s"

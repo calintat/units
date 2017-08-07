@@ -104,9 +104,11 @@
 
     <!--THEMES-->
 
-    <string-array name="themes"><item>Auto</item><item>Dark</item><item>Light</item></string-array>
+    <string-array name="themes">
+        <item>Auto</item><item>Day</item><item>Night</item></string-array>
 
-    <string-array name="themes_values"><item>0</item><item>1</item><item>2</item></string-array>
+    <string-array name="themes_values" translatable="false">
+        <item>0</item><item>1</item><item>2</item></string-array>
 
     <!--LENGTH-->
 

@@ -96,6 +96,11 @@
 
     <string name="pref_developer">Vývojka</string>
 
+    <!--THEMES-->
+
+    <string-array name="themes">
+        <item>Auto</item><item>Deň</item><item>Noc</item></string-array>
+
     <!--LENGTH-->
 
     <string name="metre">meter</string>

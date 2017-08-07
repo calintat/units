@@ -152,14 +152,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setTheme() {
 
-        when (getString("pref_theme")) {
-
-            "0" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO)
-
-            "1" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-
-            "2" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-        }
+        AppCompatDelegate.setDefaultNightMode(getInt("pref_theme"))
     }
 
     private fun setToolbar() {

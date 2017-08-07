@@ -96,6 +96,11 @@
 
     <string name="pref_developer">Sviluppatore</string>
 
+    <!--THEMES-->
+
+    <string-array name="themes">
+        <item>Auto</item><item>Giorno</item><item>Notte</item></string-array>
+
     <!--LENGTH-->
 
     <string name="metre">metro</string>
