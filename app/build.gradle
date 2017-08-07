@@ -18,7 +18,7 @@ android {
 
         versionCode 30
 
-        versionName "4.1.3"
+        versionName "4.1.4"
     }
 }
 
