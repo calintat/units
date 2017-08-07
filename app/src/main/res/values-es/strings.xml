@@ -88,7 +88,7 @@
 
     <string name="pref_advanced">Avanzado</string>
 
-    <string name="pref_dark_theme">Tema oscuro</string>
+    <string name="pref_theme">Tema</string>
 
     <string name="pref_about">Acerca de</string>
 

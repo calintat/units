@@ -18,6 +18,7 @@ import android.view.Gravity
 import android.widget.EditText
 import com.calintat.alps.getBoolean
 import com.calintat.alps.getInt
+import com.calintat.alps.getString
 import com.calintat.alps.putInt
 import com.calintat.units.R
 import com.calintat.units.recycler.Adapter
@@ -151,11 +152,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun setTheme() {
 
-        when (getBoolean("pref_dark_theme")) {
+        when (getString("pref_theme")) {
 
-            true -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            "0" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO)
 
-            else -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            "1" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+
+            "2" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
     }
 
