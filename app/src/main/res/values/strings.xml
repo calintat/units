@@ -832,7 +832,7 @@
 
     <string translatable="false" name="symbol_bar">bar</string>
 
-    <string translatable="false" name="symbol_millibar">millibar</string>
+    <string translatable="false" name="symbol_millibar">mbar</string>
 
     <string translatable="false" name="symbol_millimetre_of_mercury">mmHg</string>
 
