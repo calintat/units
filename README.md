@@ -1,5 +1,8 @@
 # Units
 
+[![](https://img.shields.io/github/release/calintat/units.svg)]()
+[![](https://img.shields.io/github/license/calintat/units.svg)]()
+
 To install on an Android device, go to the [Play Store](https://play.google.com/store/apps/details?id=com.calintat.units).
 
 I would greatly appreciate it if you could rate the app.
