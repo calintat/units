@@ -18,7 +18,6 @@ import android.view.Gravity
 import android.widget.EditText
 import com.calintat.alps.getBoolean
 import com.calintat.alps.getInt
-import com.calintat.alps.getString
 import com.calintat.alps.putInt
 import com.calintat.units.R
 import com.calintat.units.recycler.Adapter
@@ -108,7 +107,7 @@ class MainActivity : AppCompatActivity() {
 
         doFromSdk(version = 25) { favourites = ShortcutUtils.getShortcuts(this) }
 
-        val defaultId = getInt(KEY_ID, R.id.navigation_length)
+        val defaultId = getInt(KEY_ID).takeIf { Converter.isIdSafe(it) } ?: R.id.navigation_length
 
         if (savedInstanceState == null) { /* opened from launcher or app shortcut */
 

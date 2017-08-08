@@ -98,6 +98,11 @@ object Converter {
     fun get(@IdRes id: Int) = items[id] ?: throw Exception("Unknown identifier")
 
     /**
+     * Return whether the given identifier corresponds to any converter item.
+     */
+    fun isIdSafe(@IdRes id: Int) = id in items.keys
+
+    /**
      * An invertible mapping between navigation ids and shortcut ids.
      */
     val shortcuts = mutableSetOf<Pair<@IdRes Int, String>>()
