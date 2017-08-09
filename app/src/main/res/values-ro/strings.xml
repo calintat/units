@@ -441,6 +441,8 @@
 
     <string name="us_gallon_per_minute">galon american pe minut</string>
 
+    <string name="cubic_metre_per_hour">metru cub pe oră</string>
+
     <!--ACCELERATION-->
 
     <string name="metre_per_second_squared">metru pe secundă la pătrat</string>

@@ -441,6 +441,8 @@
 
     <string name="us_gallon_per_minute">US gallon per minuut</string>
 
+    <string name="cubic_metre_per_hour">kubieke meter per uur</string>
+
     <!--ACCELERATION-->
 
     <string name="metre_per_second_squared">meter per seconde kwadraat</string>

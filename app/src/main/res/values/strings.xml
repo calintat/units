@@ -752,6 +752,8 @@
 
     <string name="us_gallon_per_minute">US gallon per minute</string>
 
+    <string name="cubic_metre_per_hour">cubic metre per hour</string>
+
     <string translatable="false" name="symbol_cubic_metre_per_second">m³/s</string>
 
     <string translatable="false" name="symbol_litre_per_minute">L/min</string>
@@ -759,6 +761,8 @@
     <string translatable="false" name="symbol_imperial_gallon_per_minute">gal/min</string>
 
     <string translatable="false" name="symbol_us_gallon_per_minute">gal/min</string>
+
+    <string translatable="false" name="symbol_cubic_metre_per_hour">m³/h</string>
 
     <!--ACCELERATION-->
 

@@ -617,6 +617,8 @@ object Converter {
             unit(R.string.imperial_gallon_per_minute, R.string.symbol_imperial_gallon_per_minute, 7.577e-5)
 
             unit(R.string.us_gallon_per_minute, R.string.symbol_us_gallon_per_minute, 6.309e-5)
+
+            unit(R.string.cubic_metre_per_hour, R.string.symbol_cubic_metre_per_hour, 0.00027777777)
         }
 
         item(id = R.id.navigation_acceleration) {

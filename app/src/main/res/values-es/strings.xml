@@ -441,6 +441,8 @@
 
     <string name="us_gallon_per_minute">galón estadounidense por minuto</string>
 
+    <string name="cubic_metre_per_hour">metro cúbico por hora</string>
+
     <!--ACCELERATION-->
 
     <string name="metre_per_second_squared">metro por segundo al cuadrado</string>

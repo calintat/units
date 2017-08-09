@@ -439,6 +439,8 @@
 
     <string name="us_gallon_per_minute">US galon za minutu</string>
 
+    <string name="cubic_metre_per_hour">metr krychlový za hodinu</string>
+
     <!--ACCELERATION-->
 
     <string name="metre_per_second_squared">metr za sekundu čtvereční</string>
