@@ -285,17 +285,69 @@
 
     <!--CURRENCY-->
 
-    <string name="british_pound">libra británica</string>
+    <string name="euro">euro</string>
 
     <string name="us_dollar">dólar estadounidense</string>
 
-    <string name="euro">euro</string>
+    <string name="japanese_yen">yen</string>
+
+    <string name="bulgarian_lev">lev fuerte búlgaro</string>
+
+    <string name="czech_koruna">corona checa</string>
+
+    <string name="danish_krone">corona danesa</string>
+
+    <string name="pound_sterling">libra esterlina</string>
+
+    <string name="hungarian_forint">forinto</string>
+
+    <string name="polish_zloty">esloti</string>
+
+    <string name="romanian_leu">leu rumano</string>
+
+    <string name="swedish_krona">corona sueca</string>
+
+    <string name="swiss_franc">franco suizo</string>
+
+    <string name="norwegian_krone">corona noruega</string>
+
+    <string name="croatian_kuna">kuna</string>
+
+    <string name="russian_rouble">rublo ruso</string>
+
+    <string name="turkish_lira">lira turca</string>
 
     <string name="australian_dollar">dólar australiano</string>
 
+    <string name="brazilian_real">real brasileño</string>
+
     <string name="canadian_dollar">dólar canadiense</string>
 
-    <string name="japanese_yen">yen japonés</string>
+    <string name="chinese_yuan_renminbi">yuan</string>
+
+    <string name="hong_kong_dollar">dólar de Hong Kong</string>
+
+    <string name="indonesian_rupiah">rupia indonesia</string>
+
+    <string name="israeli_shekel">nuevo séquel israelí</string>
+
+    <string name="indian_rupee">rupia india</string>
+
+    <string name="south_korean_won">won surcoreano</string>
+
+    <string name="mexican_peso">peso mexicano</string>
+
+    <string name="malaysian_ringgit">ringit</string>
+
+    <string name="new_zealand_dollar">dólar neozelandés</string>
+
+    <string name="philippine_peso">peso filipino</string>
+
+    <string name="singapore_dollar">dólar singapurense</string>
+
+    <string name="thai_baht">bat</string>
+
+    <string name="south_african_rand">rand</string>
 
     <!--FUEL-->
 

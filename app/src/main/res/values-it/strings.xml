@@ -285,17 +285,69 @@
 
     <!--CURRENCY-->
 
-    <string name="british_pound">sterlina britannica</string>
+    <string name="euro">euro</string>
 
     <string name="us_dollar">dollaro statunitense</string>
 
-    <string name="euro">euro</string>
+    <string name="japanese_yen">yen giapponese</string>
+
+    <string name="bulgarian_lev">lev bulgaro</string>
+
+    <string name="czech_koruna">corona ceca</string>
+
+    <string name="danish_krone">corona danese</string>
+
+    <string name="pound_sterling">sterlina inglese</string>
+
+    <string name="hungarian_forint">fiorino ungherese</string>
+
+    <string name="polish_zloty">złoty polacco</string>
+
+    <string name="romanian_leu">leu rumeno</string>
+
+    <string name="swedish_krona">corona svedese</string>
+
+    <string name="swiss_franc">franco svizzero</string>
+
+    <string name="norwegian_krone">corona norvegese</string>
+
+    <string name="croatian_kuna">kuna croata</string>
+
+    <string name="russian_rouble">rublo russo</string>
+
+    <string name="turkish_lira">lira turca</string>
 
     <string name="australian_dollar">dollaro australiano</string>
 
+    <string name="brazilian_real">real brasiliano</string>
+
     <string name="canadian_dollar">dollaro canadese</string>
 
-    <string name="japanese_yen">yen giapponese</string>
+    <string name="chinese_yuan_renminbi">renminbi cinese</string>
+
+    <string name="hong_kong_dollar">dollaro di Hong Kong</string>
+
+    <string name="indonesian_rupiah">rupia indonesiana</string>
+
+    <string name="israeli_shekel">nuovo siclo israeliano</string>
+
+    <string name="indian_rupee">rupia indiana</string>
+
+    <string name="south_korean_won">won sudcoreano</string>
+
+    <string name="mexican_peso">peso messicano</string>
+
+    <string name="malaysian_ringgit">ringgit della Malesia</string>
+
+    <string name="new_zealand_dollar">dollaro neozelandese</string>
+
+    <string name="philippine_peso">peso delle Filippine</string>
+
+    <string name="singapore_dollar">dollaro di Singapore</string>
+
+    <string name="thai_baht">baht thailandese</string>
+
+    <string name="south_african_rand">rand sudafricano</string>
 
     <!--FUEL-->
 

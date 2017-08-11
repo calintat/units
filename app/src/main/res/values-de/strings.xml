@@ -285,17 +285,69 @@
 
     <!--CURRENCY-->
 
-    <string name="british_pound">Britisches Pfund</string>
-
-    <string name="us_dollar">US Dollar</string>
-
     <string name="euro">Euro</string>
+
+    <string name="us_dollar">US-Dollar</string>
+
+    <string name="japanese_yen">Japanischer Yen</string>
+
+    <string name="bulgarian_lev">Bulgarischer Lew</string>
+
+    <string name="czech_koruna">Tschechische Krone</string>
+
+    <string name="danish_krone">Dänische Krone</string>
+
+    <string name="pound_sterling">Britisches Pfund Sterling</string>
+
+    <string name="hungarian_forint">Ungarischer Forint</string>
+
+    <string name="polish_zloty">Polnischer Złoty</string>
+
+    <string name="romanian_leu">Rumänischer Leu</string>
+
+    <string name="swedish_krona">Schwedische Krone</string>
+
+    <string name="swiss_franc">Schweizer Franken</string>
+
+    <string name="norwegian_krone">Norwegische Krone</string>
+
+    <string name="croatian_kuna">Kroatischer Kuna</string>
+
+    <string name="russian_rouble">Russischer Rubel</string>
+
+    <string name="turkish_lira">Türkische Lira</string>
 
     <string name="australian_dollar">Australischer Dollar</string>
 
-    <string name="canadian_dollar">Kanadischer Dollar</string>
+    <string name="brazilian_real">Brasilianischer Real</string>
 
-    <string name="japanese_yen">Japanisch Yen</string>
+    <string name="canadian_dollar">Kanadischer Dollarr</string>
+
+    <string name="chinese_yuan_renminbi">Renminbi Yuan</string>
+
+    <string name="hong_kong_dollar">Hongkong-Dollar</string>
+
+    <string name="indonesian_rupiah">Indonesische Rupiah</string>
+
+    <string name="israeli_shekel">Israelischer Neuer Schekel</string>
+
+    <string name="indian_rupee">Indische Rupie</string>
+
+    <string name="south_korean_won">Südkoreanischer Won</string>
+
+    <string name="mexican_peso">Mexikanischer Peso</string>
+
+    <string name="malaysian_ringgit">Malaysischer Ringgit</string>
+
+    <string name="new_zealand_dollar">Neuseeland-Dollar</string>
+
+    <string name="philippine_peso">Philippinischer Peso</string>
+
+    <string name="singapore_dollar">Singapur-Dollar</string>
+
+    <string name="thai_baht">Thailändischer Baht</string>
+
+    <string name="south_african_rand">Südafrikanischer Rand</string>
 
     <!--FUEL-->
 

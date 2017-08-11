@@ -460,29 +460,133 @@
 
     <!--CURRENCY-->
 
-    <string name="british_pound">British pound</string>
+    <string name="euro">Euro</string>
 
     <string name="us_dollar">US dollar</string>
 
-    <string name="euro">euro</string>
+    <string name="japanese_yen">Japanese yen</string>
+
+    <string name="bulgarian_lev">Bulgarian lev</string>
+
+    <string name="czech_koruna">Czech koruna</string>
+
+    <string name="danish_krone">Danish krone</string>
+
+    <string name="pound_sterling">Pound sterling</string>
+
+    <string name="hungarian_forint">Hungarian forint</string>
+
+    <string name="polish_zloty">Polish zloty</string>
+
+    <string name="romanian_leu">Romanian leu</string>
+
+    <string name="swedish_krona">Swedish krona</string>
+
+    <string name="swiss_franc">Swiss franc</string>
+
+    <string name="norwegian_krone">Norwegian krone</string>
+
+    <string name="croatian_kuna">Croatian kuna</string>
+
+    <string name="russian_rouble">Russian rouble</string>
+
+    <string name="turkish_lira">Turkish lira</string>
 
     <string name="australian_dollar">Australian dollar</string>
 
+    <string name="brazilian_real">Brazilian real</string>
+
     <string name="canadian_dollar">Canadian dollar</string>
 
-    <string name="japanese_yen">Japanese yen</string>
+    <string name="chinese_yuan_renminbi">Chinese yuan renminbi</string>
 
-    <string translatable="false" name="symbol_british_pound">GBP</string>
+    <string name="hong_kong_dollar">Hong Kong dollar</string>
 
-    <string translatable="false" name="symbol_us_dollar">USD</string>
+    <string name="indonesian_rupiah">Indonesian rupiah</string>
+
+    <string name="israeli_shekel">Israeli shekel</string>
+
+    <string name="indian_rupee">Indian rupee</string>
+
+    <string name="south_korean_won">South Korean won</string>
+
+    <string name="mexican_peso">Mexican peso</string>
+
+    <string name="malaysian_ringgit">Malaysian ringgit</string>
+
+    <string name="new_zealand_dollar">New Zealand dollar</string>
+
+    <string name="philippine_peso">Philippine peso</string>
+
+    <string name="singapore_dollar">Singapore dollar</string>
+
+    <string name="thai_baht">Thai baht</string>
+
+    <string name="south_african_rand">South African rand</string>
 
     <string translatable="false" name="symbol_euro">EUR</string>
 
+    <string translatable="false" name="symbol_us_dollar">USD</string>
+
+    <string translatable="false" name="symbol_japanese_yen">JPY</string>
+
+    <string translatable="false" name="symbol_bulgarian_lev">BGN</string>
+
+    <string translatable="false" name="symbol_czech_koruna">CZK</string>
+
+    <string translatable="false" name="symbol_danish_krone">DKK</string>
+
+    <string translatable="false" name="symbol_pound_sterling">GBP</string>
+
+    <string translatable="false" name="symbol_hungarian_forint">HUF</string>
+
+    <string translatable="false" name="symbol_polish_zloty">PLN</string>
+
+    <string translatable="false" name="symbol_romanian_leu">RON</string>
+
+    <string translatable="false" name="symbol_swedish_krona">SEK</string>
+
+    <string translatable="false" name="symbol_swiss_franc">CHF</string>
+
+    <string translatable="false" name="symbol_norwegian_krone">NOK</string>
+
+    <string translatable="false" name="symbol_croatian_kuna">HRK</string>
+
+    <string translatable="false" name="symbol_russian_rouble">RUB</string>
+
+    <string translatable="false" name="symbol_turkish_lira">TRY</string>
+
     <string translatable="false" name="symbol_australian_dollar">AUD</string>
+
+    <string translatable="false" name="symbol_brazilian_real">BRL</string>
 
     <string translatable="false" name="symbol_canadian_dollar">CAD</string>
 
-    <string translatable="false" name="symbol_japanese_yen">JPY</string>
+    <string translatable="false" name="symbol_chinese_yuan_renminbi">CNY</string>
+
+    <string translatable="false" name="symbol_hong_kong_dollar">HKD</string>
+
+    <string translatable="false" name="symbol_indonesian_rupiah">IDR</string>
+
+    <string translatable="false" name="symbol_israeli_shekel">ILS</string>
+
+    <string translatable="false" name="symbol_indian_rupee">INR</string>
+
+    <string translatable="false" name="symbol_south_korean_won">KRW</string>
+
+    <string translatable="false" name="symbol_mexican_peso">MXN</string>
+
+    <string translatable="false" name="symbol_malaysian_ringgit">MYR</string>
+
+    <string translatable="false" name="symbol_new_zealand_dollar">NZD</string>
+
+    <string translatable="false" name="symbol_philippine_peso">PHP</string>
+
+    <string translatable="false" name="symbol_singapore_dollar">SGD</string>
+
+    <string translatable="false" name="symbol_thai_baht">THB</string>
+
+    <string translatable="false" name="symbol_south_african_rand">ZAR</string>
 
     <!--FUEL-->
 

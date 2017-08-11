@@ -285,17 +285,69 @@
 
     <!--CURRENCY-->
 
-    <string name="british_pound">britská libra</string>
-
-    <string name="us_dollar">US dolár</string>
-
     <string name="euro">euro</string>
+
+    <string name="us_dollar">americký dolár</string>
+
+    <string name="japanese_yen">japonský jen</string>
+
+    <string name="bulgarian_lev">Bulharský leva</string>
+
+    <string name="czech_koruna">česká koruna</string>
+
+    <string name="danish_krone">dánska koruna</string>
+
+    <string name="pound_sterling">britská libra</string>
+
+    <string name="hungarian_forint">maďarský forint</string>
+
+    <string name="polish_zloty">poľský zlotý</string>
+
+    <string name="romanian_leu">rumunský leu</string>
+
+    <string name="swedish_krona">švédska koruna</string>
+
+    <string name="swiss_franc">švajčiarsky frank</string>
+
+    <string name="norwegian_krone">nórska koruna</string>
+
+    <string name="croatian_kuna">chorvátska kuna</string>
+
+    <string name="russian_rouble">ruský rubeľ</string>
+
+    <string name="turkish_lira">turecká líra</string>
 
     <string name="australian_dollar">austrálsky dolár</string>
 
+    <string name="brazilian_real">brazílsky real</string>
+
     <string name="canadian_dollar">kanadský dolár</string>
 
-    <string name="japanese_yen">japonský jen</string>
+    <string name="chinese_yuan_renminbi">čínsky jüan</string>
+
+    <string name="hong_kong_dollar">hongkonský dolár</string>
+
+    <string name="indonesian_rupiah">indonézska rupia</string>
+
+    <string name="israeli_shekel">izraelský šekel</string>
+
+    <string name="indian_rupee">indická rupia</string>
+
+    <string name="south_korean_won">juhokórejský won</string>
+
+    <string name="mexican_peso">mexické peso</string>
+
+    <string name="malaysian_ringgit">malajzijský ringgit</string>
+
+    <string name="new_zealand_dollar">novozélandský dolár</string>
+
+    <string name="philippine_peso">filipínske peso</string>
+
+    <string name="singapore_dollar">singapurský dolár</string>
+
+    <string name="thai_baht">thajský baht</string>
+
+    <string name="south_african_rand">juhoafrický rand</string>
 
     <!--FUEL-->
 
