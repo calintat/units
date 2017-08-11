@@ -10,7 +10,7 @@ class Adapter : RecyclerView.Adapter<ViewHolder>() {
 
     internal var units = emptyList<Converter.MeasurementUnit>()
 
-    internal var input = Double.NaN // in base unit
+    internal var input = Double.NaN.toString() // in base unit
 
         set(value) { field = value; notifyDataSetChanged() }
 
@@ -34,7 +34,7 @@ class Adapter : RecyclerView.Adapter<ViewHolder>() {
 
         holder.itemView.setOnClickListener { onClick(position) }
 
-        holder.itemView.setOnLongClickListener { onLongClick(output.toString()); true }
+        holder.itemView.setOnLongClickListener { onLongClick(output); true }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

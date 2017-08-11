@@ -28,10 +28,14 @@ object Converter {
          */
         fun selfToBase(x: Double) = a * (x pow n) + b
 
+        fun selfToBase(x: String) = selfToBase(x.toDoubleOrNull() ?: Double.NaN).toString()
+
         /**
          * Convert [y] from the base unit to this unit.
          */
         fun baseToSelf(y: Double) = ((y - b) / a) pow n
+
+        fun baseToSelf(y: String) = baseToSelf(y.toDoubleOrNull() ?: Double.NaN).toString()
     }
 
     /**
