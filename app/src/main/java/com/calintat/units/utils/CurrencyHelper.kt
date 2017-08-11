@@ -8,18 +8,15 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class CurrencyHelper : AnkoLogger {
+object CurrencyHelper : AnkoLogger {
+
+    private val FIXER_URL = "http://api.fixer.io/"
+
+    private val GSON = GsonConverterFactory.create()
 
     private val retrofit = Retrofit.Builder().baseUrl(FIXER_URL).addConverterFactory(GSON).build()
 
     private val currencyService = retrofit.create(CurrencyService::class.java)
-
-    companion object {
-
-        private val FIXER_URL = "http://api.fixer.io/"
-
-        private val GSON = GsonConverterFactory.create()
-    }
 
     fun loadData(onSuccess: (data: CurrencyData) -> Unit) {
 
