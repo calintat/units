@@ -1,138 +1,31 @@
 package com.calintat.units.api
 
-import android.support.annotation.ColorRes
-import android.support.annotation.DrawableRes
-import android.support.annotation.IdRes
-import android.support.annotation.StringRes
 import com.calintat.units.R
-import kotlin.properties.Delegates
 
 object Converter {
 
-    /**
-     * Data structure to represent a measurement unit such as metres or kilometres.
-     *
-     * To convert from this unit to the corresponding base unit, apply f(x) = [a] x^[n] + [b].
-     *
-     * @param n The exponent in the conversion formula, note that it has to be either +1 or -1.
-     */
-    data class MeasurementUnit(@StringRes val name: Int, @StringRes val symbol: Int, val a: Double, val b: Double, val n: Int) {
+    private val item2units = mutableMapOf<Item, List<MeasurementUnit>>()
 
-        /**
-         * Raise a number to either +1 or -1.
-         */
-        private infix fun Double.pow(n: Int) = if (n == 1) this else 1 / this
+    private fun add(item: Item, init: MutableList<MeasurementUnit>.() -> Unit) {
 
-        /**
-         * Convert [x] from this unit to the base unit.
-         */
-        fun selfToBase(x: Double) = a * (x pow n) + b
-
-        /**
-         * Convert [y] from the base unit to this unit.
-         */
-        fun baseToSelf(y: Double) = ((y - b) / a) pow n
+        mutableListOf<MeasurementUnit>().apply(init).let { item2units += item to it }
     }
 
-    /**
-     * A converter item which represents a physical quantity such as length.
-     *
-     * @param id The identifier of the corresponding menu item.
-     */
-    data class Item(@IdRes val id: Int) {
+    private fun MutableList<MeasurementUnit>.unit(name: Int, symbol: Int, a: Double = 1.0, b: Double = 0.0, n: Double = 1.0) {
 
-        companion object {
-
-            private var counter = 0
-        }
-
-        /**
-         * The rank of this item which will be used to sort the shortcuts.
-         */
-        internal val rank = counter++
-
-        /**
-         * A list of measurement units available for this item.
-         */
-        internal val units = mutableListOf<MeasurementUnit>()
-
-        /**
-         * The resource id of the string for the short label of the shortcut.
-         */
-        internal var shortLabel by Delegates.notNull<@StringRes Int>()
-
-        /**
-         * The resource id of the primary colour.
-         */
-        internal var color by Delegates.notNull<@ColorRes Int>()
-
-        /**
-         * The resource id of the dark primary colour.
-         */
-        internal var colorDark by Delegates.notNull<@ColorRes Int>()
-
-        /**
-         * The id of the shortcut.
-         */
-        internal var shortcutId by Delegates.notNull<String>()
-        
-        /**
-         * The resource id of the icon for the app shortcut.
-         */
-        internal var shortcutIcon by Delegates.notNull<@DrawableRes Int>()
-
-        /**
-         * Builder function for measurement units which adds them in the list above.
-         */
-        internal fun unit(name: Int, symbol: Int, a: Double = 1.0, b: Double = 0.0, n: Int = 1) {
-
-            units += MeasurementUnit(name, symbol, a, b, n)
-        }
+        this += MeasurementUnitImpl1(name, symbol, a, b, n)
     }
 
-    /**
-     * Get the converter item corresponding to the given identifier.
-     *
-     * @throws Exception if the identifier is not defined in init.
-     */
-    fun get(@IdRes id: Int) = items[id] ?: throw Exception("Unknown identifier")
+    private fun MutableList<MeasurementUnit>.unit(name: Int, symbol: Int, key: String, defValue: Float) {
 
-    /**
-     * Return whether the given identifier corresponds to any converter item.
-     */
-    fun isIdSafe(@IdRes id: Int) = id in items.keys
-
-    /**
-     * An invertible mapping between navigation ids and shortcut ids.
-     */
-    val shortcuts = mutableSetOf<Pair<@IdRes Int, String>>()
-
-    /**
-     * A mapping between identifiers and physical quantities.
-     */
-    private val items = mutableMapOf<@IdRes Int, Item>()
-
-    /**
-     * Builder function for converter items that puts them in the above map.
-     */
-    private fun item(@IdRes id: Int, init: Item.() -> Unit) {
-
-        Item(id).apply(init).let { items += it.id to it; shortcuts += it.id to it.shortcutId }
+        this += MeasurementUnitImpl2(name, symbol, key, defValue)
     }
+
+    fun retrieveUnits(item: Item) = item2units[item]!!
 
     init {
 
-        item(id = R.id.navigation_length) {
-
-            shortLabel = R.string.navigation_length
-
-            color = R.color.blue_500
-
-            colorDark = R.color.blue_700
-
-            shortcutId = "shortcut_length"
-
-            shortcutIcon = R.drawable.ic_shortcut_length
+        add(Item.LENGTH) {
 
             unit(R.string.metre, R.string.symbol_metre)
 
@@ -173,17 +66,7 @@ object Converter {
             unit(R.string.nautical_mile, R.string.symbol_nautical_mile, 1852.0)
         }
 
-        item(id = R.id.navigation_area) {
-
-            shortLabel = R.string.navigation_area
-
-            color = R.color.green_500
-
-            colorDark = R.color.green_700
-
-            shortcutId = "shortcut_area"
-
-            shortcutIcon = R.drawable.ic_shortcut_area
+        add(Item.AREA) {
 
             unit(R.string.square_metre, R.string.symbol_square_metre)
 
@@ -204,17 +87,7 @@ object Converter {
             unit(R.string.square_inch, R.string.symbol_square_inch, 6.4516e-4)
         }
 
-        item(id = R.id.navigation_volume) {
-
-            shortLabel = R.string.navigation_volume
-
-            color = R.color.light_blue_500
-
-            colorDark = R.color.light_blue_700
-
-            shortcutId = "shortcut_volume"
-
-            shortcutIcon = R.drawable.ic_shortcut_volume
+        add(Item.VOLUME) {
 
             unit(R.string.cubic_metre, R.string.symbol_cubic_metre)
 
@@ -251,17 +124,7 @@ object Converter {
             unit(R.string.us_teaspoon, R.string.symbol_us_teaspoon, 4.92892159375e-6)
         }
 
-        item(id = R.id.navigation_mass) {
-
-            shortLabel = R.string.navigation_mass
-
-            color = R.color.red_500
-
-            colorDark = R.color.red_700
-
-            shortcutId = "shortcut_mass"
-
-            shortcutIcon = R.drawable.ic_shortcut_mass
+        add(Item.MASS) {
 
             unit(R.string.kilogram, R.string.symbol_kilogram)
 
@@ -300,17 +163,7 @@ object Converter {
             unit(R.string.electron_rest_mass, R.string.symbol_electron_rest_mass, 9.1093829140e-31)
         }
 
-        item(id = R.id.navigation_time) {
-
-            shortLabel = R.string.navigation_time
-
-            color = R.color.amber_500
-
-            colorDark = R.color.amber_700
-
-            shortcutId = "shortcut_time"
-
-            shortcutIcon = R.drawable.ic_shortcut_time
+        add(Item.TIME) {
 
             unit(R.string.millisecond, R.string.symbol_millisecond, 0.001)
 
@@ -333,17 +186,7 @@ object Converter {
             unit(R.string.century, R.string.symbol_century, 3.1556952e9)
         }
 
-        item(id = R.id.navigation_speed) {
-
-            shortLabel = R.string.navigation_speed
-
-            color = R.color.deep_orange_500
-
-            colorDark = R.color.deep_orange_700
-
-            shortcutId = "shortcut_speed"
-
-            shortcutIcon = R.drawable.ic_shortcut_speed
+        add(Item.SPEED) {
 
             unit(R.string.metre_per_second, R.string.symbol_metre_per_second)
 
@@ -360,17 +203,7 @@ object Converter {
             unit(R.string.speed_of_sound, R.string.symbol_speed_of_sound, 343.2)
         }
 
-        item(id = R.id.navigation_temperature) {
-
-            shortLabel = R.string.navigation_temperature
-
-            color = R.color.cyan_500
-
-            colorDark = R.color.cyan_700
-
-            shortcutId = "shortcut_temperature"
-
-            shortcutIcon = R.drawable.ic_shortcut_temperature
+        add(Item.TEMPERATURE) {
 
             unit(R.string.kelvin, R.string.symbol_kelvin)
 
@@ -379,34 +212,74 @@ object Converter {
             unit(R.string.fahrenheit, R.string.symbol_fahrenheit, 5.0 / 9, 459.67 * 5 / 9)
         }
 
-        item(id = R.id.navigation_currency) {
+        add(Item.CURRENCY) {
 
-            shortLabel = R.string.navigation_currency
+            unit(R.string.euro, R.string.symbol_euro)
 
-            color = R.color.green_500
+            unit(R.string.us_dollar, R.string.symbol_us_dollar, "pref_currency_USD", 1.1812f)
 
-            colorDark = R.color.green_700
+            unit(R.string.japanese_yen, R.string.symbol_japanese_yen, "pref_currency_JPY", 130.53f)
 
-            shortcutId = "shortcut_currency"
+            unit(R.string.bulgarian_lev, R.string.symbol_bulgarian_lev, "pref_currency_BGN", 1.9558f)
 
-            shortcutIcon = R.drawable.ic_shortcut_currency
+            unit(R.string.czech_koruna, R.string.symbol_czech_koruna, "pref_currency_CZK", 26.132f)
 
-            unit(R.string.british_pound, R.string.symbol_british_pound)
+            unit(R.string.danish_krone, R.string.symbol_danish_krone, "pref_currency_DKK", 7.4369f)
 
-            /* TODO: implement currency conversions */
+            unit(R.string.pound_sterling, R.string.symbol_pound_sterling, "pref_currency_GBP", 0.89440f)
+
+            unit(R.string.hungarian_forint, R.string.symbol_hungarian_forint, "pref_currency_HUF", 303.60f)
+
+            unit(R.string.polish_zloty, R.string.symbol_polish_zloty, "pref_currency_PLN", 4.2563f)
+
+            unit(R.string.romanian_leu, R.string.symbol_romanian_leu, "pref_currency_RON", 4.5596f)
+
+            unit(R.string.swedish_krona, R.string.symbol_swedish_krona, "pref_currency_SEK", 9.5563f)
+
+            unit(R.string.swiss_franc, R.string.symbol_swiss_franc, "pref_currency_CHF", 1.1414f)
+
+            unit(R.string.norwegian_krone, R.string.symbol_norwegian_krone, "pref_currency_NOK", 9.3343f)
+
+            unit(R.string.croatian_kuna, R.string.symbol_croatian_kuna, "pref_currency_HRK", 7.4090f)
+
+            unit(R.string.russian_rouble, R.string.symbol_russian_rouble, "pref_currency_RUB", 71.1750f)
+
+            unit(R.string.turkish_lira, R.string.symbol_turkish_lira, "pref_currency_TRY", 4.1602f)
+
+            unit(R.string.australian_dollar, R.string.symbol_australian_dollar, "pref_currency_AUD", 1.4813f)
+
+            unit(R.string.brazilian_real, R.string.symbol_brazilian_real, "pref_currency_BRL", 3.6880f)
+
+            unit(R.string.canadian_dollar, R.string.symbol_canadian_dollar, "pref_currency_CAD", 1.4737f)
+
+            unit(R.string.chinese_yuan_renminbi, R.string.symbol_chinese_yuan_renminbi, "pref_currency_CNY", 7.9371f)
+
+            unit(R.string.hong_kong_dollar, R.string.symbol_hong_kong_dollar, "pref_currency_HKD", 9.2284f)
+
+            unit(R.string.indonesian_rupiah, R.string.symbol_indonesian_rupiah, "pref_currency_IDR", 15738.31f)
+
+            unit(R.string.israeli_shekel, R.string.symbol_israeli_shekel, "pref_currency_ILS", 4.2141f)
+
+            unit(R.string.indian_rupee, R.string.symbol_indian_rupee, "pref_currency_INR", 75.7145f)
+
+            unit(R.string.south_korean_won, R.string.symbol_south_korean_won, "pref_currency_KRW", 1325.50f)
+
+            unit(R.string.mexican_peso, R.string.symbol_mexican_peso, "pref_currency_MXN", 21.0023f)
+
+            unit(R.string.malaysian_ringgit, R.string.symbol_malaysian_ringgit, "pref_currency_MYR", 5.0620f)
+
+            unit(R.string.new_zealand_dollar, R.string.symbol_new_zealand_dollar, "pref_currency_NZD", 1.5813f)
+
+            unit(R.string.philippine_peso, R.string.symbol_philippine_peso, "pref_currency_PHP", 59.508f)
+
+            unit(R.string.singapore_dollar, R.string.symbol_singapore_dollar, "pref_currency_SGD", 1.6042f)
+
+            unit(R.string.thai_baht, R.string.symbol_thai_baht, "pref_currency_THB", 39.322f)
+
+            unit(R.string.south_african_rand, R.string.symbol_south_african_rand, "pref_currency_ZAR", 15.6922f)
         }
 
-        item(id = R.id.navigation_fuel) {
-
-            shortLabel = R.string.navigation_fuel
-
-            color = R.color.lime_500
-
-            colorDark = R.color.lime_700
-
-            shortcutId = "shortcut_fuel"
-
-            shortcutIcon = R.drawable.ic_shortcut_fuel
+        add(Item.FUEL) {
 
             unit(R.string.kilometre_per_litre, R.string.symbol_kilometre_per_litre)
 
@@ -414,20 +287,10 @@ object Converter {
 
             unit(R.string.mile_per_us_gallon, R.string.symbol_mile_per_us_gallon, 0.425144)
 
-            unit(R.string.litre_per_100_kilometres, R.string.symbol_litre_per_100_kilometres, 100.0, n = -1)
+            unit(R.string.litre_per_100_kilometres, R.string.symbol_litre_per_100_kilometres, 100.0, n = -1.0)
         }
 
-        item(id = R.id.navigation_storage) {
-
-            shortLabel = R.string.navigation_storage
-
-            color = R.color.teal_500
-
-            colorDark = R.color.teal_700
-
-            shortcutId = "shortcut_storage"
-
-            shortcutIcon = R.drawable.ic_shortcut_storage
+        add(Item.STORAGE) {
 
             unit(R.string._bit, R.string.symbol_bit)
 
@@ -474,17 +337,7 @@ object Converter {
             unit(R.string.pebibyte, R.string.symbol_pebibyte, 9.007199254740992e15)
         }
 
-        item(id = R.id.navigation_bitrate) {
-
-            shortLabel = R.string.navigation_bitrate
-
-            color = R.color.amber_500
-
-            colorDark = R.color.amber_700
-
-            shortcutId = "shortcut_bitrate"
-
-            shortcutIcon = R.drawable.ic_shortcut_bitrate
+        add(Item.BITRATE) {
 
             unit(R.string.kilobit_per_second, R.string.symbol_kilobit_per_second, 1000.0)
 
@@ -519,17 +372,7 @@ object Converter {
             unit(R.string.tebibyte_per_second, R.string.symbol_tebibyte_per_second, 8.796093022208e12)
         }
 
-        item(id = R.id.navigation_angle) {
-
-            shortLabel = R.string.navigation_angle
-
-            color = R.color.red_500
-
-            colorDark = R.color.red_700
-
-            shortcutId = "shortcut_angle"
-
-            shortcutIcon = R.drawable.ic_shortcut_angle
+        add(Item.ANGLE) {
 
             unit(R.string.radian, R.string.symbol_radian)
 
@@ -540,17 +383,7 @@ object Converter {
             unit(R.string.arcsecond, R.string.symbol_arcsecond, 4.848137e-6)
         }
 
-        item(id = R.id.navigation_density) {
-
-            shortLabel = R.string.navigation_density
-
-            color = R.color.blue_500
-
-            colorDark = R.color.blue_700
-
-            shortcutId = "shortcut_density"
-
-            shortcutIcon = R.drawable.ic_shortcut_density
+        add(Item.DENSITY) {
 
             unit(R.string.kilogram_per_cubic_metre, R.string.symbol_kilogram_per_cubic_metre)
 
@@ -575,17 +408,7 @@ object Converter {
             unit(R.string.pound_per_us_gallon, R.string.symbol_pound_per_us_gallon, 119.8264273)
         }
 
-        item(id = R.id.navigation_frequency) {
-
-            shortLabel = R.string.navigation_frequency
-
-            color = R.color.green_500
-
-            colorDark = R.color.green_700
-
-            shortcutId = "shortcut_frequency"
-
-            shortcutIcon = R.drawable.ic_shortcut_frequency
+        add(Item.FREQUENCY) {
 
             unit(R.string.hertz, R.string.symbol_hertz)
 
@@ -598,17 +421,7 @@ object Converter {
             unit(R.string.revolution_per_minute, R.string.symbol_revolution_per_minute, 0.104719755)
         }
 
-        item(id = R.id.navigation_flow) {
-
-            shortLabel = R.string.navigation_flow
-
-            color = R.color.light_blue_500
-
-            colorDark = R.color.light_blue_700
-
-            shortcutId = "shortcut_flow"
-
-            shortcutIcon = R.drawable.ic_shortcut_flow
+        add(Item.FLOW) {
 
             unit(R.string.cubic_metre_per_second, R.string.symbol_cubic_metre_per_second)
 
@@ -621,17 +434,7 @@ object Converter {
             unit(R.string.cubic_metre_per_hour, R.string.symbol_cubic_metre_per_hour, 1.0 / 3600)
         }
 
-        item(id = R.id.navigation_acceleration) {
-
-            shortLabel = R.string.navigation_acceleration
-
-            color = R.color.orange_500
-
-            colorDark = R.color.orange_700
-
-            shortcutId = "shortcut_acceleration"
-
-            shortcutIcon = R.drawable.ic_shortcut_acceleration
+        add(Item.ACCELERATION) {
 
             unit(R.string.metre_per_second_squared, R.string.symbol_metre_per_second_squared)
 
@@ -644,17 +447,7 @@ object Converter {
             unit(R.string.knot_per_second, R.string.symbol_knot_per_second, 0.514444)
         }
 
-        item(id = R.id.navigation_force) {
-
-            shortLabel = R.string.navigation_force
-
-            color = R.color.teal_500
-
-            colorDark = R.color.teal_700
-
-            shortcutId = "shortcut_force"
-
-            shortcutIcon = R.drawable.ic_shortcut_force
+        add(Item.FORCE) {
 
             unit(R.string.newton, R.string.symbol_newton)
 
@@ -669,17 +462,7 @@ object Converter {
             unit(R.string.ounce_force, R.string.symbol_ounce_force, 0.27801385095378125)
         }
 
-        item(id = R.id.navigation_pressure) {
-
-            shortLabel = R.string.navigation_pressure
-
-            color = R.color.cyan_500
-
-            colorDark = R.color.cyan_700
-
-            shortcutId = "shortcut_pressure"
-
-            shortcutIcon = R.drawable.ic_shortcut_pressure
+        add(Item.PRESSURE) {
 
             unit(R.string.pascal, R.string.symbol_pascal)
 
@@ -698,17 +481,7 @@ object Converter {
             unit(R.string.megapascal, R.string.symbol_megapascal, 1e6)
         }
 
-        item(id = R.id.navigation_torque) {
-
-            shortLabel = R.string.navigation_torque
-
-            color = R.color.yellow_500
-
-            colorDark = R.color.yellow_700
-
-            shortcutId = "shortcut_torque"
-
-            shortcutIcon = R.drawable.ic_shortcut_torque
+        add(Item.TORQUE) {
 
             unit(R.string.foot_pound, R.string.symbol_foot_pound, 1.3558179483314004)
 
@@ -719,17 +492,7 @@ object Converter {
             unit(R.string.kilopond_metre, R.string.symbol_kilopond_metre, 9.80665)
         }
 
-        item(id = R.id.navigation_energy) {
-
-            shortLabel = R.string.navigation_energy
-
-            color = R.color.green_500
-
-            colorDark = R.color.green_700
-
-            shortcutId = "shortcut_energy"
-
-            shortcutIcon = R.drawable.ic_shortcut_energy
+        add(Item.ENERGY) {
 
             unit(R.string.joule, R.string.symbol_joule)
 
@@ -754,17 +517,7 @@ object Converter {
             unit(R.string.us_gallon_atmosphere, R.string.symbol_us_gallon_atmosphere, 383.5568490138)
         }
 
-        item(id = R.id.navigation_power) {
-
-            shortLabel = R.string.navigation_power
-
-            color = R.color.red_500
-
-            colorDark = R.color.red_700
-
-            shortcutId = "shortcut_power"
-
-            shortcutIcon = R.drawable.ic_shortcut_power
+        add(Item.POWER) {
 
             unit(R.string.watt, R.string.symbol_watt)
 
@@ -779,17 +532,7 @@ object Converter {
             unit(R.string.calorie_per_second, R.string.symbol_calorie_per_second, 4.1868)
         }
 
-        item(id = R.id.navigation_current) {
-
-            shortLabel = R.string.navigation_current
-
-            color = R.color.yellow_500
-
-            colorDark = R.color.yellow_700
-
-            shortcutId = "shortcut_current"
-
-            shortcutIcon = R.drawable.ic_shortcut_current
+        add(Item.CURRENT) {
 
             unit(R.string.ampere, R.string.symbol_ampere)
 
@@ -798,17 +541,7 @@ object Converter {
             unit(R.string.statampere, R.string.symbol_statampere, 3.335641e-10)
         }
 
-        item(id = R.id.navigation_charge) {
-
-            shortLabel = R.string.navigation_charge
-
-            color = R.color.light_green_500
-
-            colorDark = R.color.light_green_700
-
-            shortcutId = "shortcut_charge"
-
-            shortcutIcon = R.drawable.ic_shortcut_charge
+        add(Item.CHARGE) {
 
             unit(R.string.coulomb, R.string.symbol_coulomb)
 
@@ -821,17 +554,7 @@ object Converter {
             unit(R.string.milliampere_hour, R.string.symbol_milliampere_hour, 3.6)
         }
 
-        item(id = R.id.navigation_voltage) {
-
-            shortLabel = R.string.navigation_voltage
-
-            color = R.color.orange_500
-
-            colorDark = R.color.orange_700
-
-            shortcutId = "shortcut_voltage"
-
-            shortcutIcon = R.drawable.ic_shortcut_voltage
+        add(Item.VOLTAGE) {
 
             unit(R.string.volt, R.string.symbol_volt)
 
@@ -840,17 +563,7 @@ object Converter {
             unit(R.string.statvolt, R.string.symbol_statvolt, 299.792458)
         }
 
-        item(id = R.id.navigation_luminance) {
-
-            shortLabel = R.string.navigation_luminance
-
-            color = R.color.amber_500
-
-            colorDark = R.color.amber_700
-
-            shortcutId = "shortcut_luminance"
-
-            shortcutIcon = R.drawable.ic_shortcut_luminance
+        add(Item.LUMINANCE) {
 
             unit(R.string.candela_per_square_metre, R.string.symbol_candela_per_square_metre)
 
@@ -861,17 +574,7 @@ object Converter {
             unit(R.string.footlambert, R.string.symbol_footlambert, 3.4262590996)
         }
 
-        item(id = R.id.navigation_illuminance) {
-
-            shortLabel = R.string.navigation_illuminance
-
-            color = R.color.lime_500
-
-            colorDark = R.color.lime_700
-
-            shortcutId = "shortcut_illuminance"
-
-            shortcutIcon = R.drawable.ic_shortcut_illuminance
+        add(Item.ILLUMINANCE) {
 
             unit(R.string.lux, R.string.symbol_lux)
 
@@ -880,17 +583,7 @@ object Converter {
             unit(R.string.footcandle, R.string.symbol_footcandle, 10.763910417)
         }
 
-        item(id = R.id.navigation_radiation) {
-
-            shortLabel = R.string.navigation_radiation
-
-            color = R.color.deep_orange_500
-
-            colorDark = R.color.deep_orange_700
-
-            shortcutId = "shortcut_radiation"
-
-            shortcutIcon = R.drawable.ic_shortcut_radiation
+        add(Item.RADIATION) {
 
             unit(R.string.gray, R.string.symbol_gray)
 
@@ -901,17 +594,7 @@ object Converter {
             unit(R.string.rem, R.string.symbol_rem, 0.01)
         }
 
-        item(id = R.id.navigation_radioactivity) {
-
-            shortLabel = R.string.navigation_radioactivity
-
-            color = R.color.yellow_500
-
-            colorDark = R.color.yellow_700
-
-            shortcutId = "shortcut_radioactivity"
-
-            shortcutIcon = R.drawable.ic_shortcut_radioactivity
+        add(Item.RADIOACTIVITY) {
 
             unit(R.string.becquerel, R.string.symbol_becquerel)
 
