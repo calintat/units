@@ -32,11 +32,9 @@ import com.calintat.units.ui.MainUI.textView2
 import com.calintat.units.ui.MainUI.toolbar
 import com.calintat.units.utils.BillingHelper
 import com.calintat.units.utils.CurrencyHelper
+import org.jetbrains.anko.*
+import org.jetbrains.anko.design.snackbar
 import org.jetbrains.anko.sdk21.listeners.textChangedListener
-import org.jetbrains.anko.selector
-import org.jetbrains.anko.setContentView
-import org.jetbrains.anko.startActivity
-import org.jetbrains.anko.toast
 
 class MainActivity : AppCompatActivity() {
 
@@ -226,7 +224,7 @@ class MainActivity : AppCompatActivity() {
 
             refreshRecyclerView()
 
-            toast("Updated currency: ${it.date}")
+            toast(getString(R.string.msg_retrieved_exchange_rates, it.date))
         }
     }
 

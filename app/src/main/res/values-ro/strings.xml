@@ -18,6 +18,8 @@
 
     <string name="msg_input">Introduceţi o intrare</string>
 
+    <string name="msg_retrieved_exchange_rates">Retrieved exchange rates for %s</string>
+
     <string name="msg_thank_you_for_your_contribution">Mulțumesc pentru contribuția dvs.</string>
 
     <!--CONVERTER-->

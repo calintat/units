@@ -18,6 +18,8 @@
 
     <string name="msg_input">Introducir entrada</string>
 
+    <string name="msg_retrieved_exchange_rates">Retrieved exchange rates for %s</string>
+
     <string name="msg_thank_you_for_your_contribution">Gracias por tu contribución</string>
 
     <!--NAVIGATION-->
