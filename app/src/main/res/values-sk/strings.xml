@@ -84,6 +84,8 @@
 
     <string name="navigation_feedback">Poslať spätnú väzbu</string>
 
+    <string name="navigation_donation">Podpora rozvoja</string>
+
     <!--PREFERENCES-->
 
     <string name="pref_advanced">Pokročilý</string>

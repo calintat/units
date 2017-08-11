@@ -84,6 +84,8 @@
 
     <string name="navigation_feedback">Poslat zpětnou vazbu</string>
 
+    <string name="navigation_donation">Podpora vývoje</string>
+
     <!--PREFERENCES-->
 
     <string name="pref_advanced">Moderní</string>

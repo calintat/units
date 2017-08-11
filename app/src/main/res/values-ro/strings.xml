@@ -84,6 +84,8 @@
 
     <string name="navigation_feedback">Trimiteți feedback</string>
 
+    <string name="navigation_donation">Sprijiniți dezvoltarea</string>
+
     <!--PREFERENCES-->
 
     <string name="pref_advanced">Avansat</string>

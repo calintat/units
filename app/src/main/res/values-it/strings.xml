@@ -84,6 +84,8 @@
 
     <string name="navigation_feedback">Invia feedback</string>
 
+    <string name="navigation_donation">Sviluppo di supporto</string>
+
     <!--PREFERENCES-->
 
     <string name="pref_advanced">Avanzate</string>

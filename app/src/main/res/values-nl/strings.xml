@@ -84,6 +84,8 @@
 
     <string name="navigation_feedback">Stuur feedback</string>
 
+    <string name="navigation_donation">Ondersteunende ontwikkeling</string>
+
     <!--PREFERENCES-->
 
     <string name="pref_advanced">Gevorderd</string>

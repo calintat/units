@@ -84,6 +84,8 @@
 
     <string name="navigation_feedback">Feedback abschicken</string>
 
+    <string name="navigation_donation">Unterstützung der Entwicklung</string>
+
     <!--PREFERENCES-->
 
     <string name="pref_advanced">Fortgeschritten</string>
