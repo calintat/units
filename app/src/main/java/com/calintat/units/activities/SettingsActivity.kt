@@ -2,7 +2,6 @@ package com.calintat.units.activities
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.calintat.alps.populateWithPreferences
 import com.calintat.units.R
 import com.calintat.units.ui.SettingsUI
 import com.calintat.units.ui.SettingsUI.toolbar
@@ -22,6 +21,6 @@ class SettingsActivity : AppCompatActivity() {
 
         toolbar.setNavigationOnClickListener { finish() }
 
-        populateWithPreferences(R.id.container, R.xml.preferences)
+        fragmentManager.beginTransaction().add(R.id.container, SettingsFragment()).commit()
     }
 }

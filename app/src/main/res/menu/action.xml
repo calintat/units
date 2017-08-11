@@ -3,18 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto" >
 
     <item
-        android:id="@+id/action_remove_from_favourites"
-        android:icon="@drawable/ic_action_remove_from_favourites"
-        android:title="@string/action_remove_from_favourites"
-        app:showAsAction="ifRoom" />
-
-    <item
-        android:id="@+id/action_add_to_favourites"
-        android:icon="@drawable/ic_action_add_to_favourites"
-        android:title="@string/action_add_to_favourites"
-        app:showAsAction="ifRoom" />
-
-    <item
         android:id="@+id/action_clear_input"
         android:icon="@drawable/ic_action_clear_input"
         android:title="@string/action_clear_input"

@@ -1,0 +1,46 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="pref_advanced"
+        android:title="@string/pref_advanced" />
+
+    <ListPreference
+        android:defaultValue="1"
+        android:key="pref_theme"
+        android:title="@string/pref_theme"
+        android:summary="%s"
+        android:entries="@array/themes"
+        android:entryValues="@array/themes_values" />
+
+    <MultiSelectListPreference
+        android:key="pref_shortcuts"
+        android:title="@string/pref_shortcuts" />
+
+    <PreferenceCategory
+        android:title="@string/pref_about" >
+
+        <Preference
+            android:title="@string/pref_version"
+            android:summary="@string/app_version" >
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="market://details?id=com.calintat.units" />
+
+        </Preference>
+
+        <Preference
+            android:title="@string/pref_developer"
+            android:summary="@string/app_developer" >
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://play.google.com/store/apps/dev?id=5526451977947367946" />
+
+        </Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
