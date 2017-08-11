@@ -266,7 +266,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun refreshRecyclerView() {
 
-        position?.let { adapter.input = adapter.units[it].selfToBase(editText.text.toString()) }
+        val num = editText.text.toString().toDoubleOrNull() ?: Double.NaN
+
+        position?.let { adapter.input = adapter.units[it].selfToBase(num) }
     }
 
     private fun refreshNavigationView() {
