@@ -16,9 +16,9 @@ android {
 
         targetSdkVersion 26
 
-        versionCode 31
+        versionCode 32
 
-        versionName "4.1.5"
+        versionName "4.2-beta2"
     }
 }
 
