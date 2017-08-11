@@ -1,4 +1,4 @@
-package com.calintat.units.api
+package com.calintat.units.utils
 
 import retrofit2.Call
 import retrofit2.http.GET

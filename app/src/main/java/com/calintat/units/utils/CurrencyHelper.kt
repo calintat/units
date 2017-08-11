@@ -1,4 +1,4 @@
-package com.calintat.units.api
+package com.calintat.units.utils
 
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.debug
