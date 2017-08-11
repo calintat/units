@@ -40,7 +40,6 @@
             android:title="@string/navigation_temperature" />
 
         <item
-            android:visible="false"
             android:id="@+id/navigation_currency"
             android:icon="@drawable/ic_navigation_currency"
             android:title="@string/navigation_currency" />
