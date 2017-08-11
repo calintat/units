@@ -1,14 +1,15 @@
 package com.calintat.units.recycler
 
+import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
-import com.calintat.units.api.Converter
+import com.calintat.units.api.MeasurementUnit
 import com.calintat.units.ui.ListItem
 import org.jetbrains.anko.AnkoContext
 
-class Adapter : RecyclerView.Adapter<ViewHolder>() {
+class Adapter(private val context: Context) : RecyclerView.Adapter<ViewHolder>() {
 
-    internal var units = emptyList<Converter.MeasurementUnit>()
+    internal var units = emptyList<MeasurementUnit>()
 
     internal var input = Double.NaN // in base unit
 
@@ -24,13 +25,13 @@ class Adapter : RecyclerView.Adapter<ViewHolder>() {
 
         val unit = units[position]
 
-        val output = unit.baseToSelf(input)
+        val output = unit.baseToSelf(context, input)
 
         holder.num.text = "${output.toFloat()}"
 
-        holder.str.setText(unit.name)
+        holder.str.setText(unit.label)
 
-        holder.sym.setText(unit.symbol)
+        holder.sym.setText(unit.shortLabel)
 
         holder.itemView.setOnClickListener { onClick(position) }
 
