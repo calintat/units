@@ -1,13 +1,12 @@
 package com.calintat.units.ui
 
-import android.os.Build
 import android.text.TextUtils
 import android.util.TypedValue
 import android.view.Gravity
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import com.calintat.units.R
-import com.calintat.units.utils.AnkoUtils.textAppearance
+import com.calintat.units.utils.AnkoProperties.textAppearance
 import org.jetbrains.anko.*
 
 object ListItem : AnkoComponent<ViewGroup> {
