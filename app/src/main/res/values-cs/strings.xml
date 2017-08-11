@@ -123,6 +123,8 @@
 
     <string name="micrometre">mikrometr</string>
 
+    <string name="angstrom">angstrom</string>
+
     <string name="astronomical_unit">astronomická jednotka</string>
 
     <string name="light_year">světelný rok</string>
@@ -598,7 +600,5 @@
     <string name="curie">curie</string>
 
     <string name="rutherford">rutherford</string>
-
-    <string name="angstrom">angstrom</string>
 
 </resources>
