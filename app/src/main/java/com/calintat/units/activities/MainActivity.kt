@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
 
     private val adapter by lazy { Adapter() }
 
-    private val billingHelper by lazy { BillingHelper(this) }
+    private var billingHelper: BillingHelper? = null
 
     private var id: Int? = null
 
@@ -66,13 +66,15 @@ class MainActivity : AppCompatActivity() {
         setNavigationView()
 
         init(savedInstanceState)
+
+        billingHelper = BillingHelper(this)
     }
 
     override fun onDestroy() {
 
         super.onDestroy()
 
-        billingHelper.destroy()
+        billingHelper?.destroy()
     }
 
     override fun onResume() {
@@ -291,7 +293,7 @@ class MainActivity : AppCompatActivity() {
 
         val items = listOf("£0.99", "£1.99", "£2.99", "£3.99", "£4.99", "£9.99")
 
-        selector(title, items) { _, index -> billingHelper.makeDonation("donation$index") }
+        selector(title, items) { _, index -> billingHelper?.makeDonation("donation$index") }
     }
 
     private fun copyToClipboard(text: String) {
