@@ -29,19 +29,19 @@ import com.calintat.units.ui.MainUI.recyclerView
 import com.calintat.units.ui.MainUI.textView1
 import com.calintat.units.ui.MainUI.textView2
 import com.calintat.units.ui.MainUI.toolbar
+import com.calintat.units.utils.BillingHelper
 import com.calintat.units.utils.Converter
 import com.calintat.units.utils.ShortcutUtils
-import org.jetbrains.anko.doFromSdk
+import org.jetbrains.anko.*
 import org.jetbrains.anko.sdk21.listeners.textChangedListener
-import org.jetbrains.anko.setContentView
-import org.jetbrains.anko.startActivity
-import org.jetbrains.anko.toast
 
 class MainActivity : AppCompatActivity() {
 
     private val KEY_ID = "com.calintat.units.KEY_ID"
 
     private val adapter by lazy { Adapter() }
+
+    private val billingHelper by lazy { BillingHelper(this) }
 
     private var id: Int? = null
 
@@ -66,6 +66,13 @@ class MainActivity : AppCompatActivity() {
         setNavigationView()
 
         init(savedInstanceState)
+    }
+
+    override fun onDestroy() {
+
+        super.onDestroy()
+
+        billingHelper.destroy()
     }
 
     override fun onResume() {
@@ -208,6 +215,8 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.navigation_feedback -> gotoFeedback()
 
+                R.id.navigation_donation -> makeDonation()
+
                 else -> selectId(it.itemId)
             }
 
@@ -274,6 +283,15 @@ class MainActivity : AppCompatActivity() {
         id?.let { builder.setToolbarColor(ContextCompat.getColor(this, Converter.get(it).color)) }
 
         builder.build().launchUrl(this, Uri.parse("https://github.com/calintat/units/issues"))
+    }
+
+    private fun makeDonation() {
+
+        val title = getString(R.string.navigation_donation)
+
+        val items = listOf("£0.99", "£1.99", "£2.99", "£3.99", "£4.99", "£9.99")
+
+        selector(title, items) { _, index -> billingHelper.makeDonation("donation$index") }
     }
 
     private fun copyToClipboard(text: String) {
