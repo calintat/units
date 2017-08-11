@@ -5,6 +5,7 @@ import android.support.v4.widget.DrawerLayout
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
 import android.view.Gravity
+import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -99,6 +100,8 @@ object MainUI : AnkoComponent<MainActivity> {
                 hintResource = R.string.msg_input
 
                 inputType = 12290 // i.e. signed decimal numbers
+
+                imeOptions = EditorInfo.IME_ACTION_DONE
 
                 padding = dip(16)
 
