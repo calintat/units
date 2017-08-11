@@ -4,25 +4,19 @@
 
     <string name="action_clear_input">Ștergeți input</string>
 
-    <string name="action_add_to_favourites">Adăugati la favorite</string>
-
-    <string name="action_remove_from_favourites">Eliminați din favorite</string>
-
     <!--ERRORS-->
 
-    <string name="err_add_to_favourites">Maxim 4 favorite</string>
+    <string name="err_shortcuts">Maximum 4 comenzi rapide</string>
 
     <string name="err_could_not_initiate_purchase">Nu s-a putut iniția cumpărarea</string>
 
     <!--MESSAGES-->
 
+    <string name="msg_app_restart_required">Restartul aplicației este necesar</string>
+
     <string name="msg_clipboard">Copiat în clipboard</string>
 
     <string name="msg_input">Introduceţi o intrare</string>
-
-    <string name="msg_add_to_favourites">Adăugat la favorite</string>
-
-    <string name="msg_remove_from_favourites">Eliminat din favorite</string>
 
     <string name="msg_thank_you_for_your_contribution">Mulțumesc pentru contribuția dvs.</string>
 
@@ -96,6 +90,8 @@
 
     <string name="pref_theme">Temă</string>
 
+    <string name="pref_shortcuts">Comenzi rapide</string>
+
     <string name="pref_about">Despre</string>
 
     <string name="pref_version">Versiune</string>
@@ -104,8 +100,7 @@
 
     <!--THEMES-->
 
-    <string-array name="themes">
-        <item>Auto</item><item>Zi</item><item>Noapte</item></string-array>
+    <string-array name="themes"><item>Auto</item><item>Zi</item><item>Noapte</item></string-array>
 
     <!--LENGTH-->
 

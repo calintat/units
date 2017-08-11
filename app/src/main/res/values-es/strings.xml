@@ -4,25 +4,19 @@
 
     <string name="action_clear_input">Borrar la entrada</string>
 
-    <string name="action_add_to_favourites">Agregar a favoritos</string>
-
-    <string name="action_remove_from_favourites">Quitar de favoritos</string>
-
     <!--ERRORS-->
 
-    <string name="err_add_to_favourites">Máximo 4 favoritos</string>
+    <string name="err_shortcuts">Máximo 4 atajos</string>
 
     <string name="err_could_not_initiate_purchase">No se pudo iniciar la compra</string>
 
     <!--MESSAGES-->
 
+    <string name="msg_app_restart_required">Requiere la reinicialización de la aplicación</string>
+
     <string name="msg_clipboard">Copiado al portapapeles</string>
 
     <string name="msg_input">Introducir entrada</string>
-
-    <string name="msg_add_to_favourites">Añadido a favoritos</string>
-
-    <string name="msg_remove_from_favourites">Eliminado de los favoritos</string>
 
     <string name="msg_thank_you_for_your_contribution">Gracias por tu contribución</string>
 
@@ -96,6 +90,8 @@
 
     <string name="pref_theme">Tema</string>
 
+    <string name="pref_shortcuts">Atajos</string>
+
     <string name="pref_about">Acerca de</string>
 
     <string name="pref_version">Versión</string>
@@ -104,8 +100,7 @@
 
     <!--THEMES-->
 
-    <string-array name="themes">
-        <item>Auto</item><item>Día</item><item>Noche</item></string-array>
+    <string-array name="themes"><item>Auto</item><item>Día</item><item>Noche</item></string-array>
 
     <!--LENGTH-->
 

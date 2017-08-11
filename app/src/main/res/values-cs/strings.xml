@@ -4,25 +4,19 @@
 
     <string name="action_clear_input">Vymazat vstup</string>
 
-    <string name="action_add_to_favourites">Přidat do oblíbených</string>
-
-    <string name="action_remove_from_favourites">Odstranit z oblíbených</string>
-
     <!--ERRORS-->
 
-    <string name="err_add_to_favourites">Maximálně 4 oblíbené</string>
+    <string name="err_shortcuts">Maximálně 4 zkratky</string>
 
     <string name="err_could_not_initiate_purchase">Nelze zahájit nákup</string>
 
     <!--MESSAGES-->
 
+    <string name="msg_app_restart_required">Potřebný restart aplikace</string>
+
     <string name="msg_clipboard">Byl zkopírován do schránky</string>
 
     <string name="msg_input">Vstoupit vstup</string>
-
-    <string name="msg_add_to_favourites">Přidáno do oblíbených</string>
-
-    <string name="msg_remove_from_favourites">Odstranění z oblíbených</string>
 
     <string name="msg_thank_you_for_your_contribution">Děkujeme za váš příspěvek</string>
 
@@ -96,6 +90,8 @@
 
     <string name="pref_theme">Téma</string>
 
+    <string name="pref_shortcuts">Zkratky</string>
+
     <string name="pref_about">O aplikaci</string>
 
     <string name="pref_version">Verze</string>
@@ -104,8 +100,7 @@
 
     <!--THEMES-->
 
-    <string-array name="themes">
-        <item>Auto</item><item>Den</item><item>Noc</item></string-array>
+    <string-array name="themes"><item>Auto</item><item>Den</item><item>Noc</item></string-array>
 
     <!--LENGTH-->
 

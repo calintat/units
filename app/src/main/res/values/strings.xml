@@ -10,25 +10,19 @@
 
     <string name="action_clear_input">Clear input</string>
 
-    <string name="action_add_to_favourites">Add to favourites</string>
-
-    <string name="action_remove_from_favourites">Remove from favourites</string>
-
     <!--ERRORS-->
 
-    <string name="err_add_to_favourites">Maximum 4 favourites</string>
+    <string name="err_shortcuts">Maximum 4 shortcuts</string>
 
     <string name="err_could_not_initiate_purchase">Could not initiate purchase</string>
 
     <!--MESSAGES-->
 
+    <string name="msg_app_restart_required">App restart required</string>
+
     <string name="msg_clipboard">Copied to clipboard</string>
 
     <string name="msg_input">Enter input</string>
-
-    <string name="msg_add_to_favourites">Added to favourites</string>
-
-    <string name="msg_remove_from_favourites">Removed from favourites</string>
 
     <string name="msg_thank_you_for_your_contribution">Thank you for your contribution</string>
 
@@ -102,6 +96,8 @@
 
     <string name="pref_theme">Theme</string>
 
+    <string name="pref_shortcuts">Shortcuts</string>
+
     <string name="pref_about">About</string>
 
     <string name="pref_version">Version</string>
@@ -110,11 +106,9 @@
 
     <!--THEMES-->
 
-    <string-array name="themes">
-        <item>Auto</item><item>Day</item><item>Night</item></string-array>
+    <string-array name="themes"><item>Auto</item><item>Day</item><item>Night</item></string-array>
 
-    <string-array name="themes_values" translatable="false">
-        <item>0</item><item>1</item><item>2</item></string-array>
+    <string-array name="themes_values" translatable="false"><item>0</item><item>1</item><item>2</item></string-array>
 
     <!--LENGTH-->
 
