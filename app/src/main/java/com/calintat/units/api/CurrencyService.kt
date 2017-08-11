@@ -5,6 +5,5 @@ import retrofit2.http.GET
 
 interface CurrencyService {
 
-    @GET("latest?base=GBP")
-    fun loadData(): Call<CurrencyData>
+    @GET("latest") fun loadData(): Call<CurrencyData>
 }

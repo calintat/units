@@ -29,7 +29,7 @@ class CurrencyHelper : AnkoLogger {
 
                 debug("Received response from Fixer: $response")
 
-                if (response.isSuccessful) response.body()?.run(onSuccess)
+                if (response.isSuccessful) response.body()?.let(onSuccess)
             }
 
             override fun onFailure(call: Call<CurrencyData>, t: Throwable) {
