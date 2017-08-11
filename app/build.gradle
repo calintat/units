@@ -42,6 +42,10 @@ dependencies {
 
     compile "com.github.calintat:chromatic:1.0.1"
 
+    compile "com.squareup.retrofit2:retrofit:2.3.0"
+
+    compile "com.squareup.retrofit2:converter-gson:2.0.1"
+
     compile "org.jetbrains.anko:anko-appcompat-v7:$anko_version"
 
     compile "org.jetbrains.anko:anko-cardview-v7:$anko_version"
