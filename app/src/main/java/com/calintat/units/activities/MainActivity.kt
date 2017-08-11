@@ -31,6 +31,7 @@ import com.calintat.units.ui.MainUI.textView1
 import com.calintat.units.ui.MainUI.textView2
 import com.calintat.units.ui.MainUI.toolbar
 import com.calintat.units.utils.BillingHelper
+import com.calintat.units.utils.CurrencyHelper
 import org.jetbrains.anko.sdk21.listeners.textChangedListener
 import org.jetbrains.anko.selector
 import org.jetbrains.anko.setContentView
@@ -123,6 +124,8 @@ class MainActivity : AppCompatActivity() {
 
         this.id = id
 
+        if (id == R.id.navigation_currency) refreshCurrency()
+
         putInt(KEY_ID, id)
 
         refreshActionMenu()
@@ -214,6 +217,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun clearInput() = editText.text.clear()
+
+    private fun refreshCurrency() {
+
+        CurrencyHelper.loadData {
+
+            it.persist(this)
+
+            refreshRecyclerView()
+
+            toast("Updated currency: ${it.date}")
+        }
+    }
 
     private fun refreshActionMenu() {
 
