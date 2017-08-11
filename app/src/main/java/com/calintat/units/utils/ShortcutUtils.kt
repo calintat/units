@@ -5,9 +5,8 @@ import android.content.Context
 import android.content.pm.ShortcutInfo
 import android.content.pm.ShortcutManager
 import android.graphics.drawable.Icon
-import android.support.annotation.IdRes
-import com.calintat.units.R
 import com.calintat.units.activities.MainActivity
+import com.calintat.units.api.Converter
 import org.jetbrains.anko.intentFor
 
 @TargetApi(25)

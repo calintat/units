@@ -1,4 +1,4 @@
-package com.calintat.units.utils
+package com.calintat.units.api
 
 import android.support.annotation.ColorRes
 import android.support.annotation.DrawableRes

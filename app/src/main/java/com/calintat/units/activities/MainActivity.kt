@@ -20,6 +20,7 @@ import com.calintat.alps.getBoolean
 import com.calintat.alps.getInt
 import com.calintat.alps.putInt
 import com.calintat.units.R
+import com.calintat.units.api.Converter
 import com.calintat.units.recycler.Adapter
 import com.calintat.units.ui.MainUI
 import com.calintat.units.ui.MainUI.drawerLayout
@@ -30,7 +31,6 @@ import com.calintat.units.ui.MainUI.textView1
 import com.calintat.units.ui.MainUI.textView2
 import com.calintat.units.ui.MainUI.toolbar
 import com.calintat.units.utils.BillingHelper
-import com.calintat.units.utils.Converter
 import com.calintat.units.utils.ShortcutUtils
 import org.jetbrains.anko.*
 import org.jetbrains.anko.sdk21.listeners.textChangedListener

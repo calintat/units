@@ -2,8 +2,8 @@ package com.calintat.units.recycler
 
 import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
+import com.calintat.units.api.Converter
 import com.calintat.units.ui.ListItem
-import com.calintat.units.utils.Converter
 import org.jetbrains.anko.AnkoContext
 
 class Adapter : RecyclerView.Adapter<ViewHolder>() {
