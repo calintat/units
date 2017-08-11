@@ -4,7 +4,6 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.support.annotation.IdRes
 import android.support.customtabs.CustomTabsIntent
@@ -21,6 +20,7 @@ import com.calintat.alps.getInt
 import com.calintat.alps.putInt
 import com.calintat.units.R
 import com.calintat.units.api.Converter
+import com.calintat.units.api.Item
 import com.calintat.units.recycler.Adapter
 import com.calintat.units.ui.MainUI
 import com.calintat.units.ui.MainUI.drawerLayout
@@ -31,23 +31,23 @@ import com.calintat.units.ui.MainUI.textView1
 import com.calintat.units.ui.MainUI.textView2
 import com.calintat.units.ui.MainUI.toolbar
 import com.calintat.units.utils.BillingHelper
-import com.calintat.units.utils.ShortcutUtils
-import org.jetbrains.anko.*
 import org.jetbrains.anko.sdk21.listeners.textChangedListener
+import org.jetbrains.anko.selector
+import org.jetbrains.anko.setContentView
+import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.toast
 
 class MainActivity : AppCompatActivity() {
 
     private val KEY_ID = "com.calintat.units.KEY_ID"
 
-    private val adapter by lazy { Adapter() }
-
-    private var billingHelper: BillingHelper? = null
+    private val adapter by lazy { Adapter(this) }
 
     private var id: Int? = null
 
     private var position: Int? = null
 
-    private var favourites = emptySet<Int>()
+    private var billingHelper: BillingHelper? = null
 
     //----------------------------------------------------------------------------------------------
 
@@ -86,13 +86,6 @@ class MainActivity : AppCompatActivity() {
         refreshNavigationView()
     }
 
-    override fun onPause() {
-
-        super.onPause()
-
-        updateShortcuts()
-    }
-
     override fun onBackPressed() {
 
         when {
@@ -114,13 +107,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun init(savedInstanceState: Bundle?) {
 
-        doFromSdk(version = 25) { favourites = ShortcutUtils.getShortcuts(this) }
-
-        val defaultId = getInt(KEY_ID).takeIf { Converter.isIdSafe(it) } ?: R.id.navigation_length
+        val defaultId = getInt(KEY_ID).takeIf { Item.isIdSafe(it) } ?: R.id.navigation_length
 
         if (savedInstanceState == null) { /* opened from launcher or app shortcut */
 
-            selectId(ShortcutUtils.retrieveId(intent.action) ?: defaultId)
+            selectId(Item.get(intent)?.id ?: defaultId)
         }
         else { /* orientation change, activity resumed, etc */
 
@@ -136,15 +127,15 @@ class MainActivity : AppCompatActivity() {
 
         refreshActionMenu()
 
-        val item = Converter.get(id)
+        val item = Item.get(id) ?: return
 
-        adapter.units = item.units
+        adapter.units = Converter.retrieveUnits(item)
+
+        selectPosition(0)
 
         toolbar.setBackgroundResource(item.color)
 
         drawerLayout.setStatusBarBackground(item.colorDark)
-
-        selectPosition(0)
     }
 
     private fun selectPosition(position: Int) {
@@ -153,9 +144,9 @@ class MainActivity : AppCompatActivity() {
 
         refreshRecyclerView()
 
-        textView1.setText(adapter.units[position].name)
+        textView1.setText(adapter.units[position].label)
 
-        textView2.setText(adapter.units[position].symbol)
+        textView2.setText(adapter.units[position].shortLabel)
     }
 
     private fun setTheme() {
@@ -170,10 +161,6 @@ class MainActivity : AppCompatActivity() {
         toolbar.setOnMenuItemClickListener {
 
             when (it.itemId) {
-
-                R.id.action_remove_from_favourites -> { removeFromFavourites(); true }
-
-                R.id.action_add_to_favourites -> { addToFavourites(); true }
 
                 R.id.action_clear_input -> { clearInput(); true }
 
@@ -228,49 +215,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun clearInput() = editText.text.clear()
 
-    private fun addToFavourites() = id?.let {
-
-        if (favourites.size < 4) { /* can add to favourites */
-
-            favourites += it
-
-            refreshActionMenu()
-
-            toast(R.string.msg_add_to_favourites)
-        }
-        else { /* error: cannot have more than 4 favourites */
-
-            toast(R.string.err_add_to_favourites)
-        }
-    }
-
-    private fun removeFromFavourites() = id?.let {
-
-        favourites -= it
-
-        refreshActionMenu()
-
-        toast(R.string.msg_remove_from_favourites)
-    }
-
     private fun refreshActionMenu() {
 
-        val api25 = Build.VERSION.SDK_INT >= 25
-
-        val contained = favourites.contains(id)
-
         toolbar.menu.findItem(R.id.action_clear_input).isVisible = editText.text.isNotEmpty()
-
-        toolbar.menu.findItem(R.id.action_add_to_favourites).isVisible = api25 && !contained
-
-        toolbar.menu.findItem(R.id.action_remove_from_favourites).isVisible = api25 && contained
     }
 
     private fun refreshRecyclerView() {
 
         val num = editText.text.toString().toDoubleOrNull() ?: Double.NaN
 
-        position?.let { adapter.input = adapter.units[it].selfToBase(num) }
+        position?.let { adapter.input = adapter.units[it].selfToBase(this, num) }
     }
 
     private fun refreshNavigationView() {
@@ -282,7 +236,7 @@ class MainActivity : AppCompatActivity() {
 
         val builder = CustomTabsIntent.Builder()
 
-        id?.let { builder.setToolbarColor(ContextCompat.getColor(this, Converter.get(it).color)) }
+        Item.get(id)?.let { builder.setToolbarColor(ContextCompat.getColor(this, it.color)) }
 
         builder.build().launchUrl(this, Uri.parse("https://github.com/calintat/units/issues"))
     }
@@ -303,11 +257,6 @@ class MainActivity : AppCompatActivity() {
         clipboardManager.primaryClip = ClipData.newPlainText("conversion output", text)
 
         toast(R.string.msg_clipboard)
-    }
-
-    private fun updateShortcuts() = doFromSdk(version = 25) {
-
-        ShortcutUtils.setShortcuts(this, favourites)
     }
 
     private fun EditText.afterTextChanged(listener: (Editable?) -> Unit) {
