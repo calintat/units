@@ -12,6 +12,8 @@
 
     <string name="err_add_to_favourites">Maximaal 4 favorieten</string>
 
+    <string name="err_could_not_initiate_purchase">Kon niet de aankoop starten</string>
+
     <!--MESSAGES-->
 
     <string name="msg_clipboard">Gekopieerd naar het klembord</string>
@@ -21,6 +23,8 @@
     <string name="msg_add_to_favourites">Toegevoegd aan favorieten</string>
 
     <string name="msg_remove_from_favourites">Verwijderd uit favorieten</string>
+
+    <string name="msg_thank_you_for_your_contribution">Bedankt voor je bijdrage</string>
 
     <!--NAVIGATION-->
 

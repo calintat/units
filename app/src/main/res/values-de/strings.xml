@@ -12,6 +12,8 @@
 
     <string name="err_add_to_favourites">Maximal 4 Favoriten</string>
 
+    <string name="err_could_not_initiate_purchase">Konnte den Kauf nicht einleiten</string>
+
     <!--MESSAGES-->
 
     <string name="msg_clipboard">In die Zwischenablage kopiert</string>
@@ -21,6 +23,8 @@
     <string name="msg_add_to_favourites">Zu Favoriten hinzugefügt</string>
 
     <string name="msg_remove_from_favourites">Von Favoriten entfernt</string>
+
+    <string name="msg_thank_you_for_your_contribution">Danke für Ihren Beitrag</string>
 
     <!--NAVIGATION-->
 

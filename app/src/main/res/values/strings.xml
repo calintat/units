@@ -18,6 +18,8 @@
 
     <string name="err_add_to_favourites">Maximum 4 favourites</string>
 
+    <string name="err_could_not_initiate_purchase">Could not initiate purchase</string>
+
     <!--MESSAGES-->
 
     <string name="msg_clipboard">Copied to clipboard</string>
@@ -27,6 +29,8 @@
     <string name="msg_add_to_favourites">Added to favourites</string>
 
     <string name="msg_remove_from_favourites">Removed from favourites</string>
+
+    <string name="msg_thank_you_for_your_contribution">Thank you for your contribution</string>
 
     <!--NAVIGATION-->
 

@@ -12,6 +12,8 @@
 
     <string name="err_add_to_favourites">Maximálně 4 oblíbené</string>
 
+    <string name="err_could_not_initiate_purchase">Nelze zahájit nákup</string>
+
     <!--MESSAGES-->
 
     <string name="msg_clipboard">Byl zkopírován do schránky</string>
@@ -21,6 +23,8 @@
     <string name="msg_add_to_favourites">Přidáno do oblíbených</string>
 
     <string name="msg_remove_from_favourites">Odstranění z oblíbených</string>
+
+    <string name="msg_thank_you_for_your_contribution">Děkujeme za váš příspěvek</string>
 
     <!--NAVIGATION-->
 

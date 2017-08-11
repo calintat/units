@@ -12,6 +12,8 @@
 
     <string name="err_add_to_favourites">Maxim 4 favorite</string>
 
+    <string name="err_could_not_initiate_purchase">Nu s-a putut iniția cumpărarea</string>
+
     <!--MESSAGES-->
 
     <string name="msg_clipboard">Copiat în clipboard</string>
@@ -21,6 +23,8 @@
     <string name="msg_add_to_favourites">Adăugat la favorite</string>
 
     <string name="msg_remove_from_favourites">Eliminat din favorite</string>
+
+    <string name="msg_thank_you_for_your_contribution">Mulțumesc pentru contribuția dvs.</string>
 
     <!--CONVERTER-->
 

@@ -2,6 +2,7 @@ package com.calintat.units.utils
 
 import android.app.Activity
 import com.android.billingclient.api.*
+import com.calintat.units.R
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.debug
 import org.jetbrains.anko.toast
@@ -28,7 +29,7 @@ class BillingHelper(private val activity: Activity) : AnkoLogger, BillingClientS
 
         val responseCode = billingClient.launchBillingFlow(activity, builder.build())
 
-        if (!responseCode.isOK) activity.toast("Could not initiate purchase")
+        if (!responseCode.isOK) activity.toast(R.string.err_could_not_initiate_purchase)
     }
 
     override fun onBillingServiceDisconnected() {
@@ -45,7 +46,7 @@ class BillingHelper(private val activity: Activity) : AnkoLogger, BillingClientS
 
         debug("Consumption operation finished with status $resultCode")
 
-        if (resultCode.isOK) activity.toast("Thank you for your contribution ❤️️")
+        if (resultCode.isOK) activity.toast(R.string.msg_thank_you_for_your_contribution)
     }
 
     override fun onPurchasesUpdated(responseCode: Int, purchases: MutableList<Purchase>?) {
