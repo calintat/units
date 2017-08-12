@@ -4,43 +4,52 @@
     <SwitchPreference
         android:defaultValue="true"
         android:key="pref_advanced"
-        android:title="@string/pref_advanced" />
+        android:title="@string/pref_advanced"
+        android:icon="@drawable/ic_pref_advanced" />
+
+    <ListPreference
+        android:defaultValue="0"
+        android:key="pref_currency"
+        android:title="@string/pref_currency"
+        android:summary="%s"
+        android:icon="@drawable/ic_pref_currency"
+        android:entries="@array/pref_currency"
+        android:entryValues="@array/pref_currency_values" />
 
     <ListPreference
         android:defaultValue="1"
         android:key="pref_theme"
         android:title="@string/pref_theme"
         android:summary="%s"
-        android:entries="@array/themes"
-        android:entryValues="@array/themes_values" />
+        android:icon="@drawable/ic_pref_theme"
+        android:entries="@array/pref_theme"
+        android:entryValues="@array/pref_theme_values" />
 
     <MultiSelectListPreference
         android:key="pref_shortcuts"
-        android:title="@string/pref_shortcuts" />
+        android:title="@string/pref_shortcuts"
+        android:icon="@drawable/ic_pref_shortcuts" />
 
-    <PreferenceCategory
-        android:title="@string/pref_about" >
+    <Preference
+        android:title="@string/pref_version"
+        android:summary="@string/app_version"
+        android:icon="@drawable/ic_pref_version" >
 
-        <Preference
-            android:title="@string/pref_version"
-            android:summary="@string/app_version" >
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="market://details?id=com.calintat.units" />
 
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="market://details?id=com.calintat.units" />
+    </Preference>
 
-        </Preference>
+    <Preference
+        android:title="@string/pref_developer"
+        android:summary="@string/app_developer"
+        android:icon="@drawable/ic_pref_developer" >
 
-        <Preference
-            android:title="@string/pref_developer"
-            android:summary="@string/app_developer" >
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://play.google.com/store/apps/dev?id=5526451977947367946" />
 
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://play.google.com/store/apps/dev?id=5526451977947367946" />
-
-        </Preference>
-
-    </PreferenceCategory>
+    </Preference>
 
 </PreferenceScreen>

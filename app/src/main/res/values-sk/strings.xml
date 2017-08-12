@@ -92,19 +92,19 @@
 
     <string name="pref_advanced">Pokročilý</string>
 
+    <string name="pref_currency">Mena</string>
+
     <string name="pref_theme">Téma</string>
 
     <string name="pref_shortcuts">Skratky</string>
-
-    <string name="pref_about">O aplikácii</string>
 
     <string name="pref_version">Verzia</string>
 
     <string name="pref_developer">Vývojka</string>
 
-    <!--THEMES-->
+    <string-array name="pref_currency"><item>Auto</item><item>Manuálny</item></string-array>
 
-    <string-array name="themes"><item>Auto</item><item>Deň</item><item>Noc</item></string-array>
+    <string-array name="pref_theme"><item>Auto</item><item>Deň</item><item>Noc</item></string-array>
 
     <!--LENGTH-->
 

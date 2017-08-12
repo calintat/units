@@ -92,19 +92,19 @@
 
     <string name="pref_advanced">Advanced</string>
 
+    <string name="pref_currency">Currency</string>
+
     <string name="pref_theme">Theme</string>
 
     <string name="pref_shortcuts">Shortcuts</string>
-
-    <string name="pref_about">About</string>
 
     <string name="pref_version">Version</string>
 
     <string name="pref_developer">Developer</string>
 
-    <!--THEMES-->
+    <string-array name="pref_currency"><item>Auto</item><item>Manual</item></string-array>
 
-    <string-array name="themes"><item>Auto</item><item>Day</item><item>Night</item></string-array>
+    <string-array name="pref_theme"><item>Auto</item><item>Day</item><item>Night</item></string-array>
 
     <!--LENGTH-->
 

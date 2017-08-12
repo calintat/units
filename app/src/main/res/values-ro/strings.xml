@@ -92,19 +92,19 @@
 
     <string name="pref_advanced">Avansat</string>
 
+    <string name="pref_currency">Valută</string>
+
     <string name="pref_theme">Temă</string>
 
     <string name="pref_shortcuts">Comenzi rapide</string>
-
-    <string name="pref_about">Despre</string>
 
     <string name="pref_version">Versiune</string>
 
     <string name="pref_developer">Dezvoltator</string>
 
-    <!--THEMES-->
+    <string-array name="pref_currency"><item>Auto</item><item>Manual</item></string-array>
 
-    <string-array name="themes"><item>Auto</item><item>Zi</item><item>Noapte</item></string-array>
+    <string-array name="pref_theme"><item>Auto</item><item>Zi</item><item>Noapte</item></string-array>
 
     <!--LENGTH-->
 
