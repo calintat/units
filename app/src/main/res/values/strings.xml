@@ -962,13 +962,13 @@
 
     <string name="kilopond_metre">kilopond metre</string>
 
-    <string translatable="false" name="symbol_foot_pound">ft lbf</string>
+    <string translatable="false" name="symbol_foot_pound">ft·lbf</string>
 
-    <string translatable="false" name="symbol_inch_pound">in lbf</string>
+    <string translatable="false" name="symbol_inch_pound">in·lbf</string>
 
-    <string translatable="false" name="symbol_newton_metre">N m</string>
+    <string translatable="false" name="symbol_newton_metre">N·m</string>
 
-    <string translatable="false" name="symbol_kilopond_metre">kp m</string>
+    <string translatable="false" name="symbol_kilopond_metre">kp·m</string>
 
     <!--ENERGY-->
 
@@ -998,9 +998,9 @@
 
     <string translatable="false" name="symbol_erg">erg</string>
 
-    <string translatable="false" name="symbol_kilowatt_hour">kW h</string>
+    <string translatable="false" name="symbol_kilowatt_hour">kW·h</string>
 
-    <string translatable="false" name="symbol_megawatt_hour">MW h</string>
+    <string translatable="false" name="symbol_megawatt_hour">MW·h</string>
 
     <string translatable="false" name="symbol_calorie">cal</string>
 
@@ -1076,7 +1076,7 @@
 
     <string translatable="false" name="symbol_faraday">F</string>
 
-    <string translatable="false" name="symbol_milliampere_hour">mA h</string>
+    <string translatable="false" name="symbol_milliampere_hour">mA·h</string>
 
     <!--VOLTAGE-->
 
