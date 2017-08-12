@@ -37,15 +37,22 @@ import org.jetbrains.anko.sdk21.listeners.textChangedListener
 
 class MainActivity : AppCompatActivity() {
 
-    private val KEY_ID = "com.calintat.units.KEY_ID"
+    companion object {
 
-    private val adapter by lazy { Adapter(this) }
+        private val KEY_ID = "com.calintat.units.KEY_ID"
+    }
 
     private var id: Int? = null
 
     private var position: Int? = null
 
     private var billingHelper: BillingHelper? = null
+
+    private val adapter by lazy { Adapter(this) }
+
+    private val currency get() = id == R.id.navigation_currency
+
+    private val currencyAuto get() = getInt("pref_currency", 0) == 0
 
     //----------------------------------------------------------------------------------------------
 
@@ -78,6 +85,8 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
 
         super.onResume()
+
+        refreshActionMenu()
 
         refreshRecyclerView()
 
@@ -121,7 +130,7 @@ class MainActivity : AppCompatActivity() {
 
         this.id = id
 
-        if (id == R.id.navigation_currency) refreshCurrency()
+        if (currency && currencyAuto) refreshCurrency()
 
         putInt(KEY_ID, id)
 
@@ -162,10 +171,12 @@ class MainActivity : AppCompatActivity() {
 
             when (it.itemId) {
 
-                R.id.action_clear -> { clearInput(); true }
+                R.id.action_refresh -> refreshCurrency()
 
-                else -> false
+                R.id.action_clear -> clearInput()
             }
+
+            true
         }
 
         toolbar.setNavigationIcon(R.drawable.ic_action_menu)
@@ -230,6 +241,8 @@ class MainActivity : AppCompatActivity() {
     private fun refreshActionMenu() {
 
         toolbar.menu.findItem(R.id.action_clear).isVisible = editText.text.isNotEmpty()
+
+        toolbar.menu.findItem(R.id.action_refresh).isVisible = currency && !currencyAuto
     }
 
     private fun refreshRecyclerView() {
