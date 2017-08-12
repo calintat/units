@@ -33,7 +33,6 @@ import com.calintat.units.ui.MainUI.toolbar
 import com.calintat.units.utils.BillingHelper
 import com.calintat.units.utils.CurrencyHelper
 import org.jetbrains.anko.*
-import org.jetbrains.anko.design.snackbar
 import org.jetbrains.anko.sdk21.listeners.textChangedListener
 
 class MainActivity : AppCompatActivity() {
@@ -224,7 +223,7 @@ class MainActivity : AppCompatActivity() {
 
             refreshRecyclerView()
 
-            toast(getString(R.string.msg_retrieved_exchange_rates, it.date))
+            longToast(getString(R.string.msg_retrieved_exchange_rates, it.date))
         }
     }
 
