@@ -12,6 +12,8 @@
 
     <string name="err_could_not_initiate_purchase">Impossible d\'ouvrir l\'achat</string>
 
+    <string name="err_rates_are_already_up_to_date">Les tarifs sont déjà à jour</string>
+
     <!--MESSAGES-->
 
     <string name="msg_app_restart_required">Un redémarrage d\'application requis</string>

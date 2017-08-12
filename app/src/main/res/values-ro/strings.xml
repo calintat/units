@@ -12,6 +12,8 @@
 
     <string name="err_could_not_initiate_purchase">Nu s-a putut iniția cumpărarea</string>
 
+    <string name="err_rates_are_already_up_to_date">Cursurile sunt deja actualizate</string>
+
     <!--MESSAGES-->
 
     <string name="msg_app_restart_required">Restartul aplicației este necesar</string>

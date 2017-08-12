@@ -12,6 +12,8 @@
 
     <string name="err_could_not_initiate_purchase">Could not initiate purchase</string>
 
+    <string name="err_rates_are_already_up_to_date">Rates are already up to date</string>
+
     <!--MESSAGES-->
 
     <string name="msg_app_restart_required">App restart required</string>
