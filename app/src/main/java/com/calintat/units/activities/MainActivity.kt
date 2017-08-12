@@ -17,6 +17,7 @@ import android.view.Gravity
 import android.widget.EditText
 import com.calintat.alps.getBoolean
 import com.calintat.alps.getInt
+import com.calintat.alps.getString
 import com.calintat.alps.putInt
 import com.calintat.units.R
 import com.calintat.units.api.Converter
@@ -130,7 +131,7 @@ class MainActivity : AppCompatActivity() {
 
         this.id = id
 
-        if (currency && currencyAuto) refreshCurrency()
+        if (currency && currencyAuto) actionRefresh()
 
         putInt(KEY_ID, id)
 
@@ -171,9 +172,9 @@ class MainActivity : AppCompatActivity() {
 
             when (it.itemId) {
 
-                R.id.action_refresh -> refreshCurrency()
+                R.id.action_refresh -> actionRefresh()
 
-                R.id.action_clear -> clearInput()
+                R.id.action_clear -> actionClear()
             }
 
             true
@@ -224,11 +225,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun clearInput() = editText.text.clear()
+    private fun actionClear() = editText.text.clear()
 
-    private fun refreshCurrency() {
+    private fun actionRefresh() = CurrencyHelper.loadData {
 
-        CurrencyHelper.loadData {
+        if (it.date != getString("pref_currency_date", "2017-08-01")) {
 
             it.persist(this)
 
@@ -236,6 +237,7 @@ class MainActivity : AppCompatActivity() {
 
             longToast(getString(R.string.msg_retrieved_exchange_rates, it.date))
         }
+        else if (!currencyAuto) toast(R.string.err_rates_are_already_up_to_date)
     }
 
     private fun refreshActionMenu() {
