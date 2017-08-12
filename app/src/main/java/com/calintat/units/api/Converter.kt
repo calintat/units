@@ -531,6 +531,17 @@ object Converter {
 
             unit(R.string.calorie_per_second, R.string.symbol_calorie_per_second, 4.1868)
         }
+        
+        add(Item.VISCOSITY) {
+
+            unit(R.string.pascal_second, R.string.symbol_pascal_second)
+
+            unit(R.string.poise, R.string.symbol_poise, 0.1)
+
+            unit(R.string.pound_per_foot_hour, R.string.symbol_pound_per_foot_hour, 4.133789e-4)
+
+            unit(R.string.pound_per_foot_second, R.string.symbol_pound_per_foot_second, 1.488164)
+        }
 
         add(Item.CURRENT) {
 
