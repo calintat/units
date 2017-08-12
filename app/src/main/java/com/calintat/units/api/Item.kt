@@ -200,6 +200,15 @@ enum class Item(val id: Int, val label: Int, val color: Int, val colorDark: Int,
             shortcutIcon = R.drawable.ic_shortcut_power
     ),
 
+    VISCOSITY(
+            id = R.id.navigation_viscosity,
+            label = R.string.navigation_viscosity,
+            color = R.color.blue_500,
+            colorDark = R.color.blue_700,
+            shortcutId = "shortcut_viscosity",
+            shortcutIcon = R.drawable.ic_shortcut_viscosity
+    ),
+
     CURRENT(
             id = R.id.navigation_current,
             label = R.string.navigation_current,

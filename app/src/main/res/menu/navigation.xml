@@ -115,6 +115,11 @@
             android:title="@string/navigation_power" />
 
         <item
+            android:id="@+id/navigation_viscosity"
+            android:icon="@drawable/ic_navigation_viscosity"
+            android:title="@string/navigation_viscosity" />
+
+        <item
             android:id="@+id/navigation_current"
             android:icon="@drawable/ic_navigation_current"
             android:title="@string/navigation_current" />
