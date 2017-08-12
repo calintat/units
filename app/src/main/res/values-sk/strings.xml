@@ -2,7 +2,7 @@
 
     <!--ACTIONS-->
 
-    <string name="action_clear_input">Vymazať vstup</string>
+    <string name="action_clear">Vymazať vstup</string>
 
     <!--ERRORS-->
 

@@ -2,7 +2,7 @@
     
     <!--ACTIONS-->
 
-    <string name="action_clear_input">Clear input</string>
+    <string name="action_clear">Clear input</string>
 
     <!--ERRORS-->
 

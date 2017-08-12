@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto" >
 
     <item
-        android:id="@+id/action_clear_input"
-        android:icon="@drawable/ic_action_clear_input"
-        android:title="@string/action_clear_input"
+        android:id="@+id/action_clear"
+        android:icon="@drawable/ic_action_clear"
+        android:title="@string/action_clear"
         app:showAsAction="ifRoom" />
 
 </menu>

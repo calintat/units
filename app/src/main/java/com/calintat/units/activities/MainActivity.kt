@@ -162,7 +162,7 @@ class MainActivity : AppCompatActivity() {
 
             when (it.itemId) {
 
-                R.id.action_clear_input -> { clearInput(); true }
+                R.id.action_clear -> { clearInput(); true }
 
                 else -> false
             }
@@ -229,7 +229,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun refreshActionMenu() {
 
-        toolbar.menu.findItem(R.id.action_clear_input).isVisible = editText.text.isNotEmpty()
+        toolbar.menu.findItem(R.id.action_clear).isVisible = editText.text.isNotEmpty()
     }
 
     private fun refreshRecyclerView() {

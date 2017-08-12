@@ -2,7 +2,7 @@
 
     <!--ACTIONS-->
 
-    <string name="action_clear_input">Effacer l\'entrée</string>
+    <string name="action_clear">Effacer l\'entrée</string>
 
     <!--ERRORS-->
 
