@@ -2,7 +2,9 @@
 
     <!--ACTIONS-->
 
-    <string name="action_clear">Ștergeți input</string>
+    <string name="action_clear">Șterge</string>
+
+    <string name="action_refresh">Actualizează</string>
 
     <!--ERRORS-->
 

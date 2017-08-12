@@ -2,7 +2,9 @@
 
     <!--ACTIONS-->
 
-    <string name="action_clear">Klare Eingabe</string>
+    <string name="action_clear">Löschen</string>
+
+    <string name="action_refresh">Erfrischen</string>
 
     <!--ERRORS-->
 

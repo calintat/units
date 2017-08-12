@@ -2,7 +2,9 @@
 
     <!--ACTIONS-->
 
-    <string name="action_clear">Cancella l\'ingresso</string>
+    <string name="action_clear">Cancellare</string>
+
+    <string name="action_refresh">Ricaricare</string>
 
     <!--ERRORS-->
 

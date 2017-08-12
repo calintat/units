@@ -2,7 +2,9 @@
 
     <!--ACTIONS-->
 
-    <string name="action_clear">Borrar la entrada</string>
+    <string name="action_clear">Despejar</string>
+
+    <string name="action_refresh">Refrescar</string>
 
     <!--ERRORS-->
 

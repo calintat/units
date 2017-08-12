@@ -2,7 +2,9 @@
 
     <!--ACTIONS-->
 
-    <string name="action_clear">Effacer l\'entrée</string>
+    <string name="action_clear">Nettoyer</string>
+
+    <string name="action_refresh">Rafraîchir</string>
 
     <!--ERRORS-->
 

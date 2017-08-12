@@ -2,7 +2,9 @@
     
     <!--ACTIONS-->
 
-    <string name="action_clear">Clear ingang</string>
+    <string name="action_clear">Wissen</string>
+
+    <string name="action_refresh">Verversen</string>
 
     <!--ERRORS-->
 
