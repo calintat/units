@@ -21,6 +21,6 @@ class SettingsActivity : AppCompatActivity() {
 
         toolbar.setNavigationOnClickListener { finish() }
 
-        fragmentManager.beginTransaction().add(R.id.container, SettingsFragment()).commit()
+        fragmentManager.beginTransaction().replace(R.id.container, SettingsFragment()).commit()
     }
 }
