@@ -66,6 +66,8 @@
 
     <string name="navigation_power">Výkon</string>
 
+    <string name="navigation_viscosity">Viskozita</string>
+
     <string name="navigation_current">Proud</string>
 
     <string name="navigation_charge">Náboj</string>
@@ -589,6 +591,16 @@
     <string name="erg_per_second">erg za sekundu</string>
 
     <string name="calorie_per_second">kalorie za sekundu</string>
+
+    <!--VISCOSITY-->
+
+    <string name="pascal_second">pascal sekundu</string>
+
+    <string name="poise">poise</string>
+
+    <string name="pound_per_foot_hour">libra za stopa hodinu</string>
+
+    <string name="pound_per_foot_second">libra za stopa sekundu</string>
 
     <!--CURRENT-->
 

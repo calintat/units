@@ -66,6 +66,8 @@
 
     <string name="navigation_power">Potencia</string>
 
+    <string name="navigation_viscosity">Viscosidad</string>
+
     <string name="navigation_current">Corriente</string>
 
     <string name="navigation_charge">Carga</string>
@@ -589,6 +591,16 @@
     <string name="erg_per_second">ergio por segundo</string>
 
     <string name="calorie_per_second">caloría por segundo</string>
+
+    <!--VISCOSITY-->
+
+    <string name="pascal_second">pascal segundo</string>
+
+    <string name="poise">poise</string>
+
+    <string name="pound_per_foot_hour">libra por pie hora</string>
+
+    <string name="pound_per_foot_second">libra por pie segundo</string>
 
     <!--CURRENT-->
 

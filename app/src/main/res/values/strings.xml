@@ -72,6 +72,8 @@
 
     <string name="navigation_power">Power</string>
 
+    <string name="navigation_viscosity">Viscosity</string>
+
     <string name="navigation_current">Current</string>
 
     <string name="navigation_charge">Charge</string>
@@ -1041,6 +1043,24 @@
     <string translatable="false" name="symbol_erg_per_second">erg/s</string>
 
     <string translatable="false" name="symbol_calorie_per_second">cal/s</string>
+
+    <!--VISCOSITY-->
+
+    <string name="pascal_second">pascal second</string>
+
+    <string name="poise">poise</string>
+
+    <string name="pound_per_foot_hour">pound per foot hour</string>
+
+    <string name="pound_per_foot_second">pound per foot second</string>
+
+    <string translatable="false" name="symbol_pascal_second">Pa·s</string>
+
+    <string translatable="false" name="symbol_poise">P</string>
+
+    <string translatable="false" name="symbol_pound_per_foot_hour">lb/(ft·h)</string>
+
+    <string translatable="false" name="symbol_pound_per_foot_second">lb/(ft·s)</string>
 
     <!--CURRENT-->
 
