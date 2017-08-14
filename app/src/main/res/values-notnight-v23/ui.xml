@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="app_theme.settings">
+        <item name="android:statusBarColor">@color/grey_300</item>
+        <item name="android:windowLightStatusBar">true</item></style>
+
+</resources>

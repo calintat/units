@@ -44,6 +44,7 @@
         </activity>
 
         <activity
+            android:theme="@style/app_theme.settings"
             android:name=".activities.SettingsActivity"
             android:parentActivityName=".activities.MainActivity" />
 

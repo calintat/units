@@ -5,6 +5,8 @@
     <style name="app_theme.main">
         <item name="android:statusBarColor">@android:color/transparent</item></style>
 
+    <style name="app_theme.settings" />
+
     <dimen name="app_bar_height">168dp</dimen>
 
     <dimen name="card_view_margin_top">72dp</dimen>
