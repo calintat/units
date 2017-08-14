@@ -41,6 +41,8 @@ class MainActivity : AppCompatActivity() {
     companion object {
 
         private val KEY_ID = "com.calintat.units.KEY_ID"
+
+        private val KEY_INPUT = "com.calintat.units.KEY_INPUT"
     }
 
     private var id: Int? = null
@@ -108,6 +110,8 @@ class MainActivity : AppCompatActivity() {
 
         id?.let { outState.putInt(KEY_ID, it) }
 
+        outState.putString(KEY_INPUT, editText.text.toString())
+
         super.onSaveInstanceState(outState)
     }
 
@@ -124,6 +128,8 @@ class MainActivity : AppCompatActivity() {
         else { /* orientation change, activity resumed, etc */
 
             selectId(savedInstanceState.getInt(KEY_ID, defaultId))
+
+            editText.setText(savedInstanceState.getString(KEY_INPUT))
         }
     }
 
