@@ -86,6 +86,26 @@
 
     <string name="navigation_radioactivity">Radiactividad</string>
 
+    <string name="navigation_glucose">Glucosa</string>
+
+    <string name="navigation_cholesterol">Colesterol</string>
+
+    <string name="navigation_calcium">Calcio</string>
+
+    <string name="navigation_electrolytes">Electrolitos</string>
+
+    <string name="navigation_ferritin">Ferritina</string>
+
+    <string name="navigation_haemoglobin">Hemoglobina</string>
+
+    <string name="navigation_creatinine">Creatinina</string>
+
+    <string name="navigation_urea">Urea</string>
+
+    <string name="navigation_albumin">Albúmina</string>
+
+    <string name="navigation_liver">Enzimas hepáticas</string>
+
     <string name="navigation_settings">Ajustes</string>
 
     <string name="navigation_feedback">Enviar sugerencias</string>
@@ -95,6 +115,8 @@
     <!--PREFERENCES-->
 
     <string name="pref_advanced">Avanzado</string>
+
+    <string name="pref_medical">Medical</string>
 
     <string name="pref_currency">Divisa</string>
 
@@ -670,4 +692,64 @@
 
     <string name="rutherford">rutherford</string>
 
+    <!--MEDICAL-->
+
+    <string name="millimole_per_litre">milimol por litro</string>
+
+    <string name="micromole_per_litre">micromol por litro</string>
+
+    <string name="milligram_per_decilitre">miligramo por decilitro</string>
+
+    <string name="milligram_per_100_millilitres">miligramo por 100 mililitros</string>
+
+    <string name="milligram_per_cent">miligramo por ciento</string>
+
+    <string name="milligram_per_litre">miligramo por litro</string>
+
+    <string name="microgram_per_millilitre">microgramo por mililitro</string>
+
+    <string name="milliequivalent_per_litre">miliequivalente por litro</string>
+
+    <string name="nanomole_per_litre">nanomol por litro</string>
+
+    <string name="picomole_per_litre">picomol por litro</string>
+
+    <string name="microgram_per_decilitre">microgramo por decilitro</string>
+
+    <string name="microgram_per_100_millilitres">microgramo por 100 mililitros</string>
+
+    <string name="microgram_per_cent">microgramo por cent</string>
+
+    <string name="microgram_per_litre">microgramo por litro</string>
+
+    <string name="nanogram_per_millilitre">nanogramo por mililitro</string>
+
+    <string name="gram_per_decilitre">gramo por decilitro</string>
+
+    <string name="gram_per_100_millilitres">gramo por 100 mililitros</string>
+
+    <string name="gram_per_cent">gramo por cent</string>
+
+    <string name="gram_per_litre">gramo por litro</string>
+
+    <string name="milligram_per_millilitre">miligramo por mililitro</string>
+
+    <string name="nanokatal_per_litre">nanokatal por litro</string>
+
+    <string name="microkatal_per_litre">microkatal por litro</string>
+
+    <string name="nanomole_per_second_litre">nanomol por segundo litro</string>
+
+    <string name="micromole_per_second_litre">micromol por segundo litro</string>
+
+    <string name="enzyme_unit_per_litre">unidad enzimática por litro</string>
+
+    <string name="international_unit_per_litre">unidad internacional por litro</string>
+
+    <string name="micromole_per_minute_litre">micromol por minuto litro</string>
+
+    <string name="micromole_per_hour_litre">micromol por hora litro</string>
+
+    <string name="micromole_per_hour_millilitre">micromol por hora mililitro</string>
+    
 </resources>

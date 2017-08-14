@@ -86,6 +86,26 @@
 
     <string name="navigation_radioactivity">Radioaktivita</string>
 
+    <string name="navigation_glucose">Glukóza</string>
+
+    <string name="navigation_cholesterol">Cholesterol</string>
+
+    <string name="navigation_calcium">Vápník</string>
+
+    <string name="navigation_electrolytes">Elektrolyty</string>
+
+    <string name="navigation_ferritin">Ferritin</string>
+
+    <string name="navigation_haemoglobin">Hemoglobin</string>
+
+    <string name="navigation_creatinine">Kreatinin</string>
+
+    <string name="navigation_urea">Močovina</string>
+
+    <string name="navigation_albumin">Albumin</string>
+
+    <string name="navigation_liver">Játrové enzymy</string>
+
     <string name="navigation_settings">Nastavení</string>
 
     <string name="navigation_feedback">Poslat zpětnou vazbu</string>
@@ -95,6 +115,8 @@
     <!--PREFERENCES-->
 
     <string name="pref_advanced">Moderní</string>
+
+    <string name="pref_medical">Lékařský</string>
 
     <string name="pref_currency">Měna</string>
 
@@ -670,4 +692,64 @@
 
     <string name="rutherford">rutherford</string>
 
+    <!--MEDICAL-->
+
+    <string name="millimole_per_litre">milimol za litr</string>
+
+    <string name="micromole_per_litre">mikromol za litr</string>
+
+    <string name="milligram_per_decilitre">miligram za decilitr</string>
+
+    <string name="milligram_per_100_millilitres">miligram za 100 mililitry</string>
+
+    <string name="milligram_per_cent">miligram procent</string>
+
+    <string name="milligram_per_litre">miligram za litr</string>
+
+    <string name="microgram_per_millilitre">mikrogram za mililitr</string>
+
+    <string name="milliequivalent_per_litre">miliekvivalent za litr</string>
+
+    <string name="nanomole_per_litre">nanomol za litr</string>
+
+    <string name="picomole_per_litre">picomol za litr</string>
+
+    <string name="microgram_per_decilitre">mikrogram za decilitr</string>
+
+    <string name="microgram_per_100_millilitres">mikrogram za 100 mililitry</string>
+
+    <string name="microgram_per_cent">mikrogram procent</string>
+
+    <string name="microgram_per_litre">mikrogram za litr</string>
+
+    <string name="nanogram_per_millilitre">nanogram za mililitr</string>
+
+    <string name="gram_per_decilitre">gram za decilitr</string>
+
+    <string name="gram_per_100_millilitres">gram za 100 mililitry</string>
+
+    <string name="gram_per_cent">gram procent</string>
+
+    <string name="gram_per_litre">gram za litr</string>
+
+    <string name="milligram_per_millilitre">miligram za mililitr</string>
+
+    <string name="nanokatal_per_litre">nanokatal za litr</string>
+
+    <string name="microkatal_per_litre">mikrokatal za litr</string>
+
+    <string name="nanomole_per_second_litre">nanomol za sekunda litr</string>
+
+    <string name="micromole_per_second_litre">mikromol za sekunda litr</string>
+
+    <string name="enzyme_unit_per_litre">enzymová jednotka za litr</string>
+
+    <string name="international_unit_per_litre">mezinárodní jednotka za litr</string>
+
+    <string name="micromole_per_minute_litre">mikromol za minuta litr</string>
+
+    <string name="micromole_per_hour_litre">mikromol za hodina litr</string>
+
+    <string name="micromole_per_hour_millilitre">mikromol za hodina mililitr</string>
+    
 </resources>

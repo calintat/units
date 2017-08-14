@@ -270,6 +270,96 @@ enum class Item(val id: Int, val label: Int, val color: Int, val colorDark: Int,
             colorDark = R.color.yellow_700,
             shortcutId = "shortcut_radioactivity",
             shortcutIcon = R.drawable.ic_shortcut_radioactivity
+    ),
+
+    GLUCOSE(
+            id = R.id.navigation_glucose,
+            label = R.string.navigation_glucose,
+            color = R.color.blue_500,
+            colorDark = R.color.blue_700,
+            shortcutId = "shortcut_glucose",
+            shortcutIcon = R.drawable.ic_shortcut_glucose
+    ),
+
+    CHOLESTEROL(
+            id = R.id.navigation_cholesterol,
+            label = R.string.navigation_cholesterol,
+            color = R.color.green_500,
+            colorDark = R.color.green_700,
+            shortcutId = "shortcut_cholesterol",
+            shortcutIcon = R.drawable.ic_shortcut_cholesterol
+    ),
+
+    CALCIUM(
+            id = R.id.navigation_calcium,
+            label = R.string.navigation_calcium,
+            color = R.color.cyan_500,
+            colorDark = R.color.cyan_700,
+            shortcutId = "shortcut_calcium",
+            shortcutIcon = R.drawable.ic_shortcut_calcium
+    ),
+
+    ELECTROLYTES(
+            id = R.id.navigation_electrolytes,
+            label = R.string.navigation_electrolytes,
+            color = R.color.orange_500,
+            colorDark = R.color.orange_700,
+            shortcutId = "shortcut_electrolytes",
+            shortcutIcon = R.drawable.ic_shortcut_electrolytes
+    ),
+
+    FERRITIN(
+            id = R.id.navigation_ferritin,
+            label = R.string.navigation_ferritin,
+            color = R.color.red_500,
+            colorDark = R.color.red_700,
+            shortcutId = "shortcut_ferritin",
+            shortcutIcon = R.drawable.ic_shortcut_ferritin
+    ),
+
+    HAEMOGLOBIN(
+            id = R.id.navigation_haemoglobin,
+            label = R.string.navigation_haemoglobin,
+            color = R.color.brown_500,
+            colorDark = R.color.brown_700,
+            shortcutId = "shortcut_haemoglobin",
+            shortcutIcon = R.drawable.ic_shortcut_haemoglobin
+    ),
+
+    CREATININE(
+            id = R.id.navigation_creatinine,
+            label = R.string.action_clear,
+            color = R.color.teal_500,
+            colorDark = R.color.teal_700,
+            shortcutId = "shortcut_creatinine",
+            shortcutIcon = R.drawable.ic_shortcut_creatinine
+    ),
+
+    UREA(
+            id = R.id.navigation_urea,
+            label = R.string.navigation_urea,
+            color = R.color.lime_500,
+            colorDark = R.color.lime_700,
+            shortcutId = "shortcut_urea",
+            shortcutIcon = R.drawable.ic_shortcut_urea
+    ),
+
+    ALBUMIN(
+            id = R.id.navigation_albumin,
+            label = R.string.navigation_albumin,
+            color = R.color.light_green_500,
+            colorDark = R.color.light_green_700,
+            shortcutId = "shortcut_albumin",
+            shortcutIcon = R.drawable.ic_shortcut_albumin
+    ),
+
+    LIVER(
+            id = R.id.navigation_liver,
+            label = R.string.navigation_liver,
+            color = R.color.deep_orange_500,
+            colorDark = R.color.deep_orange_700,
+            shortcutId = "shortcut_liver",
+            shortcutIcon = R.drawable.ic_shortcut_liver
     );
 
     companion object Utils {

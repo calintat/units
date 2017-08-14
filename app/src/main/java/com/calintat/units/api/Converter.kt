@@ -613,5 +613,169 @@ object Converter {
 
             unit(R.string.rutherford, R.string.symbol_rutherford, 1e6)
         }
+
+        add(Item.GLUCOSE) {
+
+            unit(R.string.millimole_per_litre, R.string.symbol_millimole_per_litre)
+
+            unit(R.string.micromole_per_litre, R.string.symbol_micromole_per_litre, 1e-3)
+
+            unit(R.string.milligram_per_decilitre, R.string.symbol_milligram_per_decilitre, 1/18.016)
+
+            unit(R.string.milligram_per_100_millilitres, R.string.symbol_milligram_per_100_millilitres, 1/18.016)
+
+            unit(R.string.milligram_per_cent, R.string.symbol_milligram_per_cent, 1/18.016)
+
+            unit(R.string.milligram_per_litre, R.string.symbol_milligram_per_litre, 1/180.16)
+
+            unit(R.string.microgram_per_millilitre, R.string.symbol_microgram_per_millilitre, 1/180.16)
+        }
+
+        add(Item.CHOLESTEROL) {
+
+            unit(R.string.millimole_per_litre, R.string.symbol_millimole_per_litre)
+
+            unit(R.string.micromole_per_litre, R.string.symbol_micromole_per_litre, 1e-3)
+
+            unit(R.string.milligram_per_decilitre, R.string.symbol_milligram_per_decilitre, 1/38.665)
+
+            unit(R.string.milligram_per_100_millilitres, R.string.symbol_milligram_per_100_millilitres, 1/38.665)
+
+            unit(R.string.milligram_per_cent, R.string.symbol_milligram_per_cent, 1/38.665)
+
+            unit(R.string.milligram_per_litre, R.string.symbol_milligram_per_litre, 1/386.65)
+
+            unit(R.string.microgram_per_millilitre, R.string.symbol_microgram_per_millilitre, 1/386.65)
+        }
+
+        add(Item.CALCIUM) {
+
+            unit(R.string.millimole_per_litre, R.string.symbol_millimole_per_litre)
+
+            unit(R.string.micromole_per_litre, R.string.symbol_micromole_per_litre, 1e-3)
+
+            unit(R.string.milligram_per_decilitre, R.string.symbol_milligram_per_decilitre, 1/4.0078)
+
+            unit(R.string.milligram_per_100_millilitres, R.string.symbol_milligram_per_100_millilitres, 1/4.0078)
+
+            unit(R.string.milligram_per_cent, R.string.symbol_milligram_per_cent, 1/4.0078)
+
+            unit(R.string.milligram_per_litre, R.string.symbol_milligram_per_litre, 1/40.078)
+
+            unit(R.string.microgram_per_millilitre, R.string.symbol_microgram_per_millilitre, 1/40.078)
+        }
+
+        add(Item.ELECTROLYTES) {
+
+            unit(R.string.millimole_per_litre, R.string.symbol_millimole_per_litre)
+
+            unit(R.string.milliequivalent_per_litre, R.string.symbol_milliequivalent_per_litre)
+        }
+
+        add(Item.FERRITIN) {
+
+            unit(R.string.nanomole_per_litre, R.string.symbol_nanomole_per_litre)
+
+            unit(R.string.picomole_per_litre, R.string.symbol_picomole_per_litre, 1e-3)
+
+            unit(R.string.microgram_per_decilitre, R.string.symbol_microgram_per_decilitre, 1/44.5)
+
+            unit(R.string.microgram_per_100_millilitres, R.string.symbol_microgram_per_100_millilitres, 1/44.5)
+
+            unit(R.string.microgram_per_cent, R.string.symbol_microgram_per_cent, 1/44.5)
+
+            unit(R.string.microgram_per_litre, R.string.symbol_microgram_per_litre, 1/445.0)
+
+            unit(R.string.nanogram_per_millilitre, R.string.symbol_nanogram_per_millilitre, 1/445.0)
+        }
+
+        add(Item.HAEMOGLOBIN) {
+
+            unit(R.string.millimole_per_litre, R.string.symbol_millimole_per_litre)
+
+            unit(R.string.micromole_per_litre, R.string.symbol_micromole_per_litre, 1e-3)
+
+            unit(R.string.gram_per_decilitre, R.string.symbol_gram_per_decilitre, 1/6.4458)
+
+            unit(R.string.gram_per_100_millilitres, R.string.symbol_gram_per_100_millilitres, 1/6.4458)
+
+            unit(R.string.gram_per_cent, R.string.symbol_gram_per_cent, 1/6.4458)
+
+            unit(R.string.gram_per_litre, R.string.symbol_gram_per_litre, 1/64.458)
+
+            unit(R.string.milligram_per_millilitre, R.string.symbol_milligram_per_millilitre, 1/64.458)
+        }
+
+        add(Item.CREATININE) {
+
+            unit(R.string.millimole_per_litre, R.string.symbol_millimole_per_litre)
+
+            unit(R.string.micromole_per_litre, R.string.symbol_micromole_per_litre, 1e-3)
+
+            unit(R.string.milligram_per_decilitre, R.string.symbol_milligram_per_decilitre, 1/11.312)
+
+            unit(R.string.milligram_per_100_millilitres, R.string.symbol_milligram_per_100_millilitres, 1/11.312)
+
+            unit(R.string.milligram_per_cent, R.string.symbol_milligram_per_cent, 1/11.312)
+
+            unit(R.string.milligram_per_litre, R.string.symbol_milligram_per_litre, 1/113.12)
+
+            unit(R.string.microgram_per_millilitre, R.string.symbol_microgram_per_millilitre, 1/113.12)
+        }
+
+        add(Item.UREA) {
+
+            unit(R.string.millimole_per_litre, R.string.symbol_millimole_per_litre)
+
+            unit(R.string.micromole_per_litre, R.string.symbol_micromole_per_litre, 1e-3)
+
+            unit(R.string.milligram_per_decilitre, R.string.symbol_milligram_per_decilitre, 1/6.006)
+
+            unit(R.string.milligram_per_100_millilitres, R.string.symbol_milligram_per_100_millilitres, 1/6.006)
+
+            unit(R.string.milligram_per_cent, R.string.symbol_milligram_per_cent, 1/6.006)
+
+            unit(R.string.milligram_per_litre, R.string.symbol_milligram_per_litre, 1/60.06)
+
+            unit(R.string.microgram_per_millilitre, R.string.symbol_microgram_per_millilitre, 1/60.06)
+        }
+
+        add(Item.ALBUMIN) {
+
+            unit(R.string.millimole_per_litre, R.string.symbol_millimole_per_litre)
+
+            unit(R.string.micromole_per_litre, R.string.symbol_micromole_per_litre, 1e-3)
+
+            unit(R.string.gram_per_decilitre, R.string.symbol_gram_per_decilitre, 1/6.646)
+
+            unit(R.string.gram_per_100_millilitres, R.string.symbol_gram_per_100_millilitres, 1/6.646)
+
+            unit(R.string.gram_per_cent, R.string.symbol_gram_per_cent, 1/6.646)
+
+            unit(R.string.gram_per_litre, R.string.symbol_gram_per_litre, 1/66.46)
+
+            unit(R.string.milligram_per_millilitre, R.string.symbol_milligram_per_millilitre, 1/66.46)
+        }
+
+        add(Item.LIVER) {
+
+            unit(R.string.nanokatal_per_litre, R.string.symbol_nanokatal_per_litre)
+
+            unit(R.string.microkatal_per_litre, R.string.symbol_microkatal_per_litre, 1e3)
+
+            unit(R.string.nanomole_per_second_litre, R.string.symbol_nanomole_per_second_litre)
+
+            unit(R.string.micromole_per_second_litre, R.string.symbol_micromole_per_second_litre, 1e3)
+
+            unit(R.string.enzyme_unit_per_litre, R.string.symbol_enzyme_unit_per_litre, 1/0.06)
+
+            unit(R.string.international_unit_per_litre, R.string.symbol_international_unit_per_litre, 1/0.06)
+
+            unit(R.string.micromole_per_minute_litre, R.string.symbol_micromole_per_minute_litre, 1/0.06)
+
+            unit(R.string.micromole_per_hour_litre, R.string.symbol_micromole_per_hour_litre, 1/3.6)
+
+            unit(R.string.micromole_per_hour_millilitre, R.string.symbol_micromole_per_hour_millilitre, 1/0.0036)
+        }
     }
 }

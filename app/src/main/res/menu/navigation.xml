@@ -157,6 +157,61 @@
     </group>
 
     <group
+        android:id="@+id/medical" >
+
+        <item
+            android:id="@+id/navigation_glucose"
+            android:icon="@drawable/ic_navigation_glucose"
+            android:title="@string/navigation_glucose" />
+
+        <item
+            android:id="@+id/navigation_cholesterol"
+            android:icon="@drawable/ic_navigation_cholesterol"
+            android:title="@string/navigation_cholesterol" />
+
+        <item
+            android:id="@+id/navigation_calcium"
+            android:icon="@drawable/ic_navigation_calcium"
+            android:title="@string/navigation_calcium" />
+
+        <item
+            android:id="@+id/navigation_electrolytes"
+            android:icon="@drawable/ic_navigation_electrolytes"
+            android:title="@string/navigation_electrolytes" />
+
+        <item
+            android:id="@+id/navigation_ferritin"
+            android:icon="@drawable/ic_navigation_ferritin"
+            android:title="@string/navigation_ferritin" />
+
+        <item
+            android:id="@+id/navigation_haemoglobin"
+            android:icon="@drawable/ic_navigation_haemoglobin"
+            android:title="@string/navigation_haemoglobin" />
+
+        <item
+            android:id="@+id/navigation_creatinine"
+            android:icon="@drawable/ic_navigation_creatinine"
+            android:title="@string/navigation_creatinine" />
+
+        <item
+            android:id="@+id/navigation_urea"
+            android:icon="@drawable/ic_navigation_urea"
+            android:title="@string/navigation_urea" />
+
+        <item
+            android:id="@+id/navigation_albumin"
+            android:icon="@drawable/ic_navigation_albumin"
+            android:title="@string/navigation_albumin" />
+
+        <item
+            android:id="@+id/navigation_liver"
+            android:icon="@drawable/ic_navigation_liver"
+            android:title="@string/navigation_liver" />
+
+    </group>
+
+    <group
         android:id="@+id/others" >
 
         <item

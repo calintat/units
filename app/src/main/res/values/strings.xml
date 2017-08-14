@@ -1,5 +1,5 @@
 <resources>
-    
+
     <string translatable="false" name="app_name">Units</string>
 
     <string translatable="false" name="app_version">4.2</string>
@@ -92,6 +92,26 @@
 
     <string name="navigation_radioactivity">Radioactivity</string>
 
+    <string name="navigation_glucose">Glucose</string>
+
+    <string name="navigation_cholesterol">Cholesterol</string>
+
+    <string name="navigation_calcium">Calcium</string>
+
+    <string name="navigation_electrolytes">Electrolytes</string>
+
+    <string name="navigation_ferritin">Ferritin</string>
+
+    <string name="navigation_haemoglobin">Haemoglobin</string>
+
+    <string name="navigation_creatinine">Creatinine</string>
+
+    <string name="navigation_urea">Urea</string>
+
+    <string name="navigation_albumin">Albumin</string>
+
+    <string name="navigation_liver">Liver enzymes</string>
+
     <string name="navigation_settings">Settings</string>
 
     <string name="navigation_feedback">Send feedback</string>
@@ -101,6 +121,8 @@
     <!--PREFERENCES-->
 
     <string name="pref_advanced">Advanced</string>
+
+    <string name="pref_medical">Medical</string>
 
     <string name="pref_currency">Currency</string>
 
@@ -1181,5 +1203,123 @@
     <string translatable="false" name="symbol_curie">Ci</string>
 
     <string translatable="false" name="symbol_rutherford">rd</string>
+
+    <!--MEDICAL-->
+
+    <string name="millimole_per_litre">millimole per litre</string>
+
+    <string name="micromole_per_litre">micromole per litre</string>
+
+    <string name="milligram_per_decilitre">milligram per decilitre</string>
+
+    <string name="milligram_per_100_millilitres">milligram per 100 millilitres</string>
+
+    <string name="milligram_per_cent">milligram per cent</string>
+
+    <string name="milligram_per_litre">milligram per litre</string>
+
+    <string name="microgram_per_millilitre">microgram per millilitre</string>
+
+    <string name="milliequivalent_per_litre">milliequivalent per litre</string>
+
+    <string name="nanomole_per_litre">nanomole per litre</string>
+
+    <string name="picomole_per_litre">picomole per litre</string>
+
+    <string name="microgram_per_decilitre">microgram per decilitre</string>
+
+    <string name="microgram_per_100_millilitres">microgram per 100 millilitres</string>
+
+    <string name="microgram_per_cent">microgram per cent</string>
+
+    <string name="microgram_per_litre">microgram per litre</string>
+
+    <string name="nanogram_per_millilitre">nanogram per millilitre</string>
+
+    <string name="gram_per_decilitre">gram per decilitre</string>
+
+    <string name="gram_per_100_millilitres">gram per 100 millilitres</string>
+
+    <string name="gram_per_cent">gram per cent</string>
+
+    <string name="gram_per_litre">gram per litre</string>
+
+    <string name="milligram_per_millilitre">milligram per millilitre</string>
+
+    <string name="nanokatal_per_litre">nanokatal per litre</string>
+
+    <string name="microkatal_per_litre">microkatal per litre</string>
+
+    <string name="nanomole_per_second_litre">nanomole per second litre</string>
+
+    <string name="micromole_per_second_litre">micromole per second litre</string>
+
+    <string name="enzyme_unit_per_litre">enzyme unit per litre</string>
+
+    <string name="international_unit_per_litre">international unit per litre</string>
+
+    <string name="micromole_per_minute_litre">micromole per minute litre</string>
+
+    <string name="micromole_per_hour_litre">micromole per hour litre</string>
+
+    <string name="micromole_per_hour_millilitre">micromole per hour millilitre</string>
+
+    <string translatable="false" name="symbol_millimole_per_litre">mmol/L</string>
+
+    <string translatable="false" name="symbol_micromole_per_litre">µmol/L</string>
+
+    <string translatable="false" name="symbol_milligram_per_decilitre">mg/dL</string>
+
+    <string translatable="false" name="symbol_milligram_per_100_millilitres">mg/100mL</string>
+
+    <string translatable="false" name="symbol_milligram_per_cent">mg%</string>
+
+    <string translatable="false" name="symbol_milligram_per_litre">mg/L</string>
+
+    <string translatable="false" name="symbol_microgram_per_millilitre">µg/mL</string>
+
+    <string translatable="false" name="symbol_milliequivalent_per_litre">mEq/L</string>
+
+    <string translatable="false" name="symbol_nanomole_per_litre">nmol/L</string>
+
+    <string translatable="false" name="symbol_picomole_per_litre">pmol/L</string>
+
+    <string translatable="false" name="symbol_microgram_per_decilitre">µg/dL</string>
+
+    <string translatable="false" name="symbol_microgram_per_100_millilitres">µg/100mL</string>
+
+    <string translatable="false" name="symbol_microgram_per_cent">µg%</string>
+
+    <string translatable="false" name="symbol_microgram_per_litre">µg/L</string>
+
+    <string translatable="false" name="symbol_nanogram_per_millilitre">ng/mL</string>
+
+    <string translatable="false" name="symbol_gram_per_decilitre">g/dL</string>
+
+    <string translatable="false" name="symbol_gram_per_100_millilitres">g/100mL</string>
+
+    <string translatable="false" name="symbol_gram_per_cent">g%</string>
+
+    <string translatable="false" name="symbol_gram_per_litre">g/L</string>
+
+    <string translatable="false" name="symbol_milligram_per_millilitre">mg/mL</string>
+
+    <string translatable="false" name="symbol_nanokatal_per_litre">nkat/L</string>
+
+    <string translatable="false" name="symbol_microkatal_per_litre">µkat/L</string>
+
+    <string translatable="false" name="symbol_nanomole_per_second_litre">nmol/(s·L)</string>
+
+    <string translatable="false" name="symbol_micromole_per_second_litre">µmol/(s·L)</string>
+
+    <string translatable="false" name="symbol_enzyme_unit_per_litre">U/L</string>
+
+    <string translatable="false" name="symbol_international_unit_per_litre">IU/L</string>
+
+    <string translatable="false" name="symbol_micromole_per_minute_litre">µmol/(min·L)</string>
+
+    <string translatable="false" name="symbol_micromole_per_hour_litre">µmol/(h·L)</string>
+
+    <string translatable="false" name="symbol_micromole_per_hour_millilitre">µmol/(h·mL)</string>
 
 </resources>

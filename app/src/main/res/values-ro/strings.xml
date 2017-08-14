@@ -86,6 +86,26 @@
 
     <string name="navigation_radioactivity">Radioactivitate</string>
 
+    <string name="navigation_glucose">Glucoză</string>
+
+    <string name="navigation_cholesterol">Colesterol</string>
+
+    <string name="navigation_calcium">Calciu</string>
+
+    <string name="navigation_electrolytes">Electroliţi</string>
+
+    <string name="navigation_ferritin">Feritina</string>
+
+    <string name="navigation_haemoglobin">Hemoglobină</string>
+
+    <string name="navigation_creatinine">Creatinina</string>
+
+    <string name="navigation_urea">Uree</string>
+
+    <string name="navigation_albumin">Albumină</string>
+
+    <string name="navigation_liver">Enzime hepatice</string>
+
     <string name="navigation_settings">Setări</string>
 
     <string name="navigation_feedback">Trimiteți feedback</string>
@@ -95,6 +115,8 @@
     <!--PREFERENCES-->
 
     <string name="pref_advanced">Avansat</string>
+
+    <string name="pref_medical">Medical</string>
 
     <string name="pref_currency">Valută</string>
 
@@ -670,4 +692,64 @@
 
     <string name="rutherford">rutherford</string>
 
+    <!--MEDICAL-->
+
+    <string name="millimole_per_litre">milimol pe litru</string>
+
+    <string name="micromole_per_litre">micromol pe litru</string>
+
+    <string name="milligram_per_decilitre">miligram pe decilitru</string>
+
+    <string name="milligram_per_100_millilitres">miligram pe 100 mililitri</string>
+
+    <string name="milligram_per_cent">miligram la sută</string>
+
+    <string name="milligram_per_litre">miligram pe litru</string>
+
+    <string name="microgram_per_millilitre">microgram pe mililitru</string>
+
+    <string name="milliequivalent_per_litre">miliechivalent pe litru</string>
+
+    <string name="nanomole_per_litre">nanomol pe litru</string>
+
+    <string name="picomole_per_litre">picomol pe litru</string>
+
+    <string name="microgram_per_decilitre">microgram pe decilitru</string>
+
+    <string name="microgram_per_100_millilitres">microgram pe 100 mililitri</string>
+
+    <string name="microgram_per_cent">microgram la sută</string>
+
+    <string name="microgram_per_litre">microgram pe litru</string>
+
+    <string name="nanogram_per_millilitre">nanogram pe mililitru</string>
+
+    <string name="gram_per_decilitre">gram pe decilitru</string>
+
+    <string name="gram_per_100_millilitres">gram pe 100 mililitri</string>
+
+    <string name="gram_per_cent">gram la sută</string>
+
+    <string name="gram_per_litre">gram pe litru</string>
+
+    <string name="milligram_per_millilitre">miligram pe mililitru</string>
+
+    <string name="nanokatal_per_litre">nanokatal pe litru</string>
+
+    <string name="microkatal_per_litre">microkatal pe litru</string>
+
+    <string name="nanomole_per_second_litre">nanomol pe secundă litru</string>
+
+    <string name="micromole_per_second_litre">micromol pe secundă litru</string>
+
+    <string name="enzyme_unit_per_litre">unitate enzimatică pe litru</string>
+
+    <string name="international_unit_per_litre">unitate internațională pe litru</string>
+
+    <string name="micromole_per_minute_litre">micromol pe minut litru</string>
+
+    <string name="micromole_per_hour_litre">micromol pe oră litru</string>
+
+    <string name="micromole_per_hour_millilitre">micromol pe oră mililitru</string>
+    
 </resources>
