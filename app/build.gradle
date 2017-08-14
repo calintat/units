@@ -30,13 +30,15 @@ dependencies {
 
     compile "com.android.billingclient:billing:dp-1"
 
+    compile "com.android.support:appcompat-v7:$support_version"
+
     compile "com.android.support:cardview-v7:$support_version"
 
     compile "com.android.support:customtabs:$support_version"
 
     compile "com.android.support:design:$support_version"
 
-    compile "com.android.support:support-v4:$support_version"
+    compile "com.android.support:recyclerview-v7:$support_version"
 
     compile "com.github.calintat.alps:alps-core:2.0.3"
 
