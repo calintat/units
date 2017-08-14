@@ -118,6 +118,8 @@
 
     <string name="pref_science">Science</string>
 
+    <string name="pref_medical">Médical</string>
+
     <string name="pref_currency">Devise</string>
 
     <string name="pref_theme">Thème</string>
