@@ -6,6 +6,8 @@
 
     <string name="action_refresh">Erfrischen</string>
 
+    <string name="action_restart">Neustart</string>
+
     <!--ERRORS-->
 
     <string name="err_shortcuts">Maximal 4 Verknüpfungen</string>

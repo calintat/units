@@ -6,6 +6,8 @@
 
     <string name="action_refresh">Rafraîchir</string>
 
+    <string name="action_restart">Redémarrer</string>
+
     <!--ERRORS-->
 
     <string name="err_shortcuts">Maximum 4 raccourcis</string>

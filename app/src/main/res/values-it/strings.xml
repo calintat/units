@@ -6,6 +6,8 @@
 
     <string name="action_refresh">Ricaricare</string>
 
+    <string name="action_restart">Ricomincia</string>
+
     <!--ERRORS-->
 
     <string name="err_shortcuts">Massimo 4 scorciatoie</string>

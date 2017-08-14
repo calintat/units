@@ -7,9 +7,13 @@ import android.os.Bundle
 import android.preference.MultiSelectListPreference
 import android.preference.PreferenceFragment
 import android.support.annotation.RequiresApi
+import android.support.design.widget.Snackbar
 import com.calintat.units.R
 import com.calintat.units.api.Item
 import org.jetbrains.anko.ctx
+import org.jetbrains.anko.design.longSnackbar
+import org.jetbrains.anko.design.snackbar
+import org.jetbrains.anko.find
 import org.jetbrains.anko.toast
 
 class SettingsFragment : PreferenceFragment() {
@@ -22,7 +26,10 @@ class SettingsFragment : PreferenceFragment() {
 
         findPreference("pref_theme").setOnPreferenceChangeListener { _, _ ->
 
-            toast(R.string.msg_app_restart_required); true
+            Snackbar.make(view, R.string.msg_app_restart_required, Snackbar.LENGTH_INDEFINITE)
+                    .setAction(R.string.action_restart) { System.exit(0) }.show()
+
+            true
         }
 
         if (Build.VERSION.SDK_INT >= 25) {

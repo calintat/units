@@ -6,6 +6,8 @@
 
     <string name="action_refresh">Obnovit</string>
 
+    <string name="action_restart">Restart</string>
+
     <!--ERRORS-->
 
     <string name="err_shortcuts">Maximálně 4 zkratky</string>

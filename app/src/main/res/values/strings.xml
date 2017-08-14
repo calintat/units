@@ -12,6 +12,8 @@
 
     <string name="action_refresh">Refresh</string>
 
+    <string name="action_restart">Restart</string>
+
     <!--ERRORS-->
 
     <string name="err_shortcuts">Maximum 4 shortcuts</string>

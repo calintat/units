@@ -6,6 +6,8 @@
 
     <string name="action_refresh">Actualizează</string>
 
+    <string name="action_restart">Restart</string>
+
     <!--ERRORS-->
 
     <string name="err_shortcuts">Maximum 4 comenzi rapide</string>

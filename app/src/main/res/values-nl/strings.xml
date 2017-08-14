@@ -6,6 +6,8 @@
 
     <string name="action_refresh">Verversen</string>
 
+    <string name="action_restart">Herstarten</string>
+
     <!--ERRORS-->
 
     <string name="err_shortcuts">Maximaal 4 snelkoppelingen</string>

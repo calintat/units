@@ -6,6 +6,8 @@
 
     <string name="action_refresh">Obnoviť</string>
 
+    <string name="action_restart">Reštart</string>
+
     <!--ERRORS-->
 
     <string name="err_shortcuts">Maximálne 4 skratky</string>

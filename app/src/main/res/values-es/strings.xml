@@ -6,6 +6,8 @@
 
     <string name="action_refresh">Refrescar</string>
 
+    <string name="action_restart">Reiniciar</string>
+
     <!--ERRORS-->
 
     <string name="err_shortcuts">Máximo 4 atajos</string>
