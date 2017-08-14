@@ -161,7 +161,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setTheme() {
 
-        AppCompatDelegate.setDefaultNightMode(getInt("pref_theme"))
+        AppCompatDelegate.setDefaultNightMode(getInt("pref_theme", 1))
     }
 
     private fun setToolbar() {
@@ -262,8 +262,6 @@ class MainActivity : AppCompatActivity() {
     private fun gotoFeedback() {
 
         val builder = CustomTabsIntent.Builder()
-
-        Item.get(id)?.let { builder.setToolbarColor(ContextCompat.getColor(this, it.color)) }
 
         builder.build().launchUrl(this, Uri.parse("https://github.com/calintat/units/issues"))
     }
