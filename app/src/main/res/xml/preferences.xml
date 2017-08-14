@@ -7,6 +7,12 @@
         android:title="@string/pref_advanced"
         android:icon="@drawable/ic_pref_advanced" />
 
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="pref_medical"
+        android:title="@string/pref_medical"
+        android:icon="@drawable/ic_pref_medical" />
+
     <ListPreference
         android:defaultValue="0"
         android:key="pref_currency"
