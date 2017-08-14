@@ -328,7 +328,7 @@ enum class Item(val id: Int, val label: Int, val color: Int, val colorDark: Int,
 
     CREATININE(
             id = R.id.navigation_creatinine,
-            label = R.string.action_clear,
+            label = R.string.navigation_creatinine,
             color = R.color.teal_500,
             colorDark = R.color.teal_700,
             shortcutId = "shortcut_creatinine",
