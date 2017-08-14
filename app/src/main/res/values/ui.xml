@@ -1,16 +1,9 @@
 <resources>
 
-    <style name="app_theme" parent="Theme.AppCompat.DayNight.DarkActionBar" >
+    <style name="app_theme" parent="Theme.AppCompat.DayNight.NoActionBar" />
 
-        <item name="windowActionBar">false</item>
-
-        <item name="windowNoTitle">true</item>
-
-        <item name="android:statusBarColor">@android:color/transparent</item>
-
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-
-    </style>
+    <style name="app_theme.main">
+        <item name="android:statusBarColor">@android:color/transparent</item></style>
 
     <dimen name="app_bar_height">168dp</dimen>
 

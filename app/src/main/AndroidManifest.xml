@@ -23,6 +23,7 @@
             android:value="2.1" />
 
         <activity
+            android:theme="@style/app_theme.main"
             android:name=".activities.MainActivity"
             android:windowSoftInputMode="stateHidden" >
 
