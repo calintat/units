@@ -388,6 +388,10 @@
 
     <string name="litre_per_100_kilometres">liter za 100 kilometers</string>
 
+    <string name="imperial_gallon_per_100_miles">imperiálny galón za 100 míle</string>
+
+    <string name="us_gallon_per_100_miles">US galón za 100 míle</string>
+
     <!--STORAGE-->
 
     <string name="_bit">bit</string>

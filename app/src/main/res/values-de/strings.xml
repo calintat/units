@@ -388,6 +388,10 @@
 
     <string name="litre_per_100_kilometres">Liter pro 100 Kilometers</string>
 
+    <string name="imperial_gallon_per_100_miles">Imperiale Gallone pro 100 Meilen</string>
+
+    <string name="us_gallon_per_100_miles">US Gallone pro 100 Meilen</string>
+
     <!--STORAGE-->
 
     <string name="_bit">Bit</string>

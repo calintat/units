@@ -628,6 +628,10 @@
 
     <string name="litre_per_100_kilometres">litre per 100 kilometres</string>
 
+    <string name="imperial_gallon_per_100_miles">imperial gallon per 100 miles</string>
+
+    <string name="us_gallon_per_100_miles">US gallon per 100 miles</string>
+
     <string translatable="false" name="symbol_kilometre_per_litre">km/L</string>
 
     <string translatable="false" name="symbol_mile_per_imperial_gallon">mi/gal</string>
@@ -635,6 +639,10 @@
     <string translatable="false" name="symbol_mile_per_us_gallon">mi/gal</string>
 
     <string translatable="false" name="symbol_litre_per_100_kilometres">L/100km</string>
+
+    <string translatable="false" name="symbol_imperial_gallon_per_100_miles">gal/100mi</string>
+
+    <string translatable="false" name="symbol_us_gallon_per_100_miles">gal/100mi</string>
 
     <!--STORAGE-->
 

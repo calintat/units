@@ -386,6 +386,10 @@
 
     <string name="litre_per_100_kilometres">litre par 100 kilomètres</string>
 
+    <string name="imperial_gallon_per_100_miles">gallon impériale par 100 milles</string>
+
+    <string name="us_gallon_per_100_miles">gallon américaine par 100 milles</string>
+
     <!--STORAGE-->
 
     <string name="_bit">bit</string>

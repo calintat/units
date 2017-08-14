@@ -288,6 +288,10 @@ object Converter {
             unit(R.string.mile_per_us_gallon, R.string.symbol_mile_per_us_gallon, 0.425144)
 
             unit(R.string.litre_per_100_kilometres, R.string.symbol_litre_per_100_kilometres, 100.0, n = -1.0)
+
+            unit(R.string.imperial_gallon_per_100_miles, R.string.symbol_imperial_gallon_per_100_miles, 35.4006, n = -1.0)
+
+            unit(R.string.us_gallon_per_100_miles, R.string.symbol_us_gallon_per_100_miles, 42.5144, n = -1.0)
         }
 
         add(Item.STORAGE) {

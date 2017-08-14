@@ -388,6 +388,10 @@
 
     <string name="litre_per_100_kilometres">litru pe 100 kilometri</string>
 
+    <string name="imperial_gallon_per_100_miles">galon imperial pe 100 mile</string>
+
+    <string name="us_gallon_per_100_miles">galon american pe 100 mile</string>
+
     <!--STORAGE-->
 
     <string name="_bit">bit</string>
