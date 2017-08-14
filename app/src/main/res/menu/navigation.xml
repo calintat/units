@@ -62,7 +62,7 @@
     </group>
 
     <group
-        android:id="@+id/advanced" >
+        android:id="@+id/science" >
 
         <item
             android:id="@+id/navigation_angle"

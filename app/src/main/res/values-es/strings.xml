@@ -114,7 +114,7 @@
 
     <!--PREFERENCES-->
 
-    <string name="pref_advanced">Avanzado</string>
+    <string name="pref_science">Ciencia</string>
 
     <string name="pref_medical">Medical</string>
 

@@ -3,9 +3,9 @@
 
     <SwitchPreference
         android:defaultValue="true"
-        android:key="pref_advanced"
-        android:title="@string/pref_advanced"
-        android:icon="@drawable/ic_pref_advanced" />
+        android:key="pref_science"
+        android:title="@string/pref_science"
+        android:icon="@drawable/ic_pref_science" />
 
     <SwitchPreference
         android:defaultValue="false"

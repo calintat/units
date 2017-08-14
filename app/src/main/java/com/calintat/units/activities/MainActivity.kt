@@ -256,7 +256,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun refreshNavigationView() {
 
-        navigationView.menu.setGroupVisible(R.id.advanced, getBoolean("pref_advanced", true))
+        navigationView.menu.setGroupVisible(R.id.science, getBoolean("pref_science", true))
+
+        navigationView.menu.setGroupVisible(R.id.medical, getBoolean("pref_medical", false))
     }
 
     private fun gotoFeedback() {
