@@ -1,38 +1,35 @@
 package com.calintat.units.ui
 
-import android.widget.Toolbar
 import com.calintat.units.R
 import com.calintat.units.activities.SettingsActivity
-import com.github.calintat.Colorful
-import org.jetbrains.anko.*
+import org.jetbrains.anko.AnkoComponent
+import org.jetbrains.anko.AnkoContext
+import org.jetbrains.anko.appcompat.v7.navigationIconResource
+import org.jetbrains.anko.appcompat.v7.titleResource
+import org.jetbrains.anko.appcompat.v7.toolbar
 import org.jetbrains.anko.design.appBarLayout
-import org.jetbrains.anko.design.coordinatorLayout
+import org.jetbrains.anko.frameLayout
+import org.jetbrains.anko.verticalLayout
 
 object SettingsUI : AnkoComponent<SettingsActivity> {
 
-    internal lateinit var toolbar: Toolbar
-
     override fun createView(ui: AnkoContext<SettingsActivity>) = with(ui) {
 
-        coordinatorLayout {
+        verticalLayout {
 
-            fitsSystemWindows = true
+            appBarLayout {
 
-            verticalLayout {
+                toolbar {
 
-                appBarLayout {
+                    navigationIconResource = R.drawable.ic_action_back
 
-                    toolbar = toolbar {
+                    setNavigationOnClickListener { owner.finish() }
 
-                        setTitleTextColor(Colorful.white)
-                    }
-                }
-
-                frameLayout {
-
-                    id = R.id.container
+                    titleResource = R.string.navigation_settings
                 }
             }
+
+            frameLayout { id = R.id.container }
         }
     }
 }
