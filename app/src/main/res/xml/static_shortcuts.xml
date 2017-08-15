@@ -10,9 +10,15 @@
         android:shortcutShortLabel="@string/navigation_length" >
 
         <intent
-            android:action="com.calintat.units.SHORTCUT_LENGTH"
-            android:targetPackage="com.calintat.units"
-            android:targetClass="com.calintat.units.activities.MainActivity" />
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.calintat.sensors"
+            android:targetClass="com.calintat.sensors.activities.MainActivity" >
+
+            <extra
+                android:name="com.calintat.sensors.api.SHORTCUT_ID"
+                android:value="shortcut_length" />
+
+        </intent>
 
     </shortcut>
 
@@ -23,9 +29,15 @@
         android:shortcutShortLabel="@string/navigation_area" >
 
         <intent
-            android:action="com.calintat.units.SHORTCUT_AREA"
-            android:targetPackage="com.calintat.units"
-            android:targetClass="com.calintat.units.activities.MainActivity" />
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.calintat.sensors"
+            android:targetClass="com.calintat.sensors.activities.MainActivity" >
+
+            <extra
+                android:name="com.calintat.sensors.api.SHORTCUT_ID"
+                android:value="shortcut_area" />
+
+        </intent>
 
     </shortcut>
 
@@ -36,9 +48,15 @@
         android:shortcutShortLabel="@string/navigation_volume" >
 
         <intent
-            android:action="com.calintat.units.SHORTCUT_VOLUME"
-            android:targetPackage="com.calintat.units"
-            android:targetClass="com.calintat.units.activities.MainActivity" />
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.calintat.sensors"
+            android:targetClass="com.calintat.sensors.activities.MainActivity" >
+
+            <extra
+                android:name="com.calintat.sensors.api.SHORTCUT_ID"
+                android:value="shortcut_volume" />
+
+        </intent>
 
     </shortcut>
 
@@ -49,9 +67,15 @@
         android:shortcutShortLabel="@string/navigation_mass" >
 
         <intent
-            android:action="com.calintat.units.SHORTCUT_MASS"
-            android:targetPackage="com.calintat.units"
-            android:targetClass="com.calintat.units.activities.MainActivity" />
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.calintat.sensors"
+            android:targetClass="com.calintat.sensors.activities.MainActivity" >
+
+            <extra
+                android:name="com.calintat.sensors.api.SHORTCUT_ID"
+                android:value="shortcut_mass" />
+
+        </intent>
 
     </shortcut>
 
