@@ -244,13 +244,13 @@
 
     <string name="us_ton">US ton</string>
 
-    <string name="tonne">tonne</string>
+    <string name="tonne">metric ton</string>
 
     <string name="imperial_megaton">imperial megaton</string>
 
     <string name="us_megaton">US megaton</string>
 
-    <string name="megatonne">megatonne</string>
+    <string name="megatonne">metric megaton</string>
 
     <string name="gram">gram</string>
 

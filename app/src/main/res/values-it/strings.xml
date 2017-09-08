@@ -244,13 +244,13 @@
 
     <string name="us_ton">tonnellata americano</string>
 
-    <string name="tonne">tonnellata</string>
+    <string name="tonne">tonnellata metrica</string>
 
     <string name="imperial_megaton">megatonnellata imperiale</string>
 
     <string name="us_megaton">megatonnellata americano</string>
 
-    <string name="megatonne">megatonnellata</string>
+    <string name="megatonne">megatonnellata metrica</string>
 
     <string name="gram">grammo</string>
 
