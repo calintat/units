@@ -346,6 +346,12 @@
 
     <string name="tonne">tonne</string>
 
+    <string name="imperial_megaton">imperial megaton</string>
+
+    <string name="us_megaton">US megaton</string>
+
+    <string name="megatonne">megatonne</string>
+
     <string name="gram">gram</string>
 
     <string name="milligram">milligram</string>
@@ -381,6 +387,12 @@
     <string translatable="false" name="symbol_us_ton">tn</string>
 
     <string translatable="false" name="symbol_tonne">t</string>
+
+    <string translatable="false" name="symbol_imperial_megaton">Mtn</string>
+
+    <string translatable="false" name="symbol_us_megaton">Mtn</string>
+
+    <string translatable="false" name="symbol_megatonne">Mt</string>
 
     <string translatable="false" name="symbol_gram">g</string>
 

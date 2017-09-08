@@ -246,6 +246,12 @@
 
     <string name="tonne">tonne</string>
 
+    <string name="imperial_megaton">megatonne impériale</string>
+
+    <string name="us_megaton">megatonne américaine</string>
+
+    <string name="megatonne">megatonne</string>
+
     <string name="gram">gramme</string>
 
     <string name="milligram">milligramme</string>

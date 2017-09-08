@@ -246,6 +246,12 @@
 
     <string name="tonne">tonă</string>
 
+    <string name="imperial_megaton">megatonă imperială</string>
+
+    <string name="us_megaton">megatonă americană</string>
+
+    <string name="megatonne">megatonă</string>
+
     <string name="gram">gram</string>
 
     <string name="milligram">miligram</string>

@@ -140,6 +140,12 @@ object Converter {
 
             unit(R.string.tonne, R.string.symbol_tonne, 1000.0)
 
+            unit(R.string.imperial_megaton, R.string.symbol_imperial_megaton, 1.0160469088e9)
+
+            unit(R.string.us_megaton, R.string.symbol_us_megaton, 0.90718474e9)
+
+            unit(R.string.megatonne, R.string.symbol_megatonne, 1e9)
+
             unit(R.string.gram, R.string.symbol_gram, 0.001)
 
             unit(R.string.milligram, R.string.symbol_milligram, 1e-6)
