@@ -1,0 +1,767 @@
+<resources>
+    
+    <!--ACTIONS-->
+
+    <string name="action_clear">Καθαρισμός</string>
+
+    <string name="action_refresh">Ανανέωση</string>
+
+    <string name="action_restart">Επανεκκίνηση</string>
+
+    <!--ERRORS-->
+
+    <string name="err_shortcuts">Μέγιστες 4 συντομεύσεις</string>
+
+    <string name="err_could_not_initiate_purchase">Αδυναμία ενεργοποίησης πληρωμής</string>
+
+    <string name="err_rates_are_already_up_to_date">Οι ισοτιμίες είναι ήδη ενημερωμένες</string>
+    
+    <!--MESSAGES-->
+
+    <string name="msg_app_restart_required">Απαιτείται επανεκκίνηση της εφαρμογής</string>
+
+    <string name="msg_clipboard">Αντιγράφηκε στο πρόχειρο</string>
+
+    <string name="msg_input">Πληκτρολογήστε</string>
+
+    <string name="msg_retrieved_exchange_rates">Εγινε λήψη ισοτιμιών μονάδων για %s</string>
+
+    <string name="msg_thank_you_for_your_contribution">Ευχαριστούμε για την συνισφορά σας</string>
+    
+    <!--NAVIGATION-->
+
+    <string name="navigation_length">Μήκος</string>
+
+    <string name="navigation_area">Περίμετρος</string>
+
+    <string name="navigation_volume">Ογκος</string>
+
+    <string name="navigation_mass">Μάζα</string>
+
+    <string name="navigation_time">Χρόνος</string>
+
+    <string name="navigation_speed">Ταχύτητα</string>
+
+    <string name="navigation_temperature">Θερμοκρασία</string>
+
+    <string name="navigation_currency">Νόμισμα</string>
+
+    <string name="navigation_fuel">Καύσιμο</string>
+
+    <string name="navigation_storage">Χώρος</string>
+
+    <string name="navigation_bitrate">Μετάδοση Ηχου</string>
+
+    <string name="navigation_angle">Γωνία</string>
+
+    <string name="navigation_density">Density</string>
+
+    <string name="navigation_frequency">Συχνότητα</string>
+
+    <string name="navigation_flow">Ροή</string>
+
+    <string name="navigation_acceleration">Επιτάχυνση</string>
+
+    <string name="navigation_force">Δύναμη</string>
+
+    <string name="navigation_pressure">Πίεση</string>
+
+    <string name="navigation_torque">Ροπή</string>
+
+    <string name="navigation_energy">Ενέργεια</string>
+
+    <string name="navigation_power">Ιπποδύναμη</string>
+
+    <string name="navigation_viscosity">Πάχος</string>
+
+    <string name="navigation_current">Ρεύμα</string>
+
+    <string name="navigation_charge">Φορτίο</string>
+
+    <string name="navigation_voltage">Τροφοδοσία</string>
+
+    <string name="navigation_luminance">Φωτεινότητα</string>
+
+    <string name="navigation_illuminance">Φωτεινή Ροή</string>
+
+    <string name="navigation_radiation">Ακτινοβολία</string>
+
+    <string name="navigation_radioactivity">Ραδιενέργεια</string>
+
+    <string name="navigation_glucose">Γλυκόζη</string>
+
+    <string name="navigation_cholesterol">Χοληστερίνη</string>
+
+    <string name="navigation_calcium">Ασβέστιο</string>
+
+    <string name="navigation_electrolytes">Ηλεκτρολύτες</string>
+
+    <string name="navigation_ferritin">Φερριτίνη</string>
+
+    <string name="navigation_haemoglobin">Αιμοσφαιρίνη</string>
+
+    <string name="navigation_creatinine">Κρεατινίνη</string>
+
+    <string name="navigation_urea">Ουρία</string>
+
+    <string name="navigation_albumin">Λευκωματίνη</string>
+
+    <string name="navigation_liver">Ενζυμα του ήπατος</string>
+
+    <string name="navigation_settings">Ρυθμίσεις</string>
+
+    <string name="navigation_feedback">Πείτε μας τη γνώμη σας</string>
+
+    <string name="navigation_donation">Υποστηρίξτε την εφαρμογή</string>
+    
+    <!--PREFERENCES-->
+
+    <string name="pref_science">Επιστημονικά</string>
+
+    <string name="pref_medical">Ιατρικά</string>
+
+    <string name="pref_currency">Νομίσματα</string>
+
+    <string name="pref_theme">Θέματα</string>
+
+    <string name="pref_shortcuts">Συντομεύσεις</string>
+
+    <string name="pref_version">Εκδοση</string>
+
+    <string name="pref_developer">Προγραμματιστής</string>
+
+    <string-array name="pref_currency"><item>Αυτόματα</item><item>Χειροκίνητα</item></string-array>
+    
+    <string-array name="pref_theme"><item>Αυτόματα</item><item>Ημέρα</item><item>Νύχτα</item></string-array>
+
+    <!--LENGTH-->
+
+    <string name="metre">μέτρα</string>
+
+    <string name="kilometre">χιλιόμετρα</string>
+
+    <string name="mile">μίλια</string>
+
+    <string name="yard">υάρδες</string>
+
+    <string name="foot">πόδια</string>
+
+    <string name="inch">ίντσες</string>
+
+    <string name="centimetre">εκατοστά</string>
+
+    <string name="millimetre">χιλιοστόμετρα</string>
+
+    <string name="micrometre">μικρόμετρα</string>
+
+    <string name="angstrom">angstrom</string>
+
+    <string name="astronomical_unit">αστρονομική μονάδα</string>
+
+    <string name="light_year">light-year</string>
+
+    <string name="parsec">parsec</string>
+
+    <string name="nanometre">νανόμετρα</string>
+
+    <string name="picometre">picometer</string>
+
+    <string name="fermi">fermi</string>
+
+    <string name="fathom">βυθομέτρηση</string>
+
+    <string name="furlong">furlong</string>
+
+    <string name="nautical_mile">ναυτικά μίλια</string>
+    
+    <!--AREA-->
+
+    <string name="square_metre">τετραγωνικά μέτρα</string>
+
+    <string name="square_kilometre">τετρωνικά χιλιόμετρα</string>
+
+    <string name="are">are</string>
+
+    <string name="hectare">hectare</string>
+
+    <string name="acre">acre</string>
+
+    <string name="cuerda">cuerda</string>
+
+    <string name="square_yard">τετραγωνική υάρδα</string>
+
+    <string name="square_foot">τετραγωνικά πόδια</string>
+
+    <string name="square_inch">τετραγωνική ίντσα</string>
+    
+    <!--VOLUME-->
+
+    <string name="cubic_metre">κυβικά μέτρα</string>
+
+    <string name="litre">λίτρα</string>
+
+    <string name="millilitre">χιλιοστόλιτρα</string>
+
+    <string name="cubic_foot">κυβικά πόδια</string>
+
+    <string name="cubic_inch">κυβικές ίντσες</string>
+
+    <string name="imperial_gallon">γαλόνια</string>
+
+    <string name="us_gallon">γαλόνια (US)</string>
+
+    <string name="imperial_quart">τέταρτο του γαλονιού</string>
+
+    <string name="us_quart">τέταρτο του γαλονιού (US)</string>
+
+    <string name="imperial_pint">όγδοο του γαλονιού</string>
+
+    <string name="us_pint">όγδοο του γαλονιού (US)</string>
+
+    <string name="imperial_fluid_ounce">ουγκιά</string>
+
+    <string name="us_fluid_ounce">ουγκιά (US)</string>
+
+    <string name="imperial_tablespoon">κουτάλι της σούπας</string>
+
+    <string name="us_tablespoon">κουτάλι της σούπας (US)</string>
+
+    <string name="imperial_teaspoon">κουτάλι του τσαγιού</string>
+
+    <string name="us_teaspoon">κουτάλι του τσαγιού (US)</string>
+    
+    <!--MASS-->
+
+    <string name="kilogram">κιλό</string>
+
+    <string name="stone">stone</string>
+
+    <string name="pound">λίτρο</string>
+
+    <string name="ounce">ουγκιά</string>
+
+    <string name="imperial_ton">τόνος (μετρικό)</string>
+
+    <string name="us_ton">τόνος (US)</string>
+
+    <string name="tonne">τόνος</string>
+
+    <string name="imperial_megaton">μεγάτονος (μετρικό)</string>
+
+    <string name="us_megaton">μεγάτονος (US)</string>
+
+    <string name="megatonne">μεγάτονος</string>
+
+    <string name="gram">γραμμάριο</string>
+
+    <string name="milligram">χιλιοστόγραμμο</string>
+
+    <string name="microgram">μικρογραμμάριο</string>
+
+    <string name="carat">καράτι</string>
+
+    <string name="dram">όγδοο ουγκιάς</string>
+
+    <string name="grain">κόκκος</string>
+
+    <string name="troy_pound">troy pound</string>
+
+    <string name="troy_ounce">troy ounce</string>
+
+    <string name="pennyweight">βάρος 24 κόκκων</string>
+
+    <string name="atomic_mass_unit">μονάδα ατομικής μάζας</string>
+
+    <string name="electron_rest_mass">μάζα ηλεκτρονίων</string>
+    
+    <!--TIME-->
+
+    <string name="millisecond">χιλιοστό του δευτερολέπτου</string>
+
+    <string name="second">δευτερόλεπτο</string>
+
+    <string name="minute">λεπτό</string>
+
+    <string name="hour">ώρα</string>
+
+    <string name="day">ημέρα</string>
+
+    <string name="week">εβδομάδα</string>
+
+    <string name="month">μήνας</string>
+
+    <string name="year">έτος</string>
+
+    <string name="decade">δεκαετία</string>
+
+    <string name="century">αιώνας</string>
+    
+    <!--SPEED-->
+
+    <string name="metre_per_second">μέτρο το δευτερόλεπτο</string>
+
+    <string name="mile_per_hour">μίλι την ώρα</string>
+
+    <string name="kilometre_per_hour">χιλιόμετρο την ώρα</string>
+
+    <string name="foot_per_second">πόδι το δευτερόλεπτο</string>
+
+    <string name="knot">κόμβος</string>
+
+    <string name="speed_of_light">ταχύτητα του φωτός</string>
+
+    <string name="speed_of_sound">ταχύτητα του ήχου</string>
+    
+    <!--TEMPERATURE-->
+
+    <string name="kelvin">Kelvin</string>
+
+    <string name="celsius">Celsius</string>
+
+    <string name="fahrenheit">Fahrenheit</string>
+
+    <!--CURRENCY-->
+
+    <string name="euro">Ευρώ</string>
+
+    <string name="us_dollar">Δολάριο Αμερικής</string>
+
+    <string name="japanese_yen">Υεν Ιαπωνίας</string>
+
+    <string name="bulgarian_lev">Λέβ Βουλγαρίας</string>
+
+    <string name="czech_koruna">Κορούνα Τσεχίας</string>
+
+    <string name="danish_krone">Κρόνη Δανίας</string>
+
+    <string name="pound_sterling">Στερλίνα Αγγλίας</string>
+
+    <string name="hungarian_forint">Νόμισμα Ουγγαρίας</string>
+
+    <string name="polish_zloty">Ζλότι Πολωνίας</string>
+
+    <string name="romanian_leu">Νόμισμα Ρομανίας</string>
+
+    <string name="swedish_krona">Κρόνη Σουηδίας</string>
+
+    <string name="swiss_franc">Φράνκο Ελβετίας</string>
+
+    <string name="norwegian_krone">Κρόνη Νορβηγίας</string>
+
+    <string name="croatian_kuna">Νόμισμα Κροατίας</string>
+
+    <string name="russian_rouble">Ρούβλι Ρωσίας</string>
+
+    <string name="turkish_lira">Λίρα Τουρκίας</string>
+
+    <string name="australian_dollar">Δολάριο Αυστραλίας</string>
+
+    <string name="brazilian_real">Νόμισμα Βραζιλίας</string>
+
+    <string name="canadian_dollar">Δολάριο Καναδά</string>
+
+    <string name="chinese_yuan_renminbi">Νόμισμα Κίνας</string>
+
+    <string name="hong_kong_dollar">Δολάριο Χόνγκ-Κόνγκ</string>
+
+    <string name="indonesian_rupiah">Ρούπι Ινδονησίας</string>
+
+    <string name="israeli_shekel">Νόμισμα Ισραήλ</string>
+
+    <string name="indian_rupee">Ρούπι Ινδίας</string>
+
+    <string name="south_korean_won">Νόμισμα Νότιας Κορέας</string>
+
+    <string name="mexican_peso">Πέσος Μεξικού</string>
+
+    <string name="malaysian_ringgit">Νόμισμα Μαλαισίας</string>
+
+    <string name="new_zealand_dollar">Δολάριο Νέας Ζηλανδίας</string>
+
+    <string name="philippine_peso">Πέσος Φιλιππίνας</string>
+
+    <string name="singapore_dollar">Δολάριο Σινγκαπούρης</string>
+
+    <string name="thai_baht">Νόμισμα Ταιλάνδης</string>
+
+    <string name="south_african_rand">Ράντ Νότιας Αφρικής</string>
+
+    <!--FUEL-->
+
+    <string name="kilometre_per_litre">χιλιόμετρο ανα λίτρο</string>
+
+    <string name="mile_per_imperial_gallon">μίλι ανα γαλόνι</string>
+
+    <string name="mile_per_us_gallon">μίλι ανα γαλόνι (US)</string>
+
+    <string name="litre_per_100_kilometres">λίτρα ανα 100 χιλιόμετρα</string>
+
+    <string name="imperial_gallon_per_100_miles">γαλόνια ανα 100 μίλια</string>
+
+    <string name="us_gallon_per_100_miles">γαλόνια ανα 100 μίλια (US)</string>
+
+    <!--STORAGE-->
+
+    <string name="_bit">bit</string>
+
+    <string name="_byte">byte</string>
+
+    <string name="kilobit">kilobit</string>
+
+    <string name="kibibit">kibibit</string>
+
+    <string name="kilobyte">kilobyte</string>
+
+    <string name="kibibyte">kibibyte</string>
+
+    <string name="megabit">megabit</string>
+
+    <string name="mebibit">mebibit</string>
+
+    <string name="megabyte">megabyte</string>
+
+    <string name="mebibyte">mebibyte</string>
+
+    <string name="gigabit">gigabit</string>
+
+    <string name="gibibit">gibibit</string>
+
+    <string name="gigabyte">gigabyte</string>
+
+    <string name="gibibyte">gibibyte</string>
+
+    <string name="terabit">terabit</string>
+
+    <string name="tebibit">tebibit</string>
+
+    <string name="terabyte">terabyte</string>
+
+    <string name="tebibyte">tebibyte</string>
+
+    <string name="petabit">petabit</string>
+
+    <string name="pebibit">pebibit</string>
+
+    <string name="petabyte">petabyte</string>
+
+    <string name="pebibyte">pebibyte</string>
+
+    <!--BITRATE-->
+
+    <string name="kilobit_per_second">kilobit ανα δευτερόλεπτο</string>
+
+    <string name="kibibit_per_second">kibibit ανα δευτερόλεπτο</string>
+
+    <string name="kilobyte_per_second">kilobyte ανα δευτερόλεπτο</string>
+
+    <string name="kibibyte_per_second">kibibyte ανα δευτερόλεπτο</string>
+
+    <string name="megabit_per_second">megabit ανα δευτερόλεπτο</string>
+
+    <string name="mebibit_per_second">mebibit ανα δευτερόλεπτο</string>
+
+    <string name="megabyte_per_second">megabyte ανα δευτερόλεπτο</string>
+
+    <string name="mebibyte_per_second">mebibyte ανα δευτερόλεπτο</string>
+
+    <string name="gigabit_per_second">gigabit ανα δευτερόλεπτο</string>
+
+    <string name="gibibit_per_second">gibibit ανα δευτερόλεπτο</string>
+
+    <string name="gigabyte_per_second">gigabyte ανα δευτερόλεπτο</string>
+
+    <string name="gibibyte_per_second">gibibyte ανα δευτερόλεπτο</string>
+
+    <string name="terabit_per_second">terabit ανα δευτερόλεπτο</string>
+
+    <string name="tebibit_per_second">tebibit ανα δευτερόλεπτο</string>
+
+    <string name="terabyte_per_second">terabyte ανα δευτερόλεπτο</string>
+
+    <string name="tebibyte_per_second">tebibyte ανα δευτερόλεπτο</string>
+
+    <!--ANGLE-->
+
+    <string name="radian">ακτίνα</string>
+
+    <string name="degree">μοίρες</string>
+
+    <string name="arcminute">arcminute</string>
+
+    <string name="arcsecond">arcsecond</string>
+
+    <!--DENSITY-->
+
+    <string name="kilogram_per_cubic_metre">κιλογραμμάριο kilogram ανα κυβικό μέτρο</string>
+
+    <string name="kilogram_per_litre">κιλογραμμάριο ανα λίτρο</string>
+
+    <string name="gram_per_cubic_centimetre">γραμμάριο ανα κυβικό εκατοστό</string>
+
+    <string name="ounce_per_cubic_foot">ουγκιά ανα κυβικά πόδια</string>
+
+    <string name="ounce_per_cubic_inch">ουγκιά ανα κυβική ίντσα</string>
+
+    <string name="pound_per_cubic_foot">λίτρο ανα κυβικά πόδια</string>
+
+    <string name="pound_per_cubic_inch">λίτρο ανα κυβική ίντσα</string>
+
+    <string name="ounce_per_imperial_gallon">ουγκιά ανα γαλόνι</string>
+
+    <string name="ounce_per_us_gallon">ουγκιά ανα γαλόνι (US)</string>
+
+    <string name="pound_per_imperial_gallon">λίτρο ανα γαλόνι</string>
+
+    <string name="pound_per_us_gallon">λίτρο ανα γαλόνι (US)</string>
+
+    <!--FREQUENCY-->
+
+    <string name="hertz">hertz</string>
+
+    <string name="kilohertz">kilohertz</string>
+
+    <string name="megahertz">megahertz</string>
+
+    <string name="gigahertz">gigahertz</string>
+
+    <string name="revolution_per_minute">revolution per minute</string>
+
+    <!--FLOW-->
+
+    <string name="cubic_metre_per_second">κυβικά μέτρα το δευτερόλεπτο</string>
+
+    <string name="litre_per_minute">λίτρα το λεπτό</string>
+
+    <string name="imperial_gallon_per_minute">γαλόνι το λεπτό</string>
+
+    <string name="us_gallon_per_minute">γαλόνι το λεπτό (US)</string>
+
+    <string name="cubic_metre_per_hour">κυβικά μέτρα ανα ώρα</string>
+
+    <!--ACCELERATION-->
+
+    <string name="metre_per_second_squared">μέτρα το δευτερόλεπτο (τετραγωνικά)</string>
+
+    <string name="galileo">galileo</string>
+
+    <string name="standard_gravity">κανονική βαρύτητα</string>
+
+    <string name="mile_per_hour_per_second">μίλια ανα ώρα το δευτερόλεπτο</string>
+
+    <string name="knot_per_second">knot per second</string>
+
+    <!--FORCE-->
+
+    <string name="newton">newton</string>
+
+    <string name="dyne">dyne</string>
+
+    <string name="kilopond">kilopond</string>
+
+    <string name="poundal">poundal</string>
+
+    <string name="pound_force">pound-force</string>
+
+    <string name="ounce_force">ounce-force</string>
+
+    <!--PRESSURE-->
+
+    <string name="pascal">pascal</string>
+
+    <string name="pound_per_square_inch">pound ανα τετραγωνική ίντσα</string>
+
+    <string name="atmosphere">ατμοσφαιρική</string>
+
+    <string name="bar">bar</string>
+
+    <string name="millibar">millibar</string>
+
+    <string name="millimetre_of_mercury">χιλιοστόμετρα του υδραργύρου</string>
+
+    <string name="kilopascal">kilopascal</string>
+
+    <string name="megapascal">megapascal</string>
+
+    <!--TORQUE-->
+
+    <string name="foot_pound">foot-pound</string>
+
+    <string name="inch_pound">inch-pound</string>
+
+    <string name="newton_metre">newton meter</string>
+
+    <string name="kilopond_metre">kilopond meter</string>
+
+    <!--ENERGY-->
+
+    <string name="joule">joule</string>
+
+    <string name="erg">erg</string>
+
+    <string name="kilowatt_hour">kilowatt-ανα ώρα</string>
+
+    <string name="megawatt_hour">megawatt-ανα ώρα</string>
+
+    <string name="calorie">calorie</string>
+
+    <string name="kilocalorie">kilocalorie</string>
+
+    <string name="barrel_of_oil_equivalent">ισοδύναμο με βαρέλι λαδιού</string>
+
+    <string name="british_thermal_unit">Αγγλική μονάδα θέρμανσης</string>
+
+    <string name="electronvolt">electronvolt</string>
+
+    <string name="imperial_gallon_atmosphere">γαλόνι-ατμόσφαιρα</string>
+
+    <string name="us_gallon_atmosphere">γαλόνι-ατμόσφαιρα (US)</string>
+
+    <!--POWER-->
+
+    <string name="watt">watt</string>
+
+    <string name="kilowatt">kilowatt</string>
+
+    <string name="megawatt">megawatt</string>
+
+    <string name="horsepower">ιπποδύναμη</string>
+
+    <string name="erg_per_second">erg το δευτερόλεπτο</string>
+
+    <string name="calorie_per_second">calorie το δευτερόλεπτο</string>
+
+    <!--VISCOSITY-->
+
+    <string name="pascal_second">pascal second</string>
+
+    <string name="poise">poise</string>
+
+    <string name="pound_per_foot_hour">pound per foot hour</string>
+
+    <string name="pound_per_foot_second">pound per foot second</string>
+
+    <!--CURRENT-->
+
+    <string name="ampere">ampere</string>
+
+    <string name="abampere">abampere</string>
+
+    <string name="statampere">statampere</string>
+
+    <!--CHARGE-->
+
+    <string name="coulomb">coulomb</string>
+
+    <string name="abcoulomb">abcoulomb</string>
+
+    <string name="statcoulomb">statcoulomb</string>
+
+    <string name="faraday">faraday</string>
+
+    <string name="milliampere_hour">milliampere hour</string>
+
+    <!--VOLTAGE-->
+
+    <string name="volt">volt</string>
+
+    <string name="abvolt">abvolt</string>
+
+    <string name="statvolt">statvolt</string>
+
+    <!--LUMINANCE-->
+
+    <string name="candela_per_square_metre">candela ανα τετραγωνικό μέτρο</string>
+
+    <string name="stilb">stilb</string>
+
+    <string name="lambert">lambert</string>
+
+    <string name="footlambert">footlambert</string>
+
+    <!--ILLUMINANCE-->
+
+    <string name="lux">lux</string>
+
+    <string name="phot">phot</string>
+
+    <string name="footcandle">footcandle</string>
+
+    <!--RADIATION-->
+
+    <string name="gray">gray</string>
+
+    <string name="rad">rad</string>
+
+    <string name="sievert">sievert</string>
+
+    <string name="rem">rem</string>
+
+    <!--RADIOACTIVITY-->
+
+    <string name="becquerel">becquerel</string>
+
+    <string name="curie">curie</string>
+
+    <string name="rutherford">rutherford</string>
+
+    <!--MEDICAL-->
+
+    <string name="millimole_per_litre">millimole per liter</string>
+
+    <string name="micromole_per_litre">micromole per liter</string>
+
+    <string name="milligram_per_decilitre">milligram per deciliter</string>
+
+    <string name="milligram_per_100_millilitres">milligram per 100 milliliters</string>
+
+    <string name="milligram_per_cent">milligram percent</string>
+
+    <string name="milligram_per_litre">milligram per liter</string>
+
+    <string name="microgram_per_millilitre">microgram per milliliter</string>
+
+    <string name="milliequivalent_per_litre">milliequivalent per liter</string>
+
+    <string name="nanomole_per_litre">nanomole per liter</string>
+
+    <string name="picomole_per_litre">picomole per liter</string>
+
+    <string name="microgram_per_decilitre">microgram per deciliter</string>
+
+    <string name="microgram_per_100_millilitres">microgram per 100 milliliters</string>
+
+    <string name="microgram_per_cent">microgram percent</string>
+
+    <string name="microgram_per_litre">microgram per liter</string>
+
+    <string name="nanogram_per_millilitre">nanogram per milliliter</string>
+
+    <string name="gram_per_decilitre">gram per deciliter</string>
+
+    <string name="gram_per_100_millilitres">gram per 100 milliliters</string>
+
+    <string name="gram_per_cent">gram percent</string>
+
+    <string name="gram_per_litre">gram per liter</string>
+
+    <string name="milligram_per_millilitre">milligram per milliliter</string>
+
+    <string name="nanokatal_per_litre">nanokatal per liter</string>
+
+    <string name="microkatal_per_litre">microkatal per liter</string>
+
+    <string name="nanomole_per_second_litre">nanomole per second liter</string>
+
+    <string name="micromole_per_second_litre">micromole per second liter</string>
+
+    <string name="enzyme_unit_per_litre">enzyme unit per liter</string>
+
+    <string name="international_unit_per_litre">international unit per liter</string>
+
+    <string name="micromole_per_minute_litre">micromole per minute liter</string>
+
+    <string name="micromole_per_hour_litre">micromole per hour liter</string>
+
+    <string name="micromole_per_hour_millilitre">micromole per hour milliliter</string>
+
+</resources>
