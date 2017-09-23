@@ -28,7 +28,7 @@ dependencies {
 
     ext.anko_version = '0.10.1'
 
-    compile "com.android.billingclient:billing:dp-1"
+    compile "com.android.billingclient:billing:1.0"
 
     compile "com.android.support:appcompat-v7:$support_version"
 

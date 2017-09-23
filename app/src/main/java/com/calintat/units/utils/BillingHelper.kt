@@ -9,7 +9,7 @@ import org.jetbrains.anko.toast
 
 class BillingHelper(private val activity: Activity) : AnkoLogger, BillingClientStateListener, ConsumeResponseListener, PurchasesUpdatedListener {
 
-    private val billingClient = BillingClient.Builder(activity).setListener(this).build()
+    private val billingClient = BillingClient.newBuilder(activity).setListener(this).build()
 
     private val Int.isOK: Boolean get() = this == BillingClient.BillingResponse.OK
 
@@ -25,7 +25,7 @@ class BillingHelper(private val activity: Activity) : AnkoLogger, BillingClientS
 
     fun makeDonation(sku: String) {
 
-        val builder = BillingFlowParams.Builder().setSku(sku).setType(BillingClient.SkuType.INAPP)
+        val builder = BillingFlowParams.newBuilder().setSku(sku).setType(BillingClient.SkuType.INAPP)
 
         val responseCode = billingClient.launchBillingFlow(activity, builder.build())
 
@@ -42,11 +42,11 @@ class BillingHelper(private val activity: Activity) : AnkoLogger, BillingClientS
         debug("Billing setup finished with status $resultCode")
     }
 
-    override fun onConsumeResponse(purchaseToken: String?, resultCode: Int) {
+    override fun onConsumeResponse(responseCode: Int, purchaseToken: String?) {
 
-        debug("Consumption operation finished with status $resultCode")
+        debug("Consumption operation finished with status $responseCode")
 
-        if (resultCode.isOK) activity.toast(R.string.msg_thank_you_for_your_contribution)
+        if (responseCode.isOK) activity.toast(R.string.msg_thank_you_for_your_contribution)
     }
 
     override fun onPurchasesUpdated(responseCode: Int, purchases: MutableList<Purchase>?) {
