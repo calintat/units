@@ -560,6 +560,10 @@ object Converter {
             unit(R.string.abampere, R.string.symbol_abampere, 10.0)
 
             unit(R.string.statampere, R.string.symbol_statampere, 3.335641e-10)
+
+            unit(R.string.milliampere, R.string.symbol_milliampere, 1e-3)
+
+            unit(R.string.microampere, R.string.symbol_microampere, 1e-6)
         }
 
         add(Item.CHARGE) {

@@ -648,6 +648,10 @@
 
     <string name="statampere">statampere</string>
 
+    <string name="milliampere">milliampere</string>
+
+    <string name="microampere">microampere</string>
+
     <!--CHARGE-->
 
     <string name="coulomb">coulomb</string>

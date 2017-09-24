@@ -1120,11 +1120,19 @@
 
     <string name="statampere">statampere</string>
 
+    <string name="milliampere">milliampere</string>
+
+    <string name="microampere">microampere</string>
+
     <string translatable="false" name="symbol_ampere">A</string>
 
     <string translatable="false" name="symbol_abampere">abA</string>
 
     <string translatable="false" name="symbol_statampere">statA</string>
+
+    <string translatable="false" name="symbol_milliampere">mA</string>
+
+    <string translatable="false" name="symbol_microampere">µA</string>
 
     <!--CHARGE-->
 
