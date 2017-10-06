@@ -6,7 +6,7 @@ android {
 
     compileSdkVersion 26
 
-    buildToolsVersion "26.0.1"
+    buildToolsVersion "26.0.2"
 
     defaultConfig {
 
@@ -24,7 +24,7 @@ android {
 
 dependencies {
 
-    ext.support_version = '26.0.1'
+    ext.support_version = '26.1.0'
 
     ext.anko_version = '0.10.1'
 
