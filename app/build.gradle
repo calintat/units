@@ -26,7 +26,7 @@ dependencies {
 
     ext.support_version = '26.1.0'
 
-    ext.anko_version = '0.10.1'
+    ext.anko_version = '0.10.3'
 
     compile "com.android.billingclient:billing:1.0"
 
@@ -46,7 +46,7 @@ dependencies {
 
     compile "com.squareup.retrofit2:retrofit:2.3.0"
 
-    compile "com.squareup.retrofit2:converter-gson:2.0.1"
+    compile "com.squareup.retrofit2:converter-gson:2.3.0"
 
     compile "org.jetbrains.anko:anko-appcompat-v7:$anko_version"
 
