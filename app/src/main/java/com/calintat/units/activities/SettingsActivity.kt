@@ -12,7 +12,7 @@ class SettingsActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
 
-        SettingsUI.setContentView(this)
+        SettingsUI().setContentView(this)
 
         fragmentManager.beginTransaction().replace(R.id.container, SettingsFragment()).commit()
     }

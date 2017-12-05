@@ -24,13 +24,6 @@ import com.calintat.units.api.Converter
 import com.calintat.units.api.Item
 import com.calintat.units.recycler.Adapter
 import com.calintat.units.ui.MainUI
-import com.calintat.units.ui.MainUI.drawerLayout
-import com.calintat.units.ui.MainUI.editText
-import com.calintat.units.ui.MainUI.navigationView
-import com.calintat.units.ui.MainUI.recyclerView
-import com.calintat.units.ui.MainUI.textView1
-import com.calintat.units.ui.MainUI.textView2
-import com.calintat.units.ui.MainUI.toolbar
 import com.calintat.units.utils.BillingHelper
 import com.calintat.units.utils.CurrencyHelper
 import org.jetbrains.anko.*
@@ -44,6 +37,8 @@ class MainActivity : AppCompatActivity() {
 
         private val KEY_INPUT = "com.calintat.units.KEY_INPUT"
     }
+
+    private val ui = MainUI()
 
     private var id: Int? = null
 
@@ -63,7 +58,7 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
 
-        MainUI.setContentView(this)
+        ui.setContentView(this)
 
         setTheme()
 
@@ -100,7 +95,7 @@ class MainActivity : AppCompatActivity() {
 
         when {
 
-            drawerLayout.isDrawerOpen(Gravity.START) -> drawerLayout.closeDrawers()
+            ui.drawerLayout.isDrawerOpen(Gravity.START) -> ui.drawerLayout.closeDrawers()
 
             else -> super.onBackPressed()
         }
@@ -110,7 +105,7 @@ class MainActivity : AppCompatActivity() {
 
         id?.let { outState.putInt(KEY_ID, it) }
 
-        outState.putString(KEY_INPUT, editText.text.toString())
+        outState.putString(KEY_INPUT, ui.editText.text.toString())
 
         super.onSaveInstanceState(outState)
     }
@@ -129,7 +124,7 @@ class MainActivity : AppCompatActivity() {
 
             selectId(savedInstanceState.getInt(KEY_ID, defaultId))
 
-            editText.setText(savedInstanceState.getString(KEY_INPUT))
+            ui.editText.setText(savedInstanceState.getString(KEY_INPUT))
         }
     }
 
@@ -149,9 +144,9 @@ class MainActivity : AppCompatActivity() {
 
         selectPosition(0)
 
-        toolbar.setBackgroundResource(item.color)
+        ui.toolbar.setBackgroundResource(item.color)
 
-        drawerLayout.setStatusBarBackground(item.colorDark)
+        ui.drawerLayout.setStatusBarBackground(item.colorDark)
     }
 
     private fun selectPosition(position: Int) {
@@ -160,9 +155,9 @@ class MainActivity : AppCompatActivity() {
 
         refreshRecyclerView()
 
-        textView1.setText(adapter.units[position].label)
+        ui.textView1.setText(adapter.units[position].label)
 
-        textView2.setText(adapter.units[position].shortLabel)
+        ui.textView2.setText(adapter.units[position].shortLabel)
     }
 
     private fun setTheme() {
@@ -172,9 +167,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun setToolbar() {
 
-        toolbar.inflateMenu(R.menu.action)
+        ui.toolbar.inflateMenu(R.menu.action)
 
-        toolbar.setOnMenuItemClickListener {
+        ui.toolbar.setOnMenuItemClickListener {
 
             when (it.itemId) {
 
@@ -186,35 +181,35 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
-        toolbar.setNavigationIcon(R.drawable.ic_action_menu)
+        ui.toolbar.setNavigationIcon(R.drawable.ic_action_menu)
 
-        toolbar.setNavigationOnClickListener { drawerLayout.openDrawer(Gravity.START) }
+        ui.toolbar.setNavigationOnClickListener { ui.drawerLayout.openDrawer(Gravity.START) }
 
-        toolbar.overflowIcon = ContextCompat.getDrawable(this, R.drawable.ic_action_overflow)
+        ui.toolbar.overflowIcon = ContextCompat.getDrawable(this, R.drawable.ic_action_overflow)
     }
 
     private fun setMainContent() {
 
-        editText.afterTextChanged { refreshActionMenu(); refreshRecyclerView() }
+        ui.editText.afterTextChanged { refreshActionMenu(); refreshRecyclerView() }
 
         adapter.onClick = { selectPosition(it) }
 
         adapter.onLongClick = { copyToClipboard(it) }
 
-        recyclerView.adapter = adapter
+        ui.recyclerView.adapter = adapter
 
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        ui.recyclerView.layoutManager = LinearLayoutManager(this)
 
-        recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
+        ui.recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
     }
 
     private fun setNavigationView() {
 
-        navigationView.inflateMenu(R.menu.navigation)
+        ui.navigationView.inflateMenu(R.menu.navigation)
 
-        navigationView.setNavigationItemSelectedListener {
+        ui.navigationView.setNavigationItemSelectedListener {
 
-            drawerLayout.closeDrawers()
+            ui.drawerLayout.closeDrawers()
 
             when (it.itemId) {
 
@@ -231,7 +226,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun actionClear() = editText.text.clear()
+    private fun actionClear() = ui.editText.text.clear()
 
     private fun actionRefresh() = CurrencyHelper.loadData {
 
@@ -248,23 +243,23 @@ class MainActivity : AppCompatActivity() {
 
     private fun refreshActionMenu() {
 
-        toolbar.menu.findItem(R.id.action_clear).isVisible = editText.text.isNotEmpty()
+        ui.toolbar.menu.findItem(R.id.action_clear).isVisible = ui.editText.text.isNotEmpty()
 
-        toolbar.menu.findItem(R.id.action_refresh).isVisible = currency && !currencyAuto
+        ui.toolbar.menu.findItem(R.id.action_refresh).isVisible = currency && !currencyAuto
     }
 
     private fun refreshRecyclerView() {
 
-        val num = editText.text.toString().toDoubleOrNull() ?: Double.NaN
+        val num = ui.editText.text.toString().toDoubleOrNull() ?: Double.NaN
 
         position?.let { adapter.input = adapter.units[it].selfToBase(this, num) }
     }
 
     private fun refreshNavigationView() {
 
-        navigationView.menu.setGroupVisible(R.id.science, getBoolean("pref_science", true))
+        ui.navigationView.menu.setGroupVisible(R.id.science, getBoolean("pref_science", true))
 
-        navigationView.menu.setGroupVisible(R.id.medical, getBoolean("pref_medical", false))
+        ui.navigationView.menu.setGroupVisible(R.id.medical, getBoolean("pref_medical", false))
     }
 
     private fun gotoFeedback() {

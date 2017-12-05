@@ -11,7 +11,7 @@ import org.jetbrains.anko.design.appBarLayout
 import org.jetbrains.anko.frameLayout
 import org.jetbrains.anko.verticalLayout
 
-object SettingsUI : AnkoComponent<SettingsActivity> {
+class SettingsUI : AnkoComponent<SettingsActivity> {
 
     override fun createView(ui: AnkoContext<SettingsActivity>) = with(ui) {
 

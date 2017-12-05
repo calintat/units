@@ -20,7 +20,7 @@ import org.jetbrains.anko.design.coordinatorLayout
 import org.jetbrains.anko.design.navigationView
 import org.jetbrains.anko.recyclerview.v7.recyclerView
 
-object MainUI : AnkoComponent<MainActivity> {
+class MainUI : AnkoComponent<MainActivity> {
 
     internal lateinit var drawerLayout: DrawerLayout
 

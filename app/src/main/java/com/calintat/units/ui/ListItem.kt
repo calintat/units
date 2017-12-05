@@ -9,7 +9,7 @@ import com.calintat.units.R
 import com.calintat.units.utils.AnkoProperties.textAppearance
 import org.jetbrains.anko.*
 
-object ListItem : AnkoComponent<ViewGroup> {
+class ListItem() : AnkoComponent<ViewGroup> {
 
     override fun createView(ui: AnkoContext<ViewGroup>) = with(ui) {
 

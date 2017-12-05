@@ -40,6 +40,6 @@ class Adapter(private val context: Context) : RecyclerView.Adapter<ViewHolder>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
-        return ViewHolder(ListItem.createView(AnkoContext.create(parent.context, parent)))
+        return ViewHolder(ListItem().createView(AnkoContext.create(parent.context, parent)))
     }
 }
