@@ -6,7 +6,6 @@ import android.view.Gravity
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import com.calintat.units.R
-import com.calintat.units.utils.AnkoProperties.textAppearance
 import org.jetbrains.anko.*
 
 class ListItem() : AnkoComponent<ViewGroup> {

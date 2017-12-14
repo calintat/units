@@ -11,7 +11,6 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import com.calintat.units.R
 import com.calintat.units.activities.MainActivity
-import com.calintat.units.utils.AnkoProperties.textAppearance
 import org.jetbrains.anko.*
 import org.jetbrains.anko.appcompat.v7.toolbar
 import org.jetbrains.anko.cardview.v7.cardView
